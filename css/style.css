@@ -156,7 +156,7 @@ header .container .menu-icon {
   }
 }
 header .container .menu-icon img {
-  width: 50px;
+  width: 35px;
   aspect-ratio: 1/1;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -332,6 +332,12 @@ content .mainSlider .swiperControl {
   align-self: stretch;
   z-index: 9999;
 }
+@media (max-width: 768px) {
+  content .mainSlider .swiperControl {
+    width: calc(100% - 80px);
+    left: 40px;
+  }
+}
 content .mainSlider .swiperControl .swiperBtns {
   display: flex;
   width: 666px;
@@ -353,6 +359,13 @@ content .mainSlider .swiperControl .swiperBtns .mainSliderNext {
   border-radius: 83.333px;
   border: 1px solid #ffffff;
 }
+@media (max-width: 768px) {
+  content .mainSlider .swiperControl .swiperBtns .mainSliderPrev,
+  content .mainSlider .swiperControl .swiperBtns .mainSliderNext {
+    width: 30px;
+    height: 30px;
+  }
+}
 content .mainSlider .swiperControl .swiperBtns .mainSliderPrev::after,
 content .mainSlider .swiperControl .swiperBtns .mainSliderNext::after {
   content: "";
@@ -367,6 +380,13 @@ content .mainSlider .swiperControl .swiperBtns .mainSliderNext::after {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  content .mainSlider .swiperControl .swiperBtns .mainSliderPrev::after,
+  content .mainSlider .swiperControl .swiperBtns .mainSliderNext::after {
+    width: 15px;
+    height: 15px;
+  }
 }
 content .mainSlider .swiperControl .swiperBtns .mainSliderPrev.swiper-button-disabled,
 content .mainSlider .swiperControl .swiperBtns .mainSliderNext.swiper-button-disabled {
@@ -389,6 +409,12 @@ content .mainSlider .swiperControl .swiper-pagination .swiper-pagination-bullet 
   width: 16px;
   height: 16px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 768px) {
+  content .mainSlider .swiperControl .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
 }
 content .mainSlider .swiperControl .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #ffffff;

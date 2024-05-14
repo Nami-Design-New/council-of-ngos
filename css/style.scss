@@ -154,7 +154,7 @@ header {
       }
 
       img {
-        width: 35px;
+        width: 30px;
         aspect-ratio: 1 / 1;
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
@@ -246,6 +246,11 @@ header {
         height: 40px;
         border-radius: 100px;
         background: url("../assets/user.png") lightgray 50% / cover no-repeat;
+
+        @media (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       .user-name {
@@ -278,6 +283,8 @@ header {
 
       @media (max-width: 768px) {
         order: 1;
+        font-size: 13px;
+        padding: 6px 16px;
       }
     }
   }
@@ -327,7 +334,7 @@ content {
         height: 100%;
 
         img {
-          aspect-ratio: 1 / 1;
+          height: 100%;
           width: 100%;
           object-fit: cover;
         }
@@ -453,6 +460,11 @@ content {
       -ms-transform: translateY(-50%);
       -o-transform: translateY(-50%);
       z-index: 9999;
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 0 15px;
+        right: unset;
+      }
 
       .slider-content-heading {
         align-self: stretch;
@@ -479,102 +491,163 @@ content {
 
   // Start Identify
   .identify-section {
-    position: relative;
     width: 100%;
     display: flex;
-    padding: 0px 120px;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 0;
 
-    .identify-img-container {
-      height: 100%;
-      width: 50%;
-
-      img {
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-      }
+    @media (max-width: 768px) {
+      gap: 40px;
     }
 
-    .identify-content {
+    .identify-box {
+      position: relative;
+      width: 100%;
       display: flex;
-      padding-left: 40px;
-      flex-direction: column;
+      padding: 0px 120px;
+      align-items: center;
       justify-content: center;
-      align-items: flex-end;
-      gap: 8px;
-      flex: 1 0 0;
 
-      .identify-content-title {
-        align-self: stretch;
-        color: $dark-color;
-        text-align: right;
-        font-family: "MadaniArabic-SemiBold";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        padding: 0 15px;
+        gap: 20px;
       }
 
-      .identify-content-subtitle {
-        align-self: stretch;
-        color: $mainColor;
-        text-align: right;
-        font-family: "MadaniArabic-SemiBold";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+      .identify-img-container {
+        height: 100%;
+        width: 50%;
+        display: flex;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          height: 50%;
+        }
+
+        img {
+          height: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+        }
       }
 
-      .identify-content-paragraph {
-        align-self: stretch;
-        color: $text-color;
-        text-align: right;
-        font-family: MadaniArabic-Regular;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+      &.bottom-box {
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+        .identify-content {
+          padding-right: 40px;
+          padding-left: 0;
+          @media (max-width: 768px) {
+            padding-right: 0;
+          }
+        }
+      }
+
+      .identify-content {
+        display: flex;
+        padding-left: 40px;
+        padding-right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 8px;
+        flex: 1 0 0;
+        @media (max-width: 768px) {
+          padding-left: 0;
+        }
+
+        .identify-content-title {
+          align-self: stretch;
+          color: $dark-color;
+          text-align: right;
+          font-family: "MadaniArabic-SemiBold";
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          @media (max-width: 768px) {
+            text-align: center;
+          }
+        }
+
+        .identify-content-subtitle {
+          align-self: stretch;
+          color: $mainColor;
+          text-align: right;
+          font-family: "MadaniArabic-SemiBold";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .identify-content-paragraph {
+          align-self: stretch;
+          color: $text-color;
+          text-align: right;
+          font-family: MadaniArabic-Regular;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .identify-content-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          gap: 8px;
+          align-self: stretch;
+
+          .identify-content-list-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            gap: 8px;
+            align-self: stretch;
+            color: $text-color;
+            text-align: right;
+            font-family: MadaniArabic-Regular;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @media (max-width: 768px) {
+              align-items: center;
+            }
+          }
+        }
       }
     }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-.SectionTitle {
-  position: relative;
-  padding: 30px;
-  text-align: center;
-  .title {
-    font-weight: bold;
-    color: $mainColor;
-    margin-bottom: 10px;
-   
-  }
-  .hint {
-    color: $text-color;
-  }
-}
-
-
+// Start Steps
 .steps {
   padding: 50px 0 30px;
   background-color: #b5baa11a;
-  .container{
-    width: min(100% , 1280px);
+  .container {
+    width: min(100%, 1280px);
     padding: 0 8px;
     margin: auto;
+
+    .SectionTitle {
+      position: relative;
+      padding: 30px;
+      text-align: center;
+      .title {
+        font-weight: bold;
+        color: $mainColor;
+        margin-bottom: 10px;
+      }
+      .hint {
+        color: $text-color;
+      }
+    }
   }
   .allSteps {
     display: flex;
@@ -734,3 +807,4 @@ content {
     }
   }
 }
+// End Steps

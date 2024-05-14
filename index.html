@@ -1,128 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>مجلس الجمعيات الأهلية</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/icon" href="assets/fav.svg" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- Custom style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Start Header -->
-    <header>
-      <nav class="container">
-        <a href="index.html" class="logo">
-          <img
-            src="assets/logo.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-        </a>
-        <ul class="navList">
-          <li>
-            <a href="index.html">الرئيسية</a>
-          </li>
-          <li>
-            <a href="#identify">تعرف علينا</a>
-          </li>
-          <li>
-            <a href="#evalution">كيفية التقييم</a>
-          </li>
-          <li>
-            <a href="#partener">الشركاء</a>
-          </li>
-          <li>
-            <a href="#news">الاخبار</a>
-          </li>
-          <li>
-            <a href="#contact">تواصل معنا</a>
-          </li>
-        </ul>
-
-        <!-- User Info -->
-        <div class="user-info">
-          <div class="user-avatar"></div>
-          <span class="user-name">محمود جمال</span>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title -->
+  <title>مجلس الجمعيات الأهلية</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="assets/fav.svg" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Start Header -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+      </a>
+      <ul class="navList">
+        <li>
+          <a href="index.html">الرئيسية</a>
+        </li>
+        <li>
+          <a href="#identify">تعرف علينا</a>
+        </li>
+        <li>
+          <a href="#evalution">كيفية التقييم</a>
+        </li>
+        <li>
+          <a href="#partener">الشركاء</a>
+        </li>
+        <li>
+          <a href="#news">الاخبار</a>
+        </li>
+        <li>
+          <a href="#contact">تواصل معنا</a>
+        </li>
+      </ul>
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="user-avatar"></div>
+        <span class="user-name">محمود جمال</span>
+      </div>
+      <!-- Auth link -->
+      <a href="/login" target="_blank" class="authBtn">تسجيل الدخول</a>
+      <!-- menu icon -->
+      <span class="menu-icon">
+        <img src="assets/menu-close.png" alt="menu icon">
+      </span>
+    </nav>
+  </header>
+  <!-- End Header -->
+  <!-- Start content-->
+  <content>
+    <!-- Start Slider -->
+    <section class="swiper mainSlider ">
+      <div class="swiper-wrapper">
+        <!-- swiper-slide -->
+        <div class="swiper-slide">
+          <img src="assets/slideshow-img-01.png" alt="">
         </div>
-
-        <!-- Auth link -->
-        <a href="/login" target="_blank" class="authBtn">تسجيل الدخول</a>
-
-        
-        <!-- menu icon -->
-        <span class="menu-icon">
-          <img src="assets/menu-close.png" alt="menu icon">
-        </span>
-      </nav>
-    </header>
-    <!-- End Header -->
-
-    <!-- Start content-->
-    <content>
-      <!-- Start Slider -->
-      <section class="swiper mainSlider ">
-        <div class="swiper-wrapper">
-          <!-- swiper-slide -->
-          <div class="swiper-slide">
-            <img src="assets/slideshow-img-01.png" alt="">
+        <!-- swiper-slide -->
+        <div class="swiper-slide">
+          <img src="/assets/slideshow-img-02.jpeg" alt="">
+        </div>
+        <!-- swiper-slide -->
+        <div class="swiper-slide">
+          <img src="/assets/slideshow-img-03.jpeg" alt="">
+        </div>
+      </div>
+      </div>
+      <div class="slider-content">
+        <h3 class="slider-content-heading">لمزيد من المستقبل</h3>
+        <p class="slider-content-paragraph">
+          نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+          المطابع ودور النشر. كان لوريم إيبسوم ولايزال لنص، بل انه حتى صار
+          مستخدماً وبشكله الأصلي في الطباعة
+        </p>
+      </div>
+      <!-- swiper Control -->
+      <div class="swiperControl">
+        <div class="mainSliderPagination swiper-pagination"></div>
+        <div class="swiperBtns">
+          <div class="mainSliderPrev swiper-button-prev"></div>
+          <div class="mainSliderNext swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Slider -->
+    <!-- Start Identify -->
+    <section class="identify-section" id="identify">
+      <div class="identify-content">
+        <h2 class="identify-content-title">تعرف علينا</h2>
+        <h5 class="identify-content-subtitle">أداة تقييم القدرات المؤسسية للجمعيات الأهلية</h5>
+        <p class="identify-content-paragraph">نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع
+          ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص
+          مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من
+          الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة</p>
+      </div>
+      <figure class="identify-img-container">
+        <img src="/assets/slideshow-img-03.jpeg" alt="" />
+      </figure>
+    </section>
+    <!-- End Identify -->
+    <section class="steps">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="SectionTitle text-md-start">
+          <h1 class="title" data-aos="fade-up"> كيفية التقييم </h1>
+          <h6 class="hint" data-aos="fade-up"> بعدة خطوات بسيطة يمكنك تقييم المنظمة باستخدام أداة تقييم القدرات
+            المؤسسية للجمعيات الأهلية </h6>
+        </div>
+        <!-- steps -->
+        <div class="allSteps">
+          <div class="step" data-aos="zoom-out-left">
+            <div class="icon">
+              <img src="assets/1.svg" alt="">
+            </div>
+            <h4>تسجيل جديد</h4>
+            <p> أنشئ الحساب بخطوات بسيطه وقم بربط المنظمة التي تنتمي اليها بالحساب الخاص بك </p>
           </div>
-          <!-- swiper-slide -->
-          <div class="swiper-slide">
-            <img src="/assets/slideshow-img-02.jpeg" alt="">
+          <div class="step" data-aos="zoom-out-left">
+            <div class="icon">
+              <img src="assets/2.svg" alt="">
+            </div>
+            <h4> اكمال البيانات </h4>
+            <p>
+              قم باستكمال بيانات المنظمة وانتظهر حتي يتم تفعيل الحساب الخاص بك
+            </p>
           </div>
-          <!-- swiper-slide -->
-          <div class="swiper-slide">
-            <img src="/assets/slideshow-img-03.jpeg" alt="">
+          <div class="step" data-aos="zoom-out-left">
+            <div class="icon">
+              <img src="assets/3.svg" alt="">
+            </div>
+            <h4> دخول على الحساب </h4>
+            <p>
+              ابدأ باستخدام الحساب الخاص بك وشاهد الاحصائيات التي توضح لك مدي التقدم
+            </p>
+          </div>
+          <div class="step" data-aos="zoom-out-left">
+            <div class="icon">
+              <img src="assets/4.svg" alt="">
+            </div>
+            <h4> التقييم </h4>
+            <p>قم بتطبيق معايير اداة التقييم الخاصة بكل قطاع علي المنظمة </p>
           </div>
         </div>
-        </div>
-        <div class="slider-content">
-          <h3 class="slider-content-heading">لمزيد من المستقبل</h3>
-          <p class="slider-content-paragraph">
-            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
-            المطابع ودور النشر. كان لوريم إيبسوم ولايزال لنص، بل انه حتى صار
-            مستخدماً وبشكله الأصلي في الطباعة
-          </p>
-        </div>
-        <!-- swiper Control -->
-        <div class="swiperControl">
-          <div class="mainSliderPagination swiper-pagination"></div>
-          <div class="swiperBtns">
-            <div class="mainSliderPrev swiper-button-prev"></div>
-            <div class="mainSliderNext swiper-button-next"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Slider -->
-
-      <!-- Start Identify -->
-      <section class="identify-section" id="identify">
-        <div class="identify-content">
-          <h2 class="identify-content-title">تعرف علينا</h2>
-          <h5 class="identify-content-subtitle">أداة تقييم القدرات المؤسسية للجمعيات الأهلية</h5>
-          <p  class="identify-content-paragraph">نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة</p>
-        </div>
-        
-        <figure class="identify-img-container">
-          <img src="/assets/slideshow-img-03.jpeg" alt="" />
-        </figure>
-      </section>
-      <!-- End Identify -->
-    </content>
-    <!-- End content-->
-
-    <!-- jquery  -->
-    <script src="js/jquery.min.js"></script>
-    <!-- swiper slider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- custom -->
-    <script src="js/Custom.js"></script>
-  </body>
+      </div>
+    </section>
+  </content>
+  <!-- End content-->
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- swiper slider -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+</body>
 </html>

@@ -487,4 +487,202 @@ content .identify-section .identify-content .identify-content-paragraph {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.SectionTitle {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+}
+.SectionTitle .title {
+  font-weight: bold;
+  font-size: 50px !important;
+  color: #1d968f;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .SectionTitle .title {
+    font-size: 28px !important;
+  }
+}
+.SectionTitle .hint {
+  color: #666b88;
+}
+
+.steps {
+  padding: 50px 0 30px;
+  background-color: rgba(181, 186, 161, 0.1019607843);
+}
+.steps .container {
+  width: min(100%, 1280px);
+  padding: 0 8px;
+  margin: auto;
+}
+.steps .allSteps {
+  display: flex;
+  padding: 20px 0px;
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 678px) {
+  .steps .allSteps {
+    flex-direction: column;
+  }
+}
+.steps .allSteps::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #1d968f;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+@media (max-width: 678px) {
+  .steps .allSteps::before {
+    display: none;
+  }
+}
+.steps .allSteps .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step {
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+}
+.steps .allSteps .step::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px dashed #1d968f;
+  background-color: #1d968f;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step::after {
+    top: 0;
+    bottom: unset;
+  }
+}
+.steps .allSteps .step:nth-child(1):after {
+  content: "1";
+}
+.steps .allSteps .step:nth-child(2):after {
+  content: "2";
+}
+.steps .allSteps .step:nth-child(3):after {
+  content: "3";
+}
+.steps .allSteps .step:nth-child(4):after {
+  content: "4";
+}
+.steps .allSteps .step:nth-child(5):after {
+  content: "5";
+}
+.steps .allSteps .step::before {
+  content: "";
+  width: 2px;
+  height: 15px;
+  border-left: 1px dashed #1d968f;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% + 1px);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step::before {
+    top: -15px;
+    height: 60px;
+    bottom: unset;
+  }
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step:first-child::before {
+    top: 0;
+    height: 45px;
+  }
+}
+.steps .allSteps .step .images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.steps .allSteps .step .images img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 2px;
+  height: 40px;
+  width: 60px;
+  border-radius: 8px;
+}
+.steps .allSteps .step .icon {
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.steps .allSteps .step .icon i {
+  font-size: 40px;
+  color: #1d968f;
+}
+.steps .allSteps .step .icon::after {
+  content: "";
+  width: 80px;
+  height: 50px;
+  background-color: #b4b9a1;
+  opacity: 0.3;
+  position: absolute;
+  left: calc(50% - 44px);
+  top: 12px;
+  transform: skewX(-55deg) rotateX(60deg) rotateY(14deg);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.steps .allSteps .step:nth-child(even) {
+  margin-top: 220px;
+  padding-bottom: 0px;
+  padding-top: 60px;
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step:nth-child(even) {
+    margin-top: unset;
+    padding-bottom: 30px;
+    padding-top: 70px;
+  }
+}
+.steps .allSteps .step:nth-child(even)::after {
+  bottom: unset;
+  top: 0;
+}
+.steps .allSteps .step:nth-child(even)::before {
+  top: 30px;
+  bottom: unset;
+}
+@media (max-width: 678px) {
+  .steps .allSteps .step:nth-child(even)::before {
+    top: -15px;
+  }
+}
+.steps .allSteps .step:hover .icon::after {
+  transform: skewX(-25deg) rotateX(30deg) rotateY(8deg);
 }/*# sourceMappingURL=style.css.map */

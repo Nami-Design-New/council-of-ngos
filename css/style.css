@@ -522,14 +522,8 @@ content .identify-section .identify-content .identify-content-paragraph {
 }
 .SectionTitle .title {
   font-weight: bold;
-  font-size: 50px !important;
   color: #1d968f;
   margin-bottom: 10px;
-}
-@media (max-width: 768px) {
-  .SectionTitle .title {
-    font-size: 28px !important;
-  }
 }
 .SectionTitle .hint {
   color: #666b88;

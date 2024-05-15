@@ -126,13 +126,14 @@ header .container {
     gap: 24px;
   }
 }
-header .container .logo {
+header .container .header-logo {
   width: 143.283px;
   height: 50.008px;
   order: 1;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
-  header .container .logo {
+  header .container .header-logo {
     order: 3;
     flex: 1;
     display: flex;
@@ -410,10 +411,10 @@ content .mainSlider .swiperControl .swiperBtns .mainSliderNext.swiper-button-dis
   opacity: 0.2;
 }
 content .mainSlider .swiperControl .mainSliderNext::after {
-  background-image: url("../assets/leftWhiteArrow.webp");
+  background-image: url("../assets/leftWhiteArrow.svg");
 }
 content .mainSlider .swiperControl .mainSliderPrev::after {
-  background-image: url("../assets/rightWhiteArrow.webp");
+  background-image: url("../assets/rightWhiteArrow.svg");
 }
 content .mainSlider .swiperControl .swiper-pagination {
   position: relative;
@@ -1018,10 +1019,10 @@ content .identify-section .identify-box .identify-content .identify-content-list
   opacity: 0.2;
 }
 .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext::after {
-  background-image: url("../assets/leftColorArrow.webp");
+  background-image: url("../assets/leftColorArrow.svg");
 }
 .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev::after {
-  background-image: url("../assets/rightColorArrow.webp");
+  background-image: url("../assets/rightColorArrow.svg");
 }
 .news-section .container .news-content {
   width: 100%;
@@ -1377,6 +1378,7 @@ footer .container .about_company .footerLogo {
   justify-content: center;
   align-items: flex-end;
   gap: 10px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   footer .container .about_company .footerLogo {

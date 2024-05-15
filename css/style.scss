@@ -127,10 +127,11 @@ header {
       gap: 24px;
     }
 
-    .logo {
+    .header-logo {
       width: 143.283px;
       height: 50.008px;
       order: 1;
+      cursor: pointer;
 
       @media (max-width: 991px) {
         order: 3;
@@ -421,12 +422,12 @@ content {
       }
       .mainSliderNext {
         &::after {
-          background-image: url("../assets/leftWhiteArrow.webp");
+          background-image: url("../assets/leftWhiteArrow.svg");
         }
       }
       .mainSliderPrev {
         &::after {
-          background-image: url("../assets/rightWhiteArrow.webp");
+          background-image: url("../assets/rightWhiteArrow.svg");
         }
       }
 
@@ -1041,12 +1042,12 @@ content {
 
           .NewsNext {
             &::after {
-              background-image: url("../assets/leftColorArrow.webp");
+              background-image: url("../assets/leftColorArrow.svg");
             }
           }
           .NewsPrev {
             &::after {
-              background-image: url("../assets/rightColorArrow.webp");
+              background-image: url("../assets/rightColorArrow.svg");
             }
           }
         }
@@ -1434,6 +1435,7 @@ footer {
         justify-content: center;
         align-items: flex-end;
         gap: 10px;
+        cursor: pointer;
 
         @media (max-width: 768px) {
           width: 100%;

@@ -5,7 +5,9 @@ $white-color: #ffffff;
 $text-color: #666b88;
 $body-color: #f3f3f9;
 $Main-08: rgba(29, 150, 143, 0.08);
+$Main-02: rgba(29, 150, 143, 0.2);
 $transition: all 0.3s ease-in-out;
+
 @font-face {
   font-family: MadaniArabic-Regular;
   font-display: swap;
@@ -25,6 +27,11 @@ $transition: all 0.3s ease-in-out;
   outline: none;
   direction: rtl;
   scroll-behavior: smooth;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -995,6 +1002,11 @@ content {
             border-radius: 83.333px;
             border: 1px solid $mainColor;
             background: $white-color;
+            transition: $transition;
+            -webkit-transition: $transition;
+            -moz-transition: $transition;
+            -ms-transition: $transition;
+            -o-transition: $transition;
 
             &::after {
               content: "";
@@ -1112,3 +1124,484 @@ content {
 }
 
 // End News
+// Start contact
+.contact-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  // contact form
+  .contact-info-form-section {
+    display: flex;
+    padding: 60px 80px 40px 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    background-color: $white-color;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 30px 40px 20px 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      width: 421px;
+      padding: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      align-self: stretch;
+      border-radius: 8px;
+      background: $Main-08;
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h4 {
+        width: 100%;
+        color: var(--Dark, var(--White, #0d0d0d));
+        text-align: right;
+        font-family: MadaniArabic-SemiBold;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        .contact-info-list-item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 16px;
+          align-self: stretch;
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.01px;
+
+            p {
+              color: var(--Text, #666b88);
+              text-align: right;
+              font-family: MadaniArabic-Regular;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              &.heading {
+                color: $dark-color;
+              }
+            }
+          }
+
+          .icon {
+            display: flex;
+            height: 64px;
+            min-width: 64px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 32px;
+            border: 2px solid $mainColor;
+            transition: $transition;
+            -webkit-transition: $transition;
+            -moz-transition: $transition;
+            -ms-transition: $transition;
+            -o-transition: $transition;
+
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-form {
+      max-width: 100%;
+      display: flex;
+      padding: 40px 20px;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: 40px 20px;
+      flex: 1 0 0;
+      align-self: stretch;
+      flex-wrap: wrap;
+      border-radius: 8px;
+      background: $Main-08;
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
+      position: relative;
+
+      .inputfield {
+        display: flex;
+        height: 58px;
+        padding: 16px 8px 0px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+        max-width: 100%;
+        position: relative;
+        max-width: 100%;
+        min-width: 380px;
+        flex: 1;
+
+        @media (max-width: 768px) {
+          min-width: 100%;
+          width: 100%;
+        }
+
+        &.textareaField {
+          height: 123px;
+
+          label {
+            top: 0;
+            transform: none;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+          }
+        }
+
+        label {
+          color: var(--Text, #666b88);
+          text-align: right;
+          font-family: MadaniArabic-Regular;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 8px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          right: 0;
+          order: 1;
+          transition: $transition;
+          -webkit-transition: $transition;
+          -moz-transition: $transition;
+          -ms-transition: $transition;
+          -o-transition: $transition;
+        }
+
+        .highlight {
+          height: 1px;
+          flex-shrink: 0;
+          align-self: stretch;
+          background: $Main-02;
+          order: 3;
+          transition: $transition;
+          -webkit-transition: $transition;
+          -moz-transition: $transition;
+          -ms-transition: $transition;
+          -o-transition: $transition;
+        }
+
+        input,
+        textarea {
+          height: 58px;
+          position: relative;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          order: 2;
+
+          &:focus + label {
+            top: 0;
+            font-weight: 800;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 123px;
+          resize: none;
+
+          &:focus + label {
+            top: -20px;
+          }
+        }
+      }
+
+      .btnBox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+          display: flex;
+          width: 197px;
+          height: 50px;
+          padding: 12px 8px;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          border-radius: 12px;
+          background-color: transparent;
+          border: 1px solid $mainColor;
+          color: $mainColor;
+          transition: $transition;
+          -webkit-transition: $transition;
+          -moz-transition: $transition;
+          -ms-transition: $transition;
+          -o-transition: $transition;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $mainColor;
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+
+  // contact map
+  .map-section {
+    width: 100%;
+  }
+}
+// Start Footer
+footer {
+  display: flex;
+  width: 100%;
+  padding: 40px 80px;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white-color;
+
+  @media (max-width: 768px) {
+    padding: 40px;
+  }
+
+  .container {
+    display: flex;
+    gap: 0 15px;
+    align-items: flex-start;
+    gap: 64px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .about_company {
+      display: flex;
+      width: 368px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .footerLogo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          align-items: center;
+        }
+
+        img {
+          width: 143px;
+          height: 50px;
+        }
+      }
+
+      .about-content {
+        align-self: stretch;
+        color: $text-color;
+        text-align: right;
+        font-family: MadaniArabic-Regular;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .footerLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1 0 0;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h3 {
+        color: $mainColor;
+        text-align: right;
+        font-family: MadaniArabic-Regular;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .footerNavList {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        gap: 8px;
+        align-self: stretch;
+        flex-wrap: wrap;
+
+        li {
+          display: flex;
+          min-width: 180px;
+          padding: 4px 8px;
+          justify-content: flex-end;
+          align-items: center;
+
+          a {
+            flex: 1 0 0;
+            color: $dark-color;
+            text-align: right;
+            font-family: MadaniArabic-Regular;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .support {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1 0 0;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h3 {
+        color: $mainColor;
+        text-align: right;
+        font-family: MadaniArabic-Regular;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .support-contact-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 8px;
+          align-self: stretch;
+
+          p {
+            color: $dark-color;
+            text-align: right;
+            font-family: MadaniArabic-Regular;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .support-contact-social {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        position: relative;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          justify-content: center;
+        }
+
+        li {
+          display: flex;
+          position: relative;
+          width: 40px;
+          height: 40px;
+          flex-direction: column;
+          align-items: flex-start;
+          cursor: pointer;
+
+          a {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            padding: 12px 13px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 1px solid $dark-color;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Footer
+
+// End contact

@@ -299,6 +299,7 @@ content {
   align-items: center;
   gap: 40px;
   position: relative;
+  background-color: #ffffff;
 }
 content .mainSlider {
   position: relative;
@@ -895,6 +896,7 @@ content .identify-section .identify-box .identify-content .identify-content-list
   align-items: center;
   gap: 40px;
   padding: 40px 0;
+  background-color: rgba(181, 186, 161, 0.1019607843);
 }
 .news-section .container {
   display: flex;

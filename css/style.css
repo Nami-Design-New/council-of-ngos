@@ -248,13 +248,16 @@ header .container .user-info .user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  background: url("../assets/user.png") lightgray 50%/cover no-repeat;
 }
 @media (max-width: 768px) {
   header .container .user-info .user-avatar {
     width: 40px;
     height: 40px;
   }
+}
+header .container .user-info .user-avatar img {
+  width: 40px;
+  height: 40px;
 }
 header .container .user-info .user-name {
   color: var(--Dark, #0d0d0d);
@@ -309,7 +312,7 @@ content .mainSlider {
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-  background: linear-gradient(0deg, rgba(30, 34, 44, 0.35) 0%, rgba(30, 34, 44, 0.35) 100%), url("../assets/slideshow-img-01.png") lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(30, 34, 44, 0.35) 0%, rgba(30, 34, 44, 0.35) 100%), url("../assets/slideshow-img-01.webp") lightgray 50%/cover no-repeat;
 }
 content .mainSlider .swiper-wrapper {
   width: 100%;
@@ -407,10 +410,10 @@ content .mainSlider .swiperControl .swiperBtns .mainSliderNext.swiper-button-dis
   opacity: 0.2;
 }
 content .mainSlider .swiperControl .mainSliderNext::after {
-  background-image: url("../assets/leftWhiteArrow.svg");
+  background-image: url("../assets/leftWhiteArrow.webp");
 }
 content .mainSlider .swiperControl .mainSliderPrev::after {
-  background-image: url("../assets/rightWhiteArrow.svg");
+  background-image: url("../assets/rightWhiteArrow.webp");
 }
 content .mainSlider .swiperControl .swiper-pagination {
   position: relative;
@@ -908,6 +911,7 @@ content .identify-section .identify-box .identify-content .identify-content-list
 }
 @media (max-width: 768px) {
   .news-section .container {
+    padding: 0 40px;
     gap: 30px;
   }
 }
@@ -1014,10 +1018,10 @@ content .identify-section .identify-box .identify-content .identify-content-list
   opacity: 0.2;
 }
 .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext::after {
-  background-image: url("../assets/leftColorArrow.svg");
+  background-image: url("../assets/leftColorArrow.webp");
 }
 .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev::after {
-  background-image: url("../assets/rightColorArrow.svg");
+  background-image: url("../assets/rightColorArrow.webp");
 }
 .news-section .container .news-content {
   width: 100%;

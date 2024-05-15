@@ -252,9 +252,13 @@ header {
         width: 40px;
         height: 40px;
         border-radius: 100px;
-        background: url("../assets/user.png") lightgray 50% / cover no-repeat;
 
         @media (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+
+        img {
           width: 40px;
           height: 40px;
         }
@@ -321,7 +325,7 @@ content {
         rgba(30, 34, 44, 0.35) 0%,
         rgba(30, 34, 44, 0.35) 100%
       ),
-      url("../assets/slideshow-img-01.png") lightgray 50% / cover no-repeat;
+      url("../assets/slideshow-img-01.webp") lightgray 50% / cover no-repeat;
 
     .swiper-wrapper {
       width: 100%;
@@ -417,12 +421,12 @@ content {
       }
       .mainSliderNext {
         &::after {
-          background-image: url("../assets/leftWhiteArrow.svg");
+          background-image: url("../assets/leftWhiteArrow.webp");
         }
       }
       .mainSliderPrev {
         &::after {
-          background-image: url("../assets/rightWhiteArrow.svg");
+          background-image: url("../assets/rightWhiteArrow.webp");
         }
       }
 
@@ -931,6 +935,7 @@ content {
     align-self: stretch;
 
     @media (max-width: 768px) {
+      padding: 0 40px;
       gap: 30px;
     }
 
@@ -1036,12 +1041,12 @@ content {
 
           .NewsNext {
             &::after {
-              background-image: url("../assets/leftColorArrow.svg");
+              background-image: url("../assets/leftColorArrow.webp");
             }
           }
           .NewsPrev {
             &::after {
-              background-image: url("../assets/rightColorArrow.svg");
+              background-image: url("../assets/rightColorArrow.webp");
             }
           }
         }

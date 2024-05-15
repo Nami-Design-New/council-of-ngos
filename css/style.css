@@ -401,10 +401,10 @@ content .mainSlider .swiperControl .swiperBtns .mainSliderNext.swiper-button-dis
   opacity: 0.2;
 }
 content .mainSlider .swiperControl .mainSliderNext::after {
-  background-image: url("../assets/leftArrow.svg");
+  background-image: url("../assets/leftWhiteArrow.svg");
 }
 content .mainSlider .swiperControl .mainSliderPrev::after {
-  background-image: url("../assets/rightArrow.svg");
+  background-image: url("../assets/rightWhiteArrow.svg");
 }
 content .mainSlider .swiperControl .swiper-pagination {
   position: relative;
@@ -881,4 +881,197 @@ content .identify-section .identify-box .identify-content .identify-content-list
 }
 .parteners-section .partnersSlider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.news-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+.news-section .container {
+  display: flex;
+  padding: 0px 80px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 48px;
+  align-self: stretch;
+}
+@media (max-width: 768px) {
+  .news-section .container {
+    gap: 30px;
+  }
+}
+.news-section .container .news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+@media (max-width: 678px) {
+  .news-section .container .news-header {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.news-section .container .news-header .news-header-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+.news-section .container .news-header .news-header-heading h4 {
+  color: var(--Main, #1d968f);
+  text-align: right;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.news-section .container .news-header .news-header-heading p {
+  color: var(--Text, #666b88);
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.news-section .container .news-header .newsSwiperControl {
+  position: relative;
+}
+@media (max-width: 678px) {
+  .news-section .container .news-header .newsSwiperControl {
+    width: 100%;
+  }
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 678px) {
+  .news-section .container .news-header .newsSwiperControl .swiperBtns {
+    width: 100%;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev,
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 5px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 83.333px;
+  border: 1px solid #1d968f;
+  background: #ffffff;
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev::after,
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext::after {
+  content: "";
+  width: 20px;
+  height: 10.049px;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev::after,
+  .news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext::after {
+    width: 15px;
+    height: 15px;
+  }
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev.swiper-button-disabled,
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext.swiper-button-disabled {
+  opacity: 0.2;
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsNext::after {
+  background-image: url("../assets/leftColorArrow.svg");
+}
+.news-section .container .news-header .newsSwiperControl .swiperBtns .NewsPrev::after {
+  background-image: url("../assets/rightColorArrow.svg");
+}
+.news-section .container .news-content {
+  width: 100%;
+  position: relative;
+}
+.news-section .container .news-content.row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  cursor: grab;
+}
+.news-section .container .news-content.row .news-link-box {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.news-section .container .news-content.row .news-link-box .news-img-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+}
+.news-section .container .news-content.row .news-link-box .news-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-section .container .news-content.row .news-link-box .data {
+  display: flex;
+  padding-left: 16px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  align-self: stretch;
+}
+.news-section .container .news-content.row .news-link-box .data h5 {
+  width: 100%;
+  align-self: stretch;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-section .container .news-content.row .news-link-box .data p {
+  align-self: stretch;
+  color: #666b88;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+}
+.news-section .container .news-content.row .news-link-box .data p.news-paragraph-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

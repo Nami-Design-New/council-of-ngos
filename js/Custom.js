@@ -58,4 +58,35 @@ $(document).ready(function () {
       },
     },
   });
+
+  var newsSwiper = new Swiper(".swiper.news-content", {
+    navigation: {
+      nextEl: ".NewsNext",
+      prevEl: ".NewsPrev",
+    },
+    loop: true,
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      450: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
 });

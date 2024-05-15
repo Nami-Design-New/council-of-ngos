@@ -121,7 +121,7 @@ header .container {
   gap: 24px;
   flex: 1 0 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container {
     gap: 24px;
   }
@@ -131,7 +131,7 @@ header .container .logo {
   height: 50.008px;
   order: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .logo {
     order: 3;
     flex: 1;
@@ -155,7 +155,7 @@ header .container .menu-icon {
   -o-transition: all 0.3s ease-in-out;
   order: 5;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .menu-icon {
     display: flex;
   }
@@ -188,7 +188,7 @@ header .container .navList {
   -o-transition: all 0.3s ease-in-out;
   order: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .navList {
     position: absolute;
     flex-direction: column;
@@ -238,7 +238,7 @@ header .container .user-info {
   cursor: pointer;
   order: 3;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .user-info {
     padding: 4px;
     order: 2;
@@ -249,7 +249,7 @@ header .container .user-info .user-avatar {
   height: 40px;
   border-radius: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .user-info .user-avatar {
     width: 40px;
     height: 40px;
@@ -267,7 +267,7 @@ header .container .user-info .user-name {
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .user-info .user-name {
     display: none;
   }
@@ -286,7 +286,7 @@ header .container .authBtn {
   -o-border-radius: 8px;
   order: 4;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container .authBtn {
     order: 1;
     font-size: 13px;

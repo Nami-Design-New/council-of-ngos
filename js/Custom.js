@@ -3,7 +3,7 @@ $(document).ready(function () {
   let menuIcon = document.querySelector(`header .container .menu-icon img`);
   let navMenu = document.querySelector(`header .container .navList`);
 
-  menuIconBox.addEventListener("click", function () {
+  menuIconBox?.addEventListener("click", function () {
     if (navMenu.classList.contains("open")) {
       navMenu.classList.remove("open");
       menuIcon.src = "assets/menu-close.png";

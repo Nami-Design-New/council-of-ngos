@@ -1,8 +1,15 @@
 $(document).ready(function () {
-  let menuIconBox = document.querySelector(`header .container .menu-icon`);
-  let menuIcon = document.querySelector(`header .container .menu-icon img`);
-  let navMenu = document.querySelector(`header .container .navList`);
+  const menuIconBox = document.querySelector(`header .container .menu-icon`);
+  const menuIcon = document.querySelector(`header .container .menu-icon img`);
+  const navMenu = document.querySelector(`header .container .navList`);
+  const passwordInput = document.querySelector(
+    `.auth-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
+  );
+  const passwordIcon = document.querySelector(
+    `.auth-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
+  );
 
+  // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
     if (navMenu.classList.contains("open")) {
       navMenu.classList.remove("open");
@@ -10,6 +17,15 @@ $(document).ready(function () {
     } else {
       navMenu.classList.add("open");
       menuIcon.src = "assets/menu-open.png";
+    }
+  });
+
+  // toggle showing password
+  passwordIcon?.addEventListener("click", function () {
+    if (passwordInput?.getAttribute("type") === "text") {
+      passwordInput.setAttribute("type", "password");
+    } else if (passwordInput?.getAttribute("type") === "password") {
+      passwordInput.setAttribute("type", "text");
     }
   });
 

@@ -1882,7 +1882,7 @@ footer {
   width: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: $white-color;
 
   figure {
@@ -1897,7 +1897,7 @@ footer {
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -2086,6 +2086,70 @@ footer {
             }
           }
         }
+
+        &.register-wizard {
+          display: flex;
+          flex-direction: row;
+          padding: 16px 24px;
+          align-items: center;
+          gap: 20px;
+          align-self: stretch;
+          border-radius: 24px;
+          background: rgba(180, 185, 161, 0.2);
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+
+          .wizard-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &.active {
+              color: $mainColor;
+
+              .wizard-tag-index-box {
+                background-color: $Main-08;
+                border-color: $mainColor;
+              }
+            }
+
+            .wizard-tag-index-box {
+              display: flex;
+              width: 40px;
+              height: 40px;
+              padding: 10px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 100px;
+              border: 1px solid $dark-color;
+              background: $Main-08;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              background-color: $white-color;
+            }
+          }
+
+          .wizard-line {
+            flex: 1 0 0;
+            height: 1px;
+            background-color: #aaa;
+
+            @media (max-width: 768px) {
+              width: 2px;
+              flex: unset;
+              height: 40px;
+              position: relative;
+              right: 20px;
+            }
+          }
+        }
       }
 
       .auth-form {
@@ -2095,7 +2159,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        gap: 16px;
+        gap: 40px;
         align-self: stretch;
 
         .auth-form-body {
@@ -2130,7 +2194,8 @@ footer {
                 align-self: stretch;
               }
 
-              input {
+              input,
+              select {
                 display: flex;
                 min-height: 54px;
                 padding: 16px;
@@ -2183,7 +2248,8 @@ footer {
             align-self: stretch;
             flex-wrap: wrap;
 
-            input {
+            input,
+            select {
               max-width: 90px;
               display: flex;
               padding: 20px 16px;
@@ -2237,7 +2303,8 @@ footer {
           gap: 16px;
           align-self: stretch;
 
-          button {
+          button,
+          .btn {
             display: flex;
             padding: 16px 20px;
             justify-content: center;
@@ -2271,6 +2338,7 @@ footer {
             align-self: stretch;
             border-radius: 12px;
             border: 1px solid $gray-color;
+            cursor: pointer;
 
             @media (max-width: 768px) {
               padding: 6px 8px;
@@ -2284,7 +2352,7 @@ footer {
         }
       }
 
-      .register-link-box {
+      .auth-link-box {
         width: 100%;
         display: flex;
         justify-content: flex-start;

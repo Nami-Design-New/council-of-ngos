@@ -1786,7 +1786,7 @@ footer .container .support .support-contact-social li a img {
   width: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #ffffff;
 }
 .auth-page figure {
@@ -1802,8 +1802,8 @@ footer .container .support .support-contact-social li a img {
 .auth-page figure img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .auth-page .auth-container {
   height: 100%;
@@ -1986,6 +1986,66 @@ footer .container .support .support-contact-social li a img {
     width: 100%;
   }
 }
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 24px;
+  background: rgba(180, 185, 161, 0.2);
+}
+@media (max-width: 768px) {
+  .auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag.active {
+  color: #1d968f;
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag.active .wizard-tag-index-box {
+  background-color: rgba(29, 150, 143, 0.08);
+  border-color: #1d968f;
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag .wizard-tag-index-box {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #0d0d0d;
+  background: rgba(29, 150, 143, 0.08);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #ffffff;
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-line {
+  flex: 1 0 0;
+  height: 1px;
+  background-color: #aaa;
+}
+@media (max-width: 768px) {
+  .auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-line {
+    width: 2px;
+    flex: unset;
+    height: 40px;
+    position: relative;
+    right: 20px;
+  }
+}
 .auth-page .auth-container .auth-form-container .auth-form {
   width: 100%;
   display: flex;
@@ -1993,7 +2053,7 @@ footer .container .support .support-contact-social li a img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 16px;
+  gap: 40px;
   align-self: stretch;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body {
@@ -2027,7 +2087,8 @@ footer .container .support .support-contact-social li a img {
   gap: 8px;
   align-self: stretch;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select {
   display: flex;
   min-height: 54px;
   padding: 16px;
@@ -2043,10 +2104,11 @@ footer .container .support .support-contact-social li a img {
   line-height: normal;
   text-align: right;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::-moz-placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select::-moz-placeholder {
   color: #aaa;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::placeholder,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select::placeholder {
   color: #aaa;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon {
@@ -2078,7 +2140,8 @@ footer .container .support .support-contact-social li a img {
   align-self: stretch;
   flex-wrap: wrap;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select {
   max-width: 90px;
   display: flex;
   padding: 20px 16px;
@@ -2097,15 +2160,17 @@ footer .container .support .support-contact-social li a img {
   line-height: normal;
 }
 @media (max-width: 768px) {
-  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input {
+  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input,
+  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select {
     font-size: 30px;
     max-width: 50px;
   }
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::-moz-placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select::-moz-placeholder {
   color: #aaa;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::placeholder,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select::placeholder {
   color: #aaa;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .forget-password-link {
@@ -2130,7 +2195,8 @@ footer .container .support .support-contact-social li a img {
   gap: 16px;
   align-self: stretch;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container button {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container button,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container .btn {
   display: flex;
   padding: 16px 20px;
   justify-content: center;
@@ -2149,7 +2215,8 @@ footer .container .support .support-contact-social li a img {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container button {
+  .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container button,
+  .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container .btn {
     padding: 8px 16px;
   }
 }
@@ -2164,6 +2231,7 @@ footer .container .support .support-contact-social li a img {
   align-self: stretch;
   border-radius: 12px;
   border: 1px solid #777;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container .back-link {
@@ -2175,7 +2243,7 @@ footer .container .support .support-contact-social li a img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.auth-page .auth-container .auth-form-container .register-link-box {
+.auth-page .auth-container .auth-form-container .auth-link-box {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -2183,7 +2251,7 @@ footer .container .support .support-contact-social li a img {
   gap: 4px;
   align-self: stretch;
 }
-.auth-page .auth-container .auth-form-container .register-link-box p {
+.auth-page .auth-container .auth-form-container .auth-link-box p {
   color: #0d0d0d;
   text-align: right;
   font-size: 15px;
@@ -2191,7 +2259,7 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
   line-height: normal;
 }
-.auth-page .auth-container .auth-form-container .register-link-box a {
+.auth-page .auth-container .auth-form-container .auth-link-box a {
   color: #1d968f;
   text-align: right;
   font-family: MadaniArabic-Regular;

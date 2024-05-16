@@ -8,6 +8,12 @@ $(document).ready(function () {
   const loginPasswordIcon = document.querySelector(
     `.login-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
   );
+  const registerPasswordInput = document.querySelector(
+    `.register-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
+  );
+  const registerPasswordIcon = document.querySelector(
+    `.register-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
+  );
   const resetPasswordInput = document.querySelector(
     `.reset-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password [type="password"]`
   );
@@ -20,6 +26,9 @@ $(document).ready(function () {
   const confirmResetPasswordIcon = document.querySelector(
     `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password .passwordIcon`
   );
+  const registerForm = document.querySelectorAll(
+    `.auth-page .auth-container .auth-form-container .auth-form`
+  );
 
   // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
@@ -29,6 +38,15 @@ $(document).ready(function () {
     } else {
       navMenu.classList.add("open");
       menuIcon.src = "assets/menu-open.png";
+    }
+  });
+
+  // toggle showing password at register
+  registerPasswordIcon?.addEventListener("click", function () {
+    if (registerPasswordInput?.getAttribute("type") === "text") {
+      registerPasswordInput.setAttribute("type", "password");
+    } else if (registerPasswordInput?.getAttribute("type") === "password") {
+      registerPasswordInput.setAttribute("type", "text");
     }
   });
 
@@ -58,6 +76,23 @@ $(document).ready(function () {
     } else if (confirmResetPasswordInput?.getAttribute("type") === "password") {
       confirmResetPasswordInput.setAttribute("type", "text");
     }
+  });
+
+  // register forms wizards
+  var currentwizard = 1;
+  $(".auth-page .auth-container .auth-form-container .auth-form").hide();
+  $("#form-" + currentwizard).show();
+
+  $(`#form-1 span.btn`).click(function () {
+    $("#form-" + currentwizard).hide();
+    currentwizard++;
+    $("#form-" + currentwizard).show();
+  });
+
+  $(`#form-2 .back-link`).click(function () {
+    $("#form-" + currentwizard).hide();
+    currentwizard--;
+    $("#form-" + currentwizard).show();
   });
 
   const mainSlider = new Swiper(".mainSlider", {

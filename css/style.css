@@ -1966,11 +1966,18 @@ footer .container .support .support-contact-social li a img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-form-container .auth-form-heading .heading-note {
     font-size: 16px;
   }
+}
+.auth-page .auth-container .auth-form-container .auth-form-heading .heading-note span {
+  color: #1d968f;
 }
 .auth-page .auth-container .auth-form-container .auth-form {
   width: 100%;
@@ -2054,6 +2061,62 @@ footer .container .support .support-contact-social li a img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char {
+  position: relative;
+  display: flex;
+  min-height: 60px;
+  padding: 20px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+  position: relative;
+  color: #1d968f;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char::-moz-placeholder {
+  color: #aaa;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char::placeholder {
+  color: #aaa;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .forget-password-link {
   display: flex;
@@ -2141,6 +2204,31 @@ footer .container .support .support-contact-social li a img {
 .auth-page .auth-container .auth-form-container .register-link-box a {
   color: #1d968f;
   text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.auth-page .auth-container .auth-form-container .resend-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+}
+.auth-page .auth-container .auth-form-container .resend-container .timer {
+  color: #0d0d0d;
+  text-align: center;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.auth-page .auth-container .auth-form-container .resend-container .resend-button {
+  color: #1d968f;
   font-family: MadaniArabic-Regular;
   font-size: 15px;
   font-style: normal;

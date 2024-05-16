@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>مجلس الجمعيات الأهلية | تسجيل الدخول</title>
+    <title>مجلس الجمعيات الأهلية | كلمة المرور الجديدة</title>
     <!-- favicon -->
     <link rel="icon" type="image/icon" href="assets/fav.svg" />
     <!-- swiper -->
@@ -17,7 +17,7 @@
 
   <body>
     <!-- Start login form -->
-    <main class="auth-page login-page">
+    <main class="auth-page reset-page">
       <section class="auth-container">
         <div class="auth-heading">
           <a href="/index.html" class="auth-logo">
@@ -28,38 +28,40 @@
             />
           </a>
           <span class="auth-heading-line"></span>
-          <h3>تسجيل الدخول</h3>
+          <h3>كلمة المرور الجديدة</h3>
         </div>
         <div class="auth-form-container">
           <div class="auth-form-heading">
             <div class="heading-title">
-              <h2>مرحبًا بعودتك !</h2>
-              <div class="emoji">
-                <img src="assets/waving-hand.svg" alt="waving hand" />
-              </div>
+              <h2>كلمة المرور الجديدة</h2>
             </div>
-            <p class="heading-note">
-              الرجاء إدخال عنوان البريد الإلكتروني لإتمام عملية الدخول
-            </p>
+            <p class="heading-note">الرجاء إنشاء كلمة مرور يسهل تذكرها</p>
           </div>
           <form class="auth-form">
             <div class="auth-form-body">
               <div class="form-inputs-container">
-                <div class="input-group">
-                  <label for="emailInput">البريد الإلكتروني</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="emailInput"
-                    placeholder="مثال: mail@mail.com"
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="passwordInput">كلمة المرور</label>
+                <div class="input-group reset-password">
+                  <label for="resetPasswordInput">كلمة المرور</label>
                   <input
                     type="password"
                     name="password"
-                    id="passwordInput"
+                    id="resetPasswordInput"
+                    placeholder="************"
+                  />
+                  <span class="passwordIcon">
+                    <img
+                      src="assets/show-passowd.svg"
+                      alt="show password icon"
+                      title="Toggle password visiblity"
+                    />
+                  </span>
+                </div>
+                <div class="input-group confirm-password">
+                  <label for="confirmPasswordInput">تأكيد كلمة المرور</label>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPasswordInput"
                     placeholder="************"
                   />
                   <span class="passwordIcon">
@@ -71,9 +73,6 @@
                   </span>
                 </div>
               </div>
-              <a href="/forget.html" class="forget-password-link"
-                >نسيت كلمة المرور؟</a
-              >
             </div>
             <div class="auth-form-btns-container">
               <a href="/index.html" class="back-link">
@@ -83,13 +82,9 @@
                   title="back home"
                 />
               </a>
-              <button type="submit">تسجيل الدخول</button>
+              <button type="submit">حفظ</button>
             </div>
           </form>
-          <div class="register-link-box">
-            <p>ليس لديك حساب ؟</p>
-            <a href="/register.html">إنشاء حساب</a>
-          </div>
         </div>
       </section>
       <figure>

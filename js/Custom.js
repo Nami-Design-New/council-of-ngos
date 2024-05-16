@@ -2,12 +2,26 @@ $(document).ready(function () {
   const menuIconBox = document.querySelector(`header .container .menu-icon`);
   const menuIcon = document.querySelector(`header .container .menu-icon img`);
   const navMenu = document.querySelector(`header .container .navList`);
-  const passwordInput = document.querySelector(
-    `.auth-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
+  const loginPasswordInput = document.querySelector(
+    `.login-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
   );
-  const passwordIcon = document.querySelector(
-    `.auth-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
+  const loginPasswordIcon = document.querySelector(
+    `.login-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
   );
+  const resetPasswordInput = document.querySelector(
+    `.reset-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password [type="password"]`
+  );
+  const resetPasswordIcon = document.querySelector(
+    `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password .passwordIcon`
+  );
+  const confirmResetPasswordInput = document.querySelector(
+    `.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password [type="password"]`
+  );
+  const confirmResetPasswordIcon = document.querySelector(
+    `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password .passwordIcon`
+  );
+
+  console.log(resetPasswordInput);
 
   // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
@@ -20,12 +34,31 @@ $(document).ready(function () {
     }
   });
 
-  // toggle showing password
-  passwordIcon?.addEventListener("click", function () {
-    if (passwordInput?.getAttribute("type") === "text") {
-      passwordInput.setAttribute("type", "password");
-    } else if (passwordInput?.getAttribute("type") === "password") {
-      passwordInput.setAttribute("type", "text");
+  // toggle showing password at login
+  loginPasswordIcon?.addEventListener("click", function () {
+    if (loginPasswordInput?.getAttribute("type") === "text") {
+      loginPasswordInput.setAttribute("type", "password");
+    } else if (loginPasswordInput?.getAttribute("type") === "password") {
+      loginPasswordInput.setAttribute("type", "text");
+    }
+  });
+
+  // toggle showing password at reset
+  resetPasswordIcon?.addEventListener("click", function () {
+    console.log(resetPasswordInput);
+    if (resetPasswordInput?.getAttribute("type") === "text") {
+      resetPasswordInput.setAttribute("type", "password");
+    } else if (resetPasswordInput?.getAttribute("type") === "password") {
+      resetPasswordInput.setAttribute("type", "text");
+    }
+  });
+
+  // toggle showing confirm password at reset
+  confirmResetPasswordIcon?.addEventListener("click", function () {
+    if (confirmResetPasswordInput?.getAttribute("type") === "text") {
+      confirmResetPasswordInput.setAttribute("type", "password");
+    } else if (confirmResetPasswordInput?.getAttribute("type") === "password") {
+      confirmResetPasswordInput.setAttribute("type", "text");
     }
   });
 

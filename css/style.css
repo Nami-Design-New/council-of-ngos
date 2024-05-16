@@ -1974,10 +1974,17 @@ footer .container .support .support-contact-social li a img {
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-form-container .auth-form-heading .heading-note {
     font-size: 16px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .auth-page .auth-container .auth-form-container .auth-form-heading .heading-note span {
   color: #1d968f;
+}
+@media (max-width: 768px) {
+  .auth-page .auth-container .auth-form-container .auth-form-heading .heading-note span {
+    width: 100%;
+  }
 }
 .auth-page .auth-container .auth-form-container .auth-form {
   width: 100%;
@@ -2065,58 +2072,41 @@ footer .container .support .support-contact-social li a img {
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   gap: 8px;
   align-self: stretch;
+  flex-wrap: wrap;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char {
-  position: relative;
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input {
+  max-width: 90px;
   display: flex;
-  min-height: 60px;
   padding: 20px 16px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   flex: 1 0 0;
-  align-self: stretch;
-  position: relative;
-  color: #1d968f;
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+  color: var(--Main, #1d968f);
   font-family: MadaniArabic-SemiBold;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char::-moz-placeholder {
-  color: #aaa;
-  font-family: MadaniArabic-SemiBold;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+@media (max-width: 768px) {
+  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input {
+    font-size: 30px;
+    max-width: 50px;
+  }
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-char::placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::-moz-placeholder {
   color: #aaa;
-  font-family: MadaniArabic-SemiBold;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+}
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::placeholder {
+  color: #aaa;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .forget-password-link {
   display: flex;

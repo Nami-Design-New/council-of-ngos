@@ -2074,10 +2074,16 @@ footer {
 
           @media (max-width: 768px) {
             font-size: 16px;
+            flex-direction: column;
+            align-items: flex-start;
           }
 
           span {
             color: $mainColor;
+
+            @media (max-width: 768px) {
+              width: 100%;
+            }
           }
         }
       }
@@ -2171,43 +2177,38 @@ footer {
           .otp-code-container {
             width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-evenly;
             align-items: center;
             gap: 8px;
             align-self: stretch;
+            flex-wrap: wrap;
 
-            .otp-char {
-              position: relative;
+            input {
+              max-width: 90px;
               display: flex;
-              min-height: 60px;
               padding: 20px 16px;
               justify-content: center;
               align-items: center;
               gap: 8px;
               flex: 1 0 0;
-              align-self: stretch;
-              position: relative;
-              color: $mainColor;
+              border-radius: 12px;
+              border: 1px solid $InputStroke;
+              background: $InputBG;
+
+              color: var(--Main, #1d968f);
               font-family: MadaniArabic-SemiBold;
               font-size: 40px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;
 
+              @media (max-width: 768px) {
+                font-size: 30px;
+                max-width: 50px;
+              }
+
               &::placeholder {
                 color: $InputHint;
-                font-family: MadaniArabic-SemiBold;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
               }
             }
           }

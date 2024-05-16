@@ -21,8 +21,6 @@ $(document).ready(function () {
     `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password .passwordIcon`
   );
 
-  console.log(resetPasswordInput);
-
   // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
     if (navMenu.classList.contains("open")) {

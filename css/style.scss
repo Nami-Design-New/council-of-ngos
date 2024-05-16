@@ -1102,9 +1102,10 @@ content {
               font-style: normal;
               font-weight: 400;
               line-height: normal;
-              white-space: nowrap;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
               overflow: hidden;
-              text-overflow: ellipsis;
+              -webkit-line-clamp: 1;
             }
 
             p {
@@ -1828,25 +1829,18 @@ footer {
               font-weight: 400;
               line-height: normal;
               position: relative;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
 
               &.item-content-heading {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                @media (max-width: 768px) {
-                  white-space: wrap;
-                  height: 22px;
-                }
+                -webkit-line-clamp: 1;
               }
 
               &.item-content-body {
                 color: $text-color;
                 font-size: 13px;
-                display: -webkit-box;
                 -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
               }
             }
           }
@@ -1856,15 +1850,4 @@ footer {
   }
 }
 // End news page
-
-/*
-
-              &.item-heading {
-                width: 80%;
-                color: $dark-color;
-                font-size: 15px;
-                
-              }
-            }
-*/
 // End contact

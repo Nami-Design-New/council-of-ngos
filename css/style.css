@@ -1072,9 +1072,10 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
 }
 .news-section .container .news-content.row .news-link-box .data p {
   align-self: stretch;
@@ -1742,34 +1743,15 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
   line-height: normal;
   position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .news-section-container .container .moreBlogs .moreBlogs-List .moreBlogs-List-item .moreblogs-item-content p.item-content-heading {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (max-width: 768px) {
-  .news-section-container .container .moreBlogs .moreBlogs-List .moreBlogs-List-item .moreblogs-item-content p.item-content-heading {
-    white-space: wrap;
-    height: 22px;
-  }
+  -webkit-line-clamp: 1;
 }
 .news-section-container .container .moreBlogs .moreBlogs-List .moreBlogs-List-item .moreblogs-item-content p.item-content-body {
   color: #666b88;
   font-size: 13px;
-  display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/*
-
-              &.item-heading {
-                width: 80%;
-                color: $dark-color;
-                font-size: 15px;
-
-              }
-            }
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

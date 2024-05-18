@@ -1806,7 +1806,6 @@ footer .container .support .support-contact-social li a img {
      object-fit: cover;
 }
 .auth-page .auth-container {
-  height: 100%;
   display: flex;
   padding: 80px 120px;
   justify-content: center;
@@ -1814,6 +1813,7 @@ footer .container .support .support-contact-social li a img {
   flex-direction: column;
   gap: 80px;
   flex: 1 0 0;
+  position: relative;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container {

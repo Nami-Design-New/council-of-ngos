@@ -1902,7 +1902,6 @@ footer {
   }
 
   .auth-container {
-    height: 100%;
     display: flex;
     padding: 80px 120px;
     justify-content: center;
@@ -1910,6 +1909,7 @@ footer {
     flex-direction: column;
     gap: 80px;
     flex: 1 0 0;
+    position: relative;
 
     @media (max-width: 768px) {
       padding: 40px;

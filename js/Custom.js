@@ -80,7 +80,7 @@ $(document).ready(function () {
 
   // register forms wizards
   var currentwizard = 1;
-  $(".auth-page .auth-container .auth-form-container .auth-form").hide();
+  $(".auth-page .auth-container .auth-form-container .register-form").hide();
   $("#form-" + currentwizard).show();
 
   $(`#form-1 span.btn`).click(function () {

@@ -2,6 +2,16 @@ $(document).ready(function () {
   const menuIconBox = document.querySelector(`header .container .menu-icon`);
   const menuIcon = document.querySelector(`header .container .menu-icon img`);
   const navMenu = document.querySelector(`header .container .navList`);
+  const userBox = document.querySelector(`header .container .user-info`);
+  const userMenu = document.querySelector(
+    `header .container .user-info .user-menu`
+  );
+  const dateInput = document.querySelector(
+    `.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date]`
+  );
+  const dateIcon = document.querySelector(
+    `.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .dateIcon`
+  );
   const loginPasswordInput = document.querySelector(
     `.login-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
   );
@@ -32,13 +42,27 @@ $(document).ready(function () {
 
   // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
-    if (navMenu.classList.contains("open")) {
+    if (navMenu?.classList.contains("open")) {
       navMenu.classList.remove("open");
       menuIcon.src = "assets/menu-close.png";
     } else {
       navMenu.classList.add("open");
       menuIcon.src = "assets/menu-open.png";
     }
+  });
+
+  // toggle opening the user menu
+  userBox?.addEventListener("click", function () {
+    if (userMenu?.classList.contains("open")) {
+      userMenu.classList.remove("open");
+    } else {
+      userMenu.classList.add("open");
+    }
+  });
+
+  // open the date input by clicking the icon
+  dateIcon?.addEventListener("click", function () {
+    dateInput.focus();
   });
 
   // toggle showing password at register
@@ -79,20 +103,75 @@ $(document).ready(function () {
   });
 
   // register forms wizards
-  var currentwizard = 1;
-  $(".auth-page .auth-container .auth-form-container .register-form").hide();
-  $("#form-" + currentwizard).show();
+  let currentRegisterFormWizard = 1;
+  $(
+    ".register-page .auth-container .auth-form-container .register-form"
+  )?.hide();
+  $(".register-page #form-" + currentRegisterFormWizard).css("display", "flex");
 
-  $(`#form-1 span.btn`).click(function () {
-    $("#form-" + currentwizard).hide();
-    currentwizard++;
-    $("#form-" + currentwizard).show();
+  $(`.register-page #form-1 span.btn`).click(function () {
+    $(".register-page #form-" + currentRegisterFormWizard).hide();
+    if (
+      currentRegisterFormWizard + 1 <=
+      $(`.register-page .auth-container .auth-form-container .register-form`)
+        .length
+    ) {
+      currentRegisterFormWizard++;
+      $(".register-page #form-" + currentRegisterFormWizard).css(
+        "display",
+        "flex"
+      );
+    }
   });
 
-  $(`#form-2 .back-link`).click(function () {
-    $("#form-" + currentwizard).hide();
-    currentwizard--;
-    $("#form-" + currentwizard).show();
+  $(`.register-page #form-2 .back-link`).click(function () {
+    $(".register-page #form-" + currentRegisterFormWizard).hide();
+    if (currentRegisterFormWizard - 1 >= 1) {
+      currentRegisterFormWizard--;
+      $(".register-page #form-" + currentRegisterFormWizard).css(
+        "display",
+        "flex"
+      );
+    }
+  });
+
+  // org register form wizards
+  let currentORGRegisterFormWizard = 1;
+  $(".org-register-page .org-register-container .org-register-form").hide();
+  $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
+    "display",
+    "flex"
+  );
+
+  $(
+    `.org-register-page .org-register-container .org-register-form span.btn`
+  )?.click(function () {
+    $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
+    if (
+      currentORGRegisterFormWizard + 1 <=
+      $(`.org-register-page .org-register-container .org-register-form`).length
+    ) {
+      currentORGRegisterFormWizard++;
+      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
+        "display",
+        "flex"
+      );
+    } else {
+      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
+        "display",
+        "flex"
+      );
+    }
+  });
+
+  $(
+    `.org-register-page .org-register-container .org-register-form .back-link`
+  )?.click(function () {
+    $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
+    if (currentORGRegisterFormWizard - 1 >= 1) {
+      currentORGRegisterFormWizard--;
+      $(".org-register-page #form-" + currentORGRegisterFormWizard).show();
+    }
   });
 
   const mainSlider = new Swiper(".mainSlider", {

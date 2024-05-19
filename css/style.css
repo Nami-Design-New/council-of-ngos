@@ -91,7 +91,7 @@ body {
 
 header {
   width: 100%;
-  min-height: 74.008px;
+  min-height: 74px;
   background: #ffffff;
   padding: 12px 0px;
   position: fixed;
@@ -225,6 +225,7 @@ header .container .navList li a {
   line-height: normal;
 }
 header .container .user-info {
+  position: relative;
   display: flex;
   padding: 4px 4px 4px 16px;
   justify-content: flex-end;
@@ -249,6 +250,7 @@ header .container .user-info .user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 100px;
+  position: relative;
 }
 @media (max-width: 991px) {
   header .container .user-info .user-avatar {
@@ -260,6 +262,56 @@ header .container .user-info .user-avatar img {
   width: 40px;
   height: 40px;
 }
+header .container .user-info .user-menu {
+  width: 220px;
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  align-self: stretch;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.07), 0px 6px 18px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+header .container .user-info .user-menu.open {
+  display: flex;
+}
+header .container .user-info .user-menu .user-menu-item {
+  display: flex;
+  padding: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+header .container .user-info .user-menu .user-menu-item p {
+  flex: 1 0 0;
+  color: var(--Dark, #0d0d0d);
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header .container .user-info .user-menu .user-menu-item img {
+  width: 20px;
+  height: 20px;
+}
 header .container .user-info .user-name {
   color: var(--Dark, #0d0d0d);
   text-align: right;
@@ -267,6 +319,9 @@ header .container .user-info .user-name {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (max-width: 991px) {
   header .container .user-info .user-name {
@@ -1366,6 +1421,7 @@ footer {
 }
 footer .container {
   display: flex;
+  flex-direction: row;
   gap: 0 15px;
   align-items: flex-start;
   gap: 64px;
@@ -1786,11 +1842,9 @@ footer .container .support .support-contact-social li a img {
   width: 100%;
   position: relative;
   display: flex;
-  align-items: flex-start;
   background-color: #ffffff;
 }
 .auth-page figure {
-  height: 100%;
   flex: 1 0 0;
   display: flex;
 }
@@ -1807,7 +1861,7 @@ footer .container .support .support-contact-social li a img {
 }
 .auth-page .auth-container {
   display: flex;
-  padding: 80px 120px;
+  padding: 80px 0;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -1821,7 +1875,8 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .auth-page .auth-container .auth-heading {
-  width: 100%;
+  width: min(100% - 24px, 500px);
+  margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1901,6 +1956,8 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .auth-page .auth-container .auth-form-container {
+  width: min(100% - 24px, 480px);
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1986,66 +2043,6 @@ footer .container .support .support-contact-social li a img {
     width: 100%;
   }
 }
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard {
-  display: flex;
-  flex-direction: row;
-  padding: 16px 24px;
-  align-items: center;
-  gap: 20px;
-  align-self: stretch;
-  border-radius: 24px;
-  background: rgba(180, 185, 161, 0.2);
-}
-@media (max-width: 768px) {
-  .auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag.active {
-  color: #1d968f;
-}
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag.active .wizard-tag-index-box {
-  background-color: rgba(29, 150, 143, 0.08);
-  border-color: #1d968f;
-}
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-tag .wizard-tag-index-box {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 100px;
-  border: 1px solid #0d0d0d;
-  background: rgba(29, 150, 143, 0.08);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  background-color: #ffffff;
-}
-.auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-line {
-  flex: 1 0 0;
-  height: 1px;
-  background-color: #aaa;
-}
-@media (max-width: 768px) {
-  .auth-page .auth-container .auth-form-container .auth-form-heading.register-wizard .wizard-line {
-    width: 2px;
-    flex: unset;
-    height: 40px;
-    position: relative;
-    right: 20px;
-  }
-}
 .auth-page .auth-container .auth-form-container .auth-form {
   width: 100%;
   display: flex;
@@ -2126,8 +2123,8 @@ footer .container .support .support-contact-social li a img {
   cursor: pointer;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon img {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2239,7 +2236,7 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container .back-link img {
-  width: 100%;
+  width: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2292,4 +2289,474 @@ footer .container .support .support-contact-social li a img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.org-register-page {
+  position: relative;
+  width: 100%;
+  top: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  align-self: stretch;
+}
+.org-register-page .org-register-container {
+  width: 100%;
+  padding: 50px 80px 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.org-register-page .org-register-container .org-register-heading {
+  width: 100%;
+  display: flex;
+  padding-bottom: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.org-register-page .org-register-container .org-register-heading h2 {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-heading p {
+  align-self: stretch;
+  color: #777;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  align-self: stretch;
+}
+.org-register-page .org-register-container .org-register-form .form-section {
+  width: 100%;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 24px;
+  background: #ffffff;
+}
+.org-register-page .org-register-container .org-register-form .form-section .form-section-heading {
+  color: #aaa;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .monitoringGranteesNeeds {
+  width: 100%;
+  display: flex;
+  padding: 16px 0px;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .monitoringGranteesNeeds .checkbox-group {
+  display: flex;
+  min-width: 500px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: #f8f8f8;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box.activity-form-inputs-montoring input {
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box.activity-section-box .form-inputs-container {
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box.activity-section-box .input-group {
+  flex-direction: row;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box.activity-section-box input,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .activity-form-inputs-box.activity-section-box select {
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .fund-form-inputs-box {
+  align-items: center;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 1 0 0;
+  position: relative;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group.min-500 {
+  min-width: 500px;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group.min-300 {
+  min-width: 300px;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group.min-150 {
+  min-width: 150px;
+  flex-direction: row;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select {
+  display: flex;
+  min-height: 54px;
+  padding: 16px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input::-moz-placeholder, .org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select::-moz-placeholder {
+  color: #aaa;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input::placeholder,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select::placeholder {
+  color: #aaa;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date],
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select[type=date] {
+  justify-content: flex-end;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date]::-webkit-calendar-picker-indicator,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date]::-ms-clear,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select[type=date]::-ms-clear {
+  display: none;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .inputIcon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 4px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 40px;
+  bottom: 16px;
+  cursor: pointer;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .inputIcon img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .inputIcon p {
+  color: #1d968f;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-container {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-container .form-inputs-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-container .form-inputs-container input {
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box {
+  display: flex;
+  padding: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container .checkbox-inputs-container {
+  display: flex;
+  padding: 16px 0px;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container .checkbox-inputs-container .checkbox-group {
+  display: flex;
+  min-width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container .checkbox-inputs-container .checkbox-group label {
+  flex: 1 0 0;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container .checkbox-inputs-container .checkbox-group input {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container input {
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-heading,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-heading {
+  display: flex;
+  padding: 0px 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-heading h6,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-heading h6 {
+  color: #777;
+  text-align: center;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-heading h5,
+.org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-heading h5 {
+  color: #0d0d0d;
+  text-align: center;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.register-wizard {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 24px;
+  background: rgba(180, 185, 161, 0.2);
+}
+@media (max-width: 768px) {
+  .register-wizard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.register-wizard .wizard-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.register-wizard .wizard-tag.active {
+  color: #1d968f;
+}
+.register-wizard .wizard-tag.active .wizard-tag-index-box {
+  background-color: rgba(29, 150, 143, 0.08);
+  border-color: #1d968f;
+}
+.register-wizard .wizard-tag .wizard-tag-index-box {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #0d0d0d;
+  background: rgba(29, 150, 143, 0.08);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #ffffff;
+}
+.register-wizard .wizard-line {
+  flex: 1 0 0;
+  height: 1px;
+  background-color: #aaa;
+}
+@media (max-width: 768px) {
+  .register-wizard .wizard-line {
+    display: none;
+  }
+}
+
+.form-btns-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  justify-content: flex-end;
+}
+.form-btns-container .btn {
+  display: flex;
+  min-width: 150px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #1d968f;
+  color: #ffffff;
+  cursor: pointer;
+}
+.form-btns-container .back-link {
+  display: flex;
+  width: 52px;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 11.111px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #777;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .form-btns-container .back-link {
+    padding: 6px 8px;
+  }
+}
+.form-btns-container .back-link img {
+  width: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

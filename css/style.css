@@ -3589,6 +3589,7 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
   line-height: normal;
   flex: 1 0 0;
+  cursor: pointer;
 }
 .level-statistics-page .level-container .level-statistics-form .btns-container {
   width: 100%;

@@ -509,14 +509,48 @@ levelFormBtnsContainerItems?.forEach((item) => {
   });
 });
 
-// const levelFormBtnsContainerInputs = document.querySelectorAll(
-//   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container .input-group input`
-// );
+const levelFormBtnsContainerInputs = document.querySelectorAll(
+  `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container .input-group input`
+);
 
-// levelFormBtnsContainerInputs?.forEach(input => {
+// levelFormBtnsContainerInputs?.forEach((input) => {
 //   input.addEventListener("click", function () {
-//     if (input.checked)
-//   })
-// })
+//     if (input.checked) {
+//       input.checked = false;
+//       if (
+//         input.parentNode.parentNode.parentNode.classList.contains(
+//           "not-qualified"
+//         )
+//       ) {
+//         input.parentElement.classList?.remove("not-qualified");
+//         input.parentElement.classList?.add("qualified");
+//         updateQualifiedInputs();
+//       } else if (
+//         input.parentNode.parentNode.parentNode.classList.contains("qualified")
+//       ) {
+//         input.parentElement.classList?.reomve("qualified");
+//         input.parentElement.classList?.add("not-qualified");
+//         updateQualifiedInputs();
+//       }
+//     } else {
+//       input.checked = true;
+//       if (
+//         input.parentNode.parentNode.parentNode.classList.contains("qualified")
+//       ) {
+//         input.parentElement.classList.remove("qualified");
+//         input.parentElement.classList.add("not-qualified");
+//         updateQualifiedInputs();
+//       } else if (
+//         input.parentNode.parentNode.parentNode.classList.contains(
+//           "not-qualified"
+//         )
+//       ) {
+//         input.parentElement.classList.remove("not-qualified");
+//         input.parentElement.classList.add("qualified");
+//         updateQualifiedInputs();
+//       }
+//     }
+//   });
+// });
 
 updateQualifiedInputs();

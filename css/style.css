@@ -66,6 +66,10 @@ a {
   -o-transition: all 0.3s ease-in-out;
 }
 
+:target {
+  scroll-margin-top: 70px;
+}
+
 button:focus {
   outline: 0;
 }
@@ -576,6 +580,8 @@ content .identify-section .identify-box .identify-img-container {
   display: flex;
   flex: 1 0 0;
   gap: 8px;
+  aspect-ratio: 1;
+  max-height: 500px;
 }
 content .identify-section .identify-box .identify-img-container img {
   height: 100%;
@@ -1610,7 +1616,6 @@ footer .container .support .support-contact-social li a img {
 
 .newsLanding {
   width: 100%;
-  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1642,8 +1647,7 @@ footer .container .support .support-contact-social li a img {
 }
 .newsLanding .landing-text {
   display: flex;
-  height: 360px;
-  padding: 80px;
+  padding: 130px 80px 60px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -1651,6 +1655,11 @@ footer .container .support .support-contact-social li a img {
   align-self: stretch;
   position: relative;
   z-index: 9999;
+}
+@media screen and (max-width: 768px) {
+  .newsLanding .landing-text {
+    padding: 130px 40px 60px;
+  }
 }
 .newsLanding .landing-text .landing-text-header {
   display: flex;
@@ -1698,7 +1707,8 @@ footer .container .support .support-contact-social li a img {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 48px;
-  padding: 0 40px;
+  width: min(100% - 24px, 1400px);
+  margin: auto;
 }
 .news-section-container .container .blog {
   display: flex;

@@ -76,6 +76,9 @@ a {
   -ms-transition: $transition;
   -o-transition: $transition;
 }
+:target {
+  scroll-margin-top: 70px;
+}
 button:focus {
   outline: 0;
 }
@@ -552,6 +555,8 @@ content {
         display: flex;
         flex: 1 0 0;
         gap: 8px;
+        aspect-ratio: 1;
+        max-height: 500px;
         img {
           height: 100%;
           width: 100%;
@@ -1131,7 +1136,7 @@ content {
     @media (max-width: 768px) {
       flex-direction: column;
     }
- 
+
     .contact-info {
       display: flex;
       width: 421px;
@@ -1543,7 +1548,6 @@ footer {
 // Start News Landing section
 .newsLanding {
   width: 100%;
-  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1573,11 +1577,13 @@ footer {
   }
   .landing-text {
     display: flex;
-    height: 360px;
-    padding: 80px;
+    padding: 130px 80px 60px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      padding: 130px 40px 60px;
+    }
     gap: 16px;
     align-self: stretch;
     position: relative;
@@ -1629,7 +1635,8 @@ footer {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 48px;
-    padding: 0 40px;
+    width: min(100% - 24px, 1400px);
+    margin: auto;
     .blog {
       display: flex;
       flex-direction: column;

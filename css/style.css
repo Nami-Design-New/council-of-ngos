@@ -139,7 +139,6 @@ header .container .header-logo {
 }
 @media (max-width: 991px) {
   header .container .header-logo {
-    order: 3;
     flex: 1;
     display: flex;
     align-items: center;
@@ -248,7 +247,6 @@ header .container .user-info {
 @media (max-width: 991px) {
   header .container .user-info {
     padding: 4px;
-    order: 2;
   }
 }
 header .container .user-info .user-avatar {
@@ -730,6 +728,7 @@ content .identify-section .identify-box .identify-content .identify-content-list
   position: relative;
   height: 250px;
   width: 100%;
+  text-wrap: balance;
 }
 @media (max-width: 678px) {
   .steps .allSteps .step {

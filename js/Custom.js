@@ -494,6 +494,7 @@ function updateQualifiedInputs() {
 const levelFormBtnsContainerItems = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container`
 );
+
 levelFormBtnsContainerItems?.forEach((item) => {
   item.addEventListener("click", function () {
     if (item.parentElement.classList.contains("not-qualified")) {
@@ -507,5 +508,15 @@ levelFormBtnsContainerItems?.forEach((item) => {
     }
   });
 });
+
+// const levelFormBtnsContainerInputs = document.querySelectorAll(
+//   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container .input-group input`
+// );
+
+// levelFormBtnsContainerInputs?.forEach(input => {
+//   input.addEventListener("click", function () {
+//     if (input.checked)
+//   })
+// })
 
 updateQualifiedInputs();

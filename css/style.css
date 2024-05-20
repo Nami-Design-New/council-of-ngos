@@ -1633,7 +1633,7 @@ footer .container .support .support-contact-social li a img {
   left: 0;
   background-color: #1d968f;
   opacity: 0.5;
-  z-index: 999;
+  z-index: 2;
 }
 .newsLanding img {
   position: absolute;
@@ -1641,7 +1641,6 @@ footer .container .support .support-contact-social li a img {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1651,10 +1650,10 @@ footer .container .support .support-contact-social li a img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  z-index: 3;
   gap: 16px;
   align-self: stretch;
-  position: relative;
-  z-index: 9999;
 }
 @media screen and (max-width: 768px) {
   .newsLanding .landing-text {

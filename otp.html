@@ -1,106 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>مجلس الجمعيات الأهلية | رمز التحقق</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/icon" href="assets/fav.svg" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- Custom style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <!-- Start OTP form -->
-    <main class="auth-page otp-page">
-      <section class="auth-container">
-        <div class="auth-heading">
-          <a href="index.html" class="auth-logo">
-            <img
-              src="assets/logo.svg"
-              alt="مجلس الجمعيات الأهلية"
-              title="مجلس الجمعيات الأهلية"
-            />
-          </a>
-          <span class="auth-heading-line"></span>
-          <h3>رمز التحقق</h3>
-        </div>
-        <div class="auth-form-container">
-          <div class="auth-form-heading">
-            <div class="heading-title">
-              <h2>أدخل رمز التحقق</h2>
-            </div>
-            <p class="heading-note">
-              الرجاء إدخال رمز التحقق المرسل إلى <span>mail@mail.com</span>
-            </p>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title -->
+  <title>مجلس الجمعيات الأهلية | رمز التحقق</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="assets/fav.svg" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Start OTP form -->
+  <main class="auth-page otp-page">
+    <section class="auth-container">
+      <div class="auth-heading">
+        <a href="index.html" class="auth-logo">
+          <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+        </a>
+        <span class="auth-heading-line"></span>
+        <h3>رمز التحقق</h3>
+      </div>
+      <div class="auth-form-container">
+        <div class="auth-form-heading">
+          <div class="heading-title">
+            <h2>أدخل رمز التحقق</h2>
           </div>
-          <form class="auth-form">
-            <div class="auth-form-body">
-              <div class="otp-code-container">
-                <input
-                  type="text"
-                  placeholder="-"
-                  maxlength="1"
-                  name="otpInput"
-                />
-                <input
-                  type="text"
-                  placeholder="-"
-                  maxlength="1"
-                  name="otpInput"
-                />
-                <input
-                  type="text"
-                  placeholder="-"
-                  maxlength="1"
-                  name="otpInput"
-                />
-                <input
-                  type="text"
-                  placeholder="-"
-                  maxlength="1"
-                  name="otpInput"
-                />
-                <input
-                  type="text"
-                  placeholder="-"
-                  maxlength="1"
-                  name="otpInput"
-                />
-              </div>
-              <div class="resend-container">
-                <h6 class="timer">00:48</h6>
-                <p class="resend-button">أعد إرسال الرمز</p>
-              </div>
-            </div>
-            <div class="auth-form-btns-container">
-              <a href="index.html" class="back-link">
-                <img
-                  src="assets/backArrow.svg"
-                  alt="back icon"
-                  title="back home"
-                />
-              </a>
-              <button type="submit">تأكيد</button>
-            </div>
-          </form>
+          <p class="heading-note">
+            الرجاء إدخال رمز التحقق المرسل إلى <span>mail@mail.com</span>
+          </p>
         </div>
-      </section>
-      <figure>
-        <img src="assets/form_img.webp" alt="form img" />
-      </figure>
-    </main>
-    <!-- End OTP form -->
-    <!-- jquery  -->
-    <script src="js/jquery.min.js"></script>
-    <!-- swiper slider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- custom -->
-    <script src="js/Custom.js"></script>
-  </body>
+        <form class="auth-form">
+          <div class="auth-form-body">
+            <div class="otp-code-container">
+              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+            </div>
+            <div class="resend-container">
+              <h6 class="timer">00:48</h6>
+              <p class="resend-button">أعد إرسال الرمز</p>
+            </div>
+          </div>
+          <div class="auth-form-btns-container">
+            <a href="index.html" class="back-link">
+              <img src="assets/backArrow.svg" alt="back icon" title="back home" />
+            </a>
+            <button type="submit">تأكيد</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <figure>
+      <img src="assets/form_img.webp" alt="form img" />
+    </figure>
+  </main>
+  <!-- End OTP form -->
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- swiper slider -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+</body>
+
 </html>

@@ -12,8 +12,7 @@ $transition: all 0.3s ease-in-out;
 $InputBG: #f8f8f8;
 $InputStroke: #f2f2f2;
 $InputHint: #aaa;
-$grayColor: #777;
-$dashboardBG: #f8fbfb;
+$gray-color: #777;
 
 @font-face {
   font-family: MadaniArabic-Regular;
@@ -30,7 +29,6 @@ $dashboardBG: #f8fbfb;
   font-display: swap;
   src: url("../webfonts/Madani\ Arabic\ Bold.ttf");
 }
-
 * {
   font-family: "MadaniArabic-Regular";
   box-sizing: border-box;
@@ -79,6 +77,9 @@ a {
   -ms-transition: $transition;
   -o-transition: $transition;
 }
+:target {
+  scroll-margin-top: 70px;
+}
 button:focus {
   outline: 0;
 }
@@ -103,7 +104,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
 header {
   width: 100%;
   min-height: 74px;
@@ -124,7 +124,6 @@ header {
   -moz-transition: $transition;
   -ms-transition: $transition;
   -o-transition: $transition;
-
   .container {
     padding: 15px;
     max-width: 1280px;
@@ -134,17 +133,14 @@ header {
     justify-content: space-between;
     gap: 24px;
     flex: 1 0 0;
-
     @media (max-width: 991px) {
       gap: 24px;
     }
-
     .header-logo {
       width: 143.283px;
       height: 50.008px;
       order: 1;
       cursor: pointer;
-
       @media (max-width: 991px) {
         flex: 1;
         display: flex;
@@ -152,7 +148,6 @@ header {
         justify-content: flex-start;
       }
     }
-
     .menu-icon {
       height: 50px;
       height: 50px;
@@ -167,11 +162,9 @@ header {
       -ms-transition: $transition;
       -o-transition: $transition;
       order: 5;
-
       @media (max-width: 991px) {
         display: flex;
       }
-
       img {
         width: 30px;
         aspect-ratio: 1 / 1;
@@ -187,7 +180,6 @@ header {
         -o-transition: $transition;
       }
     }
-
     .navList {
       display: flex;
       max-width: 1280px;
@@ -201,7 +193,6 @@ header {
       -ms-transition: $transition;
       -o-transition: $transition;
       order: 2;
-
       @media (max-width: 991px) {
         position: absolute;
         flex-direction: column;
@@ -211,12 +202,10 @@ header {
         background: $whiteColor;
         padding: 20px 0;
         display: none;
-
         &.open {
           display: flex;
         }
       }
-
       li {
         display: flex;
         padding: 4px 8px;
@@ -228,7 +217,6 @@ header {
         -moz-transition: $transition ease-out;
         -ms-transition: $transition ease-out;
         -o-transition: $transition ease-out;
-
         a {
           color: var(--Dark, var(--White, #0d0d0d));
           text-align: right;
@@ -239,7 +227,6 @@ header {
         }
       }
     }
-
     .user-info {
       position: relative;
       display: flex;
@@ -255,28 +242,23 @@ header {
       -o-border-radius: 100px;
       cursor: pointer;
       order: 3;
-
       @media (max-width: 991px) {
         padding: 4px;
       }
-
       .user-avatar {
         width: 40px;
         height: 40px;
         border-radius: 100px;
         position: relative;
-
         @media (max-width: 991px) {
           width: 40px;
           height: 40px;
         }
-
         img {
           width: 40px;
           height: 40px;
         }
       }
-
       .user-menu {
         width: 220px;
         padding: 12px;
@@ -302,11 +284,9 @@ header {
         -moz-transition: $transition;
         -ms-transition: $transition;
         -o-transition: $transition;
-
         &.open {
           display: flex;
         }
-
         .user-menu-item {
           display: flex;
           padding: 8px;
@@ -314,7 +294,6 @@ header {
           align-items: center;
           gap: 8px;
           align-self: stretch;
-
           p {
             flex: 1 0 0;
             color: var(--Dark, #0d0d0d);
@@ -325,14 +304,12 @@ header {
             font-weight: 400;
             line-height: normal;
           }
-
           img {
             width: 20px;
             height: 20px;
           }
         }
       }
-
       .user-name {
         color: var(--Dark, #0d0d0d);
         text-align: right;
@@ -341,13 +318,11 @@ header {
         font-weight: 400;
         line-height: normal;
         user-select: none;
-
         @media (max-width: 991px) {
           display: none;
         }
       }
     }
-
     .authBtn {
       display: flex;
       padding: 8px 20px;
@@ -361,7 +336,6 @@ header {
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
       order: 4;
-
       @media (max-width: 991px) {
         order: 1;
         font-size: 13px;
@@ -370,16 +344,15 @@ header {
     }
   }
 }
-
 content {
   width: 100%;
-  top: 74.008px;
+  top: 74px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   gap: 40px;
   position: relative;
-  background-color: $whiteColor;
+  background-color: $white-color;
 
   // Start Main Slider
   .mainSlider {
@@ -396,7 +369,6 @@ content {
         rgba(30, 34, 44, 0.35) 100%
       ),
       url("../assets/slideshow-img-01.webp") lightgray 50% / cover no-repeat;
-
     .swiper-wrapper {
       width: 100%;
       height: 100%;
@@ -410,11 +382,9 @@ content {
         background-color: rgba(30, 34, 44, 0.35);
         z-index: 999;
       }
-
       .swiper-slide {
         width: 100%;
         height: 100%;
-
         img {
           height: 100%;
           width: 100%;
@@ -422,7 +392,6 @@ content {
         }
       }
     }
-
     .swiperControl {
       width: calc(100% - (2 * 80px));
       position: absolute;
@@ -433,19 +402,16 @@ content {
       align-items: center;
       align-self: stretch;
       z-index: 9999;
-
       @media (max-width: 768px) {
         width: calc(100% - (2 * 8px));
         left: 8px;
       }
-
       .swiperBtns {
         display: flex;
         width: 666px;
         align-items: center;
         justify-content: flex-end;
         gap: 32px;
-
         .mainSliderPrev,
         .mainSliderNext {
           position: relative;
@@ -458,13 +424,12 @@ content {
           align-items: center;
           flex-shrink: 0;
           border-radius: 83.333px;
-          border: 1px solid $whiteColor;
+          border: 1px solid $white-color;
 
           @media (max-width: 768px) {
             width: 30px;
             height: 30px;
           }
-
           &::after {
             content: "";
             width: 20px;
@@ -478,7 +443,6 @@ content {
             -moz-transition: $transition;
             -ms-transition: $transition;
             -o-transition: $transition;
-
             @media (max-width: 768px) {
               width: 15px;
               height: 15px;
@@ -499,31 +463,26 @@ content {
           background-image: url("../assets/rightWhiteArrow.svg");
         }
       }
-
       .swiper-pagination {
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 6px;
-
         .swiper-pagination-bullet {
           width: 16px;
           height: 16px;
           background-color: rgba(255, 255, 255, 0.8);
-
           @media (max-width: 768px) {
             width: 12px;
             height: 12px;
           }
-
           &.swiper-pagination-bullet-active {
             background-color: $whiteColor;
           }
         }
       }
     }
-
     .slider-content {
       position: absolute;
       right: 80px;
@@ -547,7 +506,6 @@ content {
         padding: 0 8px;
         right: unset;
       }
-
       .slider-content-heading {
         align-self: stretch;
         color: $whiteColor;
@@ -557,7 +515,6 @@ content {
         font-weight: 400;
         line-height: normal;
       }
-
       .slider-content-paragraph {
         align-self: stretch;
         color: $whiteColor;
@@ -570,7 +527,6 @@ content {
       }
     }
   }
-
   // Start Identify
   .identify-section {
     width: 100%;
@@ -578,68 +534,52 @@ content {
     flex-direction: column;
     position: relative;
     gap: 0;
-
     @media (max-width: 768px) {
       gap: 40px;
     }
-
     .identify-box {
       position: relative;
-      width: 100%;
+      width: min(100% - 16px, 1440px);
+      margin: auto;
       display: flex;
-      padding: 0px 120px;
-      align-items: center;
-      justify-content: center;
 
+      justify-content: center;
       @media (max-width: 768px) {
         flex-direction: column-reverse;
-        padding: 0 8px;
         gap: 20px;
       }
-
       &:nth-of-type(even) {
         flex-direction: row-reverse;
-
         @media (max-width: 768px) {
           flex-direction: column-reverse;
         }
-
-        .identify-content {
-          padding-right: 40px;
-          padding-left: 0;
-          @media (max-width: 768px) {
-            padding-right: 0;
-          }
-        }
       }
-
       .identify-img-container {
-        height: 534px;
         display: flex;
         flex: 1 0 0;
         gap: 8px;
-
+        aspect-ratio: 1;
+        max-height: 500px;
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
         }
       }
-
       .identify-content {
         display: flex;
-        padding-left: 40px;
-        padding-right: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 8px;
         flex: 1 0 0;
-
-        @media (max-width: 768px) {
-          padding-left: 0;
+        .inner {
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 8px;
+          @media (max-width: 768px) {
+            padding: 20px;
+          }
         }
-
         .identify-content-title {
           color: $darkColor;
           text-align: right;
@@ -648,12 +588,10 @@ content {
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-
           @media (max-width: 768px) {
-            text-align: center;
+            font-size: 24px;
           }
         }
-
         .identify-content-subtitle {
           align-self: stretch;
           color: $mainColor;
@@ -664,7 +602,6 @@ content {
           font-weight: 400;
           line-height: normal;
         }
-
         .identify-content-paragraph {
           align-self: stretch;
           color: $textColor;
@@ -675,14 +612,12 @@ content {
           font-weight: 400;
           line-height: normal;
         }
-
         .identify-content-list {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-end;
           gap: 8px;
-
           .identify-content-list-item {
             display: flex;
             justify-content: flex-start;
@@ -705,16 +640,15 @@ content {
     }
   }
 }
-
 // Start Steps
 .steps {
   padding: 50px 0 30px;
   background-color: #b5baa11a;
+  isolation: isolate;
   .container {
     width: min(100%, 1280px);
     padding: 0 8px;
     margin: auto;
-
     .SectionTitle {
       position: relative;
       padding: 30px;
@@ -913,7 +847,7 @@ content {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background-color: $whiteColor;
+  background-color: $white-color;
 
   .parteners-heading {
     display: flex;
@@ -923,7 +857,6 @@ content {
     gap: 16px;
     align-self: stretch;
     padding: 0 15px;
-
     h4 {
       color: $mainColor;
       text-align: right;
@@ -933,7 +866,6 @@ content {
       font-weight: 400;
       line-height: normal;
     }
-
     p {
       max-width: 450px;
       color: $textColor;
@@ -944,14 +876,12 @@ content {
       font-weight: 400;
       line-height: normal;
     }
-
     .section-line {
       width: 140px;
       height: 2px;
       background-color: $mainColor;
     }
   }
-
   .partnersSlider {
     position: relative;
     width: 100%;
@@ -960,19 +890,16 @@ content {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
     .swiper-wrapper {
       display: flex;
       position: relative;
       align-items: center;
-
       .swiper-slide {
         display: flex;
         padding: 4px 40px;
         justify-content: center;
         align-items: center;
         gap: 10px;
-
         img {
           width: 180px;
           height: 180px;
@@ -980,20 +907,17 @@ content {
         }
       }
     }
-
     .swiper-pagination {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 6px;
-
       .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
         background-color: $mainColor;
         opacity: 0.4;
-
         &.swiper-pagination-bullet-active {
           opacity: 1;
         }
@@ -1011,20 +935,17 @@ content {
   gap: 40px;
   padding: 40px 0;
   background-color: #b5baa11a;
-
   .container {
     display: flex;
-    padding: 0px 80px;
+    width: min(100% - 24px, 1400px);
     flex-direction: column;
     align-items: flex-end;
+    margin: auto;
     gap: 48px;
     align-self: stretch;
-
     @media (max-width: 768px) {
-      padding: 0;
       gap: 30px;
     }
-
     .news-header {
       display: flex;
       justify-content: space-between;
@@ -1035,14 +956,16 @@ content {
         flex-direction: column;
         gap: 40px;
       }
-
       .news-header-heading {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        @media (max-width: 678px) {
+          align-items: center;
+          text-align: center;
+        }
         gap: 8px;
-
         h4 {
           color: var(--Main, #1d968f);
           text-align: right;
@@ -1052,10 +975,8 @@ content {
           font-weight: 400;
           line-height: normal;
         }
-
         p {
           color: var(--Text, #666b88);
-          text-align: right;
           font-family: MadaniArabic-Regular;
           font-size: 15px;
           font-style: normal;
@@ -1063,26 +984,19 @@ content {
           line-height: normal;
         }
       }
-
       .newsSwiperControl {
         position: relative;
-
-        @media (max-width: 678px) {
-          width: 100%;
-        }
 
         .swiperBtns {
           display: flex;
           justify-content: flex-end;
           align-items: center;
           gap: 8px;
-
           @media (max-width: 678px) {
             width: 100%;
             justify-content: space-around;
             gap: 20px;
           }
-
           .NewsPrev,
           .NewsNext {
             position: relative;
@@ -1100,7 +1014,6 @@ content {
             -moz-transition: $transition;
             -ms-transition: $transition;
             -o-transition: $transition;
-
             &::after {
               content: "";
               width: 20px;
@@ -1114,7 +1027,6 @@ content {
               -moz-transition: $transition;
               -ms-transition: $transition;
               -o-transition: $transition;
-
               @media (max-width: 768px) {
                 width: 15px;
                 height: 15px;
@@ -1124,7 +1036,6 @@ content {
               opacity: 0.2;
             }
           }
-
           .NewsNext {
             &::after {
               background-image: url("../assets/leftColorArrow.svg");
@@ -1138,7 +1049,6 @@ content {
         }
       }
     }
-
     .news-content {
       width: 100%;
       position: relative;
@@ -1149,26 +1059,21 @@ content {
         gap: 16px;
         align-self: stretch;
         cursor: grab;
-
         .news-link-box {
           display: flex;
-          max-width: 300px;
           flex-direction: column;
           align-items: flex-start;
           gap: 12px;
-
           .news-img-container {
             width: 100%;
             height: 250px;
             display: flex;
-
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
           }
-
           .data {
             display: flex;
             padding-left: 16px;
@@ -1176,7 +1081,6 @@ content {
             align-items: flex-end;
             gap: 12px;
             align-self: stretch;
-
             h5 {
               width: 100%;
               align-self: stretch;
@@ -1192,7 +1096,6 @@ content {
               overflow: hidden;
               -webkit-line-clamp: 1;
             }
-
             p {
               align-self: stretch;
               color: $textColor;
@@ -1202,7 +1105,6 @@ content {
               line-height: normal;
               text-align: right;
               font-family: MadaniArabic-Regular;
-
               &.news-paragraph-content {
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
@@ -1216,7 +1118,6 @@ content {
     }
   }
 }
-
 // End News
 // Start contact
 .contact-section {
@@ -1228,16 +1129,14 @@ content {
   // contact form
   .contact-info-form-section {
     display: flex;
-    padding: 60px 80px 40px 80px;
     justify-content: center;
     align-items: center;
     gap: 24px;
     align-self: stretch;
-    background-color: $whiteColor;
+    background-color: $white-color;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      padding: 30px 8px 20px 8px;
     }
 
     .contact-info {
@@ -1251,11 +1150,9 @@ content {
       border-radius: 8px;
       background: $main08;
       box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
-
       @media (max-width: 768px) {
         width: 100%;
       }
-
       h4 {
         width: 100%;
         color: var(--Dark, var(--White, #0d0d0d));
@@ -1266,7 +1163,6 @@ content {
         font-weight: 400;
         line-height: normal;
       }
-
       .contact-info-list {
         display: flex;
         flex-direction: column;
@@ -1274,20 +1170,17 @@ content {
         gap: 32px;
         flex: 1 0 0;
         align-self: stretch;
-
         .contact-info-list-item {
           display: flex;
           justify-content: flex-start;
           align-items: center;
           gap: 16px;
           align-self: stretch;
-
           .text {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 0.01px;
-
             p {
               color: var(--Text, #666b88);
               text-align: right;
@@ -1301,12 +1194,10 @@ content {
               }
             }
           }
-
           .icon {
             display: flex;
             height: 64px;
             min-width: 64px;
-            padding: 20px;
             justify-content: center;
             align-items: center;
             border-radius: 32px;
@@ -1320,15 +1211,26 @@ content {
             img {
               width: 24px;
               height: 24px;
-              object-fit: cover;
+              object-fit: contain;
+            }
+            @media (max-width: 678px) {
+              height: 48px;
+              min-width: 48px;
+              img {
+                width: 20px;
+                height: 20px;
+              }
             }
           }
         }
       }
     }
 
-    .contact-form {
-      max-width: 100%;
+    form {
+      background: #fff;
+      box-shadow: 0px 4px 24px #0000001a;
+      padding: 42px 12px;
+      border-radius: 16px;
       display: flex;
       padding: 40px 20px;
       align-items: flex-start;
@@ -1338,7 +1240,7 @@ content {
       align-self: stretch;
       flex-wrap: wrap;
       border-radius: 8px;
-      background: $main08;
+      background: $Main-08;
       box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
       position: relative;
 
@@ -1406,7 +1308,7 @@ content {
           height: 1px;
           flex-shrink: 0;
           align-self: stretch;
-          background: $main02;
+          background: $Main-02;
           order: 3;
           transition: $transition;
           -webkit-transition: $transition;
@@ -1468,18 +1370,14 @@ content {
 
           &:hover {
             background-color: $mainColor;
-            color: $whiteColor;
+            color: $white-color;
           }
         }
       }
     }
   }
-
-  // contact map
-  .map-section {
-    width: 100%;
-  }
 }
+
 // Start Footer
 footer {
   display: flex;
@@ -1487,24 +1385,21 @@ footer {
   padding: 40px 80px;
   flex-direction: column;
   align-items: center;
-  background-color: $whiteColor;
+  background-color: $white-color;
 
   @media (max-width: 768px) {
     padding: 8px;
   }
-
   .container {
     display: flex;
     flex-direction: row;
     gap: 0 15px;
     align-items: flex-start;
     gap: 64px;
-
     @media (max-width: 768px) {
       flex-direction: column;
       gap: 40px;
     }
-
     .about_company {
       display: flex;
       width: 368px;
@@ -1512,11 +1407,9 @@ footer {
       align-items: flex-start;
       gap: 24px;
       align-self: stretch;
-
       @media (max-width: 768px) {
         width: 100%;
       }
-
       .footerLogo {
         display: flex;
         flex-direction: column;
@@ -1524,19 +1417,16 @@ footer {
         align-items: flex-end;
         gap: 10px;
         cursor: pointer;
-
         @media (max-width: 768px) {
           width: 100%;
           align-items: center;
         }
-
         img {
           width: 143px;
           height: 50px;
           object-fit: cover;
         }
       }
-
       .about-content {
         align-self: stretch;
         color: $textColor;
@@ -1548,18 +1438,15 @@ footer {
         line-height: normal;
       }
     }
-
     .footerLinks {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
       flex: 1 0 0;
-
       @media (max-width: 768px) {
         width: 100%;
       }
-
       h3 {
         color: $mainColor;
         text-align: right;
@@ -1569,7 +1456,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       .footerNavList {
         width: 100%;
         display: flex;
@@ -1579,14 +1465,12 @@ footer {
         gap: 8px;
         align-self: stretch;
         flex-wrap: wrap;
-
         li {
           display: flex;
           min-width: 150px;
           padding: 4px 8px;
           justify-content: flex-end;
           align-items: center;
-
           a {
             flex: 1 0 0;
             color: $darkColor;
@@ -1600,18 +1484,15 @@ footer {
         }
       }
     }
-
     .support {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
       flex: 1 0 0;
-
       @media (max-width: 768px) {
         width: 100%;
       }
-
       h3 {
         color: $mainColor;
         text-align: right;
@@ -1621,7 +1502,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       .support-contact-list {
         display: flex;
         flex-direction: column;
@@ -1629,14 +1509,12 @@ footer {
         align-items: flex-start;
         gap: 8px;
         align-self: stretch;
-
         li {
           display: flex;
           justify-content: flex-start;
           align-items: center;
           gap: 8px;
           align-self: stretch;
-
           p {
             color: $darkColor;
             text-align: right;
@@ -1646,7 +1524,6 @@ footer {
             font-weight: 400;
             line-height: normal;
           }
-
           img {
             width: 20px;
             height: 20px;
@@ -1654,7 +1531,6 @@ footer {
           }
         }
       }
-
       .support-contact-social {
         display: flex;
         justify-content: flex-start;
@@ -1662,12 +1538,10 @@ footer {
         gap: 8px;
         align-self: stretch;
         position: relative;
-
         @media (max-width: 768px) {
           width: 100%;
           justify-content: center;
         }
-
         li {
           display: flex;
           position: relative;
@@ -1676,7 +1550,6 @@ footer {
           flex-direction: column;
           align-items: flex-start;
           cursor: pointer;
-
           a {
             display: flex;
             width: 40px;
@@ -1689,7 +1562,7 @@ footer {
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-            border: 1px solid $darkColor;
+            border: 1px solid $dark-color;
 
             img {
               width: 40px;
@@ -1703,11 +1576,9 @@ footer {
   }
 }
 // End Footer
-
 // Start News Landing section
 .newsLanding {
   width: 100%;
-  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1715,7 +1586,6 @@ footer {
   gap: 16px;
   align-self: stretch;
   position: relative;
-
   &::after {
     content: "";
     width: 100%;
@@ -1725,37 +1595,34 @@ footer {
     left: 0;
     background-color: $mainColor;
     opacity: 0.5;
-    z-index: 999;
+    z-index: 2;
   }
-
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 99;
     object-fit: cover;
   }
-
   .landing-text {
     display: flex;
-    height: 360px;
-    padding: 80px;
+    padding: 130px 80px 60px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+    z-index: 3;
+    @media screen and (max-width: 768px) {
+      padding: 130px 40px 60px;
+    }
     gap: 16px;
     align-self: stretch;
-    position: relative;
-    z-index: 9999;
-
     .landing-text-header {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
-
       p {
         color: $whiteColor;
         text-align: right;
@@ -1765,7 +1632,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       img {
         width: 21.887px;
         height: 5.774px;
@@ -1773,7 +1639,6 @@ footer {
         object-fit: cover;
       }
     }
-
     .landing-text-content {
       width: 100%;
       color: $whiteColor;
@@ -1795,27 +1660,25 @@ footer {
   gap: 48px;
   position: relative;
   padding: 40px 0;
-
   .container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 48px;
-    padding: 0 40px;
-
+    width: min(100% - 24px, 1400px);
+    margin: auto;
     .blog {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       gap: 12px;
-      flex: 1 0 0;
-
+      flex: 2;
+      min-width: 350px;
       .blog-img-container {
         height: 400px;
         width: 100%;
         display: flex;
-
         img {
           width: 100%;
           height: 100%;
@@ -1833,33 +1696,27 @@ footer {
         font-weight: 400;
         line-height: normal;
         text-wrap: balance;
-
         &.blog-content {
           color: $textColor;
         }
       }
     }
-
     .moreBlogs {
       display: flex;
-      width: 424px;
       padding: 16px 0px;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       gap: 48px;
-
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-
+      flex: 1;
+      min-width: 300px;
+      
       h3 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5.5px;
         position: relative;
-
         &::after {
           content: "";
           width: 122px;
@@ -1878,7 +1735,6 @@ footer {
         align-items: flex-start;
         gap: 16px;
         position: relative;
-
         .moreBlogs-List-item {
           width: 100%;
           display: flex;
@@ -1886,26 +1742,21 @@ footer {
           align-items: center;
           gap: 12px;
           position: relative;
-
           @media (max-width: 768px) {
             flex-direction: column;
           }
-
           .moreblogs-img-container {
             width: 120px;
             height: 120px;
             display: flex;
-
             @media (max-width: 768px) {
               width: 100%;
             }
-
             img {
               object-fit: cover;
               width: 100%;
             }
           }
-
           .moreblogs-item-content {
             display: flex;
             flex-direction: column;
@@ -1913,7 +1764,6 @@ footer {
             gap: 4px;
             flex: 1 0 0;
             position: relative;
-
             p {
               color: $darkColor;
               text-align: right;
@@ -1926,11 +1776,9 @@ footer {
               display: -webkit-box;
               -webkit-box-orient: vertical;
               overflow: hidden;
-
               &.item-content-heading {
                 -webkit-line-clamp: 1;
               }
-
               &.item-content-body {
                 color: $textColor;
                 font-size: 13px;
@@ -1945,30 +1793,26 @@ footer {
 }
 // End news page
 // End contact
-
 // Start general Auth page
 .auth-page {
   width: 100%;
   position: relative;
   display: flex;
   // align-items: flex-start;
-  background-color: $whiteColor;
+  background-color: $white-color;
 
   figure {
     flex: 1 0 0;
     display: flex;
-
     @media (max-width: 768px) {
       display: none;
     }
-
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-
   .auth-container {
     display: flex;
     padding: 80px 0;
@@ -1978,11 +1822,9 @@ footer {
     gap: 80px;
     flex: 1 0 0;
     position: relative;
-
     @media (max-width: 768px) {
       padding: 40px 0;
     }
-
     .auth-heading {
       width: min(100% - 24px, 500px);
       margin: auto;
@@ -1990,11 +1832,9 @@ footer {
       justify-content: flex-start;
       align-items: center;
       gap: 16px;
-
       @media (max-width: 768px) {
         flex-direction: column;
       }
-
       .auth-logo {
         img {
           width: 100%;
@@ -2002,19 +1842,16 @@ footer {
           object-fit: cover;
         }
       }
-
       .auth-heading-line {
         display: inline-flex;
         width: 1px;
         height: 40px;
         background-color: $main02;
         position: relative;
-
         @media (max-width: 768px) {
           height: 1px;
           width: 100px;
         }
-
         &::before,
         &::after {
           content: "";
@@ -2033,7 +1870,6 @@ footer {
           -moz-transform: translateX(50%);
           -ms-transform: translateX(50%);
           -o-transform: translateX(50%);
-
           @media (max-width: 768px) {
             top: calc(50% - 1px);
             right: unset;
@@ -2044,31 +1880,26 @@ footer {
             -o-transform: translateX(0) translateY(-50%);
           }
         }
-
         &::before {
           @media (max-width: 768px) {
             left: 0;
           }
         }
-
         &::after {
           bottom: 0;
         }
       }
-
       h3 {
         color: $mainColor;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-
         @media (max-width: 768px) {
           font-size: 20px;
         }
       }
     }
-
     .auth-form-container {
       width: min(100% - 24px, 480px);
       margin: auto;
@@ -2078,7 +1909,6 @@ footer {
       align-items: flex-end;
       flex: 1 0 0;
       align-self: stretch;
-
       .auth-form-heading {
         width: 100%;
         display: flex;
@@ -2087,32 +1917,27 @@ footer {
         align-items: flex-start;
         gap: 8px;
         align-self: stretch;
-
         .heading-title {
           width: 100%;
           display: flex;
           justify-content: flex-start;
           align-items: center;
           gap: 8px;
-
           .emoji {
             display: flex;
             width: 40px;
             height: 40px;
             position: relative;
-
             @media (max-width: 768px) {
               width: 30px;
               height: 30px;
             }
-
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
           }
-
           h2 {
             color: $darkColor;
             text-align: right;
@@ -2121,13 +1946,11 @@ footer {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-
             @media (max-width: 768px) {
               font-size: 28px;
             }
           }
         }
-
         .heading-note {
           width: 100%;
           align-self: stretch;
@@ -2142,23 +1965,19 @@ footer {
           align-items: center;
           justify-content: flex-start;
           gap: 6px;
-
           @media (max-width: 768px) {
             font-size: 16px;
             flex-direction: column;
             align-items: flex-start;
           }
-
           span {
             color: $mainColor;
-
             @media (max-width: 768px) {
               width: 100%;
             }
           }
         }
       }
-
       .auth-form {
         width: 100%;
         display: flex;
@@ -2168,7 +1987,6 @@ footer {
         align-items: flex-end;
         gap: 40px;
         align-self: stretch;
-
         .auth-form-body {
           width: 100%;
           display: flex;
@@ -2176,14 +1994,12 @@ footer {
           align-items: flex-end;
           gap: 8px;
           align-self: stretch;
-
           .form-inputs-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 16px;
             align-self: stretch;
-
             .input-group {
               display: flex;
               min-width: 318px;
@@ -2192,7 +2008,6 @@ footer {
               gap: 8px;
               align-self: stretch;
               position: relative;
-
               label {
                 display: flex;
                 justify-content: flex-start;
@@ -2200,7 +2015,6 @@ footer {
                 gap: 8px;
                 align-self: stretch;
               }
-
               input,
               select {
                 display: flex;
@@ -2217,12 +2031,10 @@ footer {
                 font-weight: 400;
                 line-height: normal;
                 text-align: right;
-
                 &::placeholder {
                   color: $InputHint;
                 }
               }
-
               .passwordIcon {
                 display: flex;
                 width: 24px;
@@ -2236,7 +2048,6 @@ footer {
                 left: 16px;
                 bottom: 16px;
                 cursor: pointer;
-
                 img {
                   width: 20px;
                   height: 20px;
@@ -2245,7 +2056,6 @@ footer {
               }
             }
           }
-
           .otp-code-container {
             width: 100%;
             display: flex;
@@ -2254,7 +2064,6 @@ footer {
             gap: 8px;
             align-self: stretch;
             flex-wrap: wrap;
-
             input,
             select {
               max-width: 90px;
@@ -2267,25 +2076,21 @@ footer {
               border-radius: 12px;
               border: 1px solid $InputStroke;
               background: $InputBG;
-
               color: var(--Main, #1d968f);
               font-family: MadaniArabic-SemiBold;
               font-size: 40px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;
-
               @media (max-width: 768px) {
                 font-size: 30px;
                 max-width: 50px;
               }
-
               &::placeholder {
                 color: $InputHint;
               }
             }
           }
-
           .forget-password-link {
             display: flex;
             align-items: center;
@@ -2300,7 +2105,6 @@ footer {
             line-height: normal;
           }
         }
-
         .auth-form-btns-container {
           width: 100%;
           display: flex;
@@ -2309,7 +2113,6 @@ footer {
           align-items: center;
           gap: 16px;
           align-self: stretch;
-
           button,
           .btn {
             display: flex;
@@ -2328,12 +2131,10 @@ footer {
             text-align: right;
             color: $whiteColor;
             cursor: pointer;
-
             @media (max-width: 768px) {
               padding: 8px;
             }
           }
-
           .back-link {
             display: flex;
             width: 52px;
@@ -2346,11 +2147,9 @@ footer {
             border-radius: 12px;
             border: 1px solid $grayColor;
             cursor: pointer;
-
             @media (max-width: 768px) {
               padding: 6px 8px;
             }
-
             img {
               width: 20px;
               object-fit: cover;
@@ -2358,7 +2157,6 @@ footer {
           }
         }
       }
-
       .auth-link-box {
         width: 100%;
         display: flex;
@@ -2366,7 +2164,6 @@ footer {
         align-items: center;
         gap: 4px;
         align-self: stretch;
-
         p {
           color: $darkColor;
           text-align: right;
@@ -2375,7 +2172,6 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         a {
           color: $mainColor;
           text-align: right;
@@ -2386,7 +2182,6 @@ footer {
           line-height: normal;
         }
       }
-
       .resend-container {
         width: 100%;
         display: flex;
@@ -2394,7 +2189,6 @@ footer {
         align-items: center;
         align-self: stretch;
         position: relative;
-
         .timer {
           color: $darkColor;
           text-align: center;
@@ -2404,7 +2198,6 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .resend-button {
           color: $mainColor;
           font-family: MadaniArabic-Regular;
@@ -2418,7 +2211,6 @@ footer {
   }
 }
 // End general Auth page
-
 // Start org Register
 .org-register-page {
   position: relative;
@@ -2429,7 +2221,6 @@ footer {
   align-items: center;
   gap: 80px;
   align-self: stretch;
-
   .org-register-container {
     width: 100%;
     padding: 50px 80px 0px 80px;
@@ -2438,11 +2229,9 @@ footer {
     align-items: center;
     gap: 16px;
     align-self: stretch;
-
     @media (max-width: 768px) {
       padding: 25px 8px 0px 8px;
     }
-
     .org-register-heading {
       width: 100%;
       display: flex;
@@ -2452,7 +2241,6 @@ footer {
       align-items: flex-start;
       gap: 8px;
       align-self: stretch;
-
       h2 {
         color: $darkColor;
         text-align: right;
@@ -2462,7 +2250,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       p {
         align-self: stretch;
         color: $grayColor;
@@ -2474,7 +2261,6 @@ footer {
         line-height: normal;
       }
     }
-
     .org-register-form {
       width: 100%;
       display: flex;
@@ -2482,7 +2268,6 @@ footer {
       align-items: flex-end;
       gap: 16px;
       align-self: stretch;
-
       .form-section {
         width: 100%;
         display: flex;
@@ -2492,7 +2277,7 @@ footer {
         gap: 24px;
         align-self: stretch;
         border-radius: 24px;
-        background: $whiteColor;
+        background: $white-color;
 
         .form-section-heading {
           color: #aaa;
@@ -2502,14 +2287,12 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .section-form-body {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           gap: 24px;
           align-self: stretch;
-
           .form-inputs-container {
             display: flex;
             justify-content: flex-start;
@@ -2518,7 +2301,6 @@ footer {
             gap: 16px;
             align-self: stretch;
             flex-wrap: wrap;
-
             .monitoringGranteesNeeds {
               width: 100%;
               display: flex;
@@ -2529,12 +2311,10 @@ footer {
               gap: 24px;
               align-self: stretch;
               flex-wrap: wrap;
-
               @media (max-width: 768px) {
                 flex-direction: column;
                 align-items: flex-start;
               }
-
               .checkbox-group {
                 display: flex;
                 min-width: 500px;
@@ -2542,13 +2322,11 @@ footer {
                 align-items: center;
                 gap: 8px;
                 flex: 1 0 0;
-
                 @media (max-width: 768px) {
                   min-width: unset;
                 }
               }
             }
-
             .activity-form-inputs-box {
               width: 100%;
               display: flex;
@@ -2559,12 +2337,10 @@ footer {
               align-self: stretch;
               border-radius: 16px;
               background: $InputBG;
-
               @media (max-width: 768px) {
                 flex-direction: column;
                 align-items: center;
               }
-
               &.activity-form-inputs-montoring {
                 input {
                   border-radius: 12px;
@@ -2572,7 +2348,6 @@ footer {
                   background: $whiteColor;
                 }
               }
-
               &.activity-section-box {
                 .form-inputs-container {
                   flex: 1 0 0;
@@ -2580,7 +2355,6 @@ footer {
                 .input-group {
                   flex-direction: row;
                 }
-
                 input,
                 select {
                   border-radius: 12px;
@@ -2590,11 +2364,9 @@ footer {
                 }
               }
             }
-
             .fund-form-inputs-box {
               align-items: center;
             }
-
             .input-group {
               display: flex;
               flex-direction: column;
@@ -2602,21 +2374,18 @@ footer {
               gap: 8px;
               flex: 1 0 0;
               position: relative;
-
               &.min-500 {
                 min-width: 500px;
                 @media (max-width: 768px) {
                   min-width: unset;
                 }
               }
-
               &.min-300 {
                 min-width: 300px;
                 @media (max-width: 768px) {
                   min-width: unset;
                 }
               }
-
               &.min-150 {
                 min-width: 150px;
                 flex-direction: row;
@@ -2624,7 +2393,6 @@ footer {
                   min-width: unset;
                 }
               }
-
               label {
                 display: flex;
                 justify-content: flex-start;
@@ -2639,7 +2407,6 @@ footer {
                 font-weight: 400;
                 line-height: normal;
               }
-
               input,
               select {
                 display: flex;
@@ -2660,24 +2427,19 @@ footer {
                 -moz-border-radius: 12px;
                 -ms-border-radius: 12px;
                 -o-border-radius: 12px;
-
                 &::placeholder {
                   color: $InputHint;
                 }
-
                 &[type="date"] {
                   justify-content: flex-end;
-
                   &::-webkit-calendar-picker-indicator {
                     display: none;
                   }
-
                   &::-ms-clear {
                     display: none;
                   }
                 }
               }
-
               .inputIcon {
                 display: flex;
                 width: 24px;
@@ -2691,13 +2453,11 @@ footer {
                 left: 40px;
                 bottom: 16px;
                 cursor: pointer;
-
                 img {
                   width: 20px;
                   height: 20px;
                   object-fit: cover;
                 }
-
                 p {
                   color: $mainColor;
                   text-align: right;
@@ -2710,7 +2470,6 @@ footer {
               }
             }
           }
-
           .money-section-container {
             width: 100%;
             display: flex;
@@ -2724,14 +2483,12 @@ footer {
             border-radius: 16px;
             border: 1px solid $InputStroke;
             background: $InputBG;
-
             .form-inputs-container {
               display: flex;
               justify-content: flex-end;
               align-items: center;
               gap: 24px;
               flex: 1 0 0;
-
               input {
                 border-radius: 12px;
                 border: 1px solid $InputStroke;
@@ -2739,7 +2496,6 @@ footer {
               }
             }
           }
-
           .activity-section-container {
             display: flex;
             justify-content: flex-start;
@@ -2747,7 +2503,6 @@ footer {
             gap: 16px;
             align-self: stretch;
             flex-wrap: wrap;
-
             .activity-section-box {
               display: flex;
               padding: 16px;
@@ -2758,19 +2513,16 @@ footer {
               border-radius: 16px;
               border: 1px solid $InputStroke;
               background: $InputBG;
-
               @media (max-width: 768px) {
                 flex-direction: column;
                 justify-content: center;
               }
-
               .form-inputs-container {
                 display: flex;
                 justify-content: flex-start !important;
                 align-items: center;
                 gap: 24px;
                 flex: 1 0 0;
-
                 .checkbox-inputs-container {
                   display: flex;
                   padding: 16px 0px;
@@ -2780,12 +2532,10 @@ footer {
                   gap: 24px;
                   align-self: stretch;
                   flex-wrap: wrap;
-
                   @media (max-width: 768px) {
                     flex-direction: column;
                     align-items: flex-start;
                   }
-
                   .checkbox-group {
                     display: flex;
                     min-width: 500px;
@@ -2793,11 +2543,9 @@ footer {
                     align-items: center;
                     gap: 8px;
                     flex: 1 0 0;
-
                     @media (max-width: 768px) {
                       min-width: unset;
                     }
-
                     label {
                       flex: 1 0 0;
                       color: $darkColor;
@@ -2808,7 +2556,6 @@ footer {
                       font-weight: 400;
                       line-height: normal;
                     }
-
                     input {
                       display: flex;
                       width: 20px;
@@ -2822,7 +2569,6 @@ footer {
                     }
                   }
                 }
-
                 input {
                   border-radius: 12px;
                   border: 1px solid $InputStroke;
@@ -2831,7 +2577,6 @@ footer {
               }
             }
           }
-
           .money-section-heading,
           .activity-section-heading {
             display: flex;
@@ -2840,7 +2585,6 @@ footer {
             justify-content: center;
             align-items: center;
             gap: 4px;
-
             h6 {
               color: $grayColor;
               text-align: center;
@@ -2850,7 +2594,6 @@ footer {
               font-weight: 400;
               line-height: normal;
             }
-
             h5 {
               color: $darkColor;
               text-align: center;
@@ -2877,28 +2620,23 @@ footer {
   align-self: stretch;
   border-radius: 24px;
   background: rgba(180, 185, 161, 0.2);
-
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-
   .wizard-tag {
     display: flex;
     align-items: center;
     gap: 12px;
     cursor: pointer;
-
     &.active {
       color: $mainColor;
-
       .wizard-tag-index-box {
         background-color: $main08;
         border-color: $mainColor;
       }
     }
-
     .wizard-tag-index-box {
       display: flex;
       width: 40px;
@@ -2917,12 +2655,10 @@ footer {
       background-color: $whiteColor;
     }
   }
-
   .wizard-line {
     flex: 1 0 0;
     height: 1px;
     background-color: #aaa;
-
     @media (max-width: 768px) {
       display: none;
     }
@@ -2935,7 +2671,6 @@ footer {
   gap: 16px;
   align-self: stretch;
   justify-content: flex-end;
-
   .btn {
     display: flex;
     min-width: 150px;
@@ -2948,7 +2683,6 @@ footer {
     color: $whiteColor;
     cursor: pointer;
   }
-
   .back-link {
     display: flex;
     width: 52px;
@@ -2961,11 +2695,9 @@ footer {
     border-radius: 12px;
     border: 1px solid $grayColor;
     cursor: pointer;
-
     @media (max-width: 768px) {
       padding: 6px 8px;
     }
-
     img {
       width: 20px;
       object-fit: cover;
@@ -2982,7 +2714,6 @@ footer {
   align-items: center;
   gap: 80px;
   align-self: stretch;
-
   .org-edit-section {
     width: 100%;
     padding: 50px 80px 0px 80px;
@@ -2991,12 +2722,10 @@ footer {
     align-items: flex-start;
     gap: 20px;
     align-self: stretch;
-
     @media (max-width: 768px) {
       padding: 25px 8px 0px 8px;
     }
   }
-
   .org-edit-section-container {
     width: 100%;
     display: flex;
@@ -3013,11 +2742,9 @@ footer {
     -o-border-radius: 24px;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.07),
       0px 1px 1px 0px rgba(0, 0, 0, 0.04);
-
     @media (max-width: 768px) {
       padding: 16px;
     }
-
     .org-edit-heading {
       width: 100%;
       display: flex;
@@ -3026,7 +2753,6 @@ footer {
       align-items: flex-start;
       gap: 8px;
       align-self: stretch;
-
       h4 {
         flex: 1 0 0;
         color: $darkColor;
@@ -3037,13 +2763,11 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       .breadcrumb {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 8px;
-
         p {
           color: $grayColor;
           text-align: right;
@@ -3053,25 +2777,21 @@ footer {
           font-weight: 400;
           line-height: normal;
           white-space: nowrap;
-
           &.main {
             color: $mainColor;
           }
         }
       }
     }
-
     .org-edit-section-content {
       width: 100%;
       display: flex;
       align-items: flex-start;
       gap: 16px;
       align-self: stretch;
-
       @media (max-width: 768px) {
         flex-direction: column;
       }
-
       .org-edit-wizard {
         display: flex;
         width: 360px;
@@ -3085,11 +2805,9 @@ footer {
         -moz-border-radius: 24px;
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
-
         @media (max-width: 768px) {
           width: 100%;
         }
-
         .wizard-tag {
           display: flex;
           justify-content: flex-start;
@@ -3097,7 +2815,6 @@ footer {
           gap: 12px;
           align-self: stretch;
           cursor: pointer;
-
           &.active {
             h6 {
               color: $mainColor;
@@ -3108,7 +2825,6 @@ footer {
               border-color: $main08;
             }
           }
-
           h6 {
             color: $darkColor;
             font-family: MadaniArabic-SemiBold;
@@ -3117,7 +2833,6 @@ footer {
             font-weight: 400;
             line-height: normal;
           }
-
           .wizard-tag-index-box {
             display: flex;
             width: 40px;
@@ -3138,7 +2853,6 @@ footer {
           }
         }
       }
-
       .forms-wrapper {
         display: flex;
         padding: 24px;
@@ -3148,17 +2862,14 @@ footer {
         align-content: flex-start;
         gap: 24px;
         flex: 1 0 0;
-
         .org-edit-form {
           flex-direction: column;
           width: 100%;
-
           .input-group {
             width: 100%;
           }
         }
       }
-
       .org-edit-form {
         display: flex;
         padding: 24px;
@@ -3170,7 +2881,6 @@ footer {
         flex-wrap: wrap;
         border-radius: 24px;
         background: $InputBG;
-
         .org-edit-form-heading {
           color: $InputHint;
           font-family: MadaniArabic-SemiBold;
@@ -3179,7 +2889,6 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .input-group {
           display: flex;
           height: 86px;
@@ -3188,7 +2897,6 @@ footer {
           align-items: flex-end;
           gap: 8px;
           flex: 1 0 0;
-
           label {
             display: flex;
             justify-content: flex-start;
@@ -3203,7 +2911,6 @@ footer {
             font-weight: 400;
             line-height: normal;
           }
-
           input,
           select {
             display: flex;
@@ -3214,7 +2921,7 @@ footer {
             align-self: stretch;
             border-radius: 12px;
             border: 1px solid $InputStroke;
-            background: $whiteColor;
+            background: $white-color;
 
             &::placeholder {
               color: $InputHint;
@@ -3227,14 +2934,12 @@ footer {
             }
           }
         }
-
         .form-btns-container {
           display: flex;
           width: 100%;
           align-items: center;
           gap: 16px;
           justify-content: flex-end;
-
           .btn {
             display: flex;
             padding: 16px 20px;
@@ -3267,7 +2972,6 @@ footer {
   align-self: stretch;
   position: relative;
   top: 74px;
-
   .dashboard-container {
     width: 100%;
     padding: 50px 80px 0px 80px;
@@ -3276,11 +2980,9 @@ footer {
     align-items: center;
     gap: 16px;
     align-self: stretch;
-
     @media (max-width: 768px) {
       padding: 25px 8px 0px 8px;
     }
-
     .dashboard-heading {
       width: 100%;
       display: flex;
@@ -3290,7 +2992,6 @@ footer {
       align-items: flex-start;
       gap: 8px;
       align-self: stretch;
-
       h2 {
         flex: 1 0 0;
         color: $darkColor;
@@ -3301,7 +3002,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       p {
         align-self: stretch;
         color: $grayColor;
@@ -3313,7 +3013,6 @@ footer {
         line-height: normal;
       }
     }
-
     .levels-statistics-section {
       width: 100%;
       display: flex;
@@ -3322,7 +3021,6 @@ footer {
       gap: 16px;
       align-self: stretch;
       flex-wrap: wrap;
-
       .level-box {
         display: flex;
         padding: 40px;
@@ -3338,11 +3036,9 @@ footer {
         -o-border-radius: 16px;
         box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
           0px 10px 20px -2px rgba(0, 0, 0, 0.04);
-
         .level-box-chart {
           position: relative;
         }
-
         .level-box-title {
           align-self: stretch;
           color: $darkColor;
@@ -3353,7 +3049,6 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .level-box-link {
           display: flex;
           padding: 12px 20px;
@@ -3373,7 +3068,6 @@ footer {
         }
       }
     }
-
     .measurment-standard-section {
       display: flex;
       padding: 24px;
@@ -3389,7 +3083,6 @@ footer {
       -o-border-radius: 16px;
       box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
         0px 10px 20px -2px rgba(0, 0, 0, 0.04);
-
       .measurment-standard-heading {
         align-self: stretch;
         color: $darkColor;
@@ -3400,7 +3093,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       .measurment-standard-chart {
         width: 100%;
       }
@@ -3419,7 +3111,6 @@ footer {
   align-self: stretch;
   position: relative;
   top: 74px;
-
   .level-container {
     width: 100%;
     padding: 50px 80px 0px 80px;
@@ -3428,11 +3119,9 @@ footer {
     align-items: center;
     gap: 16px;
     align-self: stretch;
-
     @media (max-width: 768px) {
       padding: 25px 8px 0px 8px;
     }
-
     .level-heading {
       width: 100%;
       display: flex;
@@ -3440,7 +3129,6 @@ footer {
       align-items: center;
       gap: 24px;
       align-self: stretch;
-
       a.heading-back-link {
         display: flex;
         width: 48px;
@@ -3451,7 +3139,7 @@ footer {
         align-items: center;
         gap: 11.111px;
         border-radius: 12px;
-        border: 1px solid $grayColor;
+        border: 1px solid $gray-color;
 
         img {
           width: 16px;
@@ -3459,7 +3147,6 @@ footer {
           flex-shrink: 0;
         }
       }
-
       .level-heading-content {
         display: flex;
         flex-direction: column;
@@ -3467,7 +3154,6 @@ footer {
         align-items: flex-start;
         gap: 8px;
         flex: 1 0 0;
-
         h4 {
           flex: 1 0 0;
           color: $darkColor;
@@ -3478,14 +3164,12 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .breadcrumb {
           width: 100%;
           display: flex;
           align-items: center;
           flex-wrap: wrap;
           gap: 8px;
-
           p {
             color: $grayColor;
             text-align: right;
@@ -3495,7 +3179,6 @@ footer {
             font-weight: 400;
             line-height: normal;
             white-space: nowrap;
-
             &.main {
               color: $mainColor;
             }
@@ -3503,7 +3186,6 @@ footer {
         }
       }
     }
-
     .supply-demand-section {
       width: 100%;
       display: flex;
@@ -3519,12 +3201,10 @@ footer {
       -moz-border-radius: 24px;
       -ms-border-radius: 24px;
       -o-border-radius: 24px;
-
       #supply-demands-chart {
         width: 100%;
       }
     }
-
     .level-statistics-items-container {
       width: 100%;
       display: flex;
@@ -3534,7 +3214,6 @@ footer {
       gap: 16px;
       align-self: stretch;
       flex-wrap: wrap;
-
       .level-statistics-box {
         display: flex;
         min-width: 400px;
@@ -3544,23 +3223,20 @@ footer {
         gap: 20px;
         flex: 1 0 0;
         border-radius: 16px;
-        background: $whiteColor;
+        background: $white-color;
 
         /* shadow 4 */
         box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
           0px 10px 20px -2px rgba(0, 0, 0, 0.04);
-
         @media (max-width: 768px) {
           min-width: unset;
         }
-
         .level-box-content {
           display: flex;
           justify-content: flex-end;
           align-items: center;
           gap: 20px;
           flex: 1 0 0;
-
           p {
             flex: 1 0 0;
             color: $darkColor;
@@ -3571,7 +3247,6 @@ footer {
             font-weight: 400;
             line-height: normal;
           }
-
           .level-box-link {
             display: flex;
             padding: 12px 20px;
@@ -3598,7 +3273,6 @@ footer {
   }
 }
 // End Level Page
-
 // Start Level statistics
 .level-statistics-page {
   .level-container {
@@ -3612,7 +3286,6 @@ footer {
       gap: 16px;
       align-self: stretch;
       flex-wrap: wrap;
-
       .statistics-box {
         display: flex;
         min-width: 250px;
@@ -3627,19 +3300,15 @@ footer {
         -moz-border-radius: 24px;
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
-
         @media (max-width: 768px) {
           min-width: unset;
         }
-
         &.total {
           background-color: $mainColor;
-
           h6 {
             color: $whiteColor;
           }
         }
-
         h6 {
           flex: 1 0 0;
           color: $darkColor;
@@ -3652,7 +3321,6 @@ footer {
         }
       }
     }
-
     .level-statistics-form {
       width: 100%;
       display: flex;
@@ -3667,7 +3335,6 @@ footer {
       -moz-border-radius: 24px;
       -ms-border-radius: 24px;
       -o-border-radius: 24px;
-
       .form-heading-note {
         color: #000;
         font-family: MadaniArabic-Regular;
@@ -3676,7 +3343,6 @@ footer {
         font-weight: 400;
         line-height: normal;
       }
-
       .form-box {
         width: 100%;
         display: flex;
@@ -3691,11 +3357,9 @@ footer {
         -moz-border-radius: 12px;
         -ms-border-radius: 12px;
         -o-border-radius: 12px;
-
         @media (max-width: 768px) {
           gap: 40px;
         }
-
         .form-box-heading {
           align-self: stretch;
           color: $mainColor;
@@ -3706,7 +3370,6 @@ footer {
           font-weight: 400;
           line-height: normal;
         }
-
         .form-box-item {
           width: 100%;
           display: flex;
@@ -3714,7 +3377,6 @@ footer {
           align-items: center;
           gap: 12px;
           align-self: stretch;
-
           &.qualified {
             .input-group {
               background-color: unset;
@@ -3725,14 +3387,12 @@ footer {
                 -moz-border-radius: 100px;
                 -ms-border-radius: 100px;
                 -o-border-radius: 100px;
-
                 label {
                   color: $whiteColor;
                 }
               }
             }
           }
-
           &.not-qualified {
             .input-group {
               background-color: unset;
@@ -3743,7 +3403,6 @@ footer {
                 -moz-border-radius: 100px;
                 -ms-border-radius: 100px;
                 -o-border-radius: 100px;
-
                 label {
                   color: $whiteColor;
                   user-select: none;
@@ -3751,11 +3410,9 @@ footer {
               }
             }
           }
-
           @media (max-width: 768px) {
             flex-direction: column;
           }
-
           p {
             flex: 1 0 0;
             color: $darkColor;
@@ -3765,7 +3422,6 @@ footer {
             font-weight: 400;
             line-height: normal;
           }
-
           .item-btns-container {
             display: flex;
             align-items: flex-end;
@@ -3775,7 +3431,6 @@ footer {
             -moz-border-radius: 100px;
             -ms-border-radius: 100px;
             -o-border-radius: 100px;
-
             .input-group {
               display: flex;
               padding: 8px 16px;
@@ -3784,11 +3439,9 @@ footer {
               gap: 12px;
               flex: 1 0 0;
               cursor: pointer;
-
               input {
                 display: none;
               }
-
               label {
                 width: max-content;
                 color: $darkColor;
@@ -3804,7 +3457,6 @@ footer {
           }
         }
       }
-
       .btns-container {
         width: 100%;
         display: flex;
@@ -3812,7 +3464,6 @@ footer {
         justify-content: flex-end;
         gap: 16px;
         align-self: stretch;
-
         .btn {
           display: flex;
           padding: 16px 20px;
@@ -3840,25 +3491,22 @@ footer {
   }
 }
 // End Level statistics
-
 $PercentSize: 100px;
 .percent {
   position: relative;
   width: $PercentSize;
   height: $PercentSize;
   overflow: hidden;
-
   &.reverse {
     .percentNum {
       background-color: rgba(25, 194, 185, 0.7);
-      color: $whiteColor;
+      color: $white-color;
 
       span {
         color: #eee;
       }
     }
   }
-
   .percentNum {
     position: absolute;
     width: calc($PercentSize * 0.8);

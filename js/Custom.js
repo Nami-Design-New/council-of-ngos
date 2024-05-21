@@ -233,6 +233,7 @@ $(document).ready(function () {
     });
   });
 
+  
   const mainSlider = new Swiper(".mainSlider", {
     spaceBetween: 0,
     loop: true,
@@ -264,17 +265,20 @@ $(document).ready(function () {
       clickable: true,
     },
     breakpoints: {
-      "@0.00": {
+      0: {
         slidesPerView: 1,
       },
-      "@0.75": {
+      450: {
         slidesPerView: 2,
       },
-      "@1.00": {
+      768: {
         slidesPerView: 3,
       },
-      "@1.50": {
+      991: {
         slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
       },
     },
   });
@@ -304,9 +308,7 @@ $(document).ready(function () {
       991: {
         slidesPerView: 4,
       },
-      1200: {
-        slidesPerView: 5,
-      },
+     
     },
   });
 });

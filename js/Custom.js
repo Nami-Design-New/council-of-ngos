@@ -408,7 +408,7 @@ let measurmentChart = new ApexCharts(
   document.querySelector("#measurment-chart"),
   measurmentOptions
 );
-measurmentChart.render();
+measurmentChart?.render();
 
 // Add supply & demands chart
 let supplyDemandsOptions = {
@@ -461,7 +461,7 @@ let supplyDemandsChart = new ApexCharts(
   document.querySelector("#supply-demands-chart"),
   supplyDemandsOptions
 );
-supplyDemandsChart.render();
+supplyDemandsChart?.render();
 
 const levelFormCheckInputs = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .input-group input`
@@ -509,48 +509,89 @@ levelFormBtnsContainerItems?.forEach((item) => {
   });
 });
 
-const levelFormBtnsContainerInputs = document.querySelectorAll(
-  `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container .input-group input`
+const submenuIcons = document.querySelectorAll(
+  `.adminDashboardPage aside .asideNav .navItem .submenuIcon`
 );
 
-// levelFormBtnsContainerInputs?.forEach((input) => {
-//   input.addEventListener("click", function () {
-//     if (input.checked) {
-//       input.checked = false;
-//       if (
-//         input.parentNode.parentNode.parentNode.classList.contains(
-//           "not-qualified"
-//         )
-//       ) {
-//         input.parentElement.classList?.remove("not-qualified");
-//         input.parentElement.classList?.add("qualified");
-//         updateQualifiedInputs();
-//       } else if (
-//         input.parentNode.parentNode.parentNode.classList.contains("qualified")
-//       ) {
-//         input.parentElement.classList?.reomve("qualified");
-//         input.parentElement.classList?.add("not-qualified");
-//         updateQualifiedInputs();
-//       }
-//     } else {
-//       input.checked = true;
-//       if (
-//         input.parentNode.parentNode.parentNode.classList.contains("qualified")
-//       ) {
-//         input.parentElement.classList.remove("qualified");
-//         input.parentElement.classList.add("not-qualified");
-//         updateQualifiedInputs();
-//       } else if (
-//         input.parentNode.parentNode.parentNode.classList.contains(
-//           "not-qualified"
-//         )
-//       ) {
-//         input.parentElement.classList.remove("not-qualified");
-//         input.parentElement.classList.add("qualified");
-//         updateQualifiedInputs();
-//       }
-//     }
-//   });
-// });
+const asideIcon = document.querySelector(
+  `.adminDashboardPage aside .asideIcon`
+);
+
+const headerAsideIcon = document.querySelector(
+  `.adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon`
+);
+
+const submenus = document.querySelectorAll(
+  `.adminDashboardPage aside .asideNav .navItem .submenu`
+);
+
+const notificationsIcon = document.querySelector(
+  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon`
+);
+
+const dashboardUserBox = document.querySelector(
+  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox`
+);
+
+const notificationsMenu = document.querySelector(
+  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu`
+);
+
+const dashboardUserMenu = document.querySelector(
+  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu`
+);
+
+notificationsIcon?.addEventListener("click", function () {
+  notificationsMenu?.classList.toggle("open");
+});
+
+dashboardUserBox?.addEventListener("click", function () {
+  dashboardUserMenu?.classList.toggle("open");
+  if (dashboardUserMenu?.classList.contains("open")) {
+    dashboardUserBox.classList.add("clicked");
+  } else {
+    dashboardUserBox.classList.remove("clicked");
+  }
+})
+
+submenuIcons?.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    icon.parentNode.classList.toggle("open");
+  });
+});
+
+const aside = document.querySelector(`.adminDashboardPage aside`);
+
+function hideSubmenu() {
+  if (aside?.classList.contains("shrink")) {
+    submenus?.forEach((menu) => {
+      if (menu.parentNode.classList.contains("open")) {
+        menu.parentNode.classList.remove("open");
+      }
+    });
+  }
+}
+
+let asideWasShrinked = false;
+
+aside?.addEventListener("mouseenter", function () {
+  if (aside.classList.contains("shrink")) {
+    aside.classList.remove("shrink");
+    hideSubmenu();
+  }
+});
+
+hideSubmenu();
+
+document.addEventListener("resize", hideSubmenu);
+
+asideIcon?.addEventListener("click", function () {
+  aside?.classList.toggle("shrink");
+  hideSubmenu();
+});
+
+headerAsideIcon?.addEventListener("click", function () {
+  aside?.classList.toggle("open");
+});
 
 updateQualifiedInputs();

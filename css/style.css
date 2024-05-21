@@ -4873,4 +4873,826 @@ footer .container .support .support-contact-social li a img {
 }
 .percent.p100 .bar {
   transform: rotate(360deg);
+}
+
+.adminDashboardPage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.adminDashboardPage aside {
+  width: 274px;
+  display: flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage aside {
+    right: -110%;
+    position: absolute;
+    z-index: 9999;
+    background: #ffffff;
+    top: 74px;
+    box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07), 0px 10px 20px -2px rgba(0, 0, 0, 0.04);
+    width: 100%;
+  }
+  .adminDashboardPage aside.open {
+    right: 0;
+  }
+}
+.adminDashboardPage aside.shrink {
+  width: 74px;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage aside.shrink {
+    width: 100%;
+  }
+}
+.adminDashboardPage aside.shrink .navLink img {
+  width: 20px !important;
+  height: 20px !important;
+}
+.adminDashboardPage aside.shrink .submenuIcon {
+  display: none !important;
+}
+.adminDashboardPage aside .asideIcon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: pointer;
+  position: absolute;
+  left: -36px;
+  top: 31px;
+  z-index: 9999;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage aside .asideIcon {
+    display: none;
+  }
+}
+.adminDashboardPage aside .asideIcon .iconBar {
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #1d968f;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.adminDashboardPage aside .asideLogo {
+  width: 100%;
+  display: flex;
+  height: 56px;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.adminDashboardPage aside .asideLogo img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage aside .asideLogo .logo-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.6px;
+}
+.adminDashboardPage aside .asideLogo .logo-heading img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage aside .asideNav {
+  width: 100%;
+  display: flex;
+  padding: 12px 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.adminDashboardPage aside .asideNav .navItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+.adminDashboardPage aside .asideNav .navItem.active, .adminDashboardPage aside .asideNav .navItem:hover {
+  background: rgba(29, 150, 143, 0.08);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.adminDashboardPage aside .asideNav .navItem.active .navLink p, .adminDashboardPage aside .asideNav .navItem:hover .navLink p {
+  color: #1d968f;
+}
+.adminDashboardPage aside .asideNav .navItem.open .submenuIcon img {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+.adminDashboardPage aside .asideNav .navItem.open .submenu {
+  display: flex;
+}
+.adminDashboardPage aside .asideNav .navItem .navLink {
+  width: 100%;
+  flex: 1 0 0;
+  white-space: nowrap;
+  display: flex;
+  padding: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+  align-self: stretch;
+}
+.adminDashboardPage aside .asideNav .navItem .navLink p {
+  color: #777;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: wrap;
+  text-wrap: balance;
+}
+.adminDashboardPage aside .asideNav .navItem .navLink img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage aside .asideNav .navItem .submenuIcon {
+  display: flex;
+  width: 12px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: 16px;
+  cursor: pointer;
+}
+.adminDashboardPage aside .asideNav .navItem .submenuIcon img {
+  width: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+}
+.adminDashboardPage aside .asideNav .navItem .submenu {
+  position: relative;
+  width: 100%;
+  display: none;
+  padding: 0px 48px 0px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  list-style: none;
+}
+.adminDashboardPage aside .asideNav .navItem .submenu .submenuItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.adminDashboardPage aside .asideNav .navItem .submenu .submenuItem a {
+  width: 100%;
+  padding: 8px 4px;
+  color: var(--Gray, #777);
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain {
+  display: flex;
+  padding: 0px 0px 24px 0;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  flex: 1 0 0;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader {
+  position: relative;
+  height: 72px;
+  padding: 32px 60px 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: stretch;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardHeader {
+    padding: 32px 24px 20px;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon {
+  display: none;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 9999;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon {
+    display: flex;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon .iconBar {
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #1d968f;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .headerGreeting {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardHeader .headerGreeting {
+    display: none;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .headerGreeting h6 {
+  color: #777;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .headerGreeting h5 {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(29, 150, 143, 0.08);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon .notificationCount {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  padding: 4px 7px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #1d968f;
+  position: absolute;
+  left: 3.5px;
+  top: 3px;
+  color: #ffffff;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu {
+  display: flex;
+  width: 320px;
+  max-height: 320px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
+  gap: 4px;
+  position: absolute;
+  left: -100%;
+  top: 100%;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07), 0px 10px 20px -2px rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu.open {
+  left: 32px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationMenuHeading {
+  display: flex;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationMenuHeading h6 {
+  flex: 1 0 0;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationMenuHeading a {
+  color: #1d968f;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationBox {
+  display: flex;
+  padding: 8px 4px;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationBox .notificationBoxTitle {
+  align-self: stretch;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationBox .notificationBoxContent {
+  align-self: stretch;
+  color: #666b88;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu {
+  display: flex;
+  width: 250px;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07), 0px 10px 20px -2px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  left: -110%;
+  top: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu.open {
+  left: 32px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userMaskGroup {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+  position: relative;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userMaskGroup figure {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userMaskGroup figure img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userMaskGroup .editAvatar {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userMaskGroup .editAvatar img {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userInfo .userName {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userInfo .userEmail {
+  color: #777;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox {
+  width: 100%;
+  display: flex;
+  padding: 12px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox .menuLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  padding: 8px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox .menuLink p {
+  flex: 1 0 0;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox .menuLink img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox.clicked .userSubmenuIcon {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox .userBoxAvatar {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #f2f2f2;
+  background: #ffffff;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox .userBoxAvatar img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox p {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox .userSubmenuIcon {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox .userSubmenuIcon img {
+  height: 12px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 24px;
+  background: #f8fbfb;
+  position: relative;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection {
+  display: flex;
+  padding: 24px 20px 12px 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  background: rgba(29, 150, 143, 0.08);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionHeading {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07), 0px 10px 20px -2px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.mapBox {
+  height: 643px;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.min-300 {
+  min-width: 300px;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.min-400 {
+  min-width: 400px;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.min-400 {
+    min-width: 300px;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox .boxValue {
+  color: #0d0d0d;
+  text-align: center;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox .growthTitle {
+  color: #0d0d0d;
+  text-align: center;
+  font-family: MadaniArabic-SemiBold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox .boxTitle {
+  align-items: stretch;
+  color: #777;
+  text-align: center;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardFooter {
+  width: 100%;
+  display: flex;
+  padding: 16px 24px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardFooter {
+    gap: 16px;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardFooter .copyright {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  text-wrap: balance;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardFooter .copyright {
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardFooter .copyright a {
+  color: #1d968f;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.adminDashboardPage .dashboardMain .dashboardFooter .footerNav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardFooter .footerNav {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.adminDashboardPage .dashboardMain .dashboardFooter .footerNav a {
+  color: #0d0d0d;
+  text-align: right;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */

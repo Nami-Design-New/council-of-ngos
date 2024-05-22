@@ -4409,10 +4409,11 @@ $PercentSize: 100px;
 
               &.mapBox {
                 width: 100%;
+                padding: 0 !important;
                 #map_holder {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
+                  width: 100% !important;
+                  height: 100% !important;
+                  object-fit: cover !important;
                 }
               }
 

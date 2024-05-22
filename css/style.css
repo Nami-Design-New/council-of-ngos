@@ -5637,12 +5637,13 @@ footer .container .support .support-contact-social li a img {
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.mapBox {
   width: 100%;
+  padding: 0 !important;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.mapBox #map_holder {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.min-300 {
   min-width: 300px;

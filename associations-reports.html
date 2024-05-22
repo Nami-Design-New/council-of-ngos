@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>مجلس الجمعيات الأهلية | لوحة تحكم الأدمن</title>
+    <title>مجلس الجمعيات الأهلية | تقارير الجمعيات</title>
     <!-- favicon -->
     <link rel="icon" type="image/icon" href="assets/fav.svg" />
     <!-- swiper -->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="adminDashboardPage">
+    <div class="adminDashboardPage associationsReportsPage">
       <!-- Start dashboard header -->
       <aside class="">
         <div class="asideIcon">
@@ -44,10 +44,10 @@
           </div>
         </a>
         <ul class="asideNav">
-          <li class="navItem active">
+          <li class="navItem">
             <a href="admin-dashboard.html" class="navLink">
               <img
-                src="assets/dashboard-color-icon.svg"
+                src="assets/dashboard-icon.svg"
                 alt="لوحة المعلومات"
                 title="لوحة المعلومات"
               />
@@ -65,16 +65,16 @@
             </a>
           </li>
           <li class="navItem">
-            <a href="associations.html" class="navLink">
+            <a href="" class="navLink">
               <img
-                src="assets/associations-icon.svg"
+                src="assets/associations-color-icon.svg"
                 alt="الجمعيات"
                 title="الجمعيات"
               />
               <p>الجمعيات</p>
             </a>
           </li>
-          <li class="navItem">
+          <li class="navItem active">
             <a href="" class="navLink">
               <img
                 src="assets/reports-icon.svg"
@@ -90,10 +90,10 @@
               <li class="submenuItem">
                 <a href="evaluationFollow.html">متابعة التقييم</a>
               </li>
-              <li class="submenuItem">
+              <li class="submenuItem active">
                 <a href="">الجمعيات</a>
                 <ul class="Submenu">
-                  <li class="submenuItem">
+                  <li class="submenuItem active">
                     <a href="associations-reports.html">البيانات الاساسية</a>
                   </li>
                   <li class="submenuItem">
@@ -248,66 +248,70 @@
           </div>
         </header>
 
-        <div class="dashboardMainContent">
+        <div class="dashboardMainContent associationsReportsMainContent">
           <div class="contentConatiner">
-            <section class="contentSection">
-              <p class="sectionHeading">الاجماليات</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات التي اتمت التقييم</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">179</h4>
-                  <p class="boxTitle">عدد الجهات التي لم تبدأ بعد</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">التعليم</h4>
-                  <p class="boxTitle">المجال الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">الرياض</h4>
-                  <p class="boxTitle">المنطقة الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">اسم الجهه</h4>
-                  <p class="boxTitle">الجهه الاشد احتياجا</p>
-                </div>
+            <div class="associationsHeadingbox">
+              <h2>الجمعيات</h2>
+              <div class="breadcrumb">
+                <p>التقارير</p>
+                <p>/</p>
+                <p class="main">الجمعيات</p>
               </div>
-            </section>
+            </div>
             <section class="contentSection">
-              <p class="sectionHeading">مؤشرات النمو</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
-                    </div>
-                  </div>
-                  <h5 class="growthTitle">الرياض</h5>
+              <h6 class="sectionHeading">محدد البحث</h6>
+              <form class="searchBoxesForm selectionBoxesForm">
+                <div class="inputGroupBox">
+                  <label for="citySelect">المدينة</label>
+                  <select name="city" id="citySelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">المدينة 1</option>
+                    <option value="">المدينة 2</option>
+                  </select>
                 </div>
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
-                    </div>
-                  </div>
-                  <h5 class="growthTitle">اسم الجهه</h5>
+                <div class="inputGroupBox">
+                  <label for="workAreaSelect">نطاق العمل</label>
+                  <select name="workArea" id="workAreaSelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">نطاق العمل 1</option>
+                    <option value="">نطاق العمل 2</option>
+                  </select>
                 </div>
-              </div>
-            </section>
-            <section class="contentSection">
-              <p class="sectionHeading">الخريطة</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox mapBox" id="map"></div>
+                <div class="inputGroupBox">
+                  <label for="classificationSelect">التصنيف</label>
+                  <select name="classification" id="classificationSelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">التصنيف 1</option>
+                    <option value="">التصنيف 2</option>
+                  </select>
+                </div>
+                <div class="inputGroupBox">
+                  <label for="statusSelect">حالة التقييم</label>
+                  <select name="status" id="statusSelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">حالة التقييم 1</option>
+                    <option value="">حالة التقييم 2</option>
+                  </select>
+                </div>
+                <div class="inputGroupBox">
+                  <label for="areaSelect">المنطقه</label>
+                  <select name="area" id="areaSelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">المنطقه 1</option>
+                    <option value="">المنطقه 2</option>
+                  </select>
+                </div>
+                <div class="inputGroupBox">
+                  <label for="supervisoryUnitSelect">الوحده الاشرافية</label>
+                  <select name="supervisoryUnit" id="supervisoryUnitSelect">
+                    <option value="" disabled selected>اختر</option>
+                    <option value="">الوحده الاشرافية 1</option>
+                    <option value="">الوحده الاشرافية 2</option>
+                  </select>
+                </div>
+              </form>
+              <div class="btn-box">
+                <button class="btn">عرض</button>
               </div>
             </section>
           </div>
@@ -332,9 +336,6 @@
     <script src="js/apexcharts.js"></script>
     <!-- swiper slider -->
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- Map Chart -->
-    <script src="js/mapdata.js"></script>
-    <script src="js/countrymap.js"></script>
     <!-- custom -->
     <script src="js/Custom.js"></script>
   </body>

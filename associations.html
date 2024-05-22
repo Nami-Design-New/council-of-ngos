@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>مجلس الجمعيات الأهلية | الجمعيات</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/icon" href="assets/fav.svg" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- ApexChart -->
+    <link rel="stylesheet" href="css/apex-charts.css" />
+    <!-- DataTable -->
+    <link rel="stylesheet" href="css/dataTables.dataTables.min.css" />
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="adminDashboardPage associationsPage">
+      <!-- Start dashboard header -->
+      <aside class="">
+        <div class="asideIcon">
+          <span class="iconBar"> </span><span class="iconBar"></span>
+          <span class="iconBar"></span>
+        </div>
+        <a href="index.html" class="asideLogo">
+          <img
+            src="assets/empty-logo.svg"
+            alt="مجلس الجمعيات الأهلية"
+            title="مجلس الجمعيات الأهلية"
+          />
+          <div class="logo-heading">
+            <img
+              src="assets/logo-title-arabic.svg"
+              alt="مجلس الجمعيات الأهلية"
+              title="مجلس الجمعيات الأهلية"
+            />
+            <img
+              src="assets/logo-title-english.svg"
+              alt="مجلس الجمعيات الأهلية"
+              title="مجلس الجمعيات الأهلية"
+            />
+          </div>
+        </a>
+        <ul class="asideNav">
+          <li class="navItem">
+            <a href="admin-dashboard.html" class="navLink">
+              <img
+                src="assets/dashboard-icon.svg"
+                alt="لوحة المعلومات"
+                title="لوحة المعلومات"
+              />
+              <p>لوحة المعلومات (الداشبورد)</p>
+            </a>
+          </li>
+          <li class="navItem">
+            <a href="" class="navLink">
+              <img
+                src="assets/users-icon.svg"
+                alt="المستخدمون"
+                title="المستخدمون"
+              />
+              <p>المستخدمون</p>
+            </a>
+          </li>
+          <li class="navItem active">
+            <a href="" class="navLink">
+              <img
+                src="assets/associations-icon.svg"
+                alt="الجمعيات"
+                title="الجمعيات"
+              />
+              <p>الجمعيات</p>
+            </a>
+          </li>
+          <li class="navItem">
+            <a href="" class="navLink">
+              <img
+                src="assets/reports-color-icon.svg"
+                alt="التقارير"
+                title="التقارير"
+              />
+              <p>التقارير</p>
+            </a>
+            <span class="submenuIcon">
+              <img src="assets/submenu-icon.svg" alt="submenu icon" />
+            </span>
+            <ul class="submenu">
+              <li class="submenuItem">
+                <a href="evaluationFollow.html">متابعة التقييم</a>
+              </li>
+              <li class="submenuItem">
+                <a href="">الجمعيات</a>
+                <ul class="Submenu">
+                  <li class="submenuItem">
+                    <a href="associations-reports.html">البيانات الاساسية</a>
+                  </li>
+                  <li class="submenuItem">
+                    <a href="">المالية</a>
+                  </li>
+                  <li class="submenuItem">
+                    <a href="">الموارد البشرية</a>
+                  </li>
+                  <li class="submenuItem">
+                    <a href="">الانشطة</a>
+                  </li>
+                  <li class="submenuItem">
+                    <a href="">الايرادات</a>
+                  </li>
+                  <li class="submenuItem">
+                    <a href="">الدعم</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="navItem">
+            <a href="" class="navLink">
+              <img
+                src="assets/contact-request-icon.svg"
+                alt="طلبات التواصل"
+                title="طلبات التواصل"
+              />
+              <p>طلبات التواصل</p>
+            </a>
+          </li>
+          <li class="navItem">
+            <a href="" class="navLink">
+              <img
+                src="assets/settings-icon.svg"
+                alt="الاعدادات"
+                title="الاعدادات"
+              />
+              <p>الاعدادات</p>
+            </a>
+            <span class="submenuIcon">
+              <img src="assets/submenu-icon.svg" alt="submenu icon" />
+            </span>
+            <ul class="submenu">
+              <li class="submenuItem">
+                <a href="">المستخدمين</a>
+              </li>
+              <li class="submenuItem">
+                <a href="">اعدادات عامة</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!-- End dashboard header -->
+      <main class="dashboardMain">
+        <header class="dashboardHeader">
+          <div class="headerAsideIcon">
+            <span class="iconBar"> </span><span class="iconBar"></span>
+            <span class="iconBar"></span>
+          </div>
+          <div class="headerGreeting">
+            <h6>مرحبا</h6>
+            <h5>محمود جمال</h5>
+          </div>
+          <div class="notificationAndUserBox">
+            <div class="notificationMenu">
+              <div class="notificationMenuHeading">
+                <h6>الإشعارات</h6>
+                <a href="">مشاهدة الكل</a>
+              </div>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+              <a href="" class="notificationBox">
+                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+                <p class="notificationBoxContent">
+                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+                </p>
+              </a>
+            </div>
+            <div class="dashboardUserMenu">
+              <div class="userInfoBox">
+                <div class="userMaskGroup">
+                  <figure>
+                    <img src="assets/avatar.webp" alt="user avatar" />
+                  </figure>
+                  <a href="" class="editAvatar">
+                    <img src="assets/pencil.svg" alt="edit avatar" />
+                  </a>
+                </div>
+                <div class="userInfo">
+                  <p class="userName">محمود جمال</p>
+                  <p class="userEmail">admin@gmail.com</p>
+                </div>
+              </div>
+              <div class="menuLinksBox">
+                <a href="" class="menuLink">
+                  <img src="assets/settings-color-icon.svg" alt="إدارة حسابك" />
+                  <p>إدارة حسابك</p>
+                </a>
+                <a href="" class="menuLink">
+                  <img src="assets/logout-icon.svg" alt="تسجيل الخروج" />
+                  <p>تسجيل الخروج</p>
+                </a>
+              </div>
+            </div>
+            <div class="notificationIcon">
+              <img src="assets/notification-icon.svg" alt="notification icon" />
+              <p class="notificationCount">6</p>
+            </div>
+            <div class="userBox">
+              <div class="userBoxAvatar">
+                <img
+                  src="assets/avatar.webp"
+                  alt="user avatar"
+                  class="userAvatar"
+                />
+              </div>
+              <p>محمود جمال</p>
+              <span class="userSubmenuIcon">
+                <img src="assets/submenu-icon.svg" alt="submenu icon" />
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboardMainContent associationsMainContent">
+          <div class="contentConatiner">
+            <div class="associationsHeadingbox">
+              <h2>جمعيات جديدة</h2>
+              <div class="breadcrumb">
+                <p>الجمعيات</p>
+                <p>/</p>
+                <p class="main">لوحة التحكم</p>
+              </div>
+            </div>
+            <section class="contentSection tableSection">
+              <div class="tableHeading">
+                <span class="addAssociation">إنشاء جمعية</span>
+                <h5>جمعيات جديدة</h5>
+              </div>
+              <table
+                    class="tableBody"
+                    id="associationTable"
+                    style="width:100%"
+                >
+                    <thead>
+                        <tr>
+                            <th data-ordering="false">معرف الجمعية</th>
+                            <th data-ordering="false">اسم الجمعية</th>
+                            <th data-ordering="false">اسم المسؤل</th>
+                            <th data-ordering="false">تاريخ الانشاء</th>
+                            <th data-ordering="false">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البرك للمشروعات</td>
+                            <td>محمود الكومي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#23158</td>
+                            <td class="expanded">جمعية التنمية المنزلية</td>
+                            <td>عماد مجدي</td>
+                            <td>12/01/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#56128</td>
+                            <td class="expanded">جمعية التنمية الأسرية</td>
+                            <td>محمد سلمون</td>
+                            <td>31/12/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البركات البيضاء</td>
+                            <td>احمد مصطفي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البرك للمشروعات</td>
+                            <td>محمود الكومي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#23158</td>
+                            <td class="expanded">جمعية التنمية المنزلية</td>
+                            <td>عماد مجدي</td>
+                            <td>12/01/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#56128</td>
+                            <td class="expanded">جمعية التنمية الأسرية</td>
+                            <td>محمد سلمون</td>
+                            <td>31/12/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البركات البيضاء</td>
+                            <td>احمد مصطفي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البرك للمشروعات</td>
+                            <td>محمود الكومي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#23158</td>
+                            <td class="expanded">جمعية التنمية المنزلية</td>
+                            <td>عماد مجدي</td>
+                            <td>12/01/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#56128</td>
+                            <td class="expanded">جمعية التنمية الأسرية</td>
+                            <td>محمد سلمون</td>
+                            <td>31/12/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البركات البيضاء</td>
+                            <td>احمد مصطفي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البرك للمشروعات</td>
+                            <td>محمود الكومي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#23158</td>
+                            <td class="expanded">جمعية التنمية المنزلية</td>
+                            <td>عماد مجدي</td>
+                            <td>12/01/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#56128</td>
+                            <td class="expanded">جمعية التنمية الأسرية</td>
+                            <td>محمد سلمون</td>
+                            <td>31/12/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البركات البيضاء</td>
+                            <td>احمد مصطفي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البرك للمشروعات</td>
+                            <td>محمود الكومي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#23158</td>
+                            <td class="expanded">جمعية التنمية المنزلية</td>
+                            <td>عماد مجدي</td>
+                            <td>12/01/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#56128</td>
+                            <td class="expanded">جمعية التنمية الأسرية</td>
+                            <td>محمد سلمون</td>
+                            <td>31/12/2023</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#51465</td>
+                            <td class="expanded">جمعية البركات البيضاء</td>
+                            <td>احمد مصطفي</td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <div class="operationsBtns">
+                                    <span class="tableBtn hideBtn">
+                                        <img src="assets/eye-icon.svg" alt="hide association">
+                                    </span>
+                                    <span class="tableBtn editBtn">
+                                        <img src="assets/edit-icon.svg" alt="edit association">
+                                    </span>
+                                    <span class="tableBtn deleteBtn">
+                                        <img src="assets/trash-icon.svg" alt="delete association">
+                                    </span>
+                                </div>
+                                <span class="saveBtn">
+                                    تأكيد
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+          </div>
+        </div>
+
+        <footer class="dashboardFooter">
+          <p class="copyright">
+            <span>جميع الحقوق محفوظة ل</span>
+            <a href="index.html">مجلس الجمعيات الأهليه</a>
+            <span>2024 &COPY;</span>
+          </p>
+          <div class="footerNav">
+            <a href="">الشروط والأحكام</a>
+            <a href="">اتصل بنا</a>
+          </div>
+        </footer>
+      </main>
+      <div class="modal">
+        <div class="modalBox">
+          <div class="modalHeading">
+            <h6 class="modalLabel">اضافة جمعية</h6>
+            <span class="closeBtnBox">
+              <img
+                src="assets/x-icon.svg"
+                alt="close modal"
+                title="close modal"
+              />
+            </span>
+          </div>
+          <form class="modalForm" id="form-1">
+              <div class="modal-wizard register-wizard">
+                <div class="wizard-tag active" data-wizard="form-1">
+                  <div class="wizard-tag-index-box">1</div>
+                  <h5 class="wizard-tag-title">بيانات الجمعية</h5>
+                </div>
+                <span class="wizard-line"></span>
+                <div class="wizard-tag" data-wizard="form-2">
+                  <div class="wizard-tag-index-box">2</div>
+                  <h5 class="wizard-tag-title">ممثل المنظمة</h5>
+                </div>
+              </div>
+              <div class="formBody">
+                <div class="inputGroup">
+                    <label for="newAssociationAreaInput">المنطقة</label>
+                    <select name="newAssociationArea" id="newAssociationAreaInput">
+                        <option value="" disabled selected>اختر</option>
+                        <option value="">المنطقة 1</option>
+                        <option value="">المنطقة 2</option>
+                    </select>
+                </div>
+                <div class="inputGroup">
+                    <label for="newAssociationNameInput">الجمعية</label>
+                    <select name="newAssociationName" id="newAssociationNameInput">
+                        <option value="" disabled selected>اختر</option>
+                        <option value="">الجمعية 1</option>
+                        <option value="">الجمعية 2</option>
+                    </select>
+                </div>
+                <div class="inputGroup">
+                    <label for="newAssociationRegisterNumberInput">رقم التسجيل</label>
+                    <input type="number" name="newAssociationRegisterNumber" id="newAssociationRegisterNumberInput" placeholder="اكتب هنا" />
+                </div>
+                <div class="btnsBox">
+                    <span class="btn">التالي</span>
+                </div>
+              </div>
+          </form>
+          <form class="modalForm" id="form-2" action="associations.html">
+              <div class="modal-wizard register-wizard">
+                <div class="wizard-tag" data-wizard="form-1">
+                  <div class="wizard-tag-index-box">1</div>
+                  <h5 class="wizard-tag-title">بيانات الجمعية</h5>
+                </div>
+                <span class="wizard-line"></span>
+                <div class="wizard-tag active" data-wizard="form-2">
+                  <div class="wizard-tag-index-box">2</div>
+                  <h5 class="wizard-tag-title">ممثل المنظمة</h5>
+                </div>
+              </div>
+              <div class="formBody">
+                <div class="inputGroup">
+                    <label for="newAssociationRegisterFullNameInput">الاسم الكامل</label>
+                    <input type="text" name="newAssociationRegisterFullName" id="newAssociationRegisterFullNameInput" placeholder="اكتب هنا" />
+                </div>
+                <div class="inputGroup">
+                    <label for="newAssociationRegisterEmailInput">البريد الإلكتروني</label>
+                    <input type="email" name="newAssociationRegisterEmail" id="newAssociationRegisterEmailInput" placeholder="مثال: mail@mail.com" />
+                </div>
+                <div class="inputGroup">
+                    <label for="newAssociationRegisterTelephoneInput">الهاتف</label>
+                    <input type="tel" name="newAssociationRegisterTelephone" id="newAssociationRegisterTelephoneInput" placeholder="اكتب هنا" />
+                </div>
+                <div class="inputGroup">
+                    <label for="newAssociationRegisterPasswordInput">كلمة المرور</label>
+                    <input type="password" name="newAssociationRegisterPassword" id="newAssociationRegisterPasswordInput" placeholder="*********" />
+                </div>
+                <div class="btnsBox">
+                    <span class="back-link">
+                        <img src="assets/backArrow.svg" alt="back" />
+                    </span>
+                    <span class="btn">إنشاء</span>
+                </div>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jquery  -->
+    <script src="js/jquery.min.js"></script>
+    <!-- ApexChart -->
+    <script src="js/apexcharts.js"></script>
+    <!-- Data Tables -->
+    <script src="js/dataTables.min.js"></script>
+    <!-- swiper slider -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- custom -->
+    <script src="js/Custom.js"></script>
+    <script src="js/dataTables.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>مجلس الجمعيات الأهلية | لوحة تحكم الأدمن</title>
+    <title>مجلس الجمعيات الأهلية | متابعة التقييم</title>
     <!-- favicon -->
     <link rel="icon" type="image/icon" href="assets/fav.svg" />
     <!-- swiper -->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="adminDashboardPage">
+    <div class="adminDashboardPage evaluationPage">
       <!-- Start dashboard header -->
       <aside class="">
         <div class="asideIcon">
@@ -44,10 +44,10 @@
           </div>
         </a>
         <ul class="asideNav">
-          <li class="navItem active">
+          <li class="navItem">
             <a href="admin-dashboard.html" class="navLink">
               <img
-                src="assets/dashboard-color-icon.svg"
+                src="assets/dashboard-icon.svg"
                 alt="لوحة المعلومات"
                 title="لوحة المعلومات"
               />
@@ -65,7 +65,7 @@
             </a>
           </li>
           <li class="navItem">
-            <a href="associations.html" class="navLink">
+            <a href="" class="navLink">
               <img
                 src="assets/associations-icon.svg"
                 alt="الجمعيات"
@@ -74,10 +74,10 @@
               <p>الجمعيات</p>
             </a>
           </li>
-          <li class="navItem">
+          <li class="navItem active">
             <a href="" class="navLink">
               <img
-                src="assets/reports-icon.svg"
+                src="assets/reports-color-icon.svg"
                 alt="التقارير"
                 title="التقارير"
               />
@@ -87,7 +87,7 @@
               <img src="assets/submenu-icon.svg" alt="submenu icon" />
             </span>
             <ul class="submenu">
-              <li class="submenuItem">
+              <li class="submenuItem active">
                 <a href="evaluationFollow.html">متابعة التقييم</a>
               </li>
               <li class="submenuItem">
@@ -248,66 +248,174 @@
           </div>
         </header>
 
-        <div class="dashboardMainContent">
+        <div class="dashboardMainContent evalutionMainContent">
           <div class="contentConatiner">
-            <section class="contentSection">
-              <p class="sectionHeading">الاجماليات</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات التي اتمت التقييم</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">179</h4>
-                  <p class="boxTitle">عدد الجهات التي لم تبدأ بعد</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">التعليم</h4>
-                  <p class="boxTitle">المجال الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">الرياض</h4>
-                  <p class="boxTitle">المنطقة الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">اسم الجهه</h4>
-                  <p class="boxTitle">الجهه الاشد احتياجا</p>
-                </div>
+            <div class="associationsHeadingbox">
+              <h2>متابعة التقييم</h2>
+              <div class="breadcrumb">
+                <p>التقارير</p>
+                <p>/</p>
+                <p class="main">متابعة التقييم</p>
               </div>
-            </section>
+            </div>
             <section class="contentSection">
-              <p class="sectionHeading">مؤشرات النمو</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
+              <h6 class="sectionHeading">محدد البحث</h6>
+              <form class="searchBoxesForm">
+                <div class="searchBox geographicalBox">
+                  <h6>النطاق الجغرافي</h6>
+                  <div class="boxBody">
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="geographicalArea"
+                        id="geographicalAll"
+                        value="all"
+                      />
+                      <label for="geographicalAll">الكل</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="geographicalArea"
+                        id="geographicalGizan"
+                        value="gizan"
+                      />
+                      <label for="geographicalGizan">جيزان</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="geographicalArea"
+                        id="geographicalDamam"
+                        value="damam"
+                      />
+                      <label for="geographicalDamam">الدمام</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="geographicalArea"
+                        id="geographicalJeda"
+                        value="jeda"
+                      />
+                      <label for="geographicalJeda">جده</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="geographicalArea"
+                        id="geographicalRiyad"
+                        value="riyad"
+                      />
+                      <label for="geographicalRiyad">الرياض</label>
                     </div>
                   </div>
-                  <h5 class="growthTitle">الرياض</h5>
                 </div>
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
+                <div class="searchBox classificationBox">
+                  <h6>التصنيف</h6>
+                  <div class="boxBody">
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="classification"
+                        id="classificationAll"
+                        value="all"
+                      />
+                      <label for="classificationAll">الكل</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="classification"
+                        id="classificationSustainability"
+                        value="sustainability"
+                      />
+                      <label for="classificationSustainability"
+                        >الاستدامة</label
+                      >
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="classification"
+                        id="classificationFinancial"
+                        value="financial"
+                      />
+                      <label for="classificationFinancial">المالي</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="classification"
+                        id="classificationGovernance"
+                        value="governance"
+                      />
+                      <label for="classificationGovernance">الحوكمه</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="classification"
+                        id="classificationEducational"
+                        value="educational"
+                      />
+                      <label for="classificationEducational">التعليمي</label>
                     </div>
                   </div>
-                  <h5 class="growthTitle">اسم الجهه</h5>
                 </div>
-              </div>
-            </section>
-            <section class="contentSection">
-              <p class="sectionHeading">الخريطة</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox mapBox" id="map"></div>
+                <div class="searchBox standardsBox">
+                  <h6>المعايير</h6>
+                  <div class="boxBody">
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="standards"
+                        id="standardsAll"
+                        value="all"
+                      />
+                      <label for="standardsAll">الكل</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="standards"
+                        id="standardsSustainability"
+                        value="sustainability"
+                      />
+                      <label for="standardsSustainability">الاستدامة</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="standards"
+                        id="standardsFinancial"
+                        value="financial"
+                      />
+                      <label for="standardsFinancial">المالي</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="standards"
+                        id="standardsGovernance"
+                        value="governance"
+                      />
+                      <label for="standardsGovernance">الحوكمه</label>
+                    </div>
+                    <div class="inputGroup">
+                      <input
+                        type="checkbox"
+                        name="standards"
+                        id="standardsEducational"
+                        value="educational"
+                      />
+                      <label for="standardsEducational">التعليمي</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="btn-box">
+                <button class="btn">عرض</button>
               </div>
             </section>
           </div>
@@ -332,9 +440,6 @@
     <script src="js/apexcharts.js"></script>
     <!-- swiper slider -->
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- Map Chart -->
-    <script src="js/mapdata.js"></script>
-    <script src="js/countrymap.js"></script>
     <!-- custom -->
     <script src="js/Custom.js"></script>
   </body>

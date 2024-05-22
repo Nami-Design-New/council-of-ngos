@@ -12,7 +12,8 @@ $transition: all 0.3s ease-in-out;
 $InputBG: #f8f8f8;
 $InputStroke: #f2f2f2;
 $InputHint: #aaa;
-$gray-color: #777;
+$grayColor: #777;
+$dashboardBG: #f8fbfb;
 
 @font-face {
   font-family: MadaniArabic-Regular;
@@ -352,7 +353,7 @@ content {
   // align-items: center;
   gap: 40px;
   position: relative;
-  background-color: $white-color;
+  background-color: $whiteColor;
 
   // Start Main Slider
   .mainSlider {
@@ -424,7 +425,7 @@ content {
           align-items: center;
           flex-shrink: 0;
           border-radius: 83.333px;
-          border: 1px solid $white-color;
+          border: 1px solid $whiteColor;
 
           @media (max-width: 768px) {
             width: 30px;
@@ -847,7 +848,7 @@ content {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background-color: $white-color;
+  background-color: $whiteColor;
 
   .parteners-heading {
     display: flex;
@@ -1133,7 +1134,7 @@ content {
     align-items: center;
     gap: 24px;
     align-self: stretch;
-    background-color: $white-color;
+    background-color: $whiteColor;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -1240,7 +1241,7 @@ content {
       align-self: stretch;
       flex-wrap: wrap;
       border-radius: 8px;
-      background: $Main-08;
+      background: $main08;
       box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
       position: relative;
 
@@ -1308,7 +1309,7 @@ content {
           height: 1px;
           flex-shrink: 0;
           align-self: stretch;
-          background: $Main-02;
+          background: $main02;
           order: 3;
           transition: $transition;
           -webkit-transition: $transition;
@@ -1370,7 +1371,7 @@ content {
 
           &:hover {
             background-color: $mainColor;
-            color: $white-color;
+            color: $whiteColor;
           }
         }
       }
@@ -1385,7 +1386,7 @@ footer {
   padding: 40px 80px;
   flex-direction: column;
   align-items: center;
-  background-color: $white-color;
+  background-color: $whiteColor;
 
   @media (max-width: 768px) {
     padding: 8px;
@@ -1562,7 +1563,7 @@ footer {
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-            border: 1px solid $dark-color;
+            border: 1px solid $darkColor;
 
             img {
               width: 40px;
@@ -1710,7 +1711,7 @@ footer {
       gap: 48px;
       flex: 1;
       min-width: 300px;
-      
+
       h3 {
         display: flex;
         flex-direction: column;
@@ -1799,7 +1800,7 @@ footer {
   position: relative;
   display: flex;
   // align-items: flex-start;
-  background-color: $white-color;
+  background-color: $whiteColor;
 
   figure {
     flex: 1 0 0;
@@ -2277,7 +2278,7 @@ footer {
         gap: 24px;
         align-self: stretch;
         border-radius: 24px;
-        background: $white-color;
+        background: $whiteColor;
 
         .form-section-heading {
           color: #aaa;
@@ -2921,7 +2922,7 @@ footer {
             align-self: stretch;
             border-radius: 12px;
             border: 1px solid $InputStroke;
-            background: $white-color;
+            background: $whiteColor;
 
             &::placeholder {
               color: $InputHint;
@@ -3139,7 +3140,7 @@ footer {
         align-items: center;
         gap: 11.111px;
         border-radius: 12px;
-        border: 1px solid $gray-color;
+        border: 1px solid $grayColor;
 
         img {
           width: 16px;
@@ -3223,7 +3224,7 @@ footer {
         gap: 20px;
         flex: 1 0 0;
         border-radius: 16px;
-        background: $white-color;
+        background: $whiteColor;
 
         /* shadow 4 */
         box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
@@ -3500,7 +3501,7 @@ $PercentSize: 100px;
   &.reverse {
     .percentNum {
       background-color: rgba(25, 194, 185, 0.7);
-      color: $white-color;
+      color: $whiteColor;
 
       span {
         color: #eee;
@@ -3702,7 +3703,7 @@ $PercentSize: 100px;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        gap: 12px;
+        gap: 0 12px;
         transition: $transition;
         -webkit-transition: $transition;
         -moz-transition: $transition;
@@ -3793,7 +3794,7 @@ $PercentSize: 100px;
           position: relative;
           width: 100%;
           display: none;
-          padding: 0px 48px 0px 8px;
+          padding: 0px 8px 0px 8px;
           flex-direction: column;
           align-items: flex-start;
           top: 0;
@@ -3807,6 +3808,17 @@ $PercentSize: 100px;
             align-items: center;
             gap: 8px;
             align-self: stretch;
+            flex-direction: column;
+
+            &.active {
+              > a {
+                color: $mainColor !important;
+              }
+            }
+
+            ul {
+              padding-right: 40px;
+            }
 
             a {
               width: 100%;
@@ -3827,7 +3839,7 @@ $PercentSize: 100px;
 
   .dashboardMain {
     display: flex;
-    padding: 0px 0px 24px 0;
+    padding: 0px 0px 24px 24px;
     flex-direction: column;
     align-items: flex-end;
     gap: 16px;
@@ -3836,7 +3848,7 @@ $PercentSize: 100px;
     .dashboardHeader {
       position: relative;
       height: 72px;
-      padding: 32px 60px 20px 24px;
+      padding: 32px 60px 20px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -4298,6 +4310,52 @@ $PercentSize: 100px;
         flex-shrink: 0;
         align-self: stretch;
 
+        .associationsHeadingbox {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          gap: 8px;
+          align-self: stretch;
+
+          h2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            flex: 1 0 0;
+            color: #4f4f4f;
+            text-align: right;
+            font-family: MadaniArabic-SemiBold;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .breadcrumb {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            p {
+              color: $grayColor;
+              text-align: right;
+              font-family: MadaniArabic-Regular;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              white-space: nowrap;
+              &.main {
+                color: $mainColor;
+              }
+            }
+          }
+        }
+
         .contentSection {
           display: flex;
           padding: 24px 20px 12px 20px;
@@ -4350,7 +4408,11 @@ $PercentSize: 100px;
               -o-border-radius: 16px;
 
               &.mapBox {
-                height: 643px;
+                #map_holder {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
               }
 
               &.min-300 {
@@ -4474,4 +4536,585 @@ $PercentSize: 100px;
     }
   }
 }
+
+.dashboardMainContent {
+  display: flex;
+  min-height: 836px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+
+  &.associationsMainContent {
+    min-height: unset;
+  }
+
+  .contentSection {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    background: $whiteColor !important;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    .sectionHeading {
+      color: $InputHint !important;
+      font-family: MadaniArabic-SemiBold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .searchBoxesForm {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      .searchBox {
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        flex: 1 0 0;
+        background: $InputBG;
+        border: 1px solid $InputStroke;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+        min-width: 300px;
+        flex: 1 0 0;
+
+        h6 {
+          color: $grayColor;
+          text-align: center;
+          font-family: MadaniArabic-SemiBold;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .boxBody {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 8px;
+          align-self: stretch;
+
+          .inputGroup {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+
+            &:first-of-type {
+              padding: 8px 0;
+
+              label {
+                color: $mainColor;
+              }
+            }
+
+            input {
+              display: flex;
+              width: 20px;
+              height: 20px;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border: 1px solid $InputHint;
+              border-radius: 4px;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              -ms-border-radius: 4px;
+              -o-border-radius: 4px;
+              cursor: pointer;
+            }
+
+            label {
+              color: $darkColor;
+              text-align: center;
+              font-family: MadaniArabic-Regular;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+      }
+
+      .inputGroupBox {
+        display: flex;
+        min-width: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+
+        label {
+          flex: 1 0 0;
+          color: $darkColor;
+          text-align: right;
+          font-family: MadaniArabic-Regular;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        input,
+        select {
+          display: flex;
+          min-height: 54px;
+          padding: 16px;
+          align-items: center;
+          gap: 8px;
+          align-self: stretch;
+          border-radius: 12px;
+          border: 1px solid $InputStroke;
+          background: $InputBG;
+          color: $darkColor;
+          text-align: right;
+          font-family: MadaniArabic-Regular;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .btn-box {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      align-self: stretch;
+
+      .btn {
+        display: flex;
+        min-width: 150px;
+        padding: 16px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 12px;
+        background: $mainColor;
+        color: $whiteColor;
+        font-family: MadaniArabic-Regular;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.associationsMainContent {
+  .contentSection {
+    &.tableSection {
+      width: 100%;
+      display: flex;
+      padding: 24px 24px 12px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+      background: $whiteColor;
+      border-radius: 24px;
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      -ms-border-radius: 24px;
+      -o-border-radius: 24px;
+
+      .tableHeading {
+        width: 100%;
+        flex: 1 0 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        flex-wrap: wrap;
+
+        .addAssociation {
+          display: flex;
+          padding: 12px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid $mainColor;
+          background: $mainColor;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          color: $whiteColor;
+          font-family: MadaniArabic-Regular;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+        }
+
+        h5 {
+          flex: 1 0 0;
+          color: $darkColor;
+          display: flex;
+          justify-content: flex-end;
+          font-family: MadaniArabic-SemiBold;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .dt-container {
+        .dt-paging {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          .dt-paging-button {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            padding: 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            font-family: MadaniArabic-Regular;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $darkColor;
+
+            &.current {
+              border-radius: 4px;
+              background: $mainColor;
+              color: $whiteColor !important;
+            }
+          }
+        }
+
+        thead {
+          tr {
+            th {
+              color: $textColor;
+              text-align: center;
+              font-family: MadaniArabic-Regular;
+              font-size: 11px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              color: $darkColor;
+              text-align: center;
+              font-family: MadaniArabic-Regular;
+              font-size: 11px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              &:last-of-type {
+                display: flex;
+                height: 47px;
+                padding: 9px 8px;
+                align-self: stretch;
+                align-items: center;
+                justify-content: center;
+                justify-content: flex-end;
+                gap: 12px;
+
+                .operationsBtns {
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 4px;
+
+                  .tableBtn {
+                    display: flex;
+                    width: 25px;
+                    height: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    cursor: pointer;
+
+                    img {
+                      height: 16px;
+                      object-fit: cover;
+                    }
+                  }
+                }
+
+                .saveBtn {
+                  display: flex;
+                  padding: 6px 20px;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 10px;
+                  border: 1px solid $mainColor;
+                  border-radius: 8px;
+                  -webkit-border-radius: 8px;
+                  -moz-border-radius: 8px;
+                  -ms-border-radius: 8px;
+                  -o-border-radius: 8px;
+                  color: $mainColor;
+                  font-family: MadaniArabic-Regular;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // End Admin Dashboard
+// Start Modal
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.4);
+  z-index: 999999;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &.open {
+    display: flex;
+  }
+
+  .modalBox {
+    display: flex;
+    width: 800px;
+    min-width: 250px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background: $whiteColor;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    .modalHeading {
+      display: flex;
+      padding-bottom: 24px;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+
+      .modalLabel {
+        flex: 1 0 0;
+        color: $darkColor;
+        text-align: right;
+        font-family: MadaniArabic-SemiBold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .closeBtnBox {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid $darkColor;
+        background: $darkColor;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        cursor: pointer;
+
+        img {
+          width: 8px;
+          height: 8px;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .modalForm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+
+      .formBody {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+
+        .inputGroup {
+          display: flex;
+          height: 86px;
+          min-width: 300px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          align-self: stretch;
+
+          label {
+            flex: 1 0 0;
+            color: $darkColor;
+            text-align: right;
+            font-family: MadaniArabic-Regular;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          input,
+          select {
+            display: flex;
+            min-height: 54px;
+            padding: 16px;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+            background: $InputBG;
+            border: 1px solid $InputStroke;
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+          }
+        }
+
+        .btnsBox {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 16px;
+          align-self: stretch;
+          margin-top: 8px;
+
+          .btn {
+            display: flex;
+            padding: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex: 1 0 0;
+            border: 1px solid $mainColor;
+            background: $mainColor;
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+            color: $whiteColor;
+            text-align: right;
+            font-family: MadaniArabic-Regular;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .back-link {
+            display: flex;
+            width: 52px;
+            padding: 8px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 11.111px;
+            align-self: stretch;
+            border: 1px solid $grayColor;
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+            cursor: pointer;
+
+            img {
+              width: 22px;
+              height: 16px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Modal

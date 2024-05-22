@@ -111,6 +111,51 @@ $(document).ready(function () {
     }
   });
 
+  const modalWizardTags = document.querySelectorAll(
+    `.modal .modalBox .modalForm .modal-wizard .wizard-tag`
+  );
+
+  // modal forms wizards
+  let currentModalFormWizard = 1;
+  $(".modal .modalBox .modalForm")?.hide();
+  $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
+    "display",
+    "flex"
+  );
+
+  $(`.modal .modalBox .modalForm#form-1 .btn`).click(function () {
+    $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
+    if (currentModalFormWizard + 1 <= $(`.modal .modalBox .modalForm`).length) {
+      currentModalFormWizard++;
+      $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
+        "display",
+        "flex"
+      );
+    }
+  });
+
+  $(`.modal .modalBox .modalForm#form-2 .back-link`).click(function () {
+    $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
+    if (currentModalFormWizard - 1 >= 1) {
+      currentModalFormWizard--;
+      $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
+        "display",
+        "flex"
+      );
+    }
+  });
+
+  modalWizardTags.forEach((tag) => {
+    tag.addEventListener("click", function () {
+      $(".modal .modalBox .modalForm")?.hide();
+      $(".modal .modalBox .modalForm#" + tag.getAttribute("data-wizard")).css(
+        "display",
+        "flex"
+      );
+      currentModalFormWizard = +tag.getAttribute("data-wizard").split("-")[1];
+    });
+  });
+
   // register forms wizards
   let currentRegisterFormWizard = 1;
   $(
@@ -118,7 +163,7 @@ $(document).ready(function () {
   )?.hide();
   $(".register-page #form-" + currentRegisterFormWizard).css("display", "flex");
 
-  $(`.register-page #form-1 span.btn`).click(function () {
+  $(`.register-page #form-1 .btn`).click(function () {
     $(".register-page #form-" + currentRegisterFormWizard).hide();
     if (
       currentRegisterFormWizard + 1 <=
@@ -188,7 +233,7 @@ $(document).ready(function () {
   );
 
   $(
-    `.org-register-page .org-register-container .org-register-form span.btn`
+    `.org-register-page .org-register-container .org-register-form .btn`
   )?.click(function () {
     $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
     if (
@@ -233,7 +278,6 @@ $(document).ready(function () {
     });
   });
 
-  
   const mainSlider = new Swiper(".mainSlider", {
     spaceBetween: 0,
     loop: true,
@@ -308,7 +352,6 @@ $(document).ready(function () {
       991: {
         slidesPerView: 4,
       },
-     
     },
   });
 });
@@ -554,7 +597,7 @@ dashboardUserBox?.addEventListener("click", function () {
   } else {
     dashboardUserBox.classList.remove("clicked");
   }
-})
+});
 
 submenuIcons?.forEach((icon) => {
   icon.addEventListener("click", function () {
@@ -577,8 +620,15 @@ function hideSubmenu() {
 let asideWasShrinked = false;
 
 aside?.addEventListener("mouseenter", function () {
-  if (aside.classList.contains("shrink")) {
+  if (!aside.classList.contains("shrink")) {
     aside.classList.remove("shrink");
+    hideSubmenu();
+  }
+});
+
+aside?.addEventListener("mouseleave", function () {
+  if (aside.classList.contains("shrink")) {
+    aside.classList.addS("shrink");
     hideSubmenu();
   }
 });
@@ -597,3 +647,36 @@ headerAsideIcon?.addEventListener("click", function () {
 });
 
 updateQualifiedInputs();
+
+// Modal Operations
+const modal = document.querySelector(`.modal`);
+
+const modalBody = document.querySelector(`.modal .modalBox`);
+
+const modalCloseBtn = document.querySelector(
+  `.modal .modalBox .modalHeading .closeBtnBox`
+);
+
+const addAssociationBtn = document.querySelector(
+  `.associationsMainContent .contentSection.tableSection .tableHeading .addAssociation`
+);
+
+modalCloseBtn?.addEventListener("click", function () {
+  modal?.classList.remove("open");
+});
+
+addAssociationBtn?.addEventListener("click", function () {
+  modal?.classList.add("open");
+});
+
+document.addEventListener(
+  "click",
+  function (e) {
+    if (!modalBody?.contains(e.target) && modal?.classList.contains("open")) {
+      modal?.classList.remove("open");
+    }
+  },
+  true
+);
+
+// Associations Table

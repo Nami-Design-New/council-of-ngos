@@ -259,10 +259,14 @@ $(document).ready(function () {
     $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
     if (currentORGRegisterFormWizard - 1 >= 1) {
       currentORGRegisterFormWizard--;
-      $(".org-register-page #form-" + currentORGRegisterFormWizard).show();
+      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
+        "display",
+        "flex"
+      );
     }
   });
 
+  // handle clicking on every wizard tag at the org register form
   orgRegisterWizardTags.forEach((tag) => {
     tag.addEventListener("click", function () {
       $(
@@ -278,6 +282,7 @@ $(document).ready(function () {
     });
   });
 
+  // Add the main landing slider 
   const mainSlider = new Swiper(".mainSlider", {
     spaceBetween: 0,
     loop: true,
@@ -302,6 +307,7 @@ $(document).ready(function () {
     },
   });
 
+  // Add the parteners swiper
   const partenerSwiper = new Swiper(".partnersSlider", {
     slidesPerView: 5,
     pagination: {
@@ -327,6 +333,7 @@ $(document).ready(function () {
     },
   });
 
+  // Add the news section swiper
   var newsSwiper = new Swiper(".swiper.news-content", {
     navigation: {
       nextEl: ".NewsNext",
@@ -511,7 +518,7 @@ supplyDemandsChart?.render();
 const levelFormCheckInputs = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .input-group input`
 );
-
+// handle the status to be related with the check inputs value
 function updateQualifiedInputs() {
   levelFormCheckInputs?.forEach((input) => {
     if (
@@ -540,6 +547,7 @@ const levelFormBtnsContainerItems = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container`
 );
 
+// handle adding the click action to every item to toggle status
 levelFormBtnsContainerItems?.forEach((item) => {
   item.addEventListener("click", function () {
     if (item.parentElement.classList.contains("not-qualified")) {
@@ -557,39 +565,34 @@ levelFormBtnsContainerItems?.forEach((item) => {
 const submenuIcons = document.querySelectorAll(
   `.adminDashboardPage aside .asideNav .navItem .submenuIcon`
 );
-
 const asideIcon = document.querySelector(
   `.adminDashboardPage aside .asideIcon`
 );
-
 const headerAsideIcon = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon`
 );
-
 const submenus = document.querySelectorAll(
   `.adminDashboardPage aside .asideNav .navItem .submenu`
 );
-
 const notificationsIcon = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon`
 );
-
 const dashboardUserBox = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox`
 );
-
 const notificationsMenu = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu`
 );
-
 const dashboardUserMenu = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu`
 );
 
+// toggle showing the notification menu when cliking the notification btn
 notificationsIcon?.addEventListener("click", function () {
   notificationsMenu?.classList.toggle("open");
 });
 
+// toggle showing the user menu when cliking the user box
 dashboardUserBox?.addEventListener("click", function () {
   dashboardUserMenu?.classList.toggle("open");
   if (dashboardUserMenu?.classList.contains("open")) {
@@ -599,6 +602,7 @@ dashboardUserBox?.addEventListener("click", function () {
   }
 });
 
+// handle opening every submenu when clicking the arrow btn
 submenuIcons?.forEach((icon) => {
   icon.addEventListener("click", function () {
     icon.parentNode.classList.toggle("open");
@@ -607,6 +611,7 @@ submenuIcons?.forEach((icon) => {
 
 const aside = document.querySelector(`.adminDashboardPage aside`);
 
+// function to handle the showing of the submenus relating to the aside shrinked or not
 function hideSubmenu() {
   if (aside?.classList.contains("shrink")) {
     submenus?.forEach((menu) => {
@@ -617,8 +622,7 @@ function hideSubmenu() {
   }
 }
 
-let asideWasShrinked = false;
-
+// open aside when hover it
 aside?.addEventListener("mouseenter", function () {
   if (!aside.classList.contains("shrink")) {
     aside.classList.remove("shrink");
@@ -626,22 +630,25 @@ aside?.addEventListener("mouseenter", function () {
   }
 });
 
+// close aside when the hover is done
 aside?.addEventListener("mouseleave", function () {
   if (aside.classList.contains("shrink")) {
     aside.classList.addS("shrink");
     hideSubmenu();
   }
 });
-
 hideSubmenu();
 
+// handling the submenus when resizing to not effect the responsive
 document.addEventListener("resize", hideSubmenu);
 
+// toggle the aside with the aside btn at bigger screens
 asideIcon?.addEventListener("click", function () {
   aside?.classList.toggle("shrink");
   hideSubmenu();
 });
 
+// toggle opening the aside with the header btn at small devices
 headerAsideIcon?.addEventListener("click", function () {
   aside?.classList.toggle("open");
 });
@@ -650,25 +657,25 @@ updateQualifiedInputs();
 
 // Modal Operations
 const modal = document.querySelector(`.modal`);
-
 const modalBody = document.querySelector(`.modal .modalBox`);
-
 const modalCloseBtn = document.querySelector(
   `.modal .modalBox .modalHeading .closeBtnBox`
 );
-
 const addAssociationBtn = document.querySelector(
   `.associationsMainContent .contentSection.tableSection .tableHeading .addAssociation`
 );
 
+// close the modal when clicking the close button
 modalCloseBtn?.addEventListener("click", function () {
   modal?.classList.remove("open");
 });
 
+// open the modal for adding new association
 addAssociationBtn?.addEventListener("click", function () {
   modal?.classList.add("open");
 });
 
+// Close the modal when clicking outside its body
 document.addEventListener(
   "click",
   function (e) {
@@ -678,5 +685,3 @@ document.addEventListener(
   },
   true
 );
-
-// Associations Table

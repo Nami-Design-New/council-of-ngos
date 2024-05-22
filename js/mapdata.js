@@ -41,7 +41,7 @@ var simplemaps_countrymap_mapdata = {
     manual_zoom: "yes",
     back_image: "no",
     initial_back: "no",
-    initial_zoom: "1",
+    initial_zoom: "-1",
     initial_zoom_solo: "no",
     region_opacity: 1,
     region_hover_opacity: 0.6,
@@ -150,12 +150,30 @@ var simplemaps_countrymap_mapdata = {
     },
   },
   locations: {
-    // 0: {
-    //   lat: "24.707883101213962",
-    //   lng: " 46.68219649021059",
-    //   name: "الرياض",
-    //   image_url: "../assets/empty-logo.svg",
-    // },
+    0: {
+      lat: "24.707883101213962",
+      lng: "46.64920464037099",
+      name: "الرياض",
+      image_url: "../assets/empty-logo.svg",
+    },
+    1: {
+      lat: "18.95643770173688, ",
+      lng: "42.60457607715931",
+      name: "عسير",
+      image_url: "../assets/empty-logo.svg",
+    },
+    2: {
+      lat: "21.425018468672842",
+      lng: "39.811505934175585",
+      name: "مكة",
+      image_url: "../assets/empty-logo.svg",
+    },
+    3: {
+      lat: "24.475415079706938",
+      lng: "39.59007728948294",
+      name: "المدينة المنورة",
+      image_url: "../assets/empty-logo.svg",
+    },
   },
   labels: {
     SA01: {
@@ -207,7 +225,7 @@ var simplemaps_countrymap_mapdata = {
       parent_id: "SA12",
     },
     SA14: {
-      name: "`عسير",
+      name: "عسير",
       parent_id: "SA14",
     },
   },

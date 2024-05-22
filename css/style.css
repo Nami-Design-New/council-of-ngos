@@ -5635,6 +5635,9 @@ footer .container .support .support-contact-social li a img {
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
 }
+.adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.mapBox {
+  width: 100%;
+}
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox.mapBox #map_holder {
   width: 100%;
   height: 100%;

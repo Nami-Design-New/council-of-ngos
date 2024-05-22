@@ -5987,6 +5987,9 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
   line-height: normal;
 }
+.associationsMainContent .contentSection.tableSection .dt-container {
+  width: 100%;
+}
 .associationsMainContent .contentSection.tableSection .dt-container .dt-paging {
   display: flex;
   justify-content: center;

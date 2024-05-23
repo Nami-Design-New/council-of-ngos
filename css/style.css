@@ -171,7 +171,7 @@ header .container .menu-icon {
   }
 }
 header .container .menu-icon img {
-  width: 30px;
+  width: 24px;
   aspect-ratio: 1/1;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -3258,7 +3258,6 @@ footer .container .support .support-contact-social li a img {
 .level-page .level-container .supply-demand-section {
   width: 100%;
   display: flex;
-  min-width: 1000px;
   padding: 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -3439,7 +3438,6 @@ footer .container .support .support-contact-social li a img {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   gap: 12px;
   align-self: stretch;
 }
@@ -3489,6 +3487,7 @@ footer .container .support .support-contact-social li a img {
 }
 .level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container {
   display: flex;
+  align-self: flex-end;
   align-items: flex-end;
   background: #ffffff;
   border-radius: 100px;
@@ -6224,5 +6223,32 @@ footer .container .support .support-contact-social li a img {
   a,
   P {
     font-size: 14px;
+  }
+}
+.apexcharts * {
+  font-family: "MadaniArabic-Regular", sans-serif !important;
+}
+
+.apexcharts-text tspan {
+  direction: ltr;
+}
+
+.apexcharts-legend-marker {
+  margin-right: 0 !important;
+  margin-left: 3px;
+}
+
+.apexcharts-tooltip-marker {
+  margin-left: 8px;
+  margin-right: 0px !important;
+}
+
+.apexcharts-menu-item {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .apexcharts-xaxis-label tspan {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

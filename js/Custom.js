@@ -48,7 +48,6 @@ $(document).ready(function () {
   const orgRegisterWizardTags = document.querySelectorAll(
     `.org-register-page .org-register-container .org-register-form .register-wizard .wizard-tag`
   );
-
   // toggle opening the nav menu
   menuIconBox?.addEventListener("click", function () {
     if (navMenu?.classList.contains("open")) {
@@ -59,7 +58,6 @@ $(document).ready(function () {
       menuIcon.src = "assets/menu-open.png";
     }
   });
-
   // toggle opening the user menu
   userBox?.addEventListener("click", function () {
     if (userMenu?.classList.contains("open")) {
@@ -68,12 +66,10 @@ $(document).ready(function () {
       userMenu.classList.add("open");
     }
   });
-
   // open the date input by clicking the icon
   dateIcon?.addEventListener("click", function () {
     dateInput.focus();
   });
-
   // toggle showing password at register
   registerPasswordIcon?.addEventListener("click", function () {
     if (registerPasswordInput?.getAttribute("type") === "text") {
@@ -82,7 +78,6 @@ $(document).ready(function () {
       registerPasswordInput.setAttribute("type", "text");
     }
   });
-
   // toggle showing password at login
   loginPasswordIcon?.addEventListener("click", function () {
     if (loginPasswordInput?.getAttribute("type") === "text") {
@@ -91,7 +86,6 @@ $(document).ready(function () {
       loginPasswordInput.setAttribute("type", "text");
     }
   });
-
   // toggle showing password at reset
   resetPasswordIcon?.addEventListener("click", function () {
     console.log(resetPasswordInput);
@@ -101,7 +95,6 @@ $(document).ready(function () {
       resetPasswordInput.setAttribute("type", "text");
     }
   });
-
   // toggle showing confirm password at reset
   confirmResetPasswordIcon?.addEventListener("click", function () {
     if (confirmResetPasswordInput?.getAttribute("type") === "text") {
@@ -110,11 +103,9 @@ $(document).ready(function () {
       confirmResetPasswordInput.setAttribute("type", "text");
     }
   });
-
   const modalWizardTags = document.querySelectorAll(
     `.modal .modalBox .modalForm .modal-wizard .wizard-tag`
   );
-
   // modal forms wizards
   let currentModalFormWizard = 1;
   $(".modal .modalBox .modalForm")?.hide();
@@ -122,7 +113,6 @@ $(document).ready(function () {
     "display",
     "flex"
   );
-
   $(`.modal .modalBox .modalForm#form-1 .btn`).click(function () {
     $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
     if (currentModalFormWizard + 1 <= $(`.modal .modalBox .modalForm`).length) {
@@ -133,7 +123,6 @@ $(document).ready(function () {
       );
     }
   });
-
   $(`.modal .modalBox .modalForm#form-2 .back-link`).click(function () {
     $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
     if (currentModalFormWizard - 1 >= 1) {
@@ -144,7 +133,6 @@ $(document).ready(function () {
       );
     }
   });
-
   modalWizardTags.forEach((tag) => {
     tag.addEventListener("click", function () {
       $(".modal .modalBox .modalForm")?.hide();
@@ -155,14 +143,12 @@ $(document).ready(function () {
       currentModalFormWizard = +tag.getAttribute("data-wizard").split("-")[1];
     });
   });
-
   // register forms wizards
   let currentRegisterFormWizard = 1;
   $(
     ".register-page .auth-container .auth-form-container .register-form"
   )?.hide();
   $(".register-page #form-" + currentRegisterFormWizard).css("display", "flex");
-
   $(`.register-page #form-1 .btn`).click(function () {
     $(".register-page #form-" + currentRegisterFormWizard).hide();
     if (
@@ -177,7 +163,6 @@ $(document).ready(function () {
       );
     }
   });
-
   $(`.register-page #form-2 .back-link`).click(function () {
     $(".register-page #form-" + currentRegisterFormWizard).hide();
     if (currentRegisterFormWizard - 1 >= 1) {
@@ -188,7 +173,6 @@ $(document).ready(function () {
       );
     }
   });
-
   registerWizardTags.forEach((tag) => {
     tag.addEventListener("click", function () {
       $(
@@ -203,7 +187,6 @@ $(document).ready(function () {
         .split("-")[1];
     });
   });
-
   // org edit wizard navigation
   $(
     `.org-edit-page .org-edit-section-container .org-edit-section-content`
@@ -223,7 +206,6 @@ $(document).ready(function () {
       ).css("display", "flex");
     });
   });
-
   // org register form wizards
   let currentORGRegisterFormWizard = 1;
   $(".org-register-page .org-register-container .org-register-form").hide();
@@ -231,7 +213,6 @@ $(document).ready(function () {
     "display",
     "flex"
   );
-
   $(
     `.org-register-page .org-register-container .org-register-form .btn`
   )?.click(function () {
@@ -252,7 +233,6 @@ $(document).ready(function () {
       );
     }
   });
-
   $(
     `.org-register-page .org-register-container .org-register-form .back-link`
   )?.click(function () {
@@ -265,7 +245,6 @@ $(document).ready(function () {
       );
     }
   });
-
   // handle clicking on every wizard tag at the org register form
   orgRegisterWizardTags.forEach((tag) => {
     tag.addEventListener("click", function () {
@@ -281,8 +260,7 @@ $(document).ready(function () {
         .split("-")[1];
     });
   });
-
-  // Add the main landing slider 
+  // Add the main landing slider
   const mainSlider = new Swiper(".mainSlider", {
     spaceBetween: 0,
     loop: true,
@@ -306,7 +284,6 @@ $(document).ready(function () {
       onlyInViewport: true,
     },
   });
-
   // Add the parteners swiper
   const partenerSwiper = new Swiper(".partnersSlider", {
     slidesPerView: 5,
@@ -332,7 +309,6 @@ $(document).ready(function () {
       },
     },
   });
-
   // Add the news section swiper
   var newsSwiper = new Swiper(".swiper.news-content", {
     navigation: {
@@ -362,26 +338,24 @@ $(document).ready(function () {
     },
   });
 });
-
 // Add measurment chart
 let measurmentOptions = {
   series: [
     {
       name: "مستوى التطبيق",
-      data: [31, 40, 28, 51, 42, 90, 100],
+      data: [31, 40, 28, 51, 42, 90, 42, 90, 100],
     },
     {
       name: "مستوى الفاعلية",
-      data: [11, 32, 45, 32, 34, 52, 41],
+      data: [11, 32, 45, 32, 34, 52, 34, 52, 41],
     },
     {
       name: "مستوى الوجود",
-      data: [15, 11, 32, 18, 9, 24, 11],
+      data: [15, 11, 32, 18, 9, 24, 9, 24, 11],
     },
   ],
   chart: {
     height: 350,
-    width: "100%",
     type: "area",
     animations: {
       enabled: true,
@@ -455,13 +429,11 @@ let measurmentOptions = {
     offsetX: -5,
   },
 };
-
 let measurmentChart = new ApexCharts(
   document.querySelector("#measurment-chart"),
   measurmentOptions
 );
 measurmentChart?.render();
-
 // Add supply & demands chart
 let supplyDemandsOptions = {
   series: [
@@ -498,66 +470,36 @@ let supplyDemandsOptions = {
       ["الاستدامة المالية"],
       ["إدارة الموارد البشرية"],
     ],
-    labels: {
-      style: {
-        colors: ["#666B88"],
-        fontSize: "13px",
-        fontFamily: "MadaniArabic-Regular",
-        fontWeight: "400",
-      },
-    },
   },
 };
-
 let supplyDemandsChart = new ApexCharts(
   document.querySelector("#supply-demands-chart"),
   supplyDemandsOptions
 );
 supplyDemandsChart?.render();
-
 const levelFormCheckInputs = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .input-group input`
 );
 // handle the status to be related with the check inputs value
-function updateQualifiedInputs() {
-  levelFormCheckInputs?.forEach((input) => {
-    if (
-      input.parentNode.parentNode.parentElement.classList.contains("qualified")
-    ) {
-      if (input.parentNode.classList.contains("qualified-input")) {
-        input.checked = true;
-      } else if (input.parentNode.classList.contains("not-qualified-input")) {
-        input.checked = false;
-      }
-    } else if (
-      input.parentNode.parentNode.parentElement.classList.contains(
-        "not-qualified"
-      )
-    ) {
-      if (input.parentNode.classList.contains("qualified-input")) {
-        input.checked = false;
-      } else if (input.parentNode.classList.contains("not-qualified-input")) {
-        input.checked = true;
-      }
-    }
-  });
-}
 
-const levelFormBtnsContainerItems = document.querySelectorAll(
-  `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container`
-);
+document.querySelectorAll(".form-box-item").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
+      const isQualified = event.target.id.endsWith("True");
+      if (isQualified) {
+        item.classList.add("qualified");
+        item.classList.remove("not-qualified");
+      } else {
+        item.classList.add("not-qualified");
+        item.classList.remove("qualified");
+      }
 
-// handle adding the click action to every item to toggle status
-levelFormBtnsContainerItems?.forEach((item) => {
-  item.addEventListener("click", function () {
-    if (item.parentElement.classList.contains("not-qualified")) {
-      item.parentElement.classList.remove("not-qualified");
-      item.parentElement.classList.add("qualified");
-      updateQualifiedInputs();
-    } else if (item.parentElement.classList.contains("qualified")) {
-      item.parentElement.classList.remove("qualified");
-      item.parentElement.classList.add("not-qualified");
-      updateQualifiedInputs();
+      // Uncheck the other checkbox
+      item.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        if (checkbox !== event.target) {
+          checkbox.checked = false;
+        }
+      });
     }
   });
 });
@@ -586,12 +528,10 @@ const notificationsMenu = document.querySelector(
 const dashboardUserMenu = document.querySelector(
   `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu`
 );
-
 // toggle showing the notification menu when cliking the notification btn
 notificationsIcon?.addEventListener("click", function () {
   notificationsMenu?.classList.toggle("open");
 });
-
 // toggle showing the user menu when cliking the user box
 dashboardUserBox?.addEventListener("click", function () {
   dashboardUserMenu?.classList.toggle("open");
@@ -601,16 +541,13 @@ dashboardUserBox?.addEventListener("click", function () {
     dashboardUserBox.classList.remove("clicked");
   }
 });
-
 // handle opening every submenu when clicking the arrow btn
 submenuIcons?.forEach((icon) => {
   icon.addEventListener("click", function () {
     icon.parentNode.classList.toggle("open");
   });
 });
-
 const aside = document.querySelector(`.adminDashboardPage aside`);
-
 // function to handle the showing of the submenus relating to the aside shrinked or not
 function hideSubmenu() {
   if (aside?.classList.contains("shrink")) {
@@ -621,7 +558,6 @@ function hideSubmenu() {
     });
   }
 }
-
 // open aside when hover it
 aside?.addEventListener("mouseenter", function () {
   if (!aside.classList.contains("shrink")) {
@@ -629,7 +565,6 @@ aside?.addEventListener("mouseenter", function () {
     hideSubmenu();
   }
 });
-
 // close aside when the hover is done
 aside?.addEventListener("mouseleave", function () {
   if (aside.classList.contains("shrink")) {
@@ -638,23 +573,18 @@ aside?.addEventListener("mouseleave", function () {
   }
 });
 hideSubmenu();
-
 // handling the submenus when resizing to not effect the responsive
 document.addEventListener("resize", hideSubmenu);
-
 // toggle the aside with the aside btn at bigger screens
 asideIcon?.addEventListener("click", function () {
   aside?.classList.toggle("shrink");
   hideSubmenu();
 });
-
 // toggle opening the aside with the header btn at small devices
 headerAsideIcon?.addEventListener("click", function () {
   aside?.classList.toggle("open");
 });
-
 updateQualifiedInputs();
-
 // Modal Operations
 const modal = document.querySelector(`.modal`);
 const modalBody = document.querySelector(`.modal .modalBox`);
@@ -664,17 +594,14 @@ const modalCloseBtn = document.querySelector(
 const addAssociationBtn = document.querySelector(
   `.associationsMainContent .contentSection.tableSection .tableHeading .addAssociation`
 );
-
 // close the modal when clicking the close button
 modalCloseBtn?.addEventListener("click", function () {
   modal?.classList.remove("open");
 });
-
 // open the modal for adding new association
 addAssociationBtn?.addEventListener("click", function () {
   modal?.classList.add("open");
 });
-
 // Close the modal when clicking outside its body
 document.addEventListener(
   "click",

@@ -21,11 +21,7 @@
   outline: none;
   direction: rtl;
   scroll-behavior: smooth;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   line-height: normal;
 }
 
@@ -93,6 +89,62 @@ img {
   display: inline-block;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
+}
 body {
   background-color: #f3f3f9;
   width: 100%;
@@ -5037,6 +5089,11 @@ footer .container .support .support-contact-social li a img {
   gap: 16px;
   flex: 1 0 0;
 }
+@media screen and (max-width: 768px) {
+  .adminDashboardPage .dashboardMain {
+    padding: 0;
+  }
+}
 .adminDashboardPage .dashboardMain .dashboardHeader {
   position: relative;
   height: 72px;
@@ -5454,6 +5511,11 @@ footer .container .support .support-contact-social li a img {
   gap: 24px;
   flex-shrink: 0;
   align-self: stretch;
+}
+@media screen and (max-width: 768px) {
+  .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner {
+    padding: 16px;
+  }
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .associationsHeadingbox {
   width: 100%;
@@ -5886,67 +5948,13 @@ footer .container .support .support-contact-social li a img {
   font-style: normal;
   font-weight: 400;
 }
-.associationsMainContent .contentSection.tableSection .dt-container {
-  width: 100%;
-}
-.associationsMainContent .contentSection.tableSection .dt-container .dt-paging {
-  display: flex;
-  justify-content: center;
+
+.operationsBtns {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-}
-.associationsMainContent .contentSection.tableSection .dt-container .dt-paging .dt-paging-button {
-  display: flex;
-  width: 24px;
-  height: 24px;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-  font-family: MadaniArabic-Regular;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-  color: #0d0d0d;
-}
-.associationsMainContent .contentSection.tableSection .dt-container .dt-paging .dt-paging-button.current {
-  border-radius: 4px;
-  background: #1d968f;
-  color: #ffffff !important;
-}
-.associationsMainContent .contentSection.tableSection .dt-container thead tr th {
-  color: #666b88;
-  text-align: center;
-  font-family: MadaniArabic-Regular;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-}
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td {
-  color: #0d0d0d;
-  text-align: center;
-  font-family: MadaniArabic-Regular;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-}
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type {
-  display: flex;
-  height: 47px;
-  padding: 9px 8px;
-  align-self: stretch;
-  align-items: center;
-  justify-content: center;
-  justify-content: flex-end;
-  gap: 12px;
-}
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type .operationsBtns {
-  display: flex;
-  align-items: flex-start;
   gap: 4px;
 }
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type .operationsBtns .tableBtn {
+.operationsBtns .tableBtn {
   display: flex;
   width: 25px;
   height: 25px;
@@ -5964,17 +5972,20 @@ footer .container .support .support-contact-social li a img {
   flex-shrink: 0;
   cursor: pointer;
 }
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type .operationsBtns .tableBtn img {
+.operationsBtns .tableBtn img {
   height: 16px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type .saveBtn {
-  display: flex;
+
+.saveBtn {
+  display: inline-flex;
   padding: 6px 20px;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   gap: 10px;
+  cursor: pointer;
   border: 1px solid #1d968f;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -6169,62 +6180,6 @@ footer .container .support .support-contact-social li a img {
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 25px;
-  }
-  h2 {
-    font-size: 21px;
-  }
-  h3 {
-    font-size: 19px;
-  }
-  h4 {
-    font-size: 17px;
-  }
-  h5 {
-    font-size: 15px;
-  }
-  h6 {
-    font-size: 13px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 14px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 14px;
-  }
-}
 .apexcharts * {
   font-family: "MadaniArabic-Regular", sans-serif !important;
 }
@@ -6251,4 +6206,92 @@ footer .container .support .support-contact-social li a img {
   .apexcharts-xaxis-label tspan {
     font-size: 12px;
   }
+}
+
+.table {
+  width: 100% !important;
+}
+.table .dtr-details {
+  display: flex !important;
+  flex-direction: column;
+  font-size: 14px;
+}
+.table .dtr-details > li {
+  border-bottom: 1px solid #efefef;
+  padding: 0.5em 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  row-gap: 4px;
+}
+.table .dtr-details > li .dtr-data {
+  white-space: normal;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.table tbody th,
+.table tbody td,
+.table thead th,
+.table thead td {
+  padding: 12px;
+  border: none !important;
+  text-align: start !important;
+}
+.table tbody th:hover,
+.table tbody td:hover,
+.table thead th:hover,
+.table thead td:hover {
+  outline: unset !important;
+}
+.table tbody .dt-column-title,
+.table thead .dt-column-title {
+  white-space: nowrap;
+}
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}
+
+.dt-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dt-layout-table .dt-layout-cell {
+  width: 100%;
+}
+
+.dt-layout-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dt-layout-row .dt-layout-cell > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dt-layout-row .dt-layout-cell > div .dt-paging-button {
+  padding: 8px;
+  border: none;
+  aspect-ratio: 1;
+  min-width: 32px;
+  border-radius: 4px;
+}
+.dt-layout-row .dt-layout-cell > div .dt-paging-button:hover, .dt-layout-row .dt-layout-cell > div .dt-paging-button.current {
+  background-color: #1d968f;
+  color: #ffffff;
+}
+.dt-layout-row select,
+.dt-layout-row input {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  min-height: 40px;
+  padding: 8px;
 }/*# sourceMappingURL=style.css.map */

@@ -14,7 +14,6 @@ $InputStroke: #f2f2f2;
 $InputHint: #aaa;
 $grayColor: #777;
 $dashboardBG: #f8fbfb;
-
 @font-face {
   font-family: MadaniArabic-Regular;
   font-display: swap;
@@ -38,11 +37,7 @@ $dashboardBG: #f8fbfb;
   outline: none;
   direction: rtl;
   scroll-behavior: smooth;
-  transition: $transition;
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
+  transition: all 0.1s ease-in-out;
   line-height: normal;
 }
 ::-webkit-scrollbar {
@@ -101,6 +96,65 @@ img {
   height: auto;
   display: inline-block;
 }
+
+// responsive
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
+}
+
 body {
   background-color: $bodyColor;
   width: 100%;
@@ -316,7 +370,6 @@ header {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-
         user-select: none;
         @media (max-width: 991px) {
           display: none;
@@ -327,7 +380,6 @@ header {
       display: flex;
       padding: 8px 20px;
       padding-bottom: 12px;
-
       justify-content: center;
       align-items: center;
       background: var(--Main, #1d968f);
@@ -356,7 +408,6 @@ content {
   gap: 40px;
   position: relative;
   background-color: $whiteColor;
-
   // Start Main Slider
   .mainSlider {
     position: relative;
@@ -428,7 +479,6 @@ content {
           flex-shrink: 0;
           border-radius: 83.333px;
           border: 1px solid $whiteColor;
-
           @media (max-width: 768px) {
             width: 30px;
             height: 30px;
@@ -524,7 +574,6 @@ content {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-
         line-height: 1.6;
       }
     }
@@ -544,7 +593,6 @@ content {
       width: min(100% - 16px, 1440px);
       margin: auto;
       display: flex;
-
       justify-content: center;
       @media (max-width: 768px) {
         flex-direction: column-reverse;
@@ -589,7 +637,6 @@ content {
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
-
           @media (max-width: 768px) {
             font-size: 24px;
           }
@@ -630,7 +677,6 @@ content {
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-
             @media (max-width: 768px) {
               align-items: center;
             }
@@ -796,7 +842,6 @@ content {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-
         text-align: right;
       }
       p {
@@ -847,7 +892,6 @@ content {
   align-items: center;
   gap: 16px;
   background-color: $whiteColor;
-
   .parteners-heading {
     display: flex;
     flex-direction: column;
@@ -948,7 +992,6 @@ content {
       justify-content: space-between;
       align-items: center;
       align-self: stretch;
-
       @media (max-width: 678px) {
         flex-direction: column;
         gap: 40px;
@@ -981,7 +1024,6 @@ content {
       }
       .newsSwiperControl {
         position: relative;
-
         .swiperBtns {
           display: flex;
           justify-content: flex-end;
@@ -1085,7 +1127,6 @@ content {
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
-
               display: -webkit-box;
               -webkit-box-orient: vertical;
               overflow: hidden;
@@ -1097,7 +1138,6 @@ content {
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-
               text-align: right;
               font-family: MadaniArabic-Regular;
               &.news-paragraph-content {
@@ -1129,11 +1169,9 @@ content {
     gap: 24px;
     align-self: stretch;
     background-color: $whiteColor;
-
     @media (max-width: 768px) {
       flex-direction: column;
     }
-
     .contact-info {
       display: flex;
       width: 421px;
@@ -1182,7 +1220,6 @@ content {
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-
               &.heading {
                 color: $darkColor;
               }
@@ -1201,7 +1238,6 @@ content {
             -moz-transition: $transition;
             -ms-transition: $transition;
             -o-transition: $transition;
-
             img {
               width: 24px;
               height: 24px;
@@ -1219,7 +1255,6 @@ content {
         }
       }
     }
-
     form {
       background: #fff;
       box-shadow: 0px 4px 24px #0000001a;
@@ -1237,7 +1272,6 @@ content {
       background: $main08;
       box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
       position: relative;
-
       .inputfield {
         display: flex;
         height: 58px;
@@ -1251,15 +1285,12 @@ content {
         max-width: 100%;
         min-width: 380px;
         flex: 1;
-
         @media (max-width: 768px) {
           min-width: 100%;
           width: 100%;
         }
-
         &.textareaField {
           height: 123px;
-
           label {
             top: 0;
             transform: none;
@@ -1269,7 +1300,6 @@ content {
             -o-transform: none;
           }
         }
-
         label {
           color: var(--Text, #666b88);
           text-align: right;
@@ -1277,7 +1307,6 @@ content {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -1297,7 +1326,6 @@ content {
           -ms-transition: $transition;
           -o-transition: $transition;
         }
-
         .highlight {
           height: 1px;
           flex-shrink: 0;
@@ -1310,7 +1338,6 @@ content {
           -ms-transition: $transition;
           -o-transition: $transition;
         }
-
         input,
         textarea {
           height: 58px;
@@ -1319,30 +1346,25 @@ content {
           outline: none;
           border: none;
           order: 2;
-
           &:focus + label {
             top: 0;
             font-weight: 800;
           }
         }
-
         textarea {
           width: 100%;
           height: 123px;
           resize: none;
-
           &:focus + label {
             top: -20px;
           }
         }
       }
-
       .btnBox {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-
         button {
           display: flex;
           width: 197px;
@@ -1361,7 +1383,6 @@ content {
           -ms-transition: $transition;
           -o-transition: $transition;
           cursor: pointer;
-
           &:hover {
             background-color: $mainColor;
             color: $whiteColor;
@@ -1371,7 +1392,6 @@ content {
     }
   }
 }
-
 // Start Footer
 footer {
   display: flex;
@@ -1380,7 +1400,6 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: $whiteColor;
-
   @media (max-width: 768px) {
     padding: 8px;
   }
@@ -1552,7 +1571,6 @@ footer {
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             border: 1px solid $darkColor;
-
             img {
               width: 40px;
               height: 40px;
@@ -1681,7 +1699,6 @@ footer {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-
         text-wrap: balance;
         &.blog-content {
           color: $textColor;
@@ -1697,7 +1714,6 @@ footer {
       gap: 48px;
       flex: 1;
       min-width: 300px;
-
       h3 {
         display: flex;
         flex-direction: column;
@@ -1758,7 +1774,6 @@ footer {
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-
               position: relative;
               display: -webkit-box;
               -webkit-box-orient: vertical;
@@ -1788,7 +1803,6 @@ footer {
   // align-items: flex-start;
   background-color: $whiteColor;
   height: 100dvh;
-
   figure {
     flex: 1;
     display: flex;
@@ -1882,7 +1896,6 @@ footer {
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-
         @media (max-width: 768px) {
           font-size: 20px;
         }
@@ -1893,7 +1906,6 @@ footer {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-
       align-self: stretch;
       .auth-form-heading {
         width: 100%;
@@ -1931,7 +1943,6 @@ footer {
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
-
             @media (max-width: 768px) {
               font-size: 28px;
             }
@@ -1946,7 +1957,6 @@ footer {
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -2015,7 +2025,6 @@ footer {
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-
                 text-align: right;
                 &::placeholder {
                   color: $InputHint;
@@ -2067,7 +2076,6 @@ footer {
               font-size: 40px;
               font-style: normal;
               font-weight: 400;
-
               @media (max-width: 768px) {
                 font-size: 30px;
                 max-width: 50px;
@@ -2112,7 +2120,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-
             text-align: right;
             color: $whiteColor;
             cursor: pointer;
@@ -2257,7 +2264,6 @@ footer {
         align-self: stretch;
         border-radius: 24px;
         background: $whiteColor;
-
         .form-section-heading {
           color: #aaa;
           font-family: MadaniArabic-SemiBold;
@@ -2397,7 +2403,6 @@ footer {
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-
                 text-align: right;
                 border-radius: 12px;
                 -webkit-border-radius: 12px;
@@ -2624,7 +2629,6 @@ footer {
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-
       background-color: $whiteColor;
     }
   }
@@ -2747,7 +2751,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-
           white-space: nowrap;
           &.main {
             color: $mainColor;
@@ -2890,7 +2893,6 @@ footer {
             border-radius: 12px;
             border: 1px solid $InputStroke;
             background: $whiteColor;
-
             &::placeholder {
               color: $InputHint;
               text-align: right;
@@ -3101,7 +3103,6 @@ footer {
         gap: 11.111px;
         border-radius: 12px;
         border: 1px solid $grayColor;
-
         img {
           width: 16px;
           height: 11.636px;
@@ -3137,7 +3138,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-
             white-space: nowrap;
             &.main {
               color: $mainColor;
@@ -3149,7 +3149,6 @@ footer {
     .supply-demand-section {
       width: 100%;
       display: flex;
-
       padding: 24px;
       flex-direction: column;
       align-items: flex-start;
@@ -3184,7 +3183,6 @@ footer {
         flex: 1 0 0;
         border-radius: 16px;
         background: $whiteColor;
-
         /* shadow 4 */
         box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
           0px 10px 20px -2px rgba(0, 0, 0, 0.04);
@@ -3404,7 +3402,6 @@ footer {
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
-
                 flex: 1 0 0;
                 cursor: pointer;
               }
@@ -3437,7 +3434,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-
           border: none;
           outline: none;
         }
@@ -3456,7 +3452,6 @@ $PercentSize: 100px;
     .percentNum {
       background-color: rgba(25, 194, 185, 0.7);
       color: $whiteColor;
-
       span {
         color: #eee;
       }
@@ -3531,7 +3526,6 @@ $PercentSize: 100px;
     }
   }
 }
-
 // Start Admin Dashboard
 .adminDashboardPage {
   min-height: 100vh;
@@ -3541,7 +3535,6 @@ $PercentSize: 100px;
   justify-content: flex-start;
   background-color: $whiteColor;
   overflow: hidden;
-
   aside {
     width: 274px;
     display: flex;
@@ -3550,7 +3543,6 @@ $PercentSize: 100px;
     align-items: flex-start;
     gap: 16px;
     position: relative;
-
     @media (max-width: 768px) {
       right: -110%;
       position: absolute;
@@ -3560,18 +3552,15 @@ $PercentSize: 100px;
       box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
         0px 10px 20px -2px rgba(0, 0, 0, 0.04);
       width: 100%;
-
       &.open {
         right: 0;
       }
     }
-
     &.shrink {
       width: 74px;
       @media (max-width: 768px) {
         width: 100%;
       }
-
       .navLink {
         img {
           width: 20px !important;
@@ -3582,7 +3571,6 @@ $PercentSize: 100px;
         display: none !important;
       }
     }
-
     .asideIcon {
       display: flex;
       width: 36px;
@@ -3597,11 +3585,9 @@ $PercentSize: 100px;
       left: -36px;
       top: 31px;
       z-index: 9999;
-
       @media (max-width: 768px) {
         display: none;
       }
-
       .iconBar {
         width: 28px;
         height: 2px;
@@ -3614,7 +3600,6 @@ $PercentSize: 100px;
         -o-border-radius: 16px;
       }
     }
-
     .asideLogo {
       width: 100%;
       display: flex;
@@ -3623,24 +3608,20 @@ $PercentSize: 100px;
       gap: 14px;
       flex-shrink: 0;
       align-self: stretch;
-
       img {
         height: 100%;
         object-fit: cover;
       }
-
       .logo-heading {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 3.6px;
-
         img {
           object-fit: cover;
         }
       }
     }
-
     .asideNav {
       width: 100%;
       display: flex;
@@ -3650,7 +3631,6 @@ $PercentSize: 100px;
       gap: 8px;
       flex: 1 0 0;
       align-self: stretch;
-
       .navItem {
         width: 100%;
         display: flex;
@@ -3665,7 +3645,6 @@ $PercentSize: 100px;
         -o-transition: $transition;
         flex-wrap: wrap;
         overflow-x: hidden;
-
         &.active,
         &:hover {
           background: $main08;
@@ -3674,14 +3653,12 @@ $PercentSize: 100px;
           -moz-border-radius: 12px;
           -ms-border-radius: 12px;
           -o-border-radius: 12px;
-
           .navLink {
             p {
               color: $mainColor;
             }
           }
         }
-
         &.open {
           .submenuIcon {
             img {
@@ -3696,7 +3673,6 @@ $PercentSize: 100px;
             display: flex;
           }
         }
-
         .navLink {
           width: 100%;
           flex: 1 0 0;
@@ -3707,7 +3683,6 @@ $PercentSize: 100px;
           align-items: center;
           gap: 28px;
           align-self: stretch;
-
           p {
             color: $grayColor;
             text-align: right;
@@ -3715,18 +3690,15 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-
             white-space: wrap;
             text-wrap: balance;
           }
-
           img {
             width: 24px;
             height: 24px;
             object-fit: cover;
           }
         }
-
         .submenuIcon {
           display: flex;
           width: 12px;
@@ -3736,14 +3708,12 @@ $PercentSize: 100px;
           flex-shrink: 0;
           margin-left: 16px;
           cursor: pointer;
-
           img {
             width: 8px;
             object-fit: cover;
             flex-shrink: 0;
           }
         }
-
         .submenu {
           position: relative;
           width: 100%;
@@ -3755,7 +3725,6 @@ $PercentSize: 100px;
           right: 0;
           background-color: $whiteColor;
           list-style: none;
-
           .submenuItem {
             display: flex;
             justify-content: flex-start;
@@ -3763,17 +3732,14 @@ $PercentSize: 100px;
             gap: 8px;
             align-self: stretch;
             flex-direction: column;
-
             &.active {
               > a {
                 color: $mainColor !important;
               }
             }
-
             ul {
               padding-right: 40px;
             }
-
             a {
               width: 100%;
               padding: 8px 4px;
@@ -3789,7 +3755,6 @@ $PercentSize: 100px;
       }
     }
   }
-
   .dashboardMain {
     display: flex;
     padding: 0px 0px 24px 24px;
@@ -3797,7 +3762,9 @@ $PercentSize: 100px;
     align-items: flex-end;
     gap: 16px;
     flex: 1 0 0;
-
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
     .dashboardHeader {
       position: relative;
       height: 72px;
@@ -3810,11 +3777,9 @@ $PercentSize: 100px;
       align-self: stretch;
       box-shadow: none;
       background-color: $whiteColor;
-
       @media (max-width: 768px) {
         padding: 32px 24px 20px;
       }
-
       .headerAsideIcon {
         display: none;
         width: 36px;
@@ -3826,11 +3791,9 @@ $PercentSize: 100px;
         gap: 6px;
         cursor: pointer;
         z-index: 9999;
-
         @media (max-width: 768px) {
           display: flex;
         }
-
         .iconBar {
           width: 28px;
           height: 2px;
@@ -3843,18 +3806,15 @@ $PercentSize: 100px;
           -o-border-radius: 16px;
         }
       }
-
       .headerGreeting {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 8px;
         align-self: stretch;
-
         @media (max-width: 768px) {
           display: none;
         }
-
         h6 {
           color: $grayColor;
           text-align: right;
@@ -3863,7 +3823,6 @@ $PercentSize: 100px;
           font-style: normal;
           font-weight: 400;
         }
-
         h5 {
           color: $darkColor;
           text-align: right;
@@ -3873,12 +3832,10 @@ $PercentSize: 100px;
           font-weight: 400;
         }
       }
-
       .notificationAndUserBox {
         display: flex;
         align-items: center;
         gap: 7px;
-
         .notificationIcon {
           display: flex;
           width: 48px;
@@ -3896,14 +3853,12 @@ $PercentSize: 100px;
           -o-border-radius: 100px;
           position: relative;
           cursor: pointer;
-
           img {
             width: 24px;
             height: 24px;
             flex-shrink: 0;
             object-fit: cover;
           }
-
           .notificationCount {
             display: flex;
             width: 20px;
@@ -3923,7 +3878,6 @@ $PercentSize: 100px;
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-
             border-radius: 100px;
             -webkit-border-radius: 100px;
             -moz-border-radius: 100px;
@@ -3931,7 +3885,6 @@ $PercentSize: 100px;
             -o-border-radius: 100px;
           }
         }
-
         .notificationMenu {
           display: flex;
           width: 320px;
@@ -3953,16 +3906,13 @@ $PercentSize: 100px;
           -moz-border-radius: 24px;
           -ms-border-radius: 24px;
           -o-border-radius: 24px;
-
           &::-webkit-scrollbar {
             width: 0;
             height: 0;
           }
-
           &.open {
             left: 32px;
           }
-
           .notificationMenuHeading {
             display: flex;
             padding-bottom: 8px;
@@ -3970,7 +3920,6 @@ $PercentSize: 100px;
             align-items: flex-start;
             gap: 10px;
             align-self: stretch;
-
             h6 {
               flex: 1 0 0;
               color: $darkColor;
@@ -3980,7 +3929,6 @@ $PercentSize: 100px;
               font-style: normal;
               font-weight: 400;
             }
-
             a {
               color: $mainColor;
               text-align: right;
@@ -3990,7 +3938,6 @@ $PercentSize: 100px;
               font-weight: 400;
             }
           }
-
           .notificationBox {
             display: flex;
             padding: 8px 4px;
@@ -4000,7 +3947,6 @@ $PercentSize: 100px;
             align-items: flex-start;
             gap: 4px;
             flex: 1 0 0;
-
             .notificationBoxTitle {
               align-self: stretch;
               color: $darkColor;
@@ -4010,7 +3956,6 @@ $PercentSize: 100px;
               font-style: normal;
               font-weight: 400;
             }
-
             .notificationBoxContent {
               align-self: stretch;
               color: $textColor;
@@ -4022,7 +3967,6 @@ $PercentSize: 100px;
             }
           }
         }
-
         .dashboardUserMenu {
           display: flex;
           width: 250px;
@@ -4041,11 +3985,9 @@ $PercentSize: 100px;
           -moz-border-radius: 24px;
           -ms-border-radius: 24px;
           -o-border-radius: 24px;
-
           &.open {
             left: 32px;
           }
-
           .userInfoBox {
             display: flex;
             padding: 12px;
@@ -4053,7 +3995,6 @@ $PercentSize: 100px;
             align-items: center;
             gap: 8px;
             align-self: stretch;
-
             .userMaskGroup {
               display: flex;
               padding: 8px;
@@ -4065,7 +4006,6 @@ $PercentSize: 100px;
               border: 1px solid $InputStroke;
               background: $whiteColor;
               position: relative;
-
               figure {
                 width: 64px;
                 height: 64px;
@@ -4073,13 +4013,11 @@ $PercentSize: 100px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 img {
                   height: 100%;
                   object-fit: cover;
                 }
               }
-
               .editAvatar {
                 width: 25px;
                 height: 25px;
@@ -4095,7 +4033,6 @@ $PercentSize: 100px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 img {
                   width: 12px;
                   height: 12px;
@@ -4104,13 +4041,11 @@ $PercentSize: 100px;
                 }
               }
             }
-
             .userInfo {
               display: flex;
               flex-direction: column;
               align-items: center;
               gap: 4px;
-
               .userName {
                 color: $darkColor;
                 text-align: right;
@@ -4119,7 +4054,6 @@ $PercentSize: 100px;
                 font-style: normal;
                 font-weight: 400;
               }
-
               .userEmail {
                 color: $grayColor;
                 text-align: right;
@@ -4130,7 +4064,6 @@ $PercentSize: 100px;
               }
             }
           }
-
           .menuLinksBox {
             width: 100%;
             display: flex;
@@ -4139,7 +4072,6 @@ $PercentSize: 100px;
             justify-content: center;
             align-items: flex-start;
             align-self: stretch;
-
             .menuLink {
               display: flex;
               justify-content: flex-start;
@@ -4147,7 +4079,6 @@ $PercentSize: 100px;
               gap: 16px;
               align-self: stretch;
               padding: 8px;
-
               p {
                 flex: 1 0 0;
                 color: $darkColor;
@@ -4157,7 +4088,6 @@ $PercentSize: 100px;
                 font-style: normal;
                 font-weight: 400;
               }
-
               img {
                 width: 20px;
                 height: 20px;
@@ -4166,14 +4096,12 @@ $PercentSize: 100px;
             }
           }
         }
-
         .userBox {
           display: flex;
           justify-content: flex-start;
           align-items: center;
           gap: 8px;
           cursor: pointer;
-
           &.clicked {
             .userSubmenuIcon {
               transform: rotate(-90deg);
@@ -4183,7 +4111,6 @@ $PercentSize: 100px;
               -o-transform: rotate(-90deg);
             }
           }
-
           .userBoxAvatar {
             display: flex;
             width: 48px;
@@ -4199,13 +4126,11 @@ $PercentSize: 100px;
             -moz-border-radius: 100px;
             -ms-border-radius: 100px;
             -o-border-radius: 100px;
-
             img {
               width: 100%;
               object-fit: cover;
             }
           }
-
           p {
             color: $darkColor;
             text-align: right;
@@ -4214,7 +4139,6 @@ $PercentSize: 100px;
             font-style: normal;
             font-weight: 400;
           }
-
           .userSubmenuIcon {
             display: flex;
             width: 12px;
@@ -4222,7 +4146,6 @@ $PercentSize: 100px;
             justify-content: center;
             align-items: flex-end;
             gap: 10px;
-
             img {
               height: 12px;
               flex-shrink: 0;
@@ -4232,7 +4155,6 @@ $PercentSize: 100px;
         }
       }
     }
-
     .dashboardMainContent {
       display: flex;
       flex-direction: column;
@@ -4243,7 +4165,6 @@ $PercentSize: 100px;
       border-radius: 24px;
       background: $dashboardBG;
       position: relative;
-
       .contentConatiner {
         display: flex;
         padding: 32px;
@@ -4252,7 +4173,9 @@ $PercentSize: 100px;
         gap: 24px;
         flex-shrink: 0;
         align-self: stretch;
-
+        @media screen and (max-width: 768px) {
+          padding: 16px;
+        }
         .associationsHeadingbox {
           width: 100%;
           display: flex;
@@ -4261,7 +4184,6 @@ $PercentSize: 100px;
           align-items: flex-end;
           gap: 8px;
           align-self: stretch;
-
           h2 {
             display: flex;
             justify-content: flex-start;
@@ -4276,7 +4198,6 @@ $PercentSize: 100px;
             font-style: normal;
             font-weight: 400;
           }
-
           .breadcrumb {
             width: 100%;
             display: flex;
@@ -4289,7 +4210,6 @@ $PercentSize: 100px;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-
               white-space: nowrap;
               &.main {
                 color: $mainColor;
@@ -4297,7 +4217,6 @@ $PercentSize: 100px;
             }
           }
         }
-
         .contentSection {
           display: flex;
           padding: 24px 20px 12px 20px;
@@ -4313,7 +4232,6 @@ $PercentSize: 100px;
           -moz-border-radius: 24px;
           -ms-border-radius: 24px;
           -o-border-radius: 24px;
-
           .sectionHeading {
             color: $darkColor;
             text-align: right;
@@ -4322,7 +4240,6 @@ $PercentSize: 100px;
             font-style: normal;
             font-weight: 400;
           }
-
           .sectionBoxesConatiner {
             width: 100%;
             display: flex;
@@ -4330,7 +4247,6 @@ $PercentSize: 100px;
             gap: 20px;
             flex-wrap: wrap;
             position: relative;
-
             .sectionBox {
               display: flex;
               padding: 24px;
@@ -4347,7 +4263,6 @@ $PercentSize: 100px;
               -moz-border-radius: 16px;
               -ms-border-radius: 16px;
               -o-border-radius: 16px;
-
               &.mapBox {
                 width: 100%;
                 padding: 0 !important;
@@ -4357,18 +4272,15 @@ $PercentSize: 100px;
                   object-fit: cover !important;
                 }
               }
-
               &.min-300 {
                 min-width: 300px;
               }
-
               &.min-400 {
                 min-width: 400px;
                 @media (max-width: 768px) {
                   min-width: 300px;
                 }
               }
-
               .boxValue {
                 color: $darkColor;
                 text-align: center;
@@ -4377,7 +4289,6 @@ $PercentSize: 100px;
                 font-style: normal;
                 font-weight: 400;
               }
-
               .growthTitle {
                 color: $darkColor;
                 text-align: center;
@@ -4386,7 +4297,6 @@ $PercentSize: 100px;
                 font-style: normal;
                 font-weight: 400;
               }
-
               .boxTitle {
                 align-items: stretch;
                 color: $grayColor;
@@ -4401,7 +4311,6 @@ $PercentSize: 100px;
         }
       }
     }
-
     .dashboardFooter {
       width: 100%;
       display: flex;
@@ -4414,11 +4323,9 @@ $PercentSize: 100px;
       flex-shrink: 0;
       position: relative;
       flex-wrap: wrap;
-
       @media (max-width: 768px) {
         gap: 16px;
       }
-
       .copyright {
         display: flex;
         justify-content: flex-start;
@@ -4431,16 +4338,13 @@ $PercentSize: 100px;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-
         white-space: nowrap;
         text-wrap: balance;
-
         @media (max-width: 768px) {
           width: 100%;
           flex-wrap: wrap;
           font-size: 13px;
         }
-
         a {
           color: $mainColor;
           text-align: right;
@@ -4450,18 +4354,15 @@ $PercentSize: 100px;
           font-weight: 400;
         }
       }
-
       .footerNav {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 12px;
-
         @media (max-width: 768px) {
           width: 100%;
           justify-content: space-around;
         }
-
         a {
           color: $darkColor;
           text-align: right;
@@ -4474,7 +4375,6 @@ $PercentSize: 100px;
     }
   }
 }
-
 .dashboardMainContent {
   display: flex;
   min-height: 836px;
@@ -4482,11 +4382,9 @@ $PercentSize: 100px;
   align-items: flex-start;
   gap: 20px;
   align-self: stretch;
-
   &.associationsMainContent {
     min-height: unset;
   }
-
   .contentSection {
     display: flex;
     padding: 24px;
@@ -4500,7 +4398,6 @@ $PercentSize: 100px;
     -moz-border-radius: 24px;
     -ms-border-radius: 24px;
     -o-border-radius: 24px;
-
     .sectionHeading {
       color: $InputHint !important;
       font-family: MadaniArabic-SemiBold;
@@ -4508,7 +4405,6 @@ $PercentSize: 100px;
       font-style: normal;
       font-weight: 400;
     }
-
     .searchBoxesForm {
       width: 100%;
       display: flex;
@@ -4517,7 +4413,6 @@ $PercentSize: 100px;
       gap: 16px;
       align-self: stretch;
       flex-wrap: wrap;
-
       .searchBox {
         display: flex;
         padding: 16px;
@@ -4535,7 +4430,6 @@ $PercentSize: 100px;
         -o-border-radius: 16px;
         min-width: 300px;
         flex: 1 0 0;
-
         h6 {
           color: $grayColor;
           text-align: center;
@@ -4544,7 +4438,6 @@ $PercentSize: 100px;
           font-style: normal;
           font-weight: 400;
         }
-
         .boxBody {
           display: flex;
           flex-direction: column;
@@ -4552,22 +4445,18 @@ $PercentSize: 100px;
           align-items: flex-start;
           gap: 8px;
           align-self: stretch;
-
           .inputGroup {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
             align-self: stretch;
-
             &:first-of-type {
               padding: 8px 0;
-
               label {
                 color: $mainColor;
               }
             }
-
             input {
               display: flex;
               width: 20px;
@@ -4584,7 +4473,6 @@ $PercentSize: 100px;
               -o-border-radius: 4px;
               cursor: pointer;
             }
-
             label {
               color: $darkColor;
               text-align: center;
@@ -4596,7 +4484,6 @@ $PercentSize: 100px;
           }
         }
       }
-
       .inputGroupBox {
         display: flex;
         min-width: 300px;
@@ -4604,7 +4491,6 @@ $PercentSize: 100px;
         align-items: flex-start;
         gap: 8px;
         flex: 1 0 0;
-
         label {
           flex: 1 0 0;
           color: $darkColor;
@@ -4614,7 +4500,6 @@ $PercentSize: 100px;
           font-style: normal;
           font-weight: 400;
         }
-
         input,
         select {
           display: flex;
@@ -4635,7 +4520,6 @@ $PercentSize: 100px;
         }
       }
     }
-
     .btn-box {
       width: 100%;
       display: flex;
@@ -4643,7 +4527,6 @@ $PercentSize: 100px;
       align-items: center;
       gap: 16px;
       align-self: stretch;
-
       .btn {
         display: flex;
         min-width: 150px;
@@ -4658,14 +4541,12 @@ $PercentSize: 100px;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-
         border: none;
         outline: none;
       }
     }
   }
 }
-
 .associationsMainContent {
   .contentSection {
     &.tableSection {
@@ -4682,7 +4563,6 @@ $PercentSize: 100px;
       -moz-border-radius: 24px;
       -ms-border-radius: 24px;
       -o-border-radius: 24px;
-
       .tableHeading {
         width: 100%;
         flex: 1 0 0;
@@ -4691,7 +4571,6 @@ $PercentSize: 100px;
         gap: 8px;
         align-self: stretch;
         flex-wrap: wrap;
-
         .addAssociation {
           display: flex;
           padding: 12px 20px;
@@ -4710,10 +4589,8 @@ $PercentSize: 100px;
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-
           cursor: pointer;
         }
-
         h5 {
           flex: 1 0 0;
           color: $darkColor;
@@ -4725,131 +4602,59 @@ $PercentSize: 100px;
           font-weight: 400;
         }
       }
-
-      .dt-container {
-        width: 100%;
-        .dt-paging {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
-          .dt-paging-button {
-            display: flex;
-            width: 24px;
-            height: 24px;
-            padding: 8px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            text-align: center;
-            font-family: MadaniArabic-Regular;
-            font-size: 11px;
-            font-style: normal;
-            font-weight: 400;
-
-            color: $darkColor;
-
-            &.current {
-              border-radius: 4px;
-              background: $mainColor;
-              color: $whiteColor !important;
-            }
-          }
-        }
-
-        thead {
-          tr {
-            th {
-              color: $textColor;
-              text-align: center;
-              font-family: MadaniArabic-Regular;
-              font-size: 11px;
-              font-style: normal;
-              font-weight: 400;
-            }
-          }
-        }
-
-        tbody {
-          tr {
-            td {
-              color: $darkColor;
-              text-align: center;
-              font-family: MadaniArabic-Regular;
-              font-size: 11px;
-              font-style: normal;
-              font-weight: 400;
-
-              &:last-of-type {
-                display: flex;
-                height: 47px;
-                padding: 9px 8px;
-                align-self: stretch;
-                align-items: center;
-                justify-content: center;
-                justify-content: flex-end;
-                gap: 12px;
-
-                .operationsBtns {
-                  display: flex;
-                  align-items: flex-start;
-                  gap: 4px;
-
-                  .tableBtn {
-                    display: flex;
-                    width: 25px;
-                    height: 25px;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    border-radius: 4px;
-                    -webkit-border-radius: 4px;
-                    -moz-border-radius: 4px;
-                    -ms-border-radius: 4px;
-                    -o-border-radius: 4px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-shrink: 0;
-                    cursor: pointer;
-
-                    img {
-                      height: 16px;
-                      object-fit: cover;
-                    }
-                  }
-                }
-
-                .saveBtn {
-                  display: flex;
-                  padding: 6px 20px;
-                  justify-content: center;
-                  align-items: center;
-                  gap: 10px;
-                  border: 1px solid $mainColor;
-                  border-radius: 8px;
-                  -webkit-border-radius: 8px;
-                  -moz-border-radius: 8px;
-                  -ms-border-radius: 8px;
-                  -o-border-radius: 8px;
-                  color: $mainColor;
-                  font-family: MadaniArabic-Regular;
-                  font-size: 13px;
-                  font-style: normal;
-                  font-weight: 400;
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
 
+.operationsBtns {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  .tableBtn {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    img {
+      height: 16px;
+      object-fit: cover;
+    }
+  }
+}
+.saveBtn {
+  display: inline-flex;
+  padding: 6px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: $mainColor;
+  font-family: MadaniArabic-Regular;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
 // End Admin Dashboard
 // Start Modal
-
 .modal {
   width: 100%;
   height: 100vh;
@@ -4863,16 +4668,13 @@ $PercentSize: 100px;
   align-items: flex-start;
   padding: 16px;
   overflow-y: auto;
-
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-
   &.open {
     display: flex;
   }
-
   .modalBox {
     display: flex;
     width: 800px;
@@ -4887,14 +4689,12 @@ $PercentSize: 100px;
     -moz-border-radius: 24px;
     -ms-border-radius: 24px;
     -o-border-radius: 24px;
-
     .modalHeading {
       display: flex;
       padding-bottom: 24px;
       align-items: center;
       gap: 8px;
       align-self: stretch;
-
       .modalLabel {
         flex: 1 0 0;
         color: $darkColor;
@@ -4904,7 +4704,6 @@ $PercentSize: 100px;
         font-style: normal;
         font-weight: 400;
       }
-
       .closeBtnBox {
         display: flex;
         width: 20px;
@@ -4921,7 +4720,6 @@ $PercentSize: 100px;
         -ms-border-radius: 100px;
         -o-border-radius: 100px;
         cursor: pointer;
-
         img {
           width: 8px;
           height: 8px;
@@ -4930,7 +4728,6 @@ $PercentSize: 100px;
         }
       }
     }
-
     .modalForm {
       width: 100%;
       display: flex;
@@ -4938,7 +4735,6 @@ $PercentSize: 100px;
       justify-content: center;
       align-items: flex-start;
       gap: 24px;
-
       .formBody {
         width: 100%;
         display: flex;
@@ -4947,7 +4743,6 @@ $PercentSize: 100px;
         align-items: flex-start;
         gap: 16px;
         align-self: stretch;
-
         .inputGroup {
           display: flex;
           height: 86px;
@@ -4956,7 +4751,6 @@ $PercentSize: 100px;
           align-items: flex-start;
           gap: 8px;
           align-self: stretch;
-
           label {
             flex: 1 0 0;
             color: $darkColor;
@@ -4966,7 +4760,6 @@ $PercentSize: 100px;
             font-style: normal;
             font-weight: 400;
           }
-
           input,
           select {
             display: flex;
@@ -4984,7 +4777,6 @@ $PercentSize: 100px;
             -o-border-radius: 12px;
           }
         }
-
         .btnsBox {
           width: 100%;
           display: flex;
@@ -4993,7 +4785,6 @@ $PercentSize: 100px;
           gap: 16px;
           align-self: stretch;
           margin-top: 8px;
-
           .btn {
             display: flex;
             padding: 16px 20px;
@@ -5015,7 +4806,6 @@ $PercentSize: 100px;
             font-style: normal;
             font-weight: 400;
           }
-
           .back-link {
             display: flex;
             width: 52px;
@@ -5032,7 +4822,6 @@ $PercentSize: 100px;
             -ms-border-radius: 12px;
             -o-border-radius: 12px;
             cursor: pointer;
-
             img {
               width: 22px;
               height: 16px;
@@ -5044,66 +4833,7 @@ $PercentSize: 100px;
     }
   }
 }
-
 // End Modal
-
-// responsive
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 25px;
-  }
-  h2 {
-    font-size: 21px;
-  }
-  h3 {
-    font-size: 19px;
-  }
-  h4 {
-    font-size: 17px;
-  }
-  h5 {
-    font-size: 15px;
-  }
-  h6 {
-    font-size: 13px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 14px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 14px;
-  }
-}
 
 .apexcharts * {
   font-family: "MadaniArabic-Regular", sans-serif !important;
@@ -5122,8 +4852,100 @@ $PercentSize: 100px;
 .apexcharts-menu-item {
   white-space: nowrap;
 }
-.apexcharts-xaxis-label tspan{
+.apexcharts-xaxis-label tspan {
   @media screen and (max-width: 768px) {
     font-size: 12px;
+  }
+}
+
+.table {
+  width: 100% !important;
+
+  .dtr-details {
+    display: flex !important;
+    flex-direction: column;
+    font-size: 14px;
+    > li {
+      border-bottom: 1px solid #efefef;
+      padding: 0.5em 0;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      row-gap: 4px;
+      .dtr-data {
+        white-space: normal;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+    }
+  }
+  tbody,
+  thead {
+    th,
+    td {
+      padding: 12px;
+      border: none !important;
+      text-align: start !important;
+      &:hover {
+        outline: unset !important;
+      }
+    }
+    .dt-column-title {
+      white-space: nowrap;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f9f9f9 !important;
+      }
+    }
+  }
+}
+.dt-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dt-layout-table {
+  .dt-layout-cell {
+    width: 100%;
+  }
+}
+.dt-layout-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  .dt-layout-cell {
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .dt-paging-button {
+        padding: 8px;
+        border: none;
+        aspect-ratio: 1;
+        min-width: 32px;
+        border-radius: 4px;
+        &:hover,
+        &.current {
+          background-color: $mainColor;
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+  select,
+  input {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    min-height: 40px;
+    padding: 8px;
   }
 }

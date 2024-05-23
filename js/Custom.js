@@ -481,7 +481,6 @@ const levelFormCheckInputs = document.querySelectorAll(
   `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .input-group input`
 );
 // handle the status to be related with the check inputs value
-
 document.querySelectorAll(".form-box-item").forEach((item) => {
   item.addEventListener("click", function (event) {
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
@@ -493,7 +492,6 @@ document.querySelectorAll(".form-box-item").forEach((item) => {
         item.classList.add("not-qualified");
         item.classList.remove("qualified");
       }
-
       // Uncheck the other checkbox
       item.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
         if (checkbox !== event.target) {
@@ -503,7 +501,6 @@ document.querySelectorAll(".form-box-item").forEach((item) => {
     }
   });
 });
-
 const submenuIcons = document.querySelectorAll(
   `.adminDashboardPage aside .asideNav .navItem .submenuIcon`
 );
@@ -584,31 +581,3 @@ asideIcon?.addEventListener("click", function () {
 headerAsideIcon?.addEventListener("click", function () {
   aside?.classList.toggle("open");
 });
-updateQualifiedInputs();
-// Modal Operations
-const modal = document.querySelector(`.modal`);
-const modalBody = document.querySelector(`.modal .modalBox`);
-const modalCloseBtn = document.querySelector(
-  `.modal .modalBox .modalHeading .closeBtnBox`
-);
-const addAssociationBtn = document.querySelector(
-  `.associationsMainContent .contentSection.tableSection .tableHeading .addAssociation`
-);
-// close the modal when clicking the close button
-modalCloseBtn?.addEventListener("click", function () {
-  modal?.classList.remove("open");
-});
-// open the modal for adding new association
-addAssociationBtn?.addEventListener("click", function () {
-  modal?.classList.add("open");
-});
-// Close the modal when clicking outside its body
-document.addEventListener(
-  "click",
-  function (e) {
-    if (!modalBody?.contains(e.target) && modal?.classList.contains("open")) {
-      modal?.classList.remove("open");
-    }
-  },
-  true
-);

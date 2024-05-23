@@ -43,6 +43,7 @@ $dashboardBG: #f8fbfb;
   -moz-transition: $transition;
   -ms-transition: $transition;
   -o-transition: $transition;
+  line-height: normal;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -224,7 +225,6 @@ header {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -303,7 +303,6 @@ header {
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           img {
             width: 20px;
@@ -317,7 +316,7 @@ header {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         user-select: none;
         @media (max-width: 991px) {
           display: none;
@@ -327,6 +326,8 @@ header {
     .authBtn {
       display: flex;
       padding: 8px 20px;
+      padding-bottom: 12px;
+
       justify-content: center;
       align-items: center;
       background: var(--Main, #1d968f);
@@ -341,6 +342,7 @@ header {
         order: 1;
         font-size: 13px;
         padding: 6px 16px;
+        padding-bottom: 10px;
       }
     }
   }
@@ -514,7 +516,6 @@ content {
         font-size: 40px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .slider-content-paragraph {
         align-self: stretch;
@@ -523,7 +524,7 @@ content {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         line-height: 1.6;
       }
     }
@@ -588,7 +589,7 @@ content {
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           @media (max-width: 768px) {
             font-size: 24px;
           }
@@ -601,7 +602,6 @@ content {
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .identify-content-paragraph {
           align-self: stretch;
@@ -611,7 +611,6 @@ content {
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .identify-content-list {
           display: flex;
@@ -631,7 +630,7 @@ content {
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             @media (max-width: 768px) {
               align-items: center;
             }
@@ -797,7 +796,7 @@ content {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         text-align: right;
       }
       p {
@@ -806,7 +805,6 @@ content {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       &:nth-child(even) {
         margin-top: 220px;
@@ -865,7 +863,6 @@ content {
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
     p {
       max-width: 450px;
@@ -875,7 +872,6 @@ content {
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
     .section-line {
       width: 140px;
@@ -974,7 +970,6 @@ content {
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         p {
           color: var(--Text, #666b88);
@@ -982,7 +977,6 @@ content {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
       .newsSwiperControl {
@@ -1091,7 +1085,7 @@ content {
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               display: -webkit-box;
               -webkit-box-orient: vertical;
               overflow: hidden;
@@ -1103,7 +1097,7 @@ content {
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               text-align: right;
               font-family: MadaniArabic-Regular;
               &.news-paragraph-content {
@@ -1162,7 +1156,6 @@ content {
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .contact-info-list {
         display: flex;
@@ -1189,7 +1182,7 @@ content {
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               &.heading {
                 color: $darkColor;
               }
@@ -1284,7 +1277,7 @@ content {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -1436,7 +1429,6 @@ footer {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
     }
     .footerLinks {
@@ -1455,7 +1447,6 @@ footer {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .footerNavList {
         width: 100%;
@@ -1480,7 +1471,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
         }
       }
@@ -1501,7 +1491,6 @@ footer {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .support-contact-list {
         display: flex;
@@ -1523,7 +1512,6 @@ footer {
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           img {
             width: 20px;
@@ -1631,7 +1619,6 @@ footer {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       img {
         width: 21.887px;
@@ -1648,7 +1635,6 @@ footer {
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
   }
 }
@@ -1695,7 +1681,7 @@ footer {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         text-wrap: balance;
         &.blog-content {
           color: $textColor;
@@ -1772,7 +1758,7 @@ footer {
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               position: relative;
               display: -webkit-box;
               -webkit-box-orient: vertical;
@@ -1801,34 +1787,35 @@ footer {
   display: flex;
   // align-items: flex-start;
   background-color: $whiteColor;
+  height: 100dvh;
 
   figure {
-    flex: 1 0 0;
+    flex: 1;
     display: flex;
     @media (max-width: 768px) {
       display: none;
     }
     img {
       width: 100%;
-      height: 100%;
       object-fit: cover;
     }
   }
   .auth-container {
     display: flex;
-    padding: 80px 0;
+    padding: 40px 0;
+    overflow-y: auto;
     justify-content: center;
-    align-items: flex-start;
+    // align-items: flex-start;
     flex-direction: column;
-    gap: 80px;
-    flex: 1 0 0;
+    gap: 40px;
+    flex: 1;
     position: relative;
     @media (max-width: 768px) {
       padding: 40px 0;
     }
     .auth-heading {
       width: min(100% - 24px, 500px);
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1895,7 +1882,7 @@ footer {
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         @media (max-width: 768px) {
           font-size: 20px;
         }
@@ -1903,12 +1890,10 @@ footer {
     }
     .auth-form-container {
       width: min(100% - 24px, 480px);
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      flex: 1 0 0;
+
       align-self: stretch;
       .auth-form-heading {
         width: 100%;
@@ -1946,7 +1931,7 @@ footer {
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             @media (max-width: 768px) {
               font-size: 28px;
             }
@@ -1961,7 +1946,7 @@ footer {
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -2030,7 +2015,7 @@ footer {
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
+
                 text-align: right;
                 &::placeholder {
                   color: $InputHint;
@@ -2082,7 +2067,7 @@ footer {
               font-size: 40px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               @media (max-width: 768px) {
                 font-size: 30px;
                 max-width: 50px;
@@ -2103,7 +2088,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
         }
         .auth-form-btns-container {
@@ -2128,7 +2112,7 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             text-align: right;
             color: $whiteColor;
             cursor: pointer;
@@ -2171,7 +2155,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         a {
           color: $mainColor;
@@ -2180,7 +2163,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
       .resend-container {
@@ -2197,7 +2179,6 @@ footer {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .resend-button {
           color: $mainColor;
@@ -2205,7 +2186,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -2249,7 +2229,6 @@ footer {
         font-size: 32px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       p {
         align-self: stretch;
@@ -2259,7 +2238,6 @@ footer {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
     }
     .org-register-form {
@@ -2286,7 +2264,6 @@ footer {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .section-form-body {
           display: flex;
@@ -2406,7 +2383,6 @@ footer {
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
               input,
               select {
@@ -2421,7 +2397,7 @@ footer {
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
+
                 text-align: right;
                 border-radius: 12px;
                 -webkit-border-radius: 12px;
@@ -2466,7 +2442,6 @@ footer {
                   font-size: 13px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: normal;
                 }
               }
             }
@@ -2555,7 +2530,6 @@ footer {
                       font-size: 15px;
                       font-style: normal;
                       font-weight: 400;
-                      line-height: normal;
                     }
                     input {
                       display: flex;
@@ -2593,7 +2567,6 @@ footer {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
             h5 {
               color: $darkColor;
@@ -2602,7 +2575,6 @@ footer {
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -2652,7 +2624,7 @@ footer {
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
+
       background-color: $whiteColor;
     }
   }
@@ -2762,7 +2734,6 @@ footer {
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .breadcrumb {
         width: 100%;
@@ -2776,7 +2747,7 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           white-space: nowrap;
           &.main {
             color: $mainColor;
@@ -2832,7 +2803,6 @@ footer {
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           .wizard-tag-index-box {
             display: flex;
@@ -2850,7 +2820,6 @@ footer {
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
         }
       }
@@ -2888,7 +2857,6 @@ footer {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .input-group {
           display: flex;
@@ -2910,7 +2878,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           input,
           select {
@@ -2931,7 +2898,6 @@ footer {
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -2954,7 +2920,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
         }
       }
@@ -3001,7 +2966,6 @@ footer {
         font-size: 32px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       p {
         align-self: stretch;
@@ -3011,7 +2975,6 @@ footer {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
     }
     .levels-statistics-section {
@@ -3048,7 +3011,6 @@ footer {
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .level-box-link {
           display: flex;
@@ -3065,7 +3027,6 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -3092,7 +3053,6 @@ footer {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .measurment-standard-chart {
         width: 100%;
@@ -3163,7 +3123,6 @@ footer {
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .breadcrumb {
           width: 100%;
@@ -3178,7 +3137,7 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             white-space: nowrap;
             &.main {
               color: $mainColor;
@@ -3246,7 +3205,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           .level-box-link {
             display: flex;
@@ -3266,7 +3224,6 @@ footer {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
         }
       }
@@ -3318,7 +3275,6 @@ footer {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -3342,7 +3298,6 @@ footer {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
       .form-box {
         width: 100%;
@@ -3369,7 +3324,6 @@ footer {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
         .form-box-item {
           width: 100%;
@@ -3421,7 +3375,6 @@ footer {
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
           .item-btns-container {
             display: flex;
@@ -3450,7 +3403,7 @@ footer {
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
+
                 flex: 1 0 0;
                 cursor: pointer;
               }
@@ -3483,7 +3436,7 @@ footer {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           border: none;
           outline: none;
         }
@@ -3761,7 +3714,7 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             white-space: wrap;
             text-wrap: balance;
           }
@@ -3829,7 +3782,6 @@ $PercentSize: 100px;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -3909,7 +3861,6 @@ $PercentSize: 100px;
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
 
         h5 {
@@ -3919,7 +3870,6 @@ $PercentSize: 100px;
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
 
@@ -3972,7 +3922,7 @@ $PercentSize: 100px;
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             border-radius: 100px;
             -webkit-border-radius: 100px;
             -moz-border-radius: 100px;
@@ -4028,7 +3978,6 @@ $PercentSize: 100px;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
 
             a {
@@ -4038,7 +3987,6 @@ $PercentSize: 100px;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
 
@@ -4060,7 +4008,6 @@ $PercentSize: 100px;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
 
             .notificationBoxContent {
@@ -4071,7 +4018,6 @@ $PercentSize: 100px;
               font-size: 11px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -4171,7 +4117,6 @@ $PercentSize: 100px;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
 
               .userEmail {
@@ -4181,7 +4126,6 @@ $PercentSize: 100px;
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
             }
           }
@@ -4211,7 +4155,6 @@ $PercentSize: 100px;
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
 
               img {
@@ -4269,7 +4212,6 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
 
           .userSubmenuIcon {
@@ -4332,7 +4274,6 @@ $PercentSize: 100px;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
 
           .breadcrumb {
@@ -4347,7 +4288,7 @@ $PercentSize: 100px;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               white-space: nowrap;
               &.main {
                 color: $mainColor;
@@ -4379,7 +4320,6 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
 
           .sectionBoxesConatiner {
@@ -4435,7 +4375,6 @@ $PercentSize: 100px;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
 
               .growthTitle {
@@ -4445,7 +4384,6 @@ $PercentSize: 100px;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
 
               .boxTitle {
@@ -4456,7 +4394,6 @@ $PercentSize: 100px;
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;
               }
             }
           }
@@ -4493,7 +4430,7 @@ $PercentSize: 100px;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         white-space: nowrap;
         text-wrap: balance;
 
@@ -4510,7 +4447,6 @@ $PercentSize: 100px;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
 
@@ -4532,7 +4468,6 @@ $PercentSize: 100px;
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -4571,7 +4506,6 @@ $PercentSize: 100px;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
 
     .searchBoxesForm {
@@ -4608,7 +4542,6 @@ $PercentSize: 100px;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
 
         .boxBody {
@@ -4658,7 +4591,6 @@ $PercentSize: 100px;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -4680,7 +4612,6 @@ $PercentSize: 100px;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
 
         input,
@@ -4700,7 +4631,6 @@ $PercentSize: 100px;
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
     }
@@ -4727,7 +4657,7 @@ $PercentSize: 100px;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+
         border: none;
         outline: none;
       }
@@ -4779,7 +4709,7 @@ $PercentSize: 100px;
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
+
           cursor: pointer;
         }
 
@@ -4792,7 +4722,6 @@ $PercentSize: 100px;
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
 
@@ -4816,7 +4745,7 @@ $PercentSize: 100px;
             font-size: 11px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+
             color: $darkColor;
 
             &.current {
@@ -4836,7 +4765,6 @@ $PercentSize: 100px;
               font-size: 11px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
             }
           }
         }
@@ -4850,7 +4778,7 @@ $PercentSize: 100px;
               font-size: 11px;
               font-style: normal;
               font-weight: 400;
-              line-height: normal;
+
               &:last-of-type {
                 display: flex;
                 height: 47px;
@@ -4908,7 +4836,6 @@ $PercentSize: 100px;
                   font-size: 13px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: normal;
                 }
               }
             }
@@ -4975,7 +4902,6 @@ $PercentSize: 100px;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
       }
 
       .closeBtnBox {
@@ -5038,7 +4964,6 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
 
           input,
@@ -5088,7 +5013,6 @@ $PercentSize: 100px;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
           }
 
           .back-link {
@@ -5121,3 +5045,61 @@ $PercentSize: 100px;
 }
 
 // End Modal
+
+// responsive
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
+}

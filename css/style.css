@@ -26,6 +26,7 @@
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  line-height: normal;
 }
 
 ::-webkit-scrollbar {
@@ -230,7 +231,6 @@ header .container .navList li a {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 header .container .user-info {
   position: relative;
@@ -313,7 +313,6 @@ header .container .user-info .user-menu .user-menu-item p {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 header .container .user-info .user-menu .user-menu-item img {
   width: 20px;
@@ -325,7 +324,6 @@ header .container .user-info .user-name {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -338,6 +336,7 @@ header .container .user-info .user-name {
 header .container .authBtn {
   display: flex;
   padding: 8px 20px;
+  padding-bottom: 12px;
   justify-content: center;
   align-items: center;
   background: var(--Main, #1d968f);
@@ -354,6 +353,7 @@ header .container .authBtn {
     order: 1;
     font-size: 13px;
     padding: 6px 16px;
+    padding-bottom: 10px;
   }
 }
 
@@ -531,7 +531,6 @@ content .mainSlider .slider-content .slider-content-heading {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 content .mainSlider .slider-content .slider-content-paragraph {
   align-self: stretch;
@@ -540,7 +539,6 @@ content .mainSlider .slider-content .slider-content-paragraph {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   line-height: 1.6;
 }
 content .identify-section {
@@ -613,7 +611,6 @@ content .identify-section .identify-box .identify-content .identify-content-titl
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 768px) {
   content .identify-section .identify-box .identify-content .identify-content-title {
@@ -628,7 +625,6 @@ content .identify-section .identify-box .identify-content .identify-content-subt
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 content .identify-section .identify-box .identify-content .identify-content-paragraph {
   align-self: stretch;
@@ -638,7 +634,6 @@ content .identify-section .identify-box .identify-content .identify-content-para
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 content .identify-section .identify-box .identify-content .identify-content-list {
   display: flex;
@@ -659,7 +654,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 768px) {
   content .identify-section .identify-box .identify-content .identify-content-list .identify-content-list-item {
@@ -836,7 +830,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: right;
 }
 .steps .allSteps .step p {
@@ -845,7 +838,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .steps .allSteps .step:nth-child(even) {
   margin-top: 220px;
@@ -901,7 +893,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .parteners-section .parteners-heading p {
   max-width: 450px;
@@ -911,7 +902,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .parteners-section .parteners-heading .section-line {
   width: 140px;
@@ -1017,7 +1007,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .news-section .container .news-header .news-header-heading p {
   color: var(--Text, #666b88);
@@ -1025,7 +1014,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .news-section .container .news-header .newsSwiperControl {
   position: relative;
@@ -1139,7 +1127,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1151,7 +1138,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: right;
   font-family: MadaniArabic-Regular;
 }
@@ -1207,7 +1193,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .contact-section .contact-info-form-section .contact-info .contact-info-list {
   display: flex;
@@ -1237,7 +1222,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .contact-section .contact-info-form-section .contact-info .contact-info-list .contact-info-list-item .text p.heading {
   color: #0d0d0d;
@@ -1328,7 +1312,6 @@ content .identify-section .identify-box .identify-content .identify-content-list
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1479,7 +1462,6 @@ footer .container .about_company .about-content {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 footer .container .footerLinks {
   display: flex;
@@ -1500,7 +1482,6 @@ footer .container .footerLinks h3 {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 footer .container .footerLinks .footerNavList {
   width: 100%;
@@ -1527,7 +1508,6 @@ footer .container .footerLinks .footerNavList li a {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 footer .container .support {
   display: flex;
@@ -1548,7 +1528,6 @@ footer .container .support h3 {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 footer .container .support .support-contact-list {
   display: flex;
@@ -1572,7 +1551,6 @@ footer .container .support .support-contact-list li p {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 footer .container .support .support-contact-list li img {
   width: 20px;
@@ -1683,7 +1661,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .newsLanding .landing-text .landing-text-header img {
   width: 21.887px;
@@ -1700,7 +1677,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .news-section-container {
@@ -1748,7 +1724,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-wrap: balance;
 }
 .news-section-container .container .blog p.blog-content {
@@ -1832,7 +1807,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1852,9 +1826,10 @@ footer .container .support .support-contact-social li a img {
   position: relative;
   display: flex;
   background-color: #ffffff;
+  height: 100dvh;
 }
 .auth-page figure {
-  flex: 1 0 0;
+  flex: 1;
   display: flex;
 }
 @media (max-width: 768px) {
@@ -1864,18 +1839,17 @@ footer .container .support .support-contact-social li a img {
 }
 .auth-page figure img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .auth-page .auth-container {
   display: flex;
-  padding: 80px 0;
+  padding: 40px 0;
+  overflow-y: auto;
   justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  gap: 80px;
-  flex: 1 0 0;
+  gap: 40px;
+  flex: 1;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -1885,7 +1859,7 @@ footer .container .support .support-contact-social li a img {
 }
 .auth-page .auth-container .auth-heading {
   width: min(100% - 24px, 500px);
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1957,7 +1931,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-heading h3 {
@@ -1966,12 +1939,9 @@ footer .container .support .support-contact-social li a img {
 }
 .auth-page .auth-container .auth-form-container {
   width: min(100% - 24px, 480px);
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  flex: 1 0 0;
   align-self: stretch;
 }
 .auth-page .auth-container .auth-form-container .auth-form-heading {
@@ -2015,7 +1985,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-form-container .auth-form-heading .heading-title h2 {
@@ -2031,7 +2000,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2107,7 +2075,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: right;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select::-moz-placeholder {
@@ -2163,7 +2130,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 768px) {
   .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input,
@@ -2190,7 +2156,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-btns-container {
   width: 100%;
@@ -2215,7 +2180,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: right;
   color: #ffffff;
   cursor: pointer;
@@ -2263,7 +2227,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .auth-page .auth-container .auth-form-container .auth-link-box a {
   color: #1d968f;
@@ -2272,7 +2235,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .auth-page .auth-container .auth-form-container .resend-container {
   width: 100%;
@@ -2289,7 +2251,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .auth-page .auth-container .auth-form-container .resend-container .resend-button {
   color: #1d968f;
@@ -2297,7 +2258,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .org-register-page {
@@ -2341,7 +2301,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-heading p {
   align-self: stretch;
@@ -2351,7 +2310,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form {
   width: 100%;
@@ -2378,7 +2336,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body {
   display: flex;
@@ -2509,7 +2466,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input,
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group select {
@@ -2524,7 +2480,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: right;
   border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -2578,7 +2533,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-container {
   width: 100%;
@@ -2675,7 +2629,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box .form-inputs-container .checkbox-inputs-container .checkbox-group input {
   display: flex;
@@ -2710,7 +2663,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .money-section-heading h5,
 .org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-heading h5 {
@@ -2720,7 +2672,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .register-wizard {
@@ -2767,7 +2718,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   background-color: #ffffff;
 }
 .register-wizard .wizard-line {
@@ -2887,7 +2837,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-heading .breadcrumb {
   width: 100%;
@@ -2902,7 +2851,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   white-space: nowrap;
 }
 .org-edit-page .org-edit-section-container .org-edit-heading .breadcrumb p.main {
@@ -2961,7 +2909,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-wizard .wizard-tag .wizard-tag-index-box {
   display: flex;
@@ -2979,7 +2926,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .forms-wrapper {
   display: flex;
@@ -3016,7 +2962,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .input-group {
   display: flex;
@@ -3039,7 +2984,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .input-group input,
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .input-group select {
@@ -3060,7 +3004,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .input-group input::placeholder,
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .input-group select::placeholder {
@@ -3070,7 +3013,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-form .form-btns-container {
   display: flex;
@@ -3092,7 +3034,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .dashboard-page {
@@ -3138,7 +3079,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboard-page .dashboard-container .dashboard-heading p {
   align-self: stretch;
@@ -3148,7 +3088,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboard-page .dashboard-container .levels-statistics-section {
   width: 100%;
@@ -3185,7 +3124,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboard-page .dashboard-container .levels-statistics-section .level-box .level-box-link {
   display: flex;
@@ -3202,7 +3140,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboard-page .dashboard-container .measurment-standard-section {
   display: flex;
@@ -3227,7 +3164,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboard-page .dashboard-container .measurment-standard-section .measurment-standard-chart {
   width: 100%;
@@ -3299,7 +3235,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-page .level-container .level-heading .level-heading-content .breadcrumb {
   width: 100%;
@@ -3315,7 +3250,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   white-space: nowrap;
 }
 .level-page .level-container .level-heading .level-heading-content .breadcrumb p.main {
@@ -3383,7 +3317,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-page .level-container .level-statistics-items-container .level-statistics-box .level-box-content .level-box-link {
   display: flex;
@@ -3403,7 +3336,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .level-statistics-page .level-container .statistics-section {
@@ -3451,7 +3383,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-statistics-page .level-container .level-statistics-form {
   width: 100%;
@@ -3474,7 +3405,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-statistics-page .level-container .level-statistics-form .form-box {
   width: 100%;
@@ -3504,7 +3434,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-statistics-page .level-container .level-statistics-form .form-box .form-box-item {
   width: 100%;
@@ -3557,7 +3486,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .item-btns-container {
   display: flex;
@@ -3589,7 +3517,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   flex: 1 0 0;
   cursor: pointer;
 }
@@ -3619,7 +3546,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   border: none;
   outline: none;
 }
@@ -5043,7 +4969,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   white-space: wrap;
   text-wrap: balance;
 }
@@ -5104,7 +5029,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain {
   display: flex;
@@ -5179,7 +5103,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .headerGreeting h5 {
   color: #0d0d0d;
@@ -5188,7 +5111,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox {
   display: flex;
@@ -5239,7 +5161,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -5290,7 +5211,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationMenuHeading a {
   color: #1d968f;
@@ -5299,7 +5219,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationBox {
   display: flex;
@@ -5319,7 +5238,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationBox .notificationBoxContent {
   align-self: stretch;
@@ -5329,7 +5247,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu {
   display: flex;
@@ -5421,7 +5338,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .userInfoBox .userInfo .userEmail {
   color: #777;
@@ -5430,7 +5346,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox {
   width: 100%;
@@ -5457,7 +5372,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu .menuLinksBox .menuLink img {
   width: 20px;
@@ -5507,7 +5421,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox .userSubmenuIcon {
   display: flex;
@@ -5565,7 +5478,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .associationsHeadingbox .breadcrumb {
   width: 100%;
@@ -5580,7 +5492,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   white-space: nowrap;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .associationsHeadingbox .breadcrumb p.main {
@@ -5609,7 +5520,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner {
   width: 100%;
@@ -5663,7 +5573,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox .growthTitle {
   color: #0d0d0d;
@@ -5672,7 +5581,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardMainContent .contentConatiner .contentSection .sectionBoxesConatiner .sectionBox .boxTitle {
   align-items: stretch;
@@ -5682,7 +5590,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardFooter {
   width: 100%;
@@ -5714,7 +5621,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   white-space: nowrap;
   text-wrap: balance;
 }
@@ -5732,7 +5638,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .adminDashboardPage .dashboardMain .dashboardFooter .footerNav {
   display: flex;
@@ -5753,7 +5658,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .dashboardMainContent {
@@ -5787,7 +5691,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboardMainContent .contentSection .searchBoxesForm {
   width: 100%;
@@ -5823,7 +5726,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboardMainContent .contentSection .searchBoxesForm .searchBox .boxBody {
   display: flex;
@@ -5869,7 +5771,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboardMainContent .contentSection .searchBoxesForm .inputGroupBox {
   display: flex;
@@ -5887,7 +5788,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboardMainContent .contentSection .searchBoxesForm .inputGroupBox input,
 .dashboardMainContent .contentSection .searchBoxesForm .inputGroupBox select {
@@ -5906,7 +5806,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .dashboardMainContent .contentSection .btn-box {
   width: 100%;
@@ -5930,7 +5829,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   border: none;
   outline: none;
 }
@@ -5977,7 +5875,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   cursor: pointer;
 }
 .associationsMainContent .contentSection.tableSection .tableHeading h5 {
@@ -5989,7 +5886,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .associationsMainContent .contentSection.tableSection .dt-container {
   width: 100%;
@@ -6013,7 +5909,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   color: #0d0d0d;
 }
 .associationsMainContent .contentSection.tableSection .dt-container .dt-paging .dt-paging-button.current {
@@ -6028,7 +5923,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .associationsMainContent .contentSection.tableSection .dt-container tbody tr td {
   color: #0d0d0d;
@@ -6037,7 +5931,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .associationsMainContent .contentSection.tableSection .dt-container tbody tr td:last-of-type {
   display: flex;
@@ -6094,7 +5987,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .modal {
@@ -6148,7 +6040,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .modal .modalBox .modalHeading .closeBtnBox {
   display: flex;
@@ -6208,7 +6099,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .modal .modalBox .modalForm .formBody .inputGroup input,
 .modal .modalBox .modalForm .formBody .inputGroup select {
@@ -6255,7 +6145,6 @@ footer .container .support .support-contact-social li a img {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .modal .modalBox .modalForm .formBody .btnsBox .back-link {
   display: flex;
@@ -6279,4 +6168,61 @@ footer .container .support .support-contact-social li a img {
   height: 16px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

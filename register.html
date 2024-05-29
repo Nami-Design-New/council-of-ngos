@@ -12,8 +12,11 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -44,7 +47,7 @@
             <div class="form-inputs-container">
               <div class="input-group">
                 <label for="regionInput">المنطقة</label>
-                <select name="region" id="regionInput">
+                <select class="select2" name="region" id="regionInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">المنطقة 1</option>
                   <option value="">المنطقة 2</option>
@@ -52,7 +55,7 @@
               </div>
               <div class="input-group">
                 <label for="associationSelect">الجمعية</label>
-                <select name="association" id="associationSelect">
+                <select class="select2" name="association" id="associationSelect">
                   <option value="" selected disabled>اختر</option>
                   <option value="">الجمعية 1</option>
                   <option value="">الجمعية 2</option>
@@ -127,6 +130,13 @@
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+  <!-- select2 -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    });
+  </script>
 </body>
 
 </html>

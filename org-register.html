@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -12,10 +11,11 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- Start Header -->
   <header>
@@ -146,7 +146,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationMainClassificationInput">التصنيف الأساسي</label>
-                <select name="oragnizationMainClassification" id="oragnizationMainClassificationInput">
+                <select class="select2" name="oragnizationMainClassification" id="oragnizationMainClassificationInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">تصنيف 1</option>
                   <option value="">تصنيف 2</option>
@@ -154,7 +154,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationSupervisoryInput">الجهة الإشرافية</label>
-                <select name="oragnizationSupervisory" id="oragnizationSupervisoryInput">
+                <select class="select2" name="oragnizationSupervisory" id="oragnizationSupervisoryInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">جهة 1</option>
                   <option value="">جهة 2</option>
@@ -162,7 +162,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationCourseInput">الدورة</label>
-                <select name="oragnizationCourse" id="oragnizationCourseInput">
+                <select class="select2" name="oragnizationCourse" id="oragnizationCourseInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">الدورة 1</option>
                   <option value="">الدورة 2</option>
@@ -200,7 +200,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationWorkAreaInput">نطاق عمل الجهة</label>
-                <select name="oragnizationWorkArea" id="oragnizationWorkAreaInput">
+                <select class="select2" name="oragnizationWorkArea" id="oragnizationWorkAreaInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">نطاق 1</option>
                   <option value="">نطاق 2</option>
@@ -208,7 +208,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationCityInput">المدينة</label>
-                <select name="oragnizationCity" id="oragnizationCityInput">
+                <select class="select2" name="oragnizationCity" id="oragnizationCityInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">المدينة 1</option>
                   <option value="">المدينة 2</option>
@@ -216,7 +216,7 @@
               </div>
               <div class="input-group min-300">
                 <label for="oragnizationAreaInput">المنطقة</label>
-                <select name="oragnizationArea" id="oragnizationAreaInput">
+                <select class="select2" name="oragnizationArea" id="oragnizationAreaInput">
                   <option value="" selected disabled>اختر</option>
                   <option value="">المنطقة 1</option>
                   <option value="">المنطقة 2</option>
@@ -727,7 +727,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund1StatusInput">الحالة</label>
-                    <select name="fund1Status" id="fund1StatusInput">
+                    <select class="select2" name="fund1Status" id="fund1StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -746,7 +746,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund2StatusInput">الحالة</label>
-                    <select name="fund2Status" id="fund2StatusInput">
+                    <select class="select2" name="fund2Status" id="fund2StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -765,7 +765,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund3StatusInput">الحالة</label>
-                    <select name="fund3Status" id="fund3StatusInput">
+                    <select class="select2" name="fund3Status" id="fund3StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -784,7 +784,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund4StatusInput">الحالة</label>
-                    <select name="fund4Status" id="fund4StatusInput">
+                    <select class="select2" name="fund4Status" id="fund4StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -803,7 +803,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund5StatusInput">الحالة</label>
-                    <select name="fund5Status" id="fund5StatusInput">
+                    <select class="select2" name="fund5Status" id="fund5StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -822,7 +822,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund6StatusInput">الحالة</label>
-                    <select name="fund6Status" id="fund6StatusInput">
+                    <select class="select2" name="fund6Status" id="fund6StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -841,7 +841,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund7StatusInput">الحالة</label>
-                    <select name="fund7Status" id="fund7StatusInput">
+                    <select class="select2" name="fund7Status" id="fund7StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -860,7 +860,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund8StatusInput">الحالة</label>
-                    <select name="fund8Status" id="fund8StatusInput">
+                    <select class="select2" name="fund8Status" id="fund8StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -879,7 +879,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="fund9StatusInput">الحالة</label>
-                    <select name="fund9Status" id="fund9StatusInput">
+                    <select class="select2" name="fund9Status" id="fund9StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -905,7 +905,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income1StatusInput">الحالة</label>
-                    <select name="income1Status" id="income1StatusInput">
+                    <select class="select2" name="income1Status" id="income1StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -924,7 +924,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income2StatusInput">الحالة</label>
-                    <select name="income2Status" id="income2StatusInput">
+                    <select class="select2" name="income2Status" id="income2StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -943,7 +943,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income3StatusInput">الحالة</label>
-                    <select name="income3Status" id="income3StatusInput">
+                    <select class="select2" name="income3Status" id="income3StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -962,7 +962,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income4StatusInput">الحالة</label>
-                    <select name="income4Status" id="income4StatusInput">
+                    <select class="select2" name="income4Status" id="income4StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -981,7 +981,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income5StatusInput">الحالة</label>
-                    <select name="income5Status" id="income5StatusInput">
+                    <select class="select2" name="income5Status" id="income5StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -1000,7 +1000,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income6StatusInput">الحالة</label>
-                    <select name="income6Status" id="income6StatusInput">
+                    <select class="select2" name="income6Status" id="income6StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -1019,7 +1019,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income7StatusInput">الحالة</label>
-                    <select name="income7Status" id="income7StatusInput">
+                    <select class="select2" name="income7Status" id="income7StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -1038,7 +1038,7 @@
                 <div class="form-inputs-container">
                   <div class="input-group">
                     <label for="income8StatusInput">الحالة</label>
-                    <select name="income8Status" id="income8StatusInput">
+                    <select class="select2" name="income8Status" id="income8StatusInput">
                       <option value="" selected disabled>اختر</option>
                       <option value="">الحالة 1</option>
                       <option value="">الحالة 2</option>
@@ -1145,6 +1145,12 @@
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+  <!-- select2 -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    });
+  </script>
 </body>
-
 </html>

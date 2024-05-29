@@ -438,18 +438,18 @@
             </li>
           </ul>
         </div>
-        <form action="">
+        <form action="" onsubmit="return validateForm()">
           <div class="form-group">
             <!-- field-set -->
             <div class="inputfield">
               <label for="name"> الاسم الكامل</label>
-              <input type="text" id="name" name="name" onfocus="highlight(this)" onblur="dehighlight(this)">
+              <input type="text" id="name" name="name" onfocus="highlight(this)" onblur="dehighlight(this)" required>
               <span class="highlight"></span>
             </div>
             <!-- field-set -->
             <div class="inputfield">
               <label for="email"> البريد الإلكتروني</label>
-              <input type="email" id="email" name="email" onfocus="highlight(this)" onblur="dehighlight(this)">
+              <input type="email" id="email" name="email" onfocus="highlight(this)" onblur="dehighlight(this)" required>
               <span class="highlight"></span>
             </div>
           </div>
@@ -457,7 +457,8 @@
             <!-- field-set -->
             <div class="inputfield">
               <label for="phone"> رقم الهاتف</label>
-              <input type="tel" id="phone" name="phone" onfocus="highlight(this)" onblur="dehighlight(this)">
+              <input type="number" id="phone" name="phone" onfocus="highlight(this)" onblur="dehighlight(this)"
+                required>
               <span class="highlight"></span>
             </div>
             <!-- field-set -->
@@ -574,7 +575,23 @@
     function dehighlight(el) {
       if (el.value === "") {
         el.previousElementSibling.classList.remove("h");
+        el.parentElement.classList.add("error");
+      } else {
+        el.parentElement.classList.remove("error");
       }
+    }
+    function validateForm() {
+      let isValid = true;
+      const requiredFields = document.querySelectorAll('input[required], textarea[required]');
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.parentElement.classList.add("error");
+          isValid = false;
+        } else {
+          field.parentElement.classList.remove("error");
+        }
+      });
+      return isValid;
     }
   </script>
 </body>

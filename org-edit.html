@@ -1,463 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>مجلس الجمعيات الأهلية | تسجيل بيانات المنظمة</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/icon" href="assets/fav.svg" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- Custom style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <!-- Start Header -->
-    <header>
-      <nav class="container">
-        <a href="index.html" class="header-logo">
-          <img
-            src="assets/logo.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-        </a>
-        <ul class="navList">
-          <li><a href="index.html#">الرئيسية</a></li>
-          <li><a href="index.html#identify">تعرف علينا</a></li>
-          <li><a href="index.html#steps-section">كيفية التقييم</a></li>
-          <li><a href="index.html#parteners">الشركاء</a></li>
-          <li><a href="index.html#news">الاخبار</a></li>
-          <li><a href="index.html#contact">تواصل معنا</a></li>
-        </ul>
-        <!-- User Info -->
-        <div class="user-info">
-          <div class="user-avatar">
-            <img src="assets/avatar.webp" alt="user avatar" />
-          </div>
-          <span class="user-name">محمود جمال</span>
-          <div class="user-menu">
-            <a href="dashboard.html" class="user-menu-item">
-              <img
-                src="assets/dashboard-icon.svg"
-                alt="لوحة التحكم"
-                title="لوحة التحكم"
-              />
-              <p>لوحة التحكم</p>
-            </a>
-            <a href="org-edit.html" class="user-menu-item">
-              <img
-                src="assets/account-setting-icon.svg"
-                alt="اعدادات الحساب"
-                title="اعدادات الحساب"
-              />
-              <p>اعدادات الحساب</p>
-            </a>
-            <a href="login.html" class="user-menu-item">
-              <img
-                src="assets/logout-icon.svg"
-                alt="تسجيل الخروج"
-                title="تسجيل الخروج"
-              />
-              <p>تسجيل الخروج</p>
-            </a>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title -->
+  <title>مجلس الجمعيات الأهلية | تسجيل بيانات المنظمة</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="assets/fav.svg" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="header-logo">
+        <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+      </a>
+      <ul class="navList">
+        <li><a href="index.html#">الرئيسية</a></li>
+        <li><a href="index.html#identify">تعرف علينا</a></li>
+        <li><a href="index.html#steps-section">كيفية التقييم</a></li>
+        <li><a href="index.html#parteners">الشركاء</a></li>
+        <li><a href="index.html#news">الاخبار</a></li>
+        <li><a href="index.html#contact">تواصل معنا</a></li>
+      </ul>
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="user-avatar">
+          <img src="assets/avatar.webp" alt="user avatar" />
+        </div>
+        <span class="user-name">محمود جمال</span>
+        <div class="user-menu">
+          <a href="dashboard.html" class="user-menu-item">
+            <img src="assets/dashboard-icon.svg" alt="لوحة التحكم" title="لوحة التحكم" />
+            <p>لوحة التحكم</p>
+          </a>
+          <a href="org-edit.html" class="user-menu-item">
+            <img src="assets/account-setting-icon.svg" alt="اعدادات الحساب" title="اعدادات الحساب" />
+            <p>اعدادات الحساب</p>
+          </a>
+          <a href="login.html" class="user-menu-item">
+            <img src="assets/logout-icon.svg" alt="تسجيل الخروج" title="تسجيل الخروج" />
+            <p>تسجيل الخروج</p>
+          </a>
+        </div>
+      </div>
+      <!-- Auth link -->
+      <a href="login.html" class="authBtn">تسجيل الدخول</a>
+      <!-- menu icon -->
+      <span class="menu-icon">
+        <img src="assets/menu-close.png" alt="menu icon" />
+      </span>
+    </nav>
+  </header>
+  <!-- End Header -->
+  <!-- Start org Edition Section -->
+  <main class="org-edit-page">
+    <section class="org-edit-section">
+      <div class="org-edit-section-container">
+        <div class="org-edit-heading">
+          <h4>اعدادات الحساب</h4>
+          <div class="breadcrumb">
+            <p class="main">الرئيسية</p>
+            <p>/</p>
+            <p>اعدادات الحساب</p>
           </div>
         </div>
-        <!-- Auth link -->
-        <a href="login.html" class="authBtn">تسجيل الدخول</a>
-        <!-- menu icon -->
-        <span class="menu-icon">
-          <img src="assets/menu-close.png" alt="menu icon" />
-        </span>
-      </nav>
-    </header>
-    <!-- End Header -->
-    <!-- Start org Edition Section -->
-    <main class="org-edit-page">
-      <section class="org-edit-section">
-        <div class="org-edit-section-container">
-          <div class="org-edit-heading">
-            <h4>اعدادات الحساب</h4>
-            <div class="breadcrumb">
-              <p class="main">الرئيسية</p>
-              <p>/</p>
-              <p>اعدادات الحساب</p>
+        <!-- form #1 -->
+        <div class="org-edit-section-content organization-data" id="form-1">
+          <section class="org-edit-wizard org-wizard">
+            <div class="wizard-tag active" data-wizard="form-1">
+              <div class="wizard-tag-index-box">1</div>
+              <h6 class="wizard-tag-title">بيانات المنظمة</h6>
             </div>
-          </div>
-          <!-- form #1 -->
-          <div class="org-edit-section-content organization-data" id="form-1">
-            <section class="org-edit-wizard org-wizard">
-              <div class="wizard-tag active" data-wizard="form-1">
-                <div class="wizard-tag-index-box">1</div>
-                <h6 class="wizard-tag-title">بيانات المنظمة</h6>
-              </div>
-              <div class="wizard-tag" data-wizard="form-2">
-                <div class="wizard-tag-index-box">2</div>
-                <h6 class="wizard-tag-title">ممثل المنظمة</h6>
-              </div>
-            </section>
+            <div class="wizard-tag" data-wizard="form-2">
+              <div class="wizard-tag-index-box">2</div>
+              <h6 class="wizard-tag-title">ممثل المنظمة</h6>
+            </div>
+          </section>
+          <section class="org-edit-form">
+            <div class="input-group">
+              <label for="courseInput">الدورة</label>
+              <select class="select2" name="course" id="courseInput">
+                <option value="" selected disabled>اختر</option>
+                <option value="">الدورة 1</option>
+                <option value="">الدورة 2</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="oragnizationNameInput">اسم المنظمة</label>
+              <input type="text" name="oragnizationName" id="oragnizationNameInput"
+                placeholder="الجمعيه التعاونيه الاستهلاكيه بالمدينه المنوره" />
+            </div>
+            <div class="input-group">
+              <label for="mainClassificationInput">التصنيف الأساسي</label>
+              <select class="select2" name="mainClassification" id="mainClassificationInput">
+                <option value="" selected disabled>اختر</option>
+                <option value="">التصنيف 1</option>
+                <option value="">التصنيف 2</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="supervisoryInput">الجهة الإشرافية</label>
+              <select class="select2" name="supervisory" id="supervisoryInput">
+                <option value="" selected disabled>اختر</option>
+                <option value="">التصنيف 1</option>
+                <option value="">التصنيف 2</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="oragnizationGeneralityNumberInput">عدد أعضاء العمومية</label>
+              <input type="number" name="oragnizationGeneralityNumber" id="oragnizationGeneralityNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="oragnizationNewGeneralityNumberInput">عدد المنظمين الجدد للعمومية</label>
+              <input type="number" name="oragnizationNewGeneralityNumber" id="oragnizationNewGeneralityNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="publicProgrammsNumberInput">عدد البرامج العامة</label>
+              <input type="number" name="publicProgrammsNumber" id="publicProgrammsNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="oragnizationCouncilNumberInput">عدد أعضاء المجلس</label>
+              <input type="number" name="oragnizationCouncilNumber" id="oragnizationCouncilNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="trainingCoursesNumberInput">عدد البرامج التدريبية</label>
+              <input type="number" name="trainingCoursesNumber" id="trainingCoursesNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="reliefProjectsNumberInput">عدد المشاريع الاغاثية</label>
+              <input type="number" name="reliefProjectsNumber" id="reliefProjectsNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="programmsForMalesNumberInput">عدد البرامج الموجهة للذكور</label>
+              <input type="number" name="programmsForMalesNumber" id="programmsForMalesNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="programmsForFemailsNumberInput">عدد البرامج الموجهة للإناث</label>
+              <input type="number" name="programmsForFemailsNumber" id="programmsForFemailsNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="repeatedProgrammsForMoreThanTwoYearsNumberInput">عدد البرامج المكررة لأكثر من عامين</label>
+              <input type="number" name="repeatedProgrammsForMoreThanTwoYearsNumber"
+                id="repeatedProgrammsForMoreThanTwoYearsNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="specificPorgramForCertainFieldProgrammsNumberInput">عدد البرامج المتخصصة في مجال محدد</label>
+              <input type="number" name="specificPorgramForCertainFieldProgrammsNumber"
+                id="specificPorgramForCertainFieldProgrammsNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="granteesFromTheBeginningNumberInput">إجمالي عدد المستفيدين منذ التأسيس</label>
+              <input type="number" name="granteesFromTheBeginningNumber" id="granteesFromTheBeginningNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="newProgrammsNumberInput">عدد البرامج الجديدة</label>
+              <input type="number" name="newProgrammsNumber" id="newProgrammsNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="supportGranteesNumberInput">عدد مستفيدي الدعم العيني والمالي</label>
+              <input type="number" name="supportGranteesNumber" id="supportGranteesNumberInput" placeholder="00" />
+            </div>
+            <div class="input-group">
+              <label for="trainingCoursesGranteesNumberInput">عدد مستفيدي البرامج التدريبية</label>
+              <input type="number" name="trainingCoursesGranteesNumber" id="trainingCoursesGranteesNumberInput"
+                placeholder="00" />
+            </div>
+            <div class="form-btns-container">
+              <span class="btn">حفظ</span>
+            </div>
+          </section>
+        </div>
+        <!-- form #2-->
+        <div class="org-edit-section-content organization-owner" id="form-2">
+          <section class="org-edit-wizard org-wizard">
+            <div class="wizard-tag" data-wizard="form-1">
+              <div class="wizard-tag-index-box">1</div>
+              <h6 class="wizard-tag-title">بيانات المنظمة</h6>
+            </div>
+            <div class="wizard-tag active" data-wizard="form-2">
+              <div class="wizard-tag-index-box">2</div>
+              <h6 class="wizard-tag-title">ممثل المنظمة</h6>
+            </div>
+          </section>
+          <section class="forms-wrapper">
             <section class="org-edit-form">
+              <h6 class="org-edit-form-heading">تعديل البيانات الأساسية</h6>
               <div class="input-group">
-                <label for="courseInput">الدورة</label>
-                <select name="course" id="courseInput">
-                  <option value="" selected disabled>اختر</option>
-                  <option value="">الدورة 1</option>
-                  <option value="">الدورة 2</option>
-                </select>
+                <label for="oragnizationOwnerNameInput">الاسم الكامل</label>
+                <input type="text" name="oragnizationOwnerName" id="oragnizationOwnerNameInput"
+                  placeholder="محمود جمال" />
               </div>
               <div class="input-group">
-                <label for="oragnizationNameInput">اسم المنظمة</label>
-                <input
-                  type="text"
-                  name="oragnizationName"
-                  id="oragnizationNameInput"
-                  placeholder="الجمعيه التعاونيه الاستهلاكيه بالمدينه المنوره"
-                />
+                <label for="oragnizationOwnerEmailInput">البريد الإلكتروني</label>
+                <input type="email" name="oragnizationOwnerEmail" id="oragnizationOwnerEmailInput"
+                  placeholder="mail@mail.com" />
               </div>
               <div class="input-group">
-                <label for="mainClassificationInput">التصنيف الأساسي</label>
-                <select name="mainClassification" id="mainClassificationInput">
-                  <option value="" selected disabled>اختر</option>
-                  <option value="">التصنيف 1</option>
-                  <option value="">التصنيف 2</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label for="supervisoryInput">الجهة الإشرافية</label>
-                <select name="supervisory" id="supervisoryInput">
-                  <option value="" selected disabled>اختر</option>
-                  <option value="">التصنيف 1</option>
-                  <option value="">التصنيف 2</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label for="oragnizationGeneralityNumberInput"
-                  >عدد أعضاء العمومية</label
-                >
-                <input
-                  type="number"
-                  name="oragnizationGeneralityNumber"
-                  id="oragnizationGeneralityNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="oragnizationNewGeneralityNumberInput"
-                  >عدد المنظمين الجدد للعمومية</label
-                >
-                <input
-                  type="number"
-                  name="oragnizationNewGeneralityNumber"
-                  id="oragnizationNewGeneralityNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="publicProgrammsNumberInput"
-                  >عدد البرامج العامة</label
-                >
-                <input
-                  type="number"
-                  name="publicProgrammsNumber"
-                  id="publicProgrammsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="oragnizationCouncilNumberInput"
-                  >عدد أعضاء المجلس</label
-                >
-                <input
-                  type="number"
-                  name="oragnizationCouncilNumber"
-                  id="oragnizationCouncilNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="trainingCoursesNumberInput"
-                  >عدد البرامج التدريبية</label
-                >
-                <input
-                  type="number"
-                  name="trainingCoursesNumber"
-                  id="trainingCoursesNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="reliefProjectsNumberInput"
-                  >عدد المشاريع الاغاثية</label
-                >
-                <input
-                  type="number"
-                  name="reliefProjectsNumber"
-                  id="reliefProjectsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="programmsForMalesNumberInput"
-                  >عدد البرامج الموجهة للذكور</label
-                >
-                <input
-                  type="number"
-                  name="programmsForMalesNumber"
-                  id="programmsForMalesNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="programmsForFemailsNumberInput"
-                  >عدد البرامج الموجهة للإناث</label
-                >
-                <input
-                  type="number"
-                  name="programmsForFemailsNumber"
-                  id="programmsForFemailsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="repeatedProgrammsForMoreThanTwoYearsNumberInput"
-                  >عدد البرامج المكررة لأكثر من عامين</label
-                >
-                <input
-                  type="number"
-                  name="repeatedProgrammsForMoreThanTwoYearsNumber"
-                  id="repeatedProgrammsForMoreThanTwoYearsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="specificPorgramForCertainFieldProgrammsNumberInput"
-                  >عدد البرامج المتخصصة في مجال محدد</label
-                >
-                <input
-                  type="number"
-                  name="specificPorgramForCertainFieldProgrammsNumber"
-                  id="specificPorgramForCertainFieldProgrammsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="granteesFromTheBeginningNumberInput"
-                  >إجمالي عدد المستفيدين منذ التأسيس</label
-                >
-                <input
-                  type="number"
-                  name="granteesFromTheBeginningNumber"
-                  id="granteesFromTheBeginningNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="newProgrammsNumberInput">عدد البرامج الجديدة</label>
-                <input
-                  type="number"
-                  name="newProgrammsNumber"
-                  id="newProgrammsNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="supportGranteesNumberInput"
-                  >عدد مستفيدي الدعم العيني والمالي</label
-                >
-                <input
-                  type="number"
-                  name="supportGranteesNumber"
-                  id="supportGranteesNumberInput"
-                  placeholder="00"
-                />
-              </div>
-              <div class="input-group">
-                <label for="trainingCoursesGranteesNumberInput"
-                  >عدد مستفيدي البرامج التدريبية</label
-                >
-                <input
-                  type="number"
-                  name="trainingCoursesGranteesNumber"
-                  id="trainingCoursesGranteesNumberInput"
-                  placeholder="00"
-                />
+                <label for="oragnizationOwnerTelephoneInput">البريد الإلكتروني</label>
+                <input type="tel" name="oragnizationOwnerTelephone" id="oragnizationOwnerTelephoneInput"
+                  placeholder="الهاتف" />
               </div>
               <div class="form-btns-container">
                 <span class="btn">حفظ</span>
               </div>
             </section>
-          </div>
-          <!-- form #2-->
-          <div class="org-edit-section-content organization-owner" id="form-2">
-            <section class="org-edit-wizard org-wizard">
-              <div class="wizard-tag" data-wizard="form-1">
-                <div class="wizard-tag-index-box">1</div>
-                <h6 class="wizard-tag-title">بيانات المنظمة</h6>
+            <section class="org-edit-form">
+              <h6 class="org-edit-form-heading">تعديل كلمة المرور</h6>
+              <div class="input-group">
+                <label for="oldPasswordInput">كلمة المرور القديمة</label>
+                <input type="password" name="oldPassword" id="oldPasswordInput" placeholder="*********" />
               </div>
-              <div class="wizard-tag active" data-wizard="form-2">
-                <div class="wizard-tag-index-box">2</div>
-                <h6 class="wizard-tag-title">ممثل المنظمة</h6>
+              <div class="input-group">
+                <label for="newPasswordInput">كلمة المرور الجديدة</label>
+                <input type="password" name="newPassword" id="newPasswordInput" placeholder="*********" />
+              </div>
+              <div class="form-btns-container">
+                <span class="btn">حفظ</span>
               </div>
             </section>
-            <section class="forms-wrapper">
-              <section class="org-edit-form">
-                <h6 class="org-edit-form-heading">تعديل البيانات الأساسية</h6>
-                <div class="input-group">
-                  <label for="oragnizationOwnerNameInput">الاسم الكامل</label>
-                  <input
-                    type="text"
-                    name="oragnizationOwnerName"
-                    id="oragnizationOwnerNameInput"
-                    placeholder="محمود جمال"
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="oragnizationOwnerEmailInput"
-                    >البريد الإلكتروني</label
-                  >
-                  <input
-                    type="email"
-                    name="oragnizationOwnerEmail"
-                    id="oragnizationOwnerEmailInput"
-                    placeholder="mail@mail.com"
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="oragnizationOwnerTelephoneInput"
-                    >البريد الإلكتروني</label
-                  >
-                  <input
-                    type="tel"
-                    name="oragnizationOwnerTelephone"
-                    id="oragnizationOwnerTelephoneInput"
-                    placeholder="الهاتف"
-                  />
-                </div>
-                <div class="form-btns-container">
-                  <span class="btn">حفظ</span>
-                </div>
-              </section>
-              <section class="org-edit-form">
-                <h6 class="org-edit-form-heading">تعديل كلمة المرور</h6>
-                <div class="input-group">
-                  <label for="oldPasswordInput">كلمة المرور القديمة</label>
-                  <input
-                    type="password"
-                    name="oldPassword"
-                    id="oldPasswordInput"
-                    placeholder="*********"
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="newPasswordInput">كلمة المرور الجديدة</label>
-                  <input
-                    type="password"
-                    name="newPassword"
-                    id="newPasswordInput"
-                    placeholder="*********"
-                  />
-                </div>
-                <div class="form-btns-container">
-                  <span class="btn">حفظ</span>
-                </div>
-              </section>
-            </section>
-          </div>
+          </section>
         </div>
-      </section>
-      <!-- Start Footer -->
-      <footer>
-        <div class="container">
-          <div class="about_company">
-            <figure class="footerLogo">
-              <img
-                src="assets/logo.svg"
-                alt="مجلس الجمعيات الأهلية"
-                title="مجلس الجمعيات الأهلية"
-              />
-            </figure>
-            <p>
-              نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
-              المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
-              منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
-            </p>
-          </div>
-          <div class="footerLinks">
-            <h3>روابط مهمه</h3>
-            <ul class="footerNavList">
-              <li>
-                <a href="index.html">الرئيسية</a>
-              </li>
-              <li>
-                <a href="#identify">تعرف علينا</a>
-              </li>
-              <li>
-                <a href="#steps-section">كيفية التقييم</a>
-              </li>
-              <li>
-                <a href="#parteners">الشركاء</a>
-              </li>
-              <li>
-                <a href="#news">الاخبار</a>
-              </li>
-              <li>
-                <a href="#contact">تواصل معنا</a>
-              </li>
-            </ul>
-          </div>
-          <div class="support">
-            <h3>الدعم الفنى</h3>
-            <ul class="support-contact-list">
-              <li>
-                <img src="assets/mail-black-icon.svg" alt="email icon" />
-                <p>email@email.com</p>
-              </li>
-              <li>
-                <img
-                  src="assets/telephone-black-icon.svg"
-                  alt="telephone icon"
-                />
-                <p>0123456799</p>
-              </li>
-            </ul>
-            <h3>تابعنا على</h3>
-            <ul class="support-contact-social">
-              <li>
-                <a href="">
-                  <img src="assets/facebook_icon.svg" alt="facebook icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/instgram-icon.svg" alt="instagram icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/twitter-icon.svg" alt="twitter icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
-                </a>
-              </li>
-            </ul>
-          </div>
+      </div>
+    </section>
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="about_company">
+          <figure class="footerLogo">
+            <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          </figure>
+          <p>
+            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+            المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
+            منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
+          </p>
         </div>
-      </footer>
-      <!-- End Footer -->
-    </main>
-    <!-- End org Edition Section -->
-    <!-- jquery  -->
-    <script src="js/jquery.min.js"></script>
-    <!-- swiper slider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- custom -->
-    <script src="js/Custom.js"></script>
-  </body>
+        <div class="footerLinks">
+          <h3>روابط مهمه</h3>
+          <ul class="footerNavList">
+            <li>
+              <a href="index.html">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#identify">تعرف علينا</a>
+            </li>
+            <li>
+              <a href="#steps-section">كيفية التقييم</a>
+            </li>
+            <li>
+              <a href="#parteners">الشركاء</a>
+            </li>
+            <li>
+              <a href="#news">الاخبار</a>
+            </li>
+            <li>
+              <a href="#contact">تواصل معنا</a>
+            </li>
+          </ul>
+        </div>
+        <div class="support">
+          <h3>الدعم الفنى</h3>
+          <ul class="support-contact-list">
+            <li>
+              <img src="assets/mail-black-icon.svg" alt="email icon" />
+              <p>email@email.com</p>
+            </li>
+            <li>
+              <img src="assets/telephone-black-icon.svg" alt="telephone icon" />
+              <p>0123456799</p>
+            </li>
+          </ul>
+          <h3>تابعنا على</h3>
+          <ul class="support-contact-social">
+            <li>
+              <a href="">
+                <img src="assets/facebook_icon.svg" alt="facebook icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/instgram-icon.svg" alt="instagram icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/twitter-icon.svg" alt="twitter icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </main>
+  <!-- End org Edition Section -->
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- swiper slider -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+  <!-- select2 -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    });
+  </script>
+</body>
+
 </html>

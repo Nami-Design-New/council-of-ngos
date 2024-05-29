@@ -1213,6 +1213,9 @@ content .identify-section .identify-box .identify-content .identify-content-list
   align-items: center;
   gap: 24px;
   align-self: stretch;
+  width: min(100% - 24px, 1400px);
+  margin: auto;
+  padding-bottom: 20px;
   background-color: #ffffff;
 }
 @media (max-width: 768px) {
@@ -1314,137 +1317,127 @@ content .identify-section .identify-box .identify-content .identify-content-list
   padding: 42px 12px;
   border-radius: 16px;
   display: flex;
-  padding: 40px 20px;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 40px 20px;
-  flex: 1 0 0;
-  align-self: stretch;
-  flex-wrap: wrap;
-  border-radius: 8px;
-  background: rgba(29, 150, 143, 0.08);
-  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
-  position: relative;
-}
-.contact-section .contact-info-form-section form .inputfield {
-  display: flex;
-  height: 58px;
-  padding: 16px 8px 0px 8px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  flex: 1 0 0;
-  max-width: 100%;
-  position: relative;
-  max-width: 100%;
-  min-width: 380px;
+  gap: 48px;
   flex: 1;
 }
-@media (max-width: 768px) {
-  .contact-section .contact-info-form-section form .inputfield {
-    min-width: 100%;
-    width: 100%;
+@media (max-width: 576px) {
+  .contact-section .contact-info-form-section form {
+    padding: 32px 0;
   }
 }
-.contact-section .contact-info-form-section form .inputfield.textareaField {
-  height: 123px;
-}
-.contact-section .contact-info-form-section form .inputfield.textareaField label {
-  top: 0;
-  transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-}
-.contact-section .contact-info-form-section form .inputfield label {
-  color: var(--Text, #666b88);
-  text-align: right;
-  font-family: MadaniArabic-Regular;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
+.contact-section .contact-info-form-section form .form-group {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  right: 0;
-  order: 1;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  width: 100%;
 }
-.contact-section .contact-info-form-section form .inputfield .highlight {
-  height: 1px;
-  flex-shrink: 0;
-  align-self: stretch;
-  background: rgba(29, 150, 143, 0.2);
-  order: 3;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+@media (max-width: 768px) {
+  .contact-section .contact-info-form-section form .form-group {
+    flex-direction: column;
+    gap: 48px;
+  }
 }
-.contact-section .contact-info-form-section form .inputfield input,
-.contact-section .contact-info-form-section form .inputfield textarea {
-  height: 58px;
+.contact-section .contact-info-form-section form .form-group .inputfield {
+  width: 100%;
+  padding: 0 16px;
   position: relative;
-  background-color: transparent;
-  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield label {
+  position: absolute;
+  font-size: 14px;
+  color: #777;
+  right: 16px;
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  cursor: auto;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield label i {
+  margin-right: 4px;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield label.message-label {
+  top: 20%;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield label.h {
+  top: -4px;
+  color: #1d968f;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield input,
+.contact-section .contact-info-form-section form .form-group .inputfield textarea {
+  width: 100%;
+  height: 45px;
   border: none;
-  order: 2;
+  outline: none;
+  background: none;
 }
-.contact-section .contact-info-form-section form .inputfield input:focus + label,
-.contact-section .contact-info-form-section form .inputfield textarea:focus + label {
-  top: 0;
-  font-weight: 800;
+.contact-section .contact-info-form-section form .form-group .inputfield input:focus + span::after,
+.contact-section .contact-info-form-section form .form-group .inputfield textarea:focus + span::after {
+  width: calc(100% - 32px);
 }
-.contact-section .contact-info-form-section form .inputfield textarea {
+.contact-section .contact-info-form-section form .form-group .inputfield textarea {
+  padding: 16px 0;
+  height: 130px;
+}
+.contact-section .contact-info-form-section form .form-group .inputfield .highlight {
   width: 100%;
-  height: 123px;
-  resize: none;
+  height: 2px;
+  background: #eeeeee;
 }
-.contact-section .contact-info-form-section form .inputfield textarea:focus + label {
-  top: -20px;
+.contact-section .contact-info-form-section form .form-group .inputfield .highlight::after {
+  content: "";
+  width: 0;
+  transition: all 0.3s ease-in-out;
+  left: 50%;
+  height: 2px;
+  background: #1d968f;
+  position: absolute;
+  transform: translate(-50%);
 }
-.contact-section .contact-info-form-section form .btnBox {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.contact-section .contact-info-form-section form .form-group .inputfield.error label {
+  color: red;
 }
-.contact-section .contact-info-form-section form .btnBox button {
-  display: flex;
-  width: 197px;
-  height: 50px;
-  padding: 12px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 12px;
-  background-color: transparent;
+.contact-section .contact-info-form-section form .form-group .inputfield.error .highlight::after {
+  background: red;
+}
+
+.customBtn {
+  border: none;
+  outline: none;
+  background: none;
+  isolation: isolate;
+  padding: 12px 16px;
+  width: 160px;
+  margin: auto;
   border: 1px solid #1d968f;
   color: #1d968f;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
-.contact-section .contact-info-form-section form .btnBox button:hover {
-  background-color: #1d968f;
-  color: #ffffff;
+.customBtn::after {
+  position: absolute;
+  content: "";
+  height: 1000px;
+  width: 0;
+  right: 50%;
+  transition: all 0.3s ease-in-out;
+  background: #1d968f;
+  transform: rotate(-25deg);
+  z-index: -1;
+}
+.customBtn:hover {
+  color: #fff;
+  border-color: #1d968f;
+}
+.customBtn:hover::after {
+  width: 110%;
+  right: -10px;
 }
 
 footer {
@@ -2147,7 +2140,7 @@ footer .container .support .support-contact-social li a img {
   gap: 10px;
   position: absolute;
   left: 16px;
-  bottom: 16px;
+  top: 44px;
   cursor: pointer;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon img {
@@ -2157,45 +2150,22 @@ footer .container .support .support-contact-social li a img {
      object-fit: cover;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container {
-  width: 100%;
+  direction: ltr;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
+  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 4px;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input,
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select {
-  max-width: 90px;
-  display: flex;
-  padding: 20px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
-  border-radius: 12px;
-  border: 1px solid #f2f2f2;
-  background: #f8f8f8;
-  color: var(--Main, #1d968f);
-  font-family: MadaniArabic-SemiBold;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-}
-@media (max-width: 768px) {
-  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input,
-  .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select {
-    font-size: 30px;
-    max-width: 50px;
-  }
-}
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select::-moz-placeholder {
-  color: #aaa;
-}
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container input::placeholder,
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container select::placeholder {
-  color: #aaa;
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .otp-code-container .otp-input {
+  min-width: 40px;
+  flex: 1;
+  height: 64px;
+  background-color: #eee;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
 }
 .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .forget-password-link {
   display: flex;
@@ -6295,4 +6265,97 @@ footer .container .support .support-contact-social li a img {
   border-radius: 12px;
   min-height: 40px;
   padding: 8px;
+}
+
+.map-section {
+  margin-bottom: -12px;
+  display: flex;
+  width: 100%;
+}
+
+.error input {
+  border-color: red !important;
+}
+
+.errorDiv {
+  min-height: 18px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.select2 {
+  min-height: 54px;
+}
+
+.select2-container--default .select2-selection--single {
+  min-height: 54px;
+  border: none !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  padding: 0 16px;
+  line-height: 48px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 26px;
+  position: absolute;
+  top: 12px !important;
+  left: 5px;
+  right: unset !important;
+  width: 20px;
+}
+
+.item-btns-container {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  gap: 2px;
+}
+.item-btns-container .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.item-btns-container .form-check input {
+  display: none;
+}
+.item-btns-container .form-check input:checked + label {
+  color: #ffffff;
+}
+.item-btns-container .form-check input.notQualified:checked + label {
+  background-color: #E83B3B;
+}
+.item-btns-container .form-check input.qualified:checked + label {
+  background-color: #04B700;
+}
+.item-btns-container .form-check label {
+  color: #0d0d0d;
+  text-align: center;
+  padding: 6px 20px 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

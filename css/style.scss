@@ -96,7 +96,6 @@ img {
   height: auto;
   display: inline-block;
 }
-
 // responsive
 @media screen and (max-width: 768px) {
   h1 {
@@ -154,7 +153,6 @@ img {
     font-size: 14px;
   }
 }
-
 body {
   background-color: $bodyColor;
   width: 100%;
@@ -1168,6 +1166,9 @@ content {
     align-items: center;
     gap: 24px;
     align-self: stretch;
+    width: min(100% - 24px, 1400px);
+    margin: auto;
+    padding-bottom: 20px;
     background-color: $whiteColor;
     @media (max-width: 768px) {
       flex-direction: column;
@@ -1261,134 +1262,123 @@ content {
       padding: 42px 12px;
       border-radius: 16px;
       display: flex;
-      padding: 40px 20px;
-      align-items: flex-start;
-      align-content: flex-start;
-      gap: 40px 20px;
-      flex: 1 0 0;
-      align-self: stretch;
-      flex-wrap: wrap;
-      border-radius: 8px;
-      background: $main08;
-      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
-      position: relative;
-      .inputfield {
-        display: flex;
-        height: 58px;
-        padding: 16px 8px 0px 8px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        flex: 1 0 0;
-        max-width: 100%;
-        position: relative;
-        max-width: 100%;
-        min-width: 380px;
-        flex: 1;
-        @media (max-width: 768px) {
-          min-width: 100%;
-          width: 100%;
-        }
-        &.textareaField {
-          height: 123px;
-          label {
-            top: 0;
-            transform: none;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -ms-transform: none;
-            -o-transform: none;
-          }
-        }
-        label {
-          color: var(--Text, #666b88);
-          text-align: right;
-          font-family: MadaniArabic-Regular;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 8px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          -webkit-transform: translateY(-50%);
-          -moz-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          -o-transform: translateY(-50%);
-          right: 0;
-          order: 1;
-          transition: $transition;
-          -webkit-transition: $transition;
-          -moz-transition: $transition;
-          -ms-transition: $transition;
-          -o-transition: $transition;
-        }
-        .highlight {
-          height: 1px;
-          flex-shrink: 0;
-          align-self: stretch;
-          background: $main02;
-          order: 3;
-          transition: $transition;
-          -webkit-transition: $transition;
-          -moz-transition: $transition;
-          -ms-transition: $transition;
-          -o-transition: $transition;
-        }
-        input,
-        textarea {
-          height: 58px;
-          position: relative;
-          background-color: transparent;
-          outline: none;
-          border: none;
-          order: 2;
-          &:focus + label {
-            top: 0;
-            font-weight: 800;
-          }
-        }
-        textarea {
-          width: 100%;
-          height: 123px;
-          resize: none;
-          &:focus + label {
-            top: -20px;
-          }
-        }
+      flex-direction: column;
+      gap: 48px;
+      flex: 1;
+      @media (max-width: 576px) {
+        padding: 32px 0;
       }
-      .btnBox {
+      .form-group {
+        display: flex;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        button {
+        @media (max-width: 768px) {
+          flex-direction: column;
+          gap: 48px;
+        }
+        .inputfield {
+          width: 100%;
+          padding: 0 16px;
+          position: relative;
           display: flex;
-          width: 197px;
-          height: 50px;
-          padding: 12px 8px;
-          justify-content: center;
-          align-items: center;
-          gap: 4px;
-          border-radius: 12px;
-          background-color: transparent;
-          border: 1px solid $mainColor;
-          color: $mainColor;
-          transition: $transition;
-          -webkit-transition: $transition;
-          -moz-transition: $transition;
-          -ms-transition: $transition;
-          -o-transition: $transition;
-          cursor: pointer;
-          &:hover {
-            background-color: $mainColor;
-            color: $whiteColor;
+          flex-direction: column;
+          label {
+            position: absolute;
+            font-size: 14px;
+            color: $grayColor;
+            right: 16px;
+            transform: translateY(-50%);
+            top: 50%;
+            font-weight: 500;
+            transition: $transition;
+            i {
+              margin-right: 4px;
+            }
+            cursor: auto;
+            &.message-label {
+              top: 20%;
+            }
+            &.h {
+              top: -4px;
+              color: $mainColor;
+            }
+          }
+          input,
+          textarea {
+            width: 100%;
+            height: 45px;
+            border: none;
+            outline: none;
+            background: none;
+            &:focus + span::after {
+              width: calc(100% - 32px);
+            }
+          }
+          textarea {
+            padding: 16px 0;
+            height: 130px;
+          }
+          .highlight {
+            width: 100%;
+            height: 2px;
+            background: #eeeeee;
+            &::after {
+              content: "";
+              width: 0;
+              transition: $transition;
+              left: 50%;
+              height: 2px;
+              background: $mainColor;
+              position: absolute;
+              transform: translate(-50%);
+            }
+          }
+          &.error {
+            label {
+              color: red;
+            }
+            .highlight::after {
+              background: red;
+            }
           }
         }
       }
+    }
+  }
+}
+.customBtn {
+  border: none;
+  outline: none;
+  background: none;
+  isolation: isolate;
+  padding: 12px 16px;
+  width: 160px;
+  margin: auto;
+  border: 1px solid $mainColor;
+  color: $mainColor;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1000px;
+    width: 0;
+    right: 50%;
+    transition: $transition;
+    background: $mainColor;
+    transform: rotate(-25deg);
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    border-color: $mainColor;
+    &::after {
+      width: 110%;
+      right: -10px;
     }
   }
 }
@@ -2041,7 +2031,7 @@ footer {
                 gap: 10px;
                 position: absolute;
                 left: 16px;
-                bottom: 16px;
+                top: 44px;
                 cursor: pointer;
                 img {
                   width: 20px;
@@ -2052,37 +2042,21 @@ footer {
             }
           }
           .otp-code-container {
-            width: 100%;
+            direction: ltr;
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 8px;
-            align-self: stretch;
+            justify-content: space-around;
             flex-wrap: wrap;
-            input,
-            select {
-              max-width: 90px;
-              display: flex;
-              padding: 20px 16px;
-              justify-content: center;
-              align-items: center;
-              gap: 8px;
-              flex: 1 0 0;
-              border-radius: 12px;
-              border: 1px solid $InputStroke;
-              background: $InputBG;
-              color: var(--Main, #1d968f);
-              font-family: MadaniArabic-SemiBold;
-              font-size: 40px;
-              font-style: normal;
-              font-weight: 400;
-              @media (max-width: 768px) {
-                font-size: 30px;
-                max-width: 50px;
-              }
-              &::placeholder {
-                color: $InputHint;
-              }
+            gap: 4px;
+            .otp-input {
+              min-width: 40px;
+              flex: 1;
+              height: 64px;
+              background-color: #eee;
+              border: none;
+              text-align: center;
+              font-size: 18px;
+              font-weight: bold;
+              border-radius: 8px;
             }
           }
           .forget-password-link {
@@ -4604,7 +4578,6 @@ $PercentSize: 100px;
     }
   }
 }
-
 .operationsBtns {
   display: inline-flex;
   align-items: center;
@@ -4833,7 +4806,6 @@ $PercentSize: 100px;
   }
 }
 // End Modal
-
 .apexcharts * {
   font-family: "MadaniArabic-Regular", sans-serif !important;
 }
@@ -4856,10 +4828,8 @@ $PercentSize: 100px;
     font-size: 12px;
   }
 }
-
 .table {
   width: 100% !important;
-
   .dtr-details {
     display: flex !important;
     flex-direction: column;
@@ -4950,4 +4920,94 @@ $PercentSize: 100px;
     min-height: 40px;
     padding: 8px;
   }
+}
+.map-section {
+  margin-bottom: -12px;
+  display: flex;
+  width: 100%;
+}
+.error {
+  input {
+    border-color: red !important;
+  }
+}
+.errorDiv {
+  min-height: 18px;
+}
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.select2 {
+  min-height: 54px;
+}
+.select2-container--default .select2-selection--single {
+  min-height: 54px;
+  border: none !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+  background: #f8f8f8;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  padding: 0 16px;
+  line-height: 48px !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 26px;
+  position: absolute;
+  top: 12px !important;
+  left: 5px;
+  right: unset !important;
+  width: 20px;
+}
+.item-btns-container {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 100px;
+  background-color: $whiteColor;
+  gap: 2px;
+  .form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    input {
+      display: none;
+    }
+    input:checked + label {
+      color: $whiteColor;
+    }
+    input.notQualified:checked + label {
+      background-color: #E83B3B;
+    }
+    input.qualified:checked + label {
+      background-color: #04B700;
+    }
+    label {
+      color: $darkColor;
+      text-align: center;
+      padding: 6px 20px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
 }

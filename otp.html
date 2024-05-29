@@ -39,11 +39,13 @@
         <form class="auth-form">
           <div class="auth-form-body">
             <div class="otp-code-container">
-              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
-              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
-              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
-              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
-              <input type="text" placeholder="-" maxlength="1" name="otpInput" />
+              <input class="otp-input" type="text" maxlength=1>
+              <input class="otp-input" type="text" maxlength=1>
+              <input class="otp-input" type="text" maxlength=1>
+              <input class="otp-input" type="text" maxlength=1>
+              <input class="otp-input" type="text" maxlength=1>
+              <!-- Store OTP Value -->
+              <input class="otp-value" type="hidden" name="opt-value">
             </div>
             <div class="resend-container">
               <h6 class="timer">00:48</h6>
@@ -51,7 +53,7 @@
             </div>
           </div>
           <div class="auth-form-btns-container">
-            <a href="index.html" class="back-link">
+            <a href="#!" class="back-link" onclick="window.history.back();">
               <img src="assets/backArrow.svg" alt="back icon" title="back home" />
             </a>
             <button type="submit">تأكيد</button>
@@ -70,6 +72,46 @@
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".otp-code-container :input[type!='hidden']:first").focus();
+      // Selecting DOM elements
+      let otpFields = $(".otp-code-container .otp-input");
+      let otpValueField = $(".otp-code-container .otp-value");
+      function updateOTPValue() {
+        let otpValue = "";
+        otpFields.each(function () {
+          let fieldValue = $(this).val();
+          if (fieldValue !== "") {
+            otpValue += fieldValue;
+          }
+        });
+        otpValueField.val(otpValue);
+      }
+      otpFields.on("input", function () {
+        $(this).val($(this).val().replace(/[^0-9]/g, ""));
+        updateOTPValue();
+      });
+      otpFields.on("keyup", function (e) {
+        let key = e.keyCode || e.charCode;
+        if (key === 8 || key === 46 || key === 37 || key === 40) {
+          $(this).prev().focus();
+        } else if (key === 38 || key === 39 || $(this).val() !== "") {
+          $(this).next().focus();
+        }
+      });
+      otpFields.on("paste", function (e) {
+        let pasteData = (e.originalEvent || e).clipboardData.getData("text");
+        let pasteDataSplitted = pasteData.split("");
+        $.each(pasteDataSplitted, function (index, value) {
+          otpFields.eq(index).val(value);
+        });
+        updateOTPValue();
+      });
+    });
+  </script>
+
 </body>
 
 </html>

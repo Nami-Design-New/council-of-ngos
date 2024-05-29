@@ -39,12 +39,15 @@
             الرجاء إدخال عنوان البريد الإلكتروني لإتمام عملية الدخول
           </p>
         </div>
-        <form class="auth-form" action="dashboard.html">
+        <form class="auth-form" action="dashboard.html" onsubmit="return validateForm()">
           <div class="auth-form-body">
             <div class="form-inputs-container">
               <div class="input-group">
                 <label for="emailInput">البريد الإلكتروني</label>
                 <input type="email" name="email" id="emailInput" placeholder="مثال: mail@mail.com" />
+                <div class="errorDiv">
+                  <p class="errorMessage"> البريد الإلكتروني غير صحيح </p>
+                </div>
               </div>
               <div class="input-group">
                 <label for="passwordInput">كلمة المرور</label>
@@ -52,12 +55,15 @@
                 <span class="passwordIcon">
                   <img src="assets/show-passowd.svg" alt="show password icon" title="Toggle password visiblity" />
                 </span>
+                <div class="errorDiv">
+                  <p class="errorMessage"> كلمة المرور غير صحيحة </p>
+                </div>
               </div>
             </div>
-            <a href="forget.html" class="forget-password-link">نسيت كلمة المرور؟</a>
+            <a href="forget.html" class="forget-password-link"> نسيت كلمة المرور؟ </a>
           </div>
           <div class="auth-form-btns-container">
-            <a href="index.html" class="back-link">
+            <a href="#!" class="back-link" onclick="window.history.back();">
               <img src="assets/backArrow.svg" alt="back icon" title="back home" />
             </a>
             <button type="submit">تسجيل الدخول</button>
@@ -80,6 +86,40 @@
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+  <script>
+    function validateForm() {
+      let isValid = true;
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const emailGroup = emailInput.closest('.input-group');
+      const passwordGroup = passwordInput.closest('.input-group');
+      const emailErrorMessage = emailGroup.querySelector('.errorMessage');
+      const passwordErrorMessage = passwordGroup.querySelector('.errorMessage');
+      // Reset error state
+      emailGroup.classList.remove('error');
+      emailErrorMessage.style.display = 'none';
+      passwordGroup.classList.remove('error');
+      passwordErrorMessage.style.display = 'none';
+      // Validate email
+      if (!emailInput.value || !validateEmail(emailInput.value)) {
+        emailGroup.classList.add('error');
+        emailErrorMessage.style.display = 'block';
+        isValid = false;
+      }
+      // Validate password
+      if (!passwordInput.value) {
+        passwordGroup.classList.add('error');
+        passwordErrorMessage.style.display = 'block';
+        isValid = false;
+      }
+      return isValid;
+    }
+    function validateEmail(email) {
+      // Simple email validation regex
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  </script>
 </body>
 
 </html>

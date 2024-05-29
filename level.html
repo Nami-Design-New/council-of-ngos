@@ -80,7 +80,7 @@
         </div>
       </div>
       <section class="supply-demand-section">
-        <div id="supply-demands-chart" class="apexcharts" ></div>
+        <div id="supply-demands-chart" class="apexcharts"></div>
       </section>
       <section class="level-statistics-items-container">
         <div class="level-statistics-box">
@@ -287,6 +287,52 @@
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+  <!-- Add measurment chart -->
+  <script>
+    // Add supply & demands chart
+    let supplyDemandsOptions = {
+      series: [
+        {
+          data: ["55%", "22%", "40%", "84%", "60%", "28%", "13%", "75%", "80%"],
+        },
+      ],
+      chart: {
+        height: 350,
+        type: "bar",
+      },
+      colors: ["#1D968F"],
+      plotOptions: {
+        bar: {
+          columnWidth: "15px",
+          distributed: true,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      xaxis: {
+        categories: [
+          ["إدارة الاستراتيجية والأداء"],
+          ["حوكمة المنظمة وإدارة المخاطر والالتزام"],
+          ["التنظيم المالي"],
+          ["إدارة العلاقات والاتصال المؤسسي"],
+          ["التفعيل المجتمعي والتطوع"],
+          ["إدارة المشاريع والعمليات"],
+          ["البنية التحتية و التقنية"],
+          ["الاستدامة المالية"],
+          ["إدارة الموارد البشرية"],
+        ],
+      },
+    };
+    let supplyDemandsChart = new ApexCharts(
+      document.querySelector("#supply-demands-chart"),
+      supplyDemandsOptions
+    );
+    supplyDemandsChart?.render();
+  </script>
 </body>
 
 </html>

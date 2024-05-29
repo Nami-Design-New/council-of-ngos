@@ -1311,7 +1311,7 @@ content .identify-section .identify-box .identify-content .identify-content-list
     height: 20px;
   }
 }
-.contact-section .contact-info-form-section form {
+.contact-section .contact-info-form-section .contact-form {
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1019607843);
   padding: 42px 12px;
@@ -1322,28 +1322,28 @@ content .identify-section .identify-box .identify-content .identify-content-list
   flex: 1;
 }
 @media (max-width: 576px) {
-  .contact-section .contact-info-form-section form {
+  .contact-section .contact-info-form-section .contact-form {
     padding: 32px 0;
   }
 }
-.contact-section .contact-info-form-section form .form-group {
+.contact-section .contact-info-form-section .contact-form .form-group {
   display: flex;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .contact-section .contact-info-form-section form .form-group {
+  .contact-section .contact-info-form-section .contact-form .form-group {
     flex-direction: column;
     gap: 48px;
   }
 }
-.contact-section .contact-info-form-section form .form-group .inputfield {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield {
   width: 100%;
   padding: 0 16px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield label {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield label {
   position: absolute;
   font-size: 14px;
   color: #777;
@@ -1354,38 +1354,38 @@ content .identify-section .identify-box .identify-content .identify-content-list
   transition: all 0.3s ease-in-out;
   cursor: auto;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield label i {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield label i {
   margin-right: 4px;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield label.message-label {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield label.message-label {
   top: 20%;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield label.h {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield label.h {
   top: -4px;
   color: #1d968f;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield input,
-.contact-section .contact-info-form-section form .form-group .inputfield textarea {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield input,
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield textarea {
   width: 100%;
   height: 45px;
   border: none;
   outline: none;
   background: none;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield input:focus + span::after,
-.contact-section .contact-info-form-section form .form-group .inputfield textarea:focus + span::after {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield input:focus + span::after,
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield textarea:focus + span::after {
   width: calc(100% - 32px);
 }
-.contact-section .contact-info-form-section form .form-group .inputfield textarea {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield textarea {
   padding: 16px 0;
   height: 130px;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield .highlight {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield .highlight {
   width: 100%;
   height: 2px;
   background: #eeeeee;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield .highlight::after {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield .highlight::after {
   content: "";
   width: 0;
   transition: all 0.3s ease-in-out;
@@ -1395,10 +1395,10 @@ content .identify-section .identify-box .identify-content .identify-content-list
   position: absolute;
   transform: translate(-50%);
 }
-.contact-section .contact-info-form-section form .form-group .inputfield.error label {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield.error label {
   color: red;
 }
-.contact-section .contact-info-form-section form .form-group .inputfield.error .highlight::after {
+.contact-section .contact-info-form-section .contact-form .form-group .inputfield.error .highlight::after {
   background: red;
 }
 

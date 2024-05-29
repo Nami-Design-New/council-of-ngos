@@ -6358,4 +6358,39 @@ footer .container .support .support-contact-social li a img {
 
 button {
   cursor: pointer;
+}
+
+.page404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+}
+.page404 .container {
+  width: min(100% - 16px, 800px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+}
+.page404 .container .logo {
+  height: 80px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.page404 .container .page404-img {
+  width: min(100% - 16px, 500px);
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.page404 .container h5 span {
+  color: #1d968f;
+  font-weight: bold;
+}
+.page404 .container a {
+  margin-top: 16px;
 }/*# sourceMappingURL=style.css.map */

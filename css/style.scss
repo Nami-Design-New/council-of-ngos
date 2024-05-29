@@ -5011,3 +5011,41 @@ $PercentSize: 100px;
 button {
   cursor: pointer;
 }
+
+
+
+.page404{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  .container{
+    width: min(100% - 16px, 800px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 32px;
+    .logo{
+      height: 80px;
+      width: 100%;
+      object-fit: contain;
+    }
+    .page404-img{
+      width: min(100% - 16px, 500px);
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+    h5{
+      span{
+        color: $mainColor;
+        font-weight: bold;
+      }
+    }
+    a{
+      margin-top: 16px;
+    }
+  }
+}

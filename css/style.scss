@@ -4974,6 +4974,10 @@ $PercentSize: 100px;
   right: unset !important;
   width: 20px;
 }
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+  background-color: $mainColor;
+}
 .item-btns-container {
   display: flex;
   align-items: center;

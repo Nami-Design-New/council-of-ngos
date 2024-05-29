@@ -6322,6 +6322,10 @@ footer .container .support .support-contact-social li a img {
   width: 20px;
 }
 
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #1d968f;
+}
+
 .item-btns-container {
   display: flex;
   align-items: center;

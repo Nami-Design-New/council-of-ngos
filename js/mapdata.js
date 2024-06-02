@@ -19,7 +19,7 @@ var simplemaps_countrymap_mapdata = {
     location_hover_opacity: 1,
     location_size: 25,
     location_type: "square",
-    location_image_source: "../assets/empty-logo.svg",
+    location_image_source: "../assets/empty-logo-council.svg",
     location_border_color: "#777",
     location_border: 2,
     location_hover_border: 2.5,
@@ -67,7 +67,7 @@ var simplemaps_countrymap_mapdata = {
     popups: "detect",
     state_image_url: "",
     state_image_position: "",
-    location_image_url: "../assets/empty-logo.svg",
+    location_image_url: "../assets/empty-logo-council.svg",
   },
   state_specific: {
     SA01: {
@@ -154,25 +154,19 @@ var simplemaps_countrymap_mapdata = {
       lat: "24.707883101213962",
       lng: "46.64920464037099",
       name: "الرياض",
-      image_url: "../assets/empty-logo.svg",
+      image_url: "../assets/empty-logo-council.svg",
     },
     1: {
-      lat: "18.95643770173688, ",
-      lng: "42.60457607715931",
-      name: "عسير",
-      image_url: "../assets/empty-logo.svg",
-    },
-    2: {
       lat: "21.425018468672842",
       lng: "39.811505934175585",
       name: "مكة",
-      image_url: "../assets/empty-logo.svg",
+      image_url: "../assets/empty-logo-council.svg",
     },
-    3: {
+    2: {
       lat: "24.475415079706938",
       lng: "39.59007728948294",
       name: "المدينة المنورة",
-      image_url: "../assets/empty-logo.svg",
+      image_url: "../assets/empty-logo-council.svg",
     },
   },
   labels: {

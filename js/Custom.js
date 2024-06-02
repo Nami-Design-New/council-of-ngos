@@ -407,6 +407,9 @@ submenuIcons?.forEach((icon) => {
   });
 });
 const aside = document.querySelector(`.adminDashboardPage aside`);
+const restPageFromAside = document.querySelector(
+  `.adminDashboardPage .dashboardMain`
+);
 // function to handle the showing of the submenus relating to the aside shrinked or not
 function hideSubmenu() {
   if (aside?.classList.contains("shrink")) {
@@ -427,7 +430,7 @@ aside?.addEventListener("mouseenter", function () {
 // close aside when the hover is done
 aside?.addEventListener("mouseleave", function () {
   if (aside.classList.contains("shrink")) {
-    aside.classList.addS("shrink");
+    aside.classList.add("shrink");
     hideSubmenu();
   }
 });
@@ -436,7 +439,13 @@ hideSubmenu();
 document.addEventListener("resize", hideSubmenu);
 // toggle the aside with the aside btn at bigger screens
 asideIcon?.addEventListener("click", function () {
-  aside?.classList.toggle("shrink");
+  if (aside?.classList.contains("shrink")) {
+    restPageFromAside?.classList.remove("full");
+    aside.classList.remove("shrink");
+  } else {
+    restPageFromAside?.classList.add("full");
+    aside.classList.add("shrink");
+  }
   hideSubmenu();
 });
 // toggle opening the aside with the header btn at small devices

@@ -1,335 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>مجلس الجمعيات الأهلية | إدارة الاستراتيجية والأداء</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/icon" href="assets/fav.svg" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- ApexChart -->
+    <link rel="stylesheet" href="css/apex-charts.css" />
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- title -->
-  <title>مجلس الجمعيات الأهلية | إدارة الاستراتيجية والأداء</title>
-  <!-- favicon -->
-  <link rel="icon" type="image/icon" href="assets/fav.svg" />
-  <!-- swiper -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <!-- ApexChart -->
-  <link rel="stylesheet" href="css/apex-charts.css" />
-  <!-- Custom style  -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <!-- Start Header -->
-  <header>
-    <nav class="container">
-      <a href="index.html" class="header-logo">
-        <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
-      </a>
-      <ul class="navList">
-        <li><a href="index.html#">الرئيسية</a></li>
-        <li><a href="index.html#identify">تعرف علينا</a></li>
-        <li><a href="index.html#steps-section">كيفية التقييم</a></li>
-        <li><a href="index.html#parteners">الشركاء</a></li>
-        <li><a href="index.html#news">الاخبار</a></li>
-        <li><a href="index.html#contact">تواصل معنا</a></li>
-      </ul>
-      <!-- User Info -->
-      <div class="user-info">
-        <div class="user-avatar">
-          <img src="assets/avatar.webp" alt="user avatar" />
-        </div>
-        <span class="user-name">محمود جمال</span>
-        <div class="user-menu">
-          <a href="dashboard.html" class="user-menu-item">
-            <img src="assets/dashboard-icon.svg" alt="لوحة التحكم" title="لوحة التحكم" />
-            <p>لوحة التحكم</p>
-          </a>
-          <a href="org-edit.html" class="user-menu-item">
-            <img src="assets/account-setting-icon.svg" alt="اعدادات الحساب" title="اعدادات الحساب" />
-            <p>اعدادات الحساب</p>
-          </a>
-          <a href="login.html" class="user-menu-item">
-            <img src="assets/logout-icon.svg" alt="تسجيل الخروج" title="تسجيل الخروج" />
-            <p>تسجيل الخروج</p>
-          </a>
-        </div>
-      </div>
-      <!-- Auth link -->
-      <a href="login.html" class="authBtn">تسجيل الدخول</a>
-      <!-- menu icon -->
-      <span class="menu-icon">
-        <img src="assets/menu-close.png" alt="menu icon" />
-      </span>
-    </nav>
-  </header>
-  <!-- End Header -->
-  <!-- Start Main -->
-  <main class="level-page level-statistics-page">
-    <div class="level-container">
-      <div class="level-heading">
-        <a href="dashboard.html" class="heading-back-link">
-          <img src="assets/backArrow.svg" alt="back link" title="go back" />
+  <body>
+    <!-- Start Header -->
+    <header>
+      <nav class="container">
+        <a href="index.html" class="header-logo">
+          <img
+            src="assets/logo.svg"
+            alt="مجلس الجمعيات الأهلية"
+            title="مجلس الجمعيات الأهلية"
+          />
+          <img
+            src="assets/Logo Lift.png"
+            alt="صندوق دعم الجمعيات"
+            title="صندوق دعم الجمعيات"
+          />
         </a>
-        <div class="level-heading-content">
-          <h2>إدارة الاستراتيجية والأداء</h2>
-          <div class="breadcrumb">
-            <p class="main">لوحة التحكم</p>
-            <p>/</p>
-            <p class="main">مستوي الفاعلية</p>
-            <p>/</p>
-            <p>إدارة الاستراتيجية والأداء</p>
+        <ul class="navList">
+          <li><a href="index.html#">الرئيسية</a></li>
+          <li><a href="index.html#identify">تعرف علينا</a></li>
+          <li><a href="index.html#steps-section">كيفية التقييم</a></li>
+          <li><a href="index.html#parteners">الشركاء</a></li>
+          <li><a href="index.html#news">الاخبار</a></li>
+          <li><a href="index.html#contact">تواصل معنا</a></li>
+        </ul>
+        <!-- User Info -->
+        <div class="user-info">
+          <div class="user-avatar">
+            <img src="assets/avatar.webp" alt="user avatar" />
+          </div>
+          <span class="user-name">محمود جمال</span>
+          <div class="user-menu">
+            <a href="dashboard.html" class="user-menu-item">
+              <img
+                src="assets/dashboard-icon.svg"
+                alt="لوحة التحكم"
+                title="لوحة التحكم"
+              />
+              <p>لوحة التحكم</p>
+            </a>
+            <a href="org-edit.html" class="user-menu-item">
+              <img
+                src="assets/account-setting-icon.svg"
+                alt="اعدادات الحساب"
+                title="اعدادات الحساب"
+              />
+              <p>اعدادات الحساب</p>
+            </a>
+            <a href="login.html" class="user-menu-item">
+              <img
+                src="assets/logout-icon.svg"
+                alt="تسجيل الخروج"
+                title="تسجيل الخروج"
+              />
+              <p>تسجيل الخروج</p>
+            </a>
           </div>
         </div>
-      </div>
-      <section class="statistics-section">
-        <div class="statistics-box total">
-          <h6>التقييم الإجمالي</h6>
-          <div class="percent p70 reverse">
-            <p class="percentNum">70 <span> % </span></p>
-            <div class="slice">
-              <div class="bar reverse"></div>
-              <div class="fill reverse"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statistics-box">
-          <h6>غايات</h6>
-          <div class="percent p50">
-            <p class="percentNum">50 <span> % </span></p>
-            <div class="slice">
-              <div class="bar"></div>
-              <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statistics-box">
-          <h6>خطط</h6>
-          <div class="percent p50">
-            <p class="percentNum">50 <span> % </span></p>
-            <div class="slice">
-              <div class="bar"></div>
-              <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statistics-box">
-          <h6>ممارسات</h6>
-          <div class="percent p50">
-            <p class="percentNum">50 <span> % </span></p>
-            <div class="slice">
-              <div class="bar"></div>
-              <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <form class="level-statistics-form">
-        <p class="form-heading-note">
-          يرجى تحديد مستوى البنود التالية وذلك عبر اختيار الإجابة المناسبة
-          لوضع المنظمة الحالي
-        </p>
-        <div class="form-box">
-          <h6 class="form-box-heading">غايات</h6>
-          <div class="form-box-item">
-            <p>
-              يعرف المستفيدون وأصحاب العلاقة رؤية المنظمة من خلال تأثيرها
-              عليهم في وسائل الاتصال
-            </p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption1" id="radio1" checked />
-                <label class="form-check-label" for="radio1"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption1" id="radio2" />
-                <label class="form-check-label" for="radio2"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-box-item">
-            <p>
-              رسالة المنظمة مواكبة للتوجهات والتطلعات المستقبلية وملهمة في
-              أسلوب تقديم الخدمة
-            </p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption2" id="radio3" checked />
-                <label class="form-check-label" for="radio3"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption2" id="radio4" />
-                <label class="form-check-label" for="radio4"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-box">
-          <h6 class="form-box-heading">خطط</h6>
-          <div class="form-box-item">
-            <p>
-              تقدم المنظمة تقارير توضح الأهداف المنجزة والمحققة ضمن الخطة
-              الاستراتيجية
-            </p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption3" id="radio5"  />
-                <label class="form-check-label" for="radio5"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption3" id="radio6" checked />
-                <label class="form-check-label" for="radio6"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-box-item">
-            <p>
-              تصدر المنظمة تقرير ختامي بالمبادرات والبرامج المنفذة ضمن الخطة
-              السنوية
-            </p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption4" id="radio7" checked />
-                <label class="form-check-label" for="radio7"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption4" id="radio8" />
-                <label class="form-check-label" for="radio8"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-box">
-          <h6 class="form-box-heading">ممارسات</h6>
-          <div class="form-box-item">
-            <p>يسهل الهيكل التنظيمي عملية الاتصال ويجعلها مرنه وفعاله</p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption5" id="radio9" checked />
-                <label class="form-check-label" for="radio9"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption5" id="radio10" />
-                <label class="form-check-label" for="radio10"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-box-item">
-            <p>تساهم المؤشرات في تحقيق الأهداف قصيرة المدى للمنظمة</p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption6" id="radio11" />
-                <label class="form-check-label" for="radio11"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption6" id="radio12" checked />
-                <label class="form-check-label" for="radio12"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-box-item">
-            <p>تحصل المنظمة على مستوىى رضا عالي من تقييم أصحاب المصلحة</p>
-            <div class="item-btns-container">
-              <div class="form-check">
-                <input class="form-check-input notQualified" type="radio" name="radioOption7" id="radio13" checked />
-                <label class="form-check-label" for="radio13"> لا ينطبق </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input qualified" type="radio" name="radioOption7" id="radio14" />
-                <label class="form-check-label" for="radio14"> ينطبق </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btns-container">
-          <button class="btn">حفظ</button>
-        </div>
-      </form>
-    </div>
-    <!-- Start Footer -->
-    <footer>
-      <div class="container">
-        <div class="about_company">
-          <a href="index.html" class="footerLogo">
-            <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+        <!-- Auth link -->
+        <a href="login.html" class="authBtn">تسجيل الدخول</a>
+        <!-- menu icon -->
+        <span class="menu-icon">
+          <img src="assets/menu-close.png" alt="menu icon" />
+        </span>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main class="level-page level-statistics-page">
+      <div class="level-container">
+        <div class="level-heading">
+          <a href="dashboard.html" class="heading-back-link">
+            <img src="assets/backArrow.svg" alt="back link" title="go back" />
           </a>
-          <p>
-            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
-            المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
-            منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
+          <div class="level-heading-content">
+            <h2>إدارة الاستراتيجية والأداء</h2>
+            <div class="breadcrumb">
+              <p class="main">لوحة التحكم</p>
+              <p>/</p>
+              <p class="main">مستوي الفاعلية</p>
+              <p>/</p>
+              <p>إدارة الاستراتيجية والأداء</p>
+            </div>
+          </div>
+        </div>
+        <section class="statistics-section">
+          <div class="statistics-box total">
+            <h6>التقييم الإجمالي</h6>
+            <div class="percent p70 reverse">
+              <p class="percentNum">70 <span> % </span></p>
+              <div class="slice">
+                <div class="bar reverse"></div>
+                <div class="fill reverse"></div>
+              </div>
+            </div>
+          </div>
+          <div class="statistics-box">
+            <h6>غايات</h6>
+            <div class="percent p50">
+              <p class="percentNum">50 <span> % </span></p>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="statistics-box">
+            <h6>خطط</h6>
+            <div class="percent p50">
+              <p class="percentNum">50 <span> % </span></p>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="statistics-box">
+            <h6>ممارسات</h6>
+            <div class="percent p50">
+              <p class="percentNum">50 <span> % </span></p>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <form class="level-statistics-form">
+          <p class="form-heading-note">
+            يرجى تحديد مستوى البنود التالية وذلك عبر اختيار الإجابة المناسبة
+            لوضع المنظمة الحالي
           </p>
-        </div>
-        <div class="footerLinks">
-          <h3>روابط مهمه</h3>
-          <ul class="footerNavList">
-            <li>
-              <a href="index.html">الرئيسية</a>
-            </li>
-            <li>
-              <a href="#identify">تعرف علينا</a>
-            </li>
-            <li>
-              <a href="#steps-section">كيفية التقييم</a>
-            </li>
-            <li>
-              <a href="#parteners">الشركاء</a>
-            </li>
-            <li>
-              <a href="#news">الاخبار</a>
-            </li>
-            <li>
-              <a href="#contact">تواصل معنا</a>
-            </li>
-          </ul>
-        </div>
-        <div class="support">
-          <h3>الدعم الفنى</h3>
-          <ul class="support-contact-list">
-            <li>
-              <img src="assets/mail-black-icon.svg" alt="email icon" />
-              <p>email@email.com</p>
-            </li>
-            <li>
-              <img src="assets/telephone-black-icon.svg" alt="telephone icon" />
-              <p>0123456789</p>
-            </li>
-          </ul>
-          <h3>تابعنا على</h3>
-          <ul class="support-contact-social">
-            <li>
-              <a href="">
-                <img src="assets/facebook_icon.svg" alt="facebook icon" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="assets/instgram-icon.svg" alt="instagram icon" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="assets/twitter-icon.svg" alt="twitter icon" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div class="form-box">
+            <h6 class="form-box-heading">غايات</h6>
+            <div class="form-box-item">
+              <p>
+                يعرف المستفيدون وأصحاب العلاقة رؤية المنظمة من خلال تأثيرها
+                عليهم في وسائل الاتصال
+              </p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption1"
+                    id="radio1"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio1">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption1"
+                    id="radio2"
+                  />
+                  <label class="form-check-label" for="radio2"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-box-item">
+              <p>
+                رسالة المنظمة مواكبة للتوجهات والتطلعات المستقبلية وملهمة في
+                أسلوب تقديم الخدمة
+              </p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption2"
+                    id="radio3"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio3">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption2"
+                    id="radio4"
+                  />
+                  <label class="form-check-label" for="radio4"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <h6 class="form-box-heading">خطط</h6>
+            <div class="form-box-item">
+              <p>
+                تقدم المنظمة تقارير توضح الأهداف المنجزة والمحققة ضمن الخطة
+                الاستراتيجية
+              </p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption3"
+                    id="radio5"
+                  />
+                  <label class="form-check-label" for="radio5">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption3"
+                    id="radio6"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio6"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-box-item">
+              <p>
+                تصدر المنظمة تقرير ختامي بالمبادرات والبرامج المنفذة ضمن الخطة
+                السنوية
+              </p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption4"
+                    id="radio7"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio7">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption4"
+                    id="radio8"
+                  />
+                  <label class="form-check-label" for="radio8"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <h6 class="form-box-heading">ممارسات</h6>
+            <div class="form-box-item">
+              <p>يسهل الهيكل التنظيمي عملية الاتصال ويجعلها مرنه وفعاله</p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption5"
+                    id="radio9"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio9">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption5"
+                    id="radio10"
+                  />
+                  <label class="form-check-label" for="radio10"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-box-item">
+              <p>تساهم المؤشرات في تحقيق الأهداف قصيرة المدى للمنظمة</p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption6"
+                    id="radio11"
+                  />
+                  <label class="form-check-label" for="radio11">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption6"
+                    id="radio12"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio12"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-box-item">
+              <p>تحصل المنظمة على مستوىى رضا عالي من تقييم أصحاب المصلحة</p>
+              <div class="item-btns-container">
+                <div class="form-check">
+                  <input
+                    class="form-check-input notQualified"
+                    type="radio"
+                    name="radioOption7"
+                    id="radio13"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio13">
+                    لا ينطبق
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input qualified"
+                    type="radio"
+                    name="radioOption7"
+                    id="radio14"
+                  />
+                  <label class="form-check-label" for="radio14"> ينطبق </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btns-container">
+            <button class="btn">حفظ</button>
+          </div>
+        </form>
       </div>
-    </footer>
-    <!-- End Footer -->
-  </main>
-  <!-- End Main -->
-  <!-- jquery  -->
-  <script src="js/jquery.min.js"></script>
-  <!-- ApexChart -->
-  <script src="js/apexcharts.js"></script>
-  <!-- swiper slider -->
-  <script src="js/swiper-bundle.min.js"></script>
-  <!-- custom -->
-  <script src="js/Custom.js"></script>
-</body>
-
+      <!-- Start Footer -->
+      <footer>
+        <div class="container">
+          <div class="about_company">
+            <a href="index.html" class="footerLogo">
+              <img
+                src="assets/logo.svg"
+                alt="مجلس الجمعيات الأهلية"
+                title="مجلس الجمعيات الأهلية"
+              />
+            </a>
+            <p>
+              نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+              المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
+              منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
+            </p>
+          </div>
+          <div class="footerLinks">
+            <h3>روابط مهمه</h3>
+            <ul class="footerNavList">
+              <li>
+                <a href="index.html">الرئيسية</a>
+              </li>
+              <li>
+                <a href="#identify">تعرف علينا</a>
+              </li>
+              <li>
+                <a href="#steps-section">كيفية التقييم</a>
+              </li>
+              <li>
+                <a href="#parteners">الشركاء</a>
+              </li>
+              <li>
+                <a href="#news">الاخبار</a>
+              </li>
+              <li>
+                <a href="#contact">تواصل معنا</a>
+              </li>
+            </ul>
+          </div>
+          <div class="support">
+            <h3>الدعم الفنى</h3>
+            <ul class="support-contact-list">
+              <li>
+                <img src="assets/mail-black-icon.svg" alt="email icon" />
+                <p>email@email.com</p>
+              </li>
+              <li>
+                <img
+                  src="assets/telephone-black-icon.svg"
+                  alt="telephone icon"
+                />
+                <p>0123456789</p>
+              </li>
+            </ul>
+            <h3>تابعنا على</h3>
+            <ul class="support-contact-social">
+              <li>
+                <a href="">
+                  <img src="assets/facebook_icon.svg" alt="facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/instgram-icon.svg" alt="instagram icon" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/twitter-icon.svg" alt="twitter icon" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </main>
+    <!-- End Main -->
+    <!-- jquery  -->
+    <script src="js/jquery.min.js"></script>
+    <!-- ApexChart -->
+    <script src="js/apexcharts.js"></script>
+    <!-- swiper slider -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- custom -->
+    <script src="js/Custom.js"></script>
+  </body>
 </html>

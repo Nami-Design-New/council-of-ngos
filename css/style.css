@@ -5018,8 +5018,8 @@ footer .container .support .support-contact-social li a img {
 .adminDashboardPage aside .asideNav .navItem .navLink img {
   width: 24px;
   height: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .adminDashboardPage aside .asideNav .navItem .submenuIcon {
   display: flex;

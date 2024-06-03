@@ -3695,7 +3695,7 @@ $PercentSize: 100px;
           img {
             width: 24px;
             height: 24px;
-            object-fit: cover;
+            object-fit: contain;
           }
         }
         .submenuIcon {

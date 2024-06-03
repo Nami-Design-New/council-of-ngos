@@ -3560,6 +3560,16 @@ $PercentSize: 100px;
       .submenuIcon {
         display: none !important;
       }
+
+      .bottomAsideLogo {
+        .favLogo {
+          display: none !important;
+        }
+
+        .fullLogo {
+          display: flex !important;
+        }
+      }
     }
     .asideIcon {
       display: flex;
@@ -3607,6 +3617,22 @@ $PercentSize: 100px;
       @media (max-width: 768px) {
         display: none;
       }
+
+      &.bottomAsideLogo {
+        transition: 0.3s;
+        img {
+          transition: 0.3s;
+        }
+
+        .favLogo {
+          display: flex;
+        }
+
+        .fullLogo {
+          display: none;
+        }
+      }
+
       img {
         height: 100%;
         object-fit: contain;

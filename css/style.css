@@ -4886,6 +4886,12 @@ footer .container .support .support-contact-social li a img {
 .adminDashboardPage aside.shrink .submenuIcon {
   display: none !important;
 }
+.adminDashboardPage aside.shrink .bottomAsideLogo .favLogo {
+  display: none !important;
+}
+.adminDashboardPage aside.shrink .bottomAsideLogo .fullLogo {
+  display: flex !important;
+}
 .adminDashboardPage aside .asideIcon {
   display: flex;
   width: 40px;
@@ -4932,6 +4938,18 @@ footer .container .support .support-contact-social li a img {
   .adminDashboardPage aside .asideLogo {
     display: none;
   }
+}
+.adminDashboardPage aside .asideLogo.bottomAsideLogo {
+  transition: 0.3s;
+}
+.adminDashboardPage aside .asideLogo.bottomAsideLogo img {
+  transition: 0.3s;
+}
+.adminDashboardPage aside .asideLogo.bottomAsideLogo .favLogo {
+  display: flex;
+}
+.adminDashboardPage aside .asideLogo.bottomAsideLogo .fullLogo {
+  display: none;
 }
 .adminDashboardPage aside .asideLogo img {
   height: 100%;

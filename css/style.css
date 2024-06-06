@@ -5489,6 +5489,7 @@ footer .container .support .support-contact-social li a img {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  position: relative;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox.clicked .userSubmenuIcon {
   transform: rotate(-90deg);

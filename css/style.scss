@@ -4165,6 +4165,7 @@ $PercentSize: 100px;
           align-items: center;
           gap: 8px;
           cursor: pointer;
+          position: relative;
           &.clicked {
             .userSubmenuIcon {
               transform: rotate(-90deg);

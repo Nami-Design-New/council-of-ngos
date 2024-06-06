@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -15,13 +14,11 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- ================ loader ================= -->
   <div class="spinerLoader">
     <div class="spinerLoaderImg"></div>
   </div>
-
   <!-- Start login form -->
   <main class="auth-page login-page">
     <section class="auth-container">
@@ -92,39 +89,74 @@
   <!-- custom -->
   <script src="js/Custom.js"></script>
   <script>
-    function validateForm() {
-      let isValid = true;
-      const emailInput = document.getElementById('emailInput');
-      const passwordInput = document.getElementById('passwordInput');
-      const emailGroup = emailInput.closest('.input-group');
-      const passwordGroup = passwordInput.closest('.input-group');
-      const emailErrorMessage = emailGroup.querySelector('.errorMessage');
-      const passwordErrorMessage = passwordGroup.querySelector('.errorMessage');
-      // Reset error state
-      emailGroup.classList.remove('error');
-      emailErrorMessage.style.display = 'none';
-      passwordGroup.classList.remove('error');
-      passwordErrorMessage.style.display = 'none';
-      // Validate email
-      if (!emailInput.value || !validateEmail(emailInput.value)) {
-        emailGroup.classList.add('error');
-        emailErrorMessage.style.display = 'block';
-        isValid = false;
+    $(document).ready(function () {
+      function validateForm() {
+        let isValid = true;
+        // Get input elements and their closest input-group elements
+        const $emailInput = $('#emailInput');
+        const $passwordInput = $('#passwordInput');
+        const $emailGroup = $emailInput.closest('.input-group');
+        const $passwordGroup = $passwordInput.closest('.input-group');
+        // Get error message elements
+        const $emailErrorMessage = $emailGroup.find('.errorMessage');
+        const $passwordErrorMessage = $passwordGroup.find('.errorMessage');
+        // Reset error state
+        resetErrorState($emailGroup, $emailErrorMessage);
+        resetErrorState($passwordGroup, $passwordErrorMessage);
+        // Validate email
+        if (!validateEmail($emailInput.val())) {
+          setErrorState($emailGroup, $emailErrorMessage);
+          isValid = false;
+        }
+        // Validate password
+        if (!$passwordInput.val()) {
+          setErrorState($passwordGroup, $passwordErrorMessage);
+          isValid = false;
+        }
+        return isValid;
       }
-      // Validate password
-      if (!passwordInput.value) {
-        passwordGroup.classList.add('error');
-        passwordErrorMessage.style.display = 'block';
-        isValid = false;
+      function validateEmail(email) {
+        // Simple email validation regex
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
       }
-      return isValid;
-    }
-    function validateEmail(email) {
-      // Simple email validation regex
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
-    }
+      function resetErrorState($group, $errorMessage) {
+        $group.removeClass('error');
+        $errorMessage.hide();
+      }
+      function setErrorState($group, $errorMessage) {
+        $group.addClass('error');
+        $errorMessage.show();
+      }
+      // Attach validateForm to form submission
+      $('form').on('submit', function (e) {
+        if (!validateForm()) {
+          e.preventDefault(); // Prevent form submission if validation fails
+        }
+      });
+    });
   </script>
-</body>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const emailInput = document.getElementById('emailInput');
+      const errorDiv = emailInput.nextElementSibling;
+
+      emailInput.addEventListener('input', function() {
+          const emailValue = emailInput.value;
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (emailPattern.test(emailValue)) {
+              emailInput.classList.remove('error');
+              errorDiv.style.display = 'none';
+          } else {
+              emailInput.classList.add('error');
+              errorDiv.style.display = 'block';
+          }
+      });
+  });
+</script>
+
+</body>
 </html>

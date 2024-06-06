@@ -6548,4 +6548,20 @@ button {
   to {
     transform: translateY(0%);
   }
+}
+
+.row {
+  display: flex;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.row > * {
+  flex: 1;
+  min-width: 500px;
+}
+
+.select2 {
+  width: 100% !important;
 }/*# sourceMappingURL=style.css.map */

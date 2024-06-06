@@ -1,266 +1,137 @@
 $(document).ready(function () {
-  const menuIconBox = document.querySelector(`header .container .menu-icon`);
-  const menuIcon = document.querySelector(`header .container .menu-icon img`);
-  const navMenu = document.querySelector(`header .container .navList`);
-  const userBox = document.querySelector(`header .container .user-info`);
-  const userMenu = document.querySelector(
-    `header .container .user-info .user-menu`
+  const $menuIconBox = $("header .container .menu-icon");
+  const $menuIcon = $("header .container .menu-icon img");
+  const $navMenu = $("header .container .navList");
+  const $userBox = $("header .container .user-info");
+  const $userMenu = $("header .container .user-info .user-menu");
+  const $dateInput = $(
+    ".org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date]"
   );
-  const dateInput = document.querySelector(
-    `.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group input[type=date]`
+  const $dateIcon = $(
+    ".org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .dateIcon"
   );
-  const dateIcon = document.querySelector(
-    `.org-register-page .org-register-container .org-register-form .form-section .section-form-body .form-inputs-container .input-group .dateIcon`
+  const $loginPasswordInput = $(
+    '.login-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]'
   );
-  const loginPasswordInput = document.querySelector(
-    `.login-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
+  const $loginPasswordIcon = $(
+    ".login-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon"
   );
-  const loginPasswordIcon = document.querySelector(
-    `.login-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
+  const $registerPasswordInput = $(
+    '.register-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]'
   );
-  const registerPasswordInput = document.querySelector(
-    `.register-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group [type="password"]`
+  const $registerPasswordIcon = $(
+    ".register-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon"
   );
-  const registerPasswordIcon = document.querySelector(
-    `.register-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon`
+  const $resetPasswordInput = $(
+    '.reset-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password [type="password"]'
   );
-  const resetPasswordInput = document.querySelector(
-    `.reset-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password [type="password"]`
+  const $resetPasswordIcon = $(
+    ".reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password .passwordIcon"
   );
-  const resetPasswordIcon = document.querySelector(
-    `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.reset-password .passwordIcon`
+  const $confirmResetPasswordInput = $(
+    '.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password [type="password"]'
   );
-  const confirmResetPasswordInput = document.querySelector(
-    `.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password [type="password"]`
+  const $confirmResetPasswordIcon = $(
+    ".reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password .passwordIcon"
   );
-  const confirmResetPasswordIcon = document.querySelector(
-    `.reset-page .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group.confirm-password .passwordIcon`
+  const $registerForm = $(
+    ".auth-page .auth-container .auth-form-container .auth-form"
   );
-  const registerForm = document.querySelectorAll(
-    `.auth-page .auth-container .auth-form-container .auth-form`
+  const $orgEditWizardTags = $(
+    ".org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-wizard .wizard-tag"
   );
-  const orgEditWizardTags = document.querySelectorAll(
-    `.org-edit-page .org-edit-section-container .org-edit-section-content .org-edit-wizard .wizard-tag`
+  const $registerWizardTags = $(
+    ".register-page .auth-container .auth-form-container .register-form .register-wizard .wizard-tag"
   );
-  const registerWizardTags = document.querySelectorAll(
-    `.register-page .auth-container .auth-form-container .register-form .register-wizard .wizard-tag`
+  const $orgRegisterWizardTags = $(
+    ".org-register-page .org-register-container .org-register-form .register-wizard .wizard-tag"
   );
-  const orgRegisterWizardTags = document.querySelectorAll(
-    `.org-register-page .org-register-container .org-register-form .register-wizard .wizard-tag`
+  const $modalWizardTags = $(
+    ".modal .modalBox .modalForm .modal-wizard .wizard-tag"
   );
-  // toggle opening the nav menu
-  menuIconBox?.addEventListener("click", function () {
-    if (navMenu?.classList.contains("open")) {
-      navMenu.classList.remove("open");
-      menuIcon.src = "assets/menu-close.png";
-    } else {
-      navMenu.classList.add("open");
-      menuIcon.src = "assets/menu-open.png";
-    }
+  // Toggle nav menu
+  $menuIconBox.on("click", function () {
+    $navMenu.toggleClass("open");
+    $menuIcon.attr(
+      "src",
+      $navMenu.hasClass("open")
+        ? "assets/menu-open.png"
+        : "assets/menu-close.png"
+    );
   });
-  // toggle opening the user menu
-  userBox?.addEventListener("click", function () {
-    if (userMenu?.classList.contains("open")) {
-      userMenu.classList.remove("open");
-    } else {
-      userMenu.classList.add("open");
-    }
+  // Toggle user menu
+  $userBox.on("click", function () {
+    $userMenu.toggleClass("open");
   });
-  // open the date input by clicking the icon
-  dateIcon?.addEventListener("click", function () {
-    dateInput.focus();
+  // Open date input on icon click
+  $dateIcon.on("click", function () {
+    $dateInput.focus();
   });
-  // toggle showing password at register
-  registerPasswordIcon?.addEventListener("click", function () {
-    if (registerPasswordInput?.getAttribute("type") === "text") {
-      registerPasswordInput.setAttribute("type", "password");
-    } else if (registerPasswordInput?.getAttribute("type") === "password") {
-      registerPasswordInput.setAttribute("type", "text");
-    }
-  });
-  // toggle showing password at login
-  loginPasswordIcon?.addEventListener("click", function () {
-    if (loginPasswordInput?.getAttribute("type") === "text") {
-      loginPasswordInput.setAttribute("type", "password");
-    } else if (loginPasswordInput?.getAttribute("type") === "password") {
-      loginPasswordInput.setAttribute("type", "text");
-    }
-  });
-  // toggle showing password at reset
-  resetPasswordIcon?.addEventListener("click", function () {
-    console.log(resetPasswordInput);
-    if (resetPasswordInput?.getAttribute("type") === "text") {
-      resetPasswordInput.setAttribute("type", "password");
-    } else if (resetPasswordInput?.getAttribute("type") === "password") {
-      resetPasswordInput.setAttribute("type", "text");
-    }
-  });
-  // toggle showing confirm password at reset
-  confirmResetPasswordIcon?.addEventListener("click", function () {
-    if (confirmResetPasswordInput?.getAttribute("type") === "text") {
-      confirmResetPasswordInput.setAttribute("type", "password");
-    } else if (confirmResetPasswordInput?.getAttribute("type") === "password") {
-      confirmResetPasswordInput.setAttribute("type", "text");
-    }
-  });
-  const modalWizardTags = document.querySelectorAll(
-    `.modal .modalBox .modalForm .modal-wizard .wizard-tag`
-  );
-  // modal forms wizards
-  let currentModalFormWizard = 1;
-  $(".modal .modalBox .modalForm")?.hide();
-  $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
-    "display",
-    "flex"
-  );
-  $(`.modal .modalBox .modalForm#form-1 .btn`).click(function () {
-    $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
-    if (currentModalFormWizard + 1 <= $(`.modal .modalBox .modalForm`).length) {
-      currentModalFormWizard++;
-      $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  $(`.modal .modalBox .modalForm#form-2 .back-link`).click(function () {
-    $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).hide();
-    if (currentModalFormWizard - 1 >= 1) {
-      currentModalFormWizard--;
-      $(".modal .modalBox .modalForm#form-" + currentModalFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  modalWizardTags.forEach((tag) => {
-    tag.addEventListener("click", function () {
-      $(".modal .modalBox .modalForm")?.hide();
-      $(".modal .modalBox .modalForm#" + tag.getAttribute("data-wizard")).css(
-        "display",
-        "flex"
-      );
-      currentModalFormWizard = +tag.getAttribute("data-wizard").split("-")[1];
+  // Toggle showing passwords
+  function togglePasswordVisibility($input, $icon) {
+    $icon.on("click", function () {
+      const type = $input.attr("type") === "text" ? "password" : "text";
+      $input.attr("type", type);
     });
-  });
-  // register forms wizards
-  let currentRegisterFormWizard = 1;
-  $(
-    ".register-page .auth-container .auth-form-container .register-form"
-  )?.hide();
-  $(".register-page #form-" + currentRegisterFormWizard).css("display", "flex");
-  $(`.register-page #form-1 .btn`).click(function () {
-    $(".register-page #form-" + currentRegisterFormWizard).hide();
-    if (
-      currentRegisterFormWizard + 1 <=
-      $(`.register-page .auth-container .auth-form-container .register-form`)
-        .length
-    ) {
-      currentRegisterFormWizard++;
-      $(".register-page #form-" + currentRegisterFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  $(`.register-page #form-2 .back-link`).click(function () {
-    $(".register-page #form-" + currentRegisterFormWizard).hide();
-    if (currentRegisterFormWizard - 1 >= 1) {
-      currentRegisterFormWizard--;
-      $(".register-page #form-" + currentRegisterFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  registerWizardTags.forEach((tag) => {
-    tag.addEventListener("click", function () {
-      $(
-        ".register-page .auth-container .auth-form-container .register-form"
-      )?.hide();
-      $(".register-page #" + tag.getAttribute("data-wizard")).css(
-        "display",
-        "flex"
-      );
-      currentRegisterFormWizard = +tag
-        .getAttribute("data-wizard")
-        .split("-")[1];
-    });
-  });
-  // org edit wizard navigation
-  $(
-    `.org-edit-page .org-edit-section-container .org-edit-section-content`
-  ).hide();
-  $(
-    `.org-edit-page .org-edit-section-container .org-edit-section-content#form-1`
-  ).css("display", "flex");
-  orgEditWizardTags.forEach((tag) => {
-    tag.addEventListener("click", function () {
-      $(
-        `.org-edit-page .org-edit-section-container .org-edit-section-content`
-      ).hide();
-      $(
-        `.org-edit-page .org-edit-section-container .org-edit-section-content#${tag.getAttribute(
-          "data-wizard"
-        )}`
-      ).css("display", "flex");
-    });
-  });
-  // org register form wizards
-  let currentORGRegisterFormWizard = 1;
-  $(".org-register-page .org-register-container .org-register-form").hide();
-  $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
-    "display",
-    "flex"
+  }
+  togglePasswordVisibility($loginPasswordInput, $loginPasswordIcon);
+  togglePasswordVisibility($registerPasswordInput, $registerPasswordIcon);
+  togglePasswordVisibility($resetPasswordInput, $resetPasswordIcon);
+  togglePasswordVisibility(
+    $confirmResetPasswordInput,
+    $confirmResetPasswordIcon
   );
-  $(
-    `.org-register-page .org-register-container .org-register-form .btn`
-  )?.click(function () {
-    $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
-    if (
-      currentORGRegisterFormWizard + 1 <=
-      $(`.org-register-page .org-register-container .org-register-form`).length
-    ) {
-      currentORGRegisterFormWizard++;
-      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
-        "display",
-        "flex"
-      );
-    } else {
-      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  $(
-    `.org-register-page .org-register-container .org-register-form .back-link`
-  )?.click(function () {
-    $(".org-register-page #form-" + currentORGRegisterFormWizard).hide();
-    if (currentORGRegisterFormWizard - 1 >= 1) {
-      currentORGRegisterFormWizard--;
-      $(".org-register-page #form-" + currentORGRegisterFormWizard).css(
-        "display",
-        "flex"
-      );
-    }
-  });
-  // handle clicking on every wizard tag at the org register form
-  orgRegisterWizardTags.forEach((tag) => {
-    tag.addEventListener("click", function () {
-      $(
-        ".org-register-page .org-register-container .org-register-form"
-      )?.hide();
-      $(".org-register-page #" + tag.getAttribute("data-wizard")).css(
-        "display",
-        "flex"
-      );
-      currentORGRegisterFormWizard = +tag
-        .getAttribute("data-wizard")
-        .split("-")[1];
+  // Handle wizard navigation
+  function handleWizardNavigation($form, $wizardTags, prefix) {
+    let currentFormWizard = 1;
+    $form.hide();
+    $(`#${prefix}-1`).css("display", "flex");
+    $wizardTags.on("click", function () {
+      $form.hide();
+      const wizardId = $(this).data("wizard");
+      $(`#${wizardId}`).css("display", "flex");
+      currentFormWizard = parseInt(wizardId.split("-")[1]);
     });
-  });
-  // Add the main landing slider
+    $form.each(function (index) {
+      const $btn = $(this).find(".btn");
+      const $backLink = $(this).find(".back-link");
+      $btn.on("click", function () {
+        $(`#${prefix}-${currentFormWizard}`).hide();
+        if (currentFormWizard + 1 <= $form.length) {
+          currentFormWizard++;
+          $(`#${prefix}-${currentFormWizard}`).css("display", "flex");
+        }
+      });
+      $backLink.on("click", function () {
+        $(`#${prefix}-${currentFormWizard}`).hide();
+        if (currentFormWizard - 1 >= 1) {
+          currentFormWizard--;
+          $(`#${prefix}-${currentFormWizard}`).css("display", "flex");
+        }
+      });
+    });
+  }
+  handleWizardNavigation(
+    $(".modal .modalBox .modalForm"),
+    $modalWizardTags,
+    "form"
+  );
+  handleWizardNavigation(
+    $(".register-page .auth-container .auth-form-container .register-form"),
+    $registerWizardTags,
+    "form"
+  );
+  handleWizardNavigation(
+    $(".org-register-page .org-register-container .org-register-form"),
+    $orgRegisterWizardTags,
+    "form"
+  );
+  handleWizardNavigation(
+    $(".org-edit-page .org-edit-section-container .org-edit-section-content"),
+    $orgEditWizardTags,
+    "form"
+  );
+  // Main landing slider
   const mainSlider = new Swiper(".mainSlider", {
     spaceBetween: 0,
     loop: true,
@@ -284,7 +155,7 @@ $(document).ready(function () {
       onlyInViewport: true,
     },
   });
-  // Add the parteners swiper
+  // Partners swiper
   const partenerSwiper = new Swiper(".partnersSlider", {
     slidesPerView: 5,
     pagination: {
@@ -292,25 +163,15 @@ $(document).ready(function () {
       clickable: true,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      450: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      991: {
-        slidesPerView: 4,
-      },
-      1200: {
-        slidesPerView: 5,
-      },
+      0: { slidesPerView: 1 },
+      450: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      991: { slidesPerView: 4 },
+      1200: { slidesPerView: 5 },
     },
   });
-  // Add the news section swiper
-  var newsSwiper = new Swiper(".swiper.news-content", {
+  // News section swiper
+  const newsSwiper = new Swiper(".swiper.news-content", {
     navigation: {
       nextEl: ".NewsNext",
       prevEl: ".NewsPrev",
@@ -323,132 +184,74 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      450: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      991: {
-        slidesPerView: 4,
-      },
+      0: { slidesPerView: 1 },
+      450: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      991: { slidesPerView: 4 },
     },
   });
-});
-
-const levelFormCheckInputs = document.querySelectorAll(
-  `.level-statistics-page .level-container .level-statistics-form .form-box .form-box-item .input-group input`
-);
-// handle the status to be related with the check inputs value
-document.querySelectorAll(".form-box-item").forEach((item) => {
-  item.addEventListener("click", function (event) {
+  // Level form check inputs
+  $(
+    ".level-statistics-page .level-container .level-statistics-form .form-box-item"
+  ).on("click", function (event) {
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
+      const $item = $(this);
       const isQualified = event.target.id.endsWith("True");
-      if (isQualified) {
-        item.classList.add("qualified");
-        item.classList.remove("not-qualified");
-      } else {
-        item.classList.add("not-qualified");
-        item.classList.remove("qualified");
-      }
-      // Uncheck the other checkbox
-      item.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        if (checkbox !== event.target) {
-          checkbox.checked = false;
-        }
-      });
+      $item.toggleClass("qualified", isQualified);
+      $item.toggleClass("not-qualified", !isQualified);
+      $item
+        .find('input[type="checkbox"]')
+        .not(event.target)
+        .prop("checked", false);
     }
   });
-});
-const submenuIcons = document.querySelectorAll(
-  `.adminDashboardPage aside .asideNav .navItem .submenuIcon`
-);
-const asideIcon = document.querySelector(
-  `.adminDashboardPage aside .asideIcon`
-);
-const headerAsideIcon = document.querySelector(
-  `.adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon`
-);
-const submenus = document.querySelectorAll(
-  `.adminDashboardPage aside .asideNav .navItem .submenu`
-);
-const notificationsIcon = document.querySelector(
-  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationIcon`
-);
-const dashboardUserBox = document.querySelector(
-  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .userBox`
-);
-const notificationsMenu = document.querySelector(
-  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu`
-);
-const dashboardUserMenu = document.querySelector(
-  `.adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .dashboardUserMenu`
-);
-// toggle showing the notification menu when cliking the notification btn
-notificationsIcon?.addEventListener("click", function () {
-  notificationsMenu?.classList.toggle("open");
-});
-// toggle showing the user menu when cliking the user box
-dashboardUserBox?.addEventListener("click", function () {
-  dashboardUserMenu?.classList.toggle("open");
-  if (dashboardUserMenu?.classList.contains("open")) {
-    dashboardUserBox.classList.add("clicked");
-  } else {
-    dashboardUserBox.classList.remove("clicked");
-  }
-});
-// handle opening every submenu when clicking the arrow btn
-submenuIcons?.forEach((icon) => {
-  icon.addEventListener("click", function () {
-    icon.parentNode.classList.toggle("open");
+  // Admin dashboard interactions
+  const $submenuIcons = $(
+    ".adminDashboardPage aside .asideNav .navItem .submenuIcon"
+  );
+  const $asideIcon = $(".adminDashboardPage aside .asideIcon");
+  const $headerAsideIcon = $(
+    ".adminDashboardPage .dashboardMain .dashboardHeader .headerAsideIcon"
+  );
+  const $submenus = $(".adminDashboardPage aside .asideNav .navItem .submenu");
+  const $notificationsIcon = $(
+    ".adminDashboardPage .dashboardMain .dashboardHeader .notificationIcon"
+  );
+  const $dashboardUserBox = $(
+    ".adminDashboardPage .dashboardMain .dashboardHeader .userBox"
+  );
+  const $notificationsMenu = $(
+    ".adminDashboardPage .dashboardMain .dashboardHeader .notificationMenu"
+  );
+  const $dashboardUserMenu = $(
+    ".adminDashboardPage .dashboardMain .dashboardHeader .dashboardUserMenu"
+  );
+  const $aside = $(".adminDashboardPage aside");
+  const $restPageFromAside = $(".adminDashboardPage .dashboardMain");
+  // Toggle notification menu
+  $notificationsIcon.on("click", function () {
+    $notificationsMenu.toggleClass("open");
   });
-});
-const aside = document.querySelector(`.adminDashboardPage aside`);
-const restPageFromAside = document.querySelector(
-  `.adminDashboardPage .dashboardMain`
-);
-// function to handle the showing of the submenus relating to the aside shrinked or not
-function hideSubmenu() {
-  if (aside?.classList.contains("shrink")) {
-    submenus?.forEach((menu) => {
-      if (menu.parentNode.classList.contains("open")) {
-        menu.parentNode.classList.remove("open");
-      }
-    });
-  }
-}
-// open aside when hover it
-aside?.addEventListener("mouseenter", function () {
-  if (!aside.classList.contains("shrink")) {
-    aside.classList.remove("shrink");
-    hideSubmenu();
-  }
-});
-// close aside when the hover is done
-aside?.addEventListener("mouseleave", function () {
-  if (aside.classList.contains("shrink")) {
-    aside.classList.add("shrink");
-    hideSubmenu();
-  }
-});
-hideSubmenu();
-// handling the submenus when resizing to not effect the responsive
-document.addEventListener("resize", hideSubmenu);
-// toggle the aside with the aside btn at bigger screens
-asideIcon?.addEventListener("click", function () {
-  if (aside?.classList.contains("shrink")) {
-    restPageFromAside?.classList.remove("full");
-    aside.classList.remove("shrink");
-  } else {
-    restPageFromAside?.classList.add("full");
-    aside.classList.add("shrink");
-  }
-  hideSubmenu();
-});
-// toggle opening the aside with the header btn at small devices
-headerAsideIcon?.addEventListener("click", function () {
-  aside?.classList.toggle("open");
+  // Toggle user menu
+  $dashboardUserBox.on("click", function () {
+    $dashboardUserMenu.toggleClass("open");
+    $dashboardUserMenu.css("right", "20px");
+  });
+  // Toggle sidebar visibility
+  $asideIcon.on("click", function () {
+    $aside.toggleClass("close");
+    $restPageFromAside.toggleClass("open");
+  });
+  // Toggle aside navigation from header
+  $headerAsideIcon.on("click", function () {
+    $aside.toggleClass("open");
+    $restPageFromAside.toggleClass("open");
+  });
+  // Toggle submenu
+  $submenuIcons.on("click", function () {
+    $(this).next(".submenu").slideToggle(500);
+  });
+
+  //spinner
+  $(".spinerLoader").delay(500).fadeOut(300);
 });

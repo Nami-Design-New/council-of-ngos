@@ -4990,6 +4990,9 @@ footer .container .support .support-contact-social li a img {
   -o-transition: all 0.3s ease-in-out;
   flex-wrap: wrap;
   overflow-x: hidden;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: 0.3s;
 }
 .adminDashboardPage aside .asideNav .navItem.active, .adminDashboardPage aside .asideNav .navItem:hover {
   background: rgba(29, 150, 143, 0.08);
@@ -4998,6 +5001,7 @@ footer .container .support .support-contact-social li a img {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+  filter: grayscale(0);
 }
 .adminDashboardPage aside .asideNav .navItem.active .navLink p, .adminDashboardPage aside .asideNav .navItem:hover .navLink p {
   color: #1d968f;

@@ -3670,6 +3670,9 @@ $PercentSize: 100px;
         -o-transition: $transition;
         flex-wrap: wrap;
         overflow-x: hidden;
+        cursor: pointer;
+        filter: grayscale(1);
+        transition: 0.3s;
         &.active,
         &:hover {
           background: $main08;
@@ -3678,6 +3681,7 @@ $PercentSize: 100px;
           -moz-border-radius: 12px;
           -ms-border-radius: 12px;
           -o-border-radius: 12px;
+          filter: grayscale(0);
           .navLink {
             p {
               color: $mainColor;

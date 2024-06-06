@@ -2129,8 +2129,6 @@ footer {
             }
           }
         }
-
-     
       }
       .auth-link-box {
         width: 100%;
@@ -3519,7 +3517,7 @@ $PercentSize: 100px;
   background-color: $whiteColor;
   overflow: hidden;
   aside {
-    width: 274px;
+    width: 74px;
     display: flex;
     padding: 24px 16px;
     flex-direction: column;
@@ -3532,6 +3530,7 @@ $PercentSize: 100px;
     z-index: 999999;
     background-color: $whiteColor;
     box-shadow: 0 0 2px 1px #ececec;
+    transition: 0.3s;
 
     @media (max-width: 768px) {
       right: unset;
@@ -3543,12 +3542,12 @@ $PercentSize: 100px;
       box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.07),
         0px 10px 20px -2px rgba(0, 0, 0, 0.04);
       width: 100%;
-      &.open {
+      &.expand {
         left: 0;
       }
     }
-    &.shrink {
-      width: 74px;
+    &.expand {
+      width: 274px;
       @media (max-width: 768px) {
         width: 100%;
       }
@@ -3559,16 +3558,16 @@ $PercentSize: 100px;
         }
       }
       .submenuIcon {
-        display: none !important;
+        display: flex !important;
       }
 
       .bottomAsideLogo {
         .favLogo {
-          display: none !important;
+          display: flex !important;
         }
 
         .fullLogo {
-          display: flex !important;
+          display: none !important;
         }
       }
     }
@@ -3626,11 +3625,11 @@ $PercentSize: 100px;
         }
 
         .favLogo {
-          display: flex;
+          display: none;
         }
 
         .fullLogo {
-          display: none;
+          display: flex;
         }
       }
 
@@ -3686,7 +3685,7 @@ $PercentSize: 100px;
           }
         }
         &.open {
-          .submenuIcon {
+          > .submenuIcon {
             img {
               transform: rotate(-90deg);
               -webkit-transform: rotate(-90deg);
@@ -3695,7 +3694,7 @@ $PercentSize: 100px;
               -o-transform: rotate(-90deg);
             }
           }
-          .submenu {
+          > .submenu {
             display: flex;
           }
         }
@@ -3726,7 +3725,7 @@ $PercentSize: 100px;
           }
         }
         .submenuIcon {
-          display: flex;
+          display: none;
           width: 12px;
           justify-content: center;
           align-items: flex-end;
@@ -3750,6 +3749,7 @@ $PercentSize: 100px;
           top: 0;
           right: 0;
           background-color: $whiteColor;
+          transition: 0.3s;
           list-style: none;
           .submenuItem {
             display: flex;
@@ -3758,13 +3758,56 @@ $PercentSize: 100px;
             gap: 8px;
             align-self: stretch;
             flex-direction: column;
+            transition: 0.3s;
             &.active {
-              > a {
+              > li {
                 color: $mainColor !important;
               }
             }
+
+            &.innerSubmenuItem {
+              &.open {
+                .submenuIcon {
+                  img {
+                    transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg);
+                    -moz-transform: rotate(-90deg);
+                    -ms-transform: rotate(-90deg);
+                    -o-transform: rotate(-90deg);
+                  }
+                }
+                > .submenu {
+                  display: flex;
+                }
+              }
+            }
+            .submenuMenuItem {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 8px;
+              align-self: stretch;
+              color: $grayColor;
+              transition: 0.3s;
+
+              &.active {
+                > a {
+                  color: $mainColor !important;
+                }
+              }
+            }
             ul {
-              padding-right: 40px;
+              padding-right: 20px;
+              width: 100%;
+              background-color: $main02;
+              transition: 0.3s;
+
+              li {
+                transition: 0.3s;
+                &:hover {
+                  padding-right: 8px !important;
+                }
+              }
             }
             a {
               width: 100%;
@@ -3783,15 +3826,15 @@ $PercentSize: 100px;
   }
   .dashboardMain {
     display: flex;
-    padding: 0px 274px 24px 24px;
+    padding: 0px 74px 24px 24px;
     flex-direction: column;
     align-items: flex-end;
     gap: 16px;
     flex: 1 0 0;
     width: 100%;
 
-    &.full {
-      padding-right: 74px;
+    &.shrink {
+      padding-right: 274px;
 
       @media screen and (max-width: 768px) {
         padding: 0;
@@ -3974,7 +4017,7 @@ $PercentSize: 100px;
             height: 0;
           }
           &.open {
-            left: 32px;
+            left: 20px;
           }
           .notificationMenuHeading {
             display: flex;
@@ -4049,7 +4092,7 @@ $PercentSize: 100px;
           -ms-border-radius: 24px;
           -o-border-radius: 24px;
           &.open {
-            left: 32px;
+            left: 20px;
           }
           .userInfoBox {
             display: flex;
@@ -5156,9 +5199,6 @@ button {
   }
 }
 
-
-
-
 .spinerLoader {
   background-color: $whiteColor;
   position: fixed;
@@ -5212,14 +5252,13 @@ button {
   }
 }
 
-
-.row{
+.row {
   display: flex;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   gap: 24px;
-  >*{
+  > * {
     flex: 1;
     min-width: 500px;
   }

@@ -3763,6 +3763,7 @@ $PercentSize: 100px;
           background-color: $whiteColor;
           transition: 0.3s ease-in-out;
           list-style: none;
+          border-radius: 8px;
           .submenuItem {
             display: flex;
             justify-content: flex-start;

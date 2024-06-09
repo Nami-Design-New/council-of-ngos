@@ -254,13 +254,13 @@ $(document).ready(function () {
   });
   // Toggle submenu
   $navMenuItem.on("click", function () {
-    $(this).children(".submenu").slideToggle(500);
+    $(this).children(".submenu").slideToggle(0);
     $(this).toggleClass("open");
   });
   // toggle inner submenu
   $navSubmenuItem.on("click", function (e) {
     e.stopPropagation();
-    $(this).children(".submenu").slideToggle(500);
+    $(this).children(".submenu").slideToggle(0);
     $(this).toggleClass("open");
   });
 

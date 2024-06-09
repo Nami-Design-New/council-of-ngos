@@ -5075,6 +5075,7 @@ footer .container .support .support-contact-social li a img {
   background-color: #ffffff;
   transition: 0.3s ease-in-out;
   list-style: none;
+  border-radius: 8px;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem {
   display: flex;

@@ -2123,10 +2123,10 @@ footer .container .support .support-contact-social li a img {
   padding: 16px;
   align-items: center;
   gap: 8px;
+  width: 100%;
   align-self: stretch;
-  border-radius: 12px;
-  border: 1px solid #f2f2f2;
-  background: #f8f8f8;
+  border-radius: 12px !important;
+  border-width: 1px;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -2609,8 +2609,7 @@ footer .container .support .support-contact-social li a img {
   gap: 16px;
   flex: 1 0 0;
   border-radius: 16px;
-  border: 1px solid #f2f2f2;
-  background: #f8f8f8;
+  border-width: 1px;
 }
 @media (max-width: 768px) {
   .org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box {
@@ -6619,4 +6618,12 @@ button {
 
 .select2 {
   width: 100% !important;
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+figure {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

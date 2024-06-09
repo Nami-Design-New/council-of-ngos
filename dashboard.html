@@ -1,332 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>مجلس الجمعيات الأهلية | لوحة التحكم</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/icon" href="assets/fav.svg" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- ApexChart -->
-    <link rel="stylesheet" href="css/apex-charts.css" />
-    <!-- Custom style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title -->
+  <title>مجلس الجمعيات الأهلية | لوحة التحكم</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="assets/fav.svg" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- ApexChart -->
+  <link rel="stylesheet" href="css/apex-charts.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
   <!-- ================ loader ================= -->
   <div class="spinerLoader">
     <div class="spinerLoaderImg"></div>
   </div>
-
-    <!-- Start Header -->
-    <header>
-      <nav class="container">
-        <a href="index.html" class="header-logo">
-          <img
-            src="assets/logo.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-          <img
-            src="assets/Logo Lift.png"
-            alt="صندوق دعم الجمعيات"
-            title="صندوق دعم الجمعيات"
-          />
-        </a>
-        <ul class="navList">
-          <li><a href="index.html#">الرئيسية</a></li>
-          <li><a href="index.html#identify">تعرف علينا</a></li>
-          <li><a href="index.html#steps-section">كيفية التقييم</a></li>
-          <li><a href="index.html#parteners">الشركاء</a></li>
-          <li><a href="index.html#news">الاخبار</a></li>
-          <li><a href="index.html#contact">تواصل معنا</a></li>
-        </ul>
-        <!-- User Info -->
-        <div class="user-info">
-          <div class="user-avatar">
-            <img src="assets/avatar.webp" alt="user avatar" />
-          </div>
-          <span class="user-name">محمود جمال</span>
-          <div class="user-menu">
-            <a href="dashboard.html" class="user-menu-item">
-              <img
-                src="assets/dashboard-icon.svg"
-                alt="لوحة التحكم"
-                title="لوحة التحكم"
-              />
-              <p>لوحة التحكم</p>
-            </a>
-            <a href="org-edit.html" class="user-menu-item">
-              <img
-                src="assets/account-setting-icon.svg"
-                alt="اعدادات الحساب"
-                title="اعدادات الحساب"
-              />
-              <p>اعدادات الحساب</p>
-            </a>
-            <a href="login.html" class="user-menu-item">
-              <img
-                src="assets/logout-icon.svg"
-                alt="تسجيل الخروج"
-                title="تسجيل الخروج"
-              />
-              <p>تسجيل الخروج</p>
-            </a>
-          </div>
+  <!-- Start Header -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="header-logo">
+        <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+        <img src="assets/Logo Lift.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات" />
+      </a>
+      <ul class="navList">
+        <li><a href="index.html#">الرئيسية</a></li>
+        <li><a href="index.html#identify">تعرف علينا</a></li>
+        <li><a href="index.html#steps-section">كيفية التقييم</a></li>
+        <li><a href="index.html#parteners">الشركاء</a></li>
+        <li><a href="index.html#news">الاخبار</a></li>
+        <li><a href="index.html#contact">تواصل معنا</a></li>
+      </ul>
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="user-avatar">
+          <img src="assets/avatar.webp" alt="user avatar" />
         </div>
-        <!-- menu icon -->
-        <span class="menu-icon">
-          <img src="assets/menu-close.png" alt="menu icon" />
-        </span>
-      </nav>
-    </header>
-    <!-- End Header -->
-    <!-- Start Main -->
-    <main class="dashboard-page">
-      <section class="dashboard-container">
-        <div class="dashboard-heading">
-          <h2>اهلا محمود</h2>
-          <p>تابع مستوي التقدم في جمعيتك أول بأول</p>
+        <span class="user-name">محمود جمال</span>
+        <div class="user-menu">
+          <a href="dashboard.html" class="user-menu-item">
+            <img src="assets/dashboard-icon.svg" alt="لوحة التحكم" title="لوحة التحكم" />
+            <p>لوحة التحكم</p>
+          </a>
+          <a href="org-edit.html" class="user-menu-item">
+            <img src="assets/account-setting-icon.svg" alt="اعدادات الحساب" title="اعدادات الحساب" />
+            <p>اعدادات الحساب</p>
+          </a>
+          <a href="login.html" class="user-menu-item">
+            <img src="assets/logout-icon.svg" alt="تسجيل الخروج" title="تسجيل الخروج" />
+            <p>تسجيل الخروج</p>
+          </a>
         </div>
-        <div class="levels-statistics-section">
-          <div class="level-box">
-            <div class="percent p75">
-              <p class="percentNum">75 <span> % </span></p>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-              </div>
+      </div>
+      <!-- menu icon -->
+      <span class="menu-icon">
+        <img src="assets/menu-close.png" alt="menu icon" />
+      </span>
+    </nav>
+  </header>
+  <!-- End Header -->
+  <!-- Start Main -->
+  <main class="dashboard-page">
+    <section class="dashboard-container">
+      <div class="dashboard-heading">
+        <h2>اهلا محمود</h2>
+        <p>تابع مستوي التقدم في جمعيتك أول بأول</p>
+      </div>
+      <div class="levels-statistics-section">
+        <div class="level-box">
+          <div class="percent p75">
+            <p class="percentNum">75 <span> % </span></p>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
             </div>
-            <h5 class="level-box-title">مستوي الفاعلية</h5>
-            <a href="level.html" class="level-box-link"> عرض </a>
           </div>
-          <div class="level-box">
-            <div class="percent p75">
-              <p class="percentNum">75 <span> % </span></p>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-              </div>
+          <h5 class="level-box-title">مستوي الفاعلية</h5>
+          <a href="level.html" class="level-box-link"> عرض </a>
+        </div>
+        <div class="level-box">
+          <div class="percent p75">
+            <p class="percentNum">75 <span> % </span></p>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
             </div>
-            <h5 class="level-box-title">مستوي التطبيق</h5>
-            <a href="level.html" class="level-box-link"> عرض </a>
           </div>
-          <div class="level-box">
-            <div class="percent p75">
-              <p class="percentNum">75 <span> % </span></p>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-              </div>
+          <h5 class="level-box-title">مستوي التطبيق</h5>
+          <a href="level.html" class="level-box-link"> عرض </a>
+        </div>
+        <div class="level-box">
+          <div class="percent p75">
+            <p class="percentNum">75 <span> % </span></p>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
             </div>
-            <h5 class="level-box-title">مستوي الوجود</h5>
-            <a href="level.html" class="level-box-link"> عرض </a>
           </div>
+          <h5 class="level-box-title">مستوي الوجود</h5>
+          <a href="level.html" class="level-box-link"> عرض </a>
         </div>
-        <div class="measurment-standard-section">
-          <h5 class="measurment-standard-heading">
-            معيار قياس الاحتياج للجمعيات الأهلية
-          </h5>
-          <div
-            class="measurment-standard-chart apexcharts"
-            id="measurment-chart"
-          ></div>
+      </div>
+      <div class="measurment-standard-section">
+        <h5 class="measurment-standard-heading">
+          معيار قياس الاحتياج للجمعيات الأهلية
+        </h5>
+        <div class="measurment-standard-chart apexcharts" id="measurment-chart"></div>
+      </div>
+    </section>
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="about_company">
+          <a href="index.html" class="footerLogo">
+            <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          </a>
+          <p>
+            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+            المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
+            منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
+          </p>
         </div>
-      </section>
-      <!-- Start Footer -->
-      <footer>
-        <div class="container">
-          <div class="about_company">
-            <a href="index.html" class="footerLogo">
-              <img
-                src="assets/logo.svg"
-                alt="مجلس الجمعيات الأهلية"
-                title="مجلس الجمعيات الأهلية"
-              />
-            </a>
-            <p>
-              نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
-              المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
-              منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف
-            </p>
-          </div>
-          <div class="footerLinks">
-            <h3>روابط مهمه</h3>
-            <ul class="footerNavList">
-              <li>
-                <a href="index.html">الرئيسية</a>
-              </li>
-              <li>
-                <a href="#identify">تعرف علينا</a>
-              </li>
-              <li>
-                <a href="#steps-section">كيفية التقييم</a>
-              </li>
-              <li>
-                <a href="#parteners">الشركاء</a>
-              </li>
-              <li>
-                <a href="#news">الاخبار</a>
-              </li>
-              <li>
-                <a href="#contact">تواصل معنا</a>
-              </li>
-            </ul>
-          </div>
-          <div class="support">
-            <h3>الدعم الفنى</h3>
-            <ul class="support-contact-list">
-              <li>
-                <img src="assets/mail-black-icon.svg" alt="email icon" />
-                <p>email@email.com</p>
-              </li>
-              <li>
-                <img
-                  src="assets/telephone-black-icon.svg"
-                  alt="telephone icon"
-                />
-                <p>0123456789</p>
-              </li>
-            </ul>
-            <h3>تابعنا على</h3>
-            <ul class="support-contact-social">
-              <li>
-                <a href="">
-                  <img src="assets/facebook_icon.svg" alt="facebook icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/instgram-icon.svg" alt="instagram icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/twitter-icon.svg" alt="twitter icon" />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="footerLinks">
+          <h3>روابط مهمه</h3>
+          <ul class="footerNavList">
+            <li>
+              <a href="index.html">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#identify">تعرف علينا</a>
+            </li>
+            <li>
+              <a href="#steps-section">كيفية التقييم</a>
+            </li>
+            <li>
+              <a href="#parteners">الشركاء</a>
+            </li>
+            <li>
+              <a href="#news">الاخبار</a>
+            </li>
+            <li>
+              <a href="#contact">تواصل معنا</a>
+            </li>
+          </ul>
         </div>
-      </footer>
-      <!-- End Footer -->
-    </main>
-    <!-- End Main -->
-    <!-- jquery  -->
-    <script src="js/jquery.min.js"></script>
-    <!-- ApexChart -->
-    <script src="js/apexcharts.js"></script>
-    <!-- swiper slider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- custom -->
-    <script src="js/Custom.js"></script>
-    <!-- Add measurment chart -->
-    <script>
-      // Add measurment chart
-      let measurmentOptions = {
-        series: [
-          {
-            name: "مستوى التطبيق",
-            data: [31, 40, 28, 51, 42, 90, 42, 90, 100],
-          },
-          {
-            name: "مستوى الفاعلية",
-            data: [11, 32, 45, 32, 34, 52, 34, 52, 41],
-          },
-          {
-            name: "مستوى الوجود",
-            data: [15, 11, 32, 18, 9, 24, 9, 24, 11],
-          },
-        ],
-        chart: {
-          height: 350,
-          type: "area",
-          animations: {
+        <div class="support">
+          <h3>الدعم الفنى</h3>
+          <ul class="support-contact-list">
+            <li>
+              <img src="assets/mail-black-icon.svg" alt="email icon" />
+              <p>email@email.com</p>
+            </li>
+            <li>
+              <img src="assets/telephone-black-icon.svg" alt="telephone icon" />
+              <p>0123456789</p>
+            </li>
+          </ul>
+          <h3>تابعنا على</h3>
+          <ul class="support-contact-social">
+            <li>
+              <a href="">
+                <img src="assets/facebook_icon.svg" alt="facebook icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/instgram-icon.svg" alt="instagram icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/twitter-icon.svg" alt="twitter icon" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/linkedin-icon.svg" alt="linkedin icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </main>
+  <!-- End Main -->
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- ApexChart -->
+  <script src="js/apexcharts.js"></script>
+  <!-- swiper slider -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS و Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+  <!-- Add measurment chart -->
+  <script>
+    // Add measurment chart
+    let measurmentOptions = {
+      series: [
+        {
+          name: "مستوى التطبيق",
+          data: [31, 40, 28, 51, 42, 90, 42, 90, 100],
+        },
+        {
+          name: "مستوى الفاعلية",
+          data: [11, 32, 45, 32, 34, 52, 34, 52, 41],
+        },
+        {
+          name: "مستوى الوجود",
+          data: [15, 11, 32, 18, 9, 24, 9, 24, 11],
+        },
+      ],
+      chart: {
+        height: 350,
+        type: "area",
+        animations: {
+          enabled: true,
+          easing: "easeinout",
+          speed: 1500,
+          animateGradually: {
             enabled: true,
-            easing: "easeinout",
-            speed: 1500,
-            animateGradually: {
-              enabled: true,
-              delay: 300,
-            },
-            dynamicAnimation: {
-              enabled: true,
-              speed: 1000,
-            },
+            delay: 300,
+          },
+          dynamicAnimation: {
+            enabled: true,
+            speed: 1000,
           },
         },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: "smooth",
-        },
-        xaxis: {
-          type: "category",
-          categories: [
-            "البنية التحتية و التقنية",
-            "التفعيل المجتمعي والتطوع",
-            "إدارة العلاقات والاتصال المؤسسي",
-            "إدارة الموارد البشرية",
-            "الاستدامة المالية",
-            "التنظيم المالي",
-            "إدارة المشاريع والعمليات",
-            "حوكمة المنظمة وإدارة المخاطر والالتزام",
-            "إدارة الاستراتيجية والأداء",
-          ],
-        },
-        yaxis: {
-          opposite: true,
-          labels: {
-            formatter: function (value) {
-              return value + "%";
-            },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      xaxis: {
+        type: "category",
+        categories: [
+          "البنية التحتية و التقنية",
+          "التفعيل المجتمعي والتطوع",
+          "إدارة العلاقات والاتصال المؤسسي",
+          "إدارة الموارد البشرية",
+          "الاستدامة المالية",
+          "التنظيم المالي",
+          "إدارة المشاريع والعمليات",
+          "حوكمة المنظمة وإدارة المخاطر والالتزام",
+          "إدارة الاستراتيجية والأداء",
+        ],
+      },
+      yaxis: {
+        opposite: true,
+        labels: {
+          formatter: function (value) {
+            return value + "%";
           },
         },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return val + "%";
-            },
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val + "%";
           },
         },
-        colors: ["#F9C74F", "#2D9CDB", "#F94144"],
-        fill: {
-          opacity: 0.8,
-          type: "gradient",
-          gradient: {
-            shade: "light",
-            type: "horizontal",
-            shadeIntensity: 0.25,
-            gradientToColors: undefined,
-            inverseColors: true,
-            opacityFrom: 0.75,
-            opacityTo: 0.75,
-            stops: [0, 100],
-          },
+      },
+      colors: ["#F9C74F", "#2D9CDB", "#F94144"],
+      fill: {
+        opacity: 0.8,
+        type: "gradient",
+        gradient: {
+          shade: "light",
+          type: "horizontal",
+          shadeIntensity: 0.25,
+          gradientToColors: undefined,
+          inverseColors: true,
+          opacityFrom: 0.75,
+          opacityTo: 0.75,
+          stops: [0, 100],
         },
-        legend: {
-          position: "top",
-          horizontalAlign: "center",
-          floating: true,
-          offsetY: -25,
-          offsetX: -5,
-        },
-      };
-      let measurmentChart = new ApexCharts(
-        document.querySelector("#measurment-chart"),
-        measurmentOptions
-      );
-      measurmentChart?.render();
-    </script>
-  </body>
+      },
+      legend: {
+        position: "top",
+        horizontalAlign: "center",
+        floating: true,
+        offsetY: -25,
+        offsetX: -5,
+      },
+    };
+    let measurmentChart = new ApexCharts(
+      document.querySelector("#measurment-chart"),
+      measurmentOptions
+    );
+    measurmentChart?.render();
+  </script>
+</body>
+
 </html>

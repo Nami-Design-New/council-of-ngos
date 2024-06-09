@@ -12,17 +12,15 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <!-- ================ loader ================= -->
-  <div class="spinerLoader">
-    <div class="spinerLoaderImg"></div>
-  </div>
   <!-- Start login form -->
   <main class="auth-page login-page">
     <section class="auth-container">
@@ -45,35 +43,33 @@
             الرجاء إدخال عنوان البريد الإلكتروني لإتمام عملية الدخول
           </p>
         </div>
-
-
-
-
-        <form class="auth-form needs-validation" novalidate>
-          <div class="input-group">
-            <label class="form-label"> البريد الإلكتروني </label>
-            <input type="email" class="form-control" required>
-            <div class="invalid-feedback">
-              البريد الإلكتروني غير صحيح
-            </div>
-          </div>
-          <div class="input-group">
-            <label class="form-label"> كلمة المرور </label>
-            <input type="password" class="form-control" required>
-            <div class="invalid-feedback">
-              كلمة المرور غير صحيحة
-            </div>
-          </div>
-
+        <form class="auth-form needs-validation" id="loginForm" novalidate action="dashboard.html">
           <div class="auth-form-body">
-           
+            <div class="form-inputs-container">
+              <div class="input-group">
+                <label for="emailInput">البريد الإلكتروني</label>
+                <input type="email" class="form-control" name="email" id="emailInput" placeholder="مثال: mail@mail.com"
+                  required />
+                <div class="invalid-feedback"> البريد الإلكتروني غير صحيح </div>
+              </div>
+              <div class="input-group">
+                <label for="passwordInput">كلمة المرور</label>
+                <input type="password" class="form-control" name="password" id="passwordInput"
+                  placeholder="************" required />
+                <span class="passwordIcon">
+                  <img src="assets/show-passowd.svg" alt="show password icon" title="Toggle password visibility"
+                    id="togglePassword" />
+                </span>
+                <div class="invalid-feedback"> كلمة المرور غير صحيحة </div>
+              </div>
+            </div>
             <a href="forget.html" class="forget-password-link"> نسيت كلمة المرور؟ </a>
           </div>
-          <div class="auth-form-btns-container">
+          <div class="auth-form-btns-container d-flex justify-content-between align-items-center">
             <a href="#!" class="back-link" onclick="window.history.back();">
               <img src="assets/backArrow.svg" alt="back icon" title="back home" />
             </a>
-            <button type="submit">تسجيل الدخول</button>
+            <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
           </div>
         </form>
         <div class="auth-link-box">
@@ -89,39 +85,25 @@
   <!-- End login form -->
   <!-- jquery  -->
   <script src="js/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
   <!-- swiper slider -->
   <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS و Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
-
   <script>
-
-    (() => {
-      'use strict'
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
+    (function () {
+      'use strict';
+      document.getElementById('loginForm').addEventListener('submit', function (event) {
+        if (!this.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        this.classList.add('was-validated');
+      }, false);
+    })();
   </script>
-
 </body>
 
 </html>

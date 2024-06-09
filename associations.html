@@ -12,6 +12,8 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css" />
@@ -23,7 +25,6 @@
   <div class="spinerLoader">
     <div class="spinerLoaderImg"></div>
   </div>
-
   <div class="adminDashboardPage associationsPage">
     <!-- Start dashboard header -->
     <aside class="expand">
@@ -38,7 +39,6 @@
           <img src="assets/logo-title-english-council.svg" alt="Council of NGOs" title="Council of NGOs" />
         </div>
       </a>
-
       <ul class="asideNav">
         <li class="navItem">
           <a href="admin-dashboard.html" class="navLink">
@@ -127,7 +127,6 @@
           </ul>
         </li>
       </ul>
-
       <a href="index.html" class="asideLogo bottomAsideLogo">
         <img src="assets/empty-logo-associations.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات"
           class="fullLogo" />
@@ -232,7 +231,6 @@
           </div>
         </div>
       </header>
-
       <div class="dashboardMainContent associationsMainContent">
         <div class="contentConatiner">
           <div class="associationsHeadingbox">
@@ -812,6 +810,9 @@
   <script src="js/jquery.min.js"></script>
   <!-- swiper slider -->
   <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS و Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
   <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
@@ -821,8 +822,6 @@
     $('.table').DataTable({
       responsive: true
     });
-
-
     // Modal Operations
     const modal = document.querySelector(`.modal`);
     const modalBody = document.querySelector(`.modal .modalBox`);
@@ -850,7 +849,6 @@
       },
       true
     );
-
   </script>
 </body>
 

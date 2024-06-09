@@ -206,8 +206,9 @@ $(document).ready(function () {
     }
   });
   // Admin dashboard interactions
-  const $submenuIcons = $(
-    ".adminDashboardPage aside .asideNav .navItem .submenuIcon"
+  const $navMenuItem = $(".adminDashboardPage aside .asideNav > .navItem");
+  const $navSubmenuItem = $(
+    ".adminDashboardPage aside .asideNav .navItem .submenu .submenuItem"
   );
   const $asideIcon = $(".adminDashboardPage aside .asideIcon");
   const $headerAsideIcon = $(
@@ -235,21 +236,32 @@ $(document).ready(function () {
   // Toggle user menu
   $dashboardUserBox.on("click", function () {
     $dashboardUserMenu.toggleClass("open");
-    $dashboardUserMenu.css("right", "20px");
   });
   // Toggle sidebar visibility
   $asideIcon.on("click", function () {
-    $aside.toggleClass("close");
-    $restPageFromAside.toggleClass("open");
+    $aside.toggleClass("expand");
+    $restPageFromAside.toggleClass("shrink");
+    if ($aside.hasClass("expand")) {
+      $navMenuItem.children(".submenu").each(function () {
+        $(this).removeClass("open");
+      });
+    }
   });
   // Toggle aside navigation from header
   $headerAsideIcon.on("click", function () {
-    $aside.toggleClass("open");
-    $restPageFromAside.toggleClass("open");
+    $aside.toggleClass("expand");
+    $restPageFromAside.toggleClass("shrink");
   });
   // Toggle submenu
-  $submenuIcons.on("click", function () {
-    $(this).next(".submenu").slideToggle(500);
+  $navMenuItem.on("click", function () {
+    $(this).children(".submenu").slideToggle(500);
+    $(this).toggleClass("open");
+  });
+  // toggle inner submenu
+  $navSubmenuItem.on("click", function (e) {
+    e.stopPropagation();
+    $(this).children(".submenu").slideToggle(500);
+    $(this).toggleClass("open");
   });
 
   //spinner

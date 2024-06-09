@@ -1,397 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>مجلس الجمعيات الأهلية | لوحة تحكم الأدمن</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/icon" href="assets/fav.svg" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- ApexChart -->
-    <link rel="stylesheet" href="css/apex-charts.css" />
-    <!-- Custom style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- ================ loader ================= -->
-    <div class="spinerLoader">
-      <div class="spinerLoaderImg"></div>
-    </div>
 
-    <div class="adminDashboardPage">
-      <!-- Start dashboard header -->
-      <aside class="">
-        <div class="asideIcon">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title -->
+  <title>مجلس الجمعيات الأهلية | لوحة تحكم الأدمن</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="assets/fav.svg" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- ApexChart -->
+  <link rel="stylesheet" href="css/apex-charts.css" />
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ================ loader ================= -->
+  <div class="spinerLoader">
+    <div class="spinerLoaderImg"></div>
+  </div>
+
+  <div class="adminDashboardPage">
+    <!-- Start dashboard header -->
+    <aside class="expand">
+      <div class="asideIcon">
+        <span class="iconBar"> </span><span class="iconBar"></span>
+        <span class="iconBar"></span>
+      </div>
+      <a href="index.html" class="asideLogo">
+        <img src="assets/empty-logo-council.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+        <div class="logo-heading">
+          <img src="assets/logo-title-arabic-council.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          <img src="assets/logo-title-english-council.svg" alt="Council of NGOs" title="Council of NGOs" />
+        </div>
+      </a>
+
+      <ul class="asideNav">
+        <li class="navItem active">
+          <a href="admin-dashboard.html" class="navLink">
+            <img src="assets/dashboard-color-icon.svg" alt="لوحة المعلومات" title="لوحة المعلومات" />
+            <p>لوحة المعلومات (الداشبورد)</p>
+          </a>
+        </li>
+        <li class="navItem">
+          <a href="" class="navLink">
+            <img src="assets/users-color-icon.svg" alt="المستخدمون" title="المستخدمون" />
+            <p>المستخدمون</p>
+          </a>
+        </li>
+        <li class="navItem">
+          <a href="associations.html" class="navLink">
+            <img src="assets/associations-color-icon.svg" alt="الجمعيات" title="الجمعيات" />
+            <p>الجمعيات</p>
+          </a>
+        </li>
+        <li class="navItem">
+          <div href="" class="navLink">
+            <img src="assets/reports-color-icon.svg" alt="التقارير" title="التقارير" />
+            <p>التقارير</p>
+          </div>
+          <span class="submenuIcon">
+            <img src="assets/submenu-icon.svg" alt="submenu icon" />
+          </span>
+          <ul class="submenu">
+            <li class="submenuItem">
+              <a href="evaluationFollow.html">التقارير</a>
+            </li>
+            <li class="submenuItem">
+              <a href="evaluationFollow.html">متابعة التقييم</a>
+            </li>
+            <li class="submenuItem innerSubmenuItem">
+              <div class="submenuMenuItem">
+                الجمعيات
+                <span class="submenuIcon">
+                  <img src="assets/submenu-icon.svg" alt="submenu icon" />
+                </span>
+              </div>
+              <ul class="submenu">
+                <li class="submenuItem">
+                  <a href="associations-reports.html">البيانات الاساسية</a>
+                </li>
+                <li class="submenuItem">
+                  <a href="">المالية</a>
+                </li>
+                <li class="submenuItem">
+                  <a href="">الموارد البشرية</a>
+                </li>
+                <li class="submenuItem">
+                  <a href="">الانشطة</a>
+                </li>
+                <li class="submenuItem">
+                  <a href="">الايرادات</a>
+                </li>
+                <li class="submenuItem">
+                  <a href="">الدعم</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="navItem">
+          <a href="" class="navLink">
+            <img src="assets/contact-request-color-icon.svg" alt="طلبات التواصل" title="طلبات التواصل" />
+            <p>طلبات التواصل</p>
+          </a>
+        </li>
+        <li class="navItem">
+          <div href="" class="navLink">
+            <img src="assets/settings-color-icon.svg" alt="الاعدادات" title="الاعدادات" />
+            <p>الاعدادات</p>
+          </div>
+          <span class="submenuIcon">
+            <img src="assets/submenu-icon.svg" alt="submenu icon" />
+          </span>
+          <ul class="submenu">
+            <li class="submenuItem">
+              <a href="">المستخدمين</a>
+            </li>
+            <li class="submenuItem">
+              <a href="">اعدادات عامة</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <a href="index.html" class="asideLogo bottomAsideLogo">
+        <img src="assets/empty-logo-associations.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات"
+          class="fullLogo" />
+        <img src="assets/Logo Lift.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات" class="favLogo" />
+      </a>
+    </aside>
+    <!-- End dashboard header -->
+    <main class="dashboardMain shrink">
+      <header class="dashboardHeader">
+        <a href="index.html" class="header-logo">
+          <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          <img src="assets/Logo Lift.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات" />
+        </a>
+        <div class="headerAsideIcon">
           <span class="iconBar"> </span><span class="iconBar"></span>
           <span class="iconBar"></span>
         </div>
-        <a href="index.html" class="asideLogo">
-          <img
-            src="assets/empty-logo-council.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-          <div class="logo-heading">
-            <img
-              src="assets/logo-title-arabic-council.svg"
-              alt="مجلس الجمعيات الأهلية"
-              title="مجلس الجمعيات الأهلية"
-            />
-            <img
-              src="assets/logo-title-english-council.svg"
-              alt="Council of NGOs"
-              title="Council of NGOs"
-            />
-          </div>
-        </a>
-
-        <ul class="asideNav">
-          <li class="navItem active">
-            <a href="admin-dashboard.html" class="navLink">
-              <img
-                src="assets/dashboard-color-icon.svg"
-                alt="لوحة المعلومات"
-                title="لوحة المعلومات"
-              />
-              <p>لوحة المعلومات (الداشبورد)</p>
-            </a>
-          </li>
-          <li class="navItem">
-            <a href="" class="navLink">
-              <img
-                src="assets/users-color-icon.svg"
-                alt="المستخدمون"
-                title="المستخدمون"
-              />
-              <p>المستخدمون</p>
-            </a>
-          </li>
-          <li class="navItem">
-            <a href="associations.html" class="navLink">
-              <img
-                src="assets/associations-color-icon.svg"
-                alt="الجمعيات"
-                title="الجمعيات"
-              />
-              <p>الجمعيات</p>
-            </a>
-          </li>
-          <li class="navItem">
-            <div href="" class="navLink">
-              <img
-                src="assets/reports-color-icon.svg"
-                alt="التقارير"
-                title="التقارير"
-              />
-              <p>التقارير</p>
+        <div class="headerGreeting">
+          <h6>مرحبا</h6>
+          <h5>محمود جمال</h5>
+        </div>
+        <div class="notificationAndUserBox">
+          <div class="notificationMenu">
+            <div class="notificationMenuHeading">
+              <h6>الإشعارات</h6>
+              <a href="">مشاهدة الكل</a>
             </div>
-            <span class="submenuIcon">
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+            <a href="" class="notificationBox">
+              <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
+              <p class="notificationBoxContent">
+                جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
+              </p>
+            </a>
+          </div>
+          <div class="dashboardUserMenu">
+            <div class="userInfoBox">
+              <div class="userMaskGroup">
+                <figure>
+                  <img src="assets/avatar.webp" alt="user avatar" title="user avatar" />
+                </figure>
+                <a href="" class="editAvatar"><img src="assets/pencil.svg" alt="edit avatar"
+                    title="تعديل صورة الملف" /></a>
+              </div>
+              <div class="userInfo">
+                <p class="userName">محمود جمال</p>
+                <p class="userEmail">admin@gmail.com</p>
+              </div>
+            </div>
+            <div class="menuLinksBox">
+              <a href="" class="menuLink">
+                <img src="assets/settings-color-icon.svg" alt="إدارة حسابك" title="إدارة حسابك" />
+                <p>إدارة حسابك</p>
+              </a>
+              <a href="" class="menuLink">
+                <img src="assets/logout-icon.svg" alt="تسجيل الخروج" title="تسجيل الخروج" />
+                <p>تسجيل الخروج</p>
+              </a>
+            </div>
+          </div>
+          <div class="notificationIcon">
+            <img src="assets/notification-icon.svg" alt="notification icon" />
+            <p class="notificationCount">6</p>
+          </div>
+          <div class="userBox">
+            <div class="userBoxAvatar">
+              <img src="assets/avatar.webp" alt="user avatar" class="userAvatar" />
+            </div>
+            <p>محمود جمال</p>
+            <span class="userSubmenuIcon">
               <img src="assets/submenu-icon.svg" alt="submenu icon" />
             </span>
-            <ul class="submenu">
-              <li class="submenuItem">
-                <a href="evaluationFollow.html">التقارير</a>
-              </li>
-              <li class="submenuItem">
-                <a href="evaluationFollow.html">متابعة التقييم</a>
-              </li>
-              <li class="submenuItem innerSubmenuItem">
-                <div class="submenuMenuItem">
-                  الجمعيات
-                  <span class="submenuIcon">
-                    <img src="assets/submenu-icon.svg" alt="submenu icon" />
-                  </span>
-                </div>
-                <ul class="submenu">
-                  <li class="submenuItem">
-                    <a href="associations-reports.html">البيانات الاساسية</a>
-                  </li>
-                  <li class="submenuItem">
-                    <a href="">المالية</a>
-                  </li>
-                  <li class="submenuItem">
-                    <a href="">الموارد البشرية</a>
-                  </li>
-                  <li class="submenuItem">
-                    <a href="">الانشطة</a>
-                  </li>
-                  <li class="submenuItem">
-                    <a href="">الايرادات</a>
-                  </li>
-                  <li class="submenuItem">
-                    <a href="">الدعم</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="navItem">
-            <a href="" class="navLink">
-              <img
-                src="assets/contact-request-color-icon.svg"
-                alt="طلبات التواصل"
-                title="طلبات التواصل"
-              />
-              <p>طلبات التواصل</p>
-            </a>
-          </li>
-          <li class="navItem">
-            <div href="" class="navLink">
-              <img
-                src="assets/settings-color-icon.svg"
-                alt="الاعدادات"
-                title="الاعدادات"
-              />
-              <p>الاعدادات</p>
-            </div>
-            <span class="submenuIcon">
-              <img src="assets/submenu-icon.svg" alt="submenu icon" />
-            </span>
-            <ul class="submenu">
-              <li class="submenuItem">
-                <a href="">المستخدمين</a>
-              </li>
-              <li class="submenuItem">
-                <a href="">اعدادات عامة</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <a href="index.html" class="asideLogo bottomAsideLogo">
-          <img
-            src="assets/empty-logo-associations.png"
-            alt="صندوق دعم الجمعيات"
-            title="صندوق دعم الجمعيات"
-            class="fullLogo"
-          />
-          <img
-            src="assets/Logo Lift.png"
-            alt="صندوق دعم الجمعيات"
-            title="صندوق دعم الجمعيات"
-            class="favLogo"
-          />
-        </a>
-      </aside>
-      <!-- End dashboard header -->
-      <main class="dashboardMain">
-        <header class="dashboardHeader">
-          <a href="index.html" class="header-logo">
-            <img
-              src="assets/logo.svg"
-              alt="مجلس الجمعيات الأهلية"
-              title="مجلس الجمعيات الأهلية"
-            />
-            <img
-              src="assets/Logo Lift.png"
-              alt="صندوق دعم الجمعيات"
-              title="صندوق دعم الجمعيات"
-            />
-          </a>
-          <div class="headerAsideIcon">
-            <span class="iconBar"> </span><span class="iconBar"></span>
-            <span class="iconBar"></span>
-          </div>
-          <div class="headerGreeting">
-            <h6>مرحبا</h6>
-            <h5>محمود جمال</h5>
-          </div>
-          <div class="notificationAndUserBox">
-            <div class="notificationMenu">
-              <div class="notificationMenuHeading">
-                <h6>الإشعارات</h6>
-                <a href="">مشاهدة الكل</a>
-              </div>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-              <a href="" class="notificationBox">
-                <p class="notificationBoxTitle">يوجد طلب انضمام جديد</p>
-                <p class="notificationBoxContent">
-                  جمعية الرحمة ترغب في الانضمام إلى مؤسستكم
-                </p>
-              </a>
-            </div>
-            <div class="dashboardUserMenu">
-              <div class="userInfoBox">
-                <div class="userMaskGroup">
-                  <figure>
-                    <img
-                      src="assets/avatar.webp"
-                      alt="user avatar"
-                      title="user avatar"
-                    />
-                  </figure>
-                  <a href="" class="editAvatar"
-                    ><img
-                      src="assets/pencil.svg"
-                      alt="edit avatar"
-                      title="تعديل صورة الملف"
-                  /></a>
-                </div>
-                <div class="userInfo">
-                  <p class="userName">محمود جمال</p>
-                  <p class="userEmail">admin@gmail.com</p>
-                </div>
-              </div>
-              <div class="menuLinksBox">
-                <a href="" class="menuLink">
-                  <img
-                    src="assets/settings-color-icon.svg"
-                    alt="إدارة حسابك"
-                    title="إدارة حسابك"
-                  />
-                  <p>إدارة حسابك</p>
-                </a>
-                <a href="" class="menuLink">
-                  <img
-                    src="assets/logout-icon.svg"
-                    alt="تسجيل الخروج"
-                    title="تسجيل الخروج"
-                  />
-                  <p>تسجيل الخروج</p>
-                </a>
-              </div>
-            </div>
-            <div class="notificationIcon">
-              <img src="assets/notification-icon.svg" alt="notification icon" />
-              <p class="notificationCount">6</p>
-            </div>
-            <div class="userBox">
-              <div class="userBoxAvatar">
-                <img
-                  src="assets/avatar.webp"
-                  alt="user avatar"
-                  class="userAvatar"
-                />
-              </div>
-              <p>محمود جمال</p>
-              <span class="userSubmenuIcon">
-                <img src="assets/submenu-icon.svg" alt="submenu icon" />
-              </span>
-            </div>
-          </div>
-        </header>
-
-        <div class="dashboardMainContent">
-          <div class="contentConatiner">
-            <section class="contentSection">
-              <p class="sectionHeading">الاجماليات</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات التي اتمت التقييم</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">179</h4>
-                  <p class="boxTitle">عدد الجهات التي لم تبدأ بعد</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">938</h4>
-                  <p class="boxTitle">عدد الجهات</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">التعليم</h4>
-                  <p class="boxTitle">المجال الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">الرياض</h4>
-                  <p class="boxTitle">المنطقة الاشد احتياجا</p>
-                </div>
-                <div class="sectionBox min-300">
-                  <h4 class="boxValue">اسم الجهه</h4>
-                  <p class="boxTitle">الجهه الاشد احتياجا</p>
-                </div>
-              </div>
-            </section>
-            <section class="contentSection">
-              <p class="sectionHeading">مؤشرات النمو</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
-                    </div>
-                  </div>
-                  <h5 class="growthTitle">الرياض</h5>
-                </div>
-                <div class="sectionBox growthBox min-400">
-                  <div class="percent p70">
-                    <p class="percentNum">70 <span> % </span></p>
-                    <div class="slice">
-                      <div class="bar"></div>
-                      <div class="fill"></div>
-                    </div>
-                  </div>
-                  <h5 class="growthTitle">اسم الجهه</h5>
-                </div>
-              </div>
-            </section>
-            <section class="contentSection">
-              <p class="sectionHeading">الخريطة</p>
-              <div class="sectionBoxesConatiner">
-                <div class="sectionBox mapBox" id="map"></div>
-              </div>
-            </section>
           </div>
         </div>
+      </header>
 
-        <footer class="dashboardFooter">
-          <p class="copyright">
-            <span>جميع الحقوق محفوظة ل</span>
-            <a href="index.html">مجلس الجمعيات الأهليه</a>
-            <span>2024 &COPY;</span>
-          </p>
-          <div class="footerNav">
-            <a href="">الشروط والأحكام</a>
-            <a href="">اتصل بنا</a>
-          </div>
-        </footer>
-      </main>
-    </div>
-    <!-- jquery  -->
-    <script src="js/jquery.min.js"></script>
-    <!-- ApexChart -->
-    <script src="js/apexcharts.js"></script>
-    <!-- swiper slider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Map Chart -->
-    <script src="js/mapdata.js"></script>
-    <script src="js/countrymap.js"></script>
-    <!-- custom -->
-    <script src="js/Custom.js"></script>
-  </body>
+      <div class="dashboardMainContent">
+        <div class="contentConatiner">
+          <section class="contentSection">
+            <p class="sectionHeading">الاجماليات</p>
+            <div class="sectionBoxesConatiner">
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">938</h4>
+                <p class="boxTitle">عدد الجهات التي اتمت التقييم</p>
+              </div>
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">179</h4>
+                <p class="boxTitle">عدد الجهات التي لم تبدأ بعد</p>
+              </div>
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">938</h4>
+                <p class="boxTitle">عدد الجهات</p>
+              </div>
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">التعليم</h4>
+                <p class="boxTitle">المجال الاشد احتياجا</p>
+              </div>
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">الرياض</h4>
+                <p class="boxTitle">المنطقة الاشد احتياجا</p>
+              </div>
+              <div class="sectionBox min-300">
+                <h4 class="boxValue">اسم الجهه</h4>
+                <p class="boxTitle">الجهه الاشد احتياجا</p>
+              </div>
+            </div>
+          </section>
+          <section class="contentSection">
+            <p class="sectionHeading">مؤشرات النمو</p>
+            <div class="sectionBoxesConatiner">
+              <div class="sectionBox growthBox min-400">
+                <div class="percent p70">
+                  <p class="percentNum">70 <span> % </span></p>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+                <h5 class="growthTitle">الرياض</h5>
+              </div>
+              <div class="sectionBox growthBox min-400">
+                <div class="percent p70">
+                  <p class="percentNum">70 <span> % </span></p>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+                <h5 class="growthTitle">اسم الجهه</h5>
+              </div>
+            </div>
+          </section>
+          <section class="contentSection">
+            <p class="sectionHeading">الخريطة</p>
+            <div class="sectionBoxesConatiner">
+              <div class="sectionBox mapBox" id="map"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="dashboardFooter">
+        <p class="copyright">
+          <span>جميع الحقوق محفوظة ل</span>
+          <a href="index.html">مجلس الجمعيات الأهليه</a>
+          <span>2024 &COPY;</span>
+        </p>
+        <div class="footerNav">
+          <a href="">الشروط والأحكام</a>
+          <a href="">اتصل بنا</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- ApexChart -->
+  <script src="js/apexcharts.js"></script>
+  <!-- swiper slider -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Map Chart -->
+  <script src="js/mapdata.js"></script>
+  <script src="js/countrymap.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+</body>
+
 </html>

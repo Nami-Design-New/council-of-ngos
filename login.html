@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -11,9 +12,12 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ loader ================= -->
   <div class="spinerLoader">
@@ -41,27 +45,28 @@
             الرجاء إدخال عنوان البريد الإلكتروني لإتمام عملية الدخول
           </p>
         </div>
-        <form class="auth-form" action="dashboard.html" onsubmit="return validateForm()">
-          <div class="auth-form-body">
-            <div class="form-inputs-container">
-              <div class="input-group">
-                <label for="emailInput">البريد الإلكتروني</label>
-                <input type="email" name="email" id="emailInput" placeholder="مثال: mail@mail.com" />
-                <div class="errorDiv">
-                  <p class="errorMessage"> البريد الإلكتروني غير صحيح </p>
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="passwordInput">كلمة المرور</label>
-                <input type="password" name="password" id="passwordInput" placeholder="************" />
-                <span class="passwordIcon">
-                  <img src="assets/show-passowd.svg" alt="show password icon" title="Toggle password visiblity" />
-                </span>
-                <div class="errorDiv">
-                  <p class="errorMessage"> كلمة المرور غير صحيحة </p>
-                </div>
-              </div>
+
+
+
+
+        <form class="auth-form needs-validation" novalidate>
+          <div class="input-group">
+            <label class="form-label"> البريد الإلكتروني </label>
+            <input type="email" class="form-control" required>
+            <div class="invalid-feedback">
+              البريد الإلكتروني غير صحيح
             </div>
+          </div>
+          <div class="input-group">
+            <label class="form-label"> كلمة المرور </label>
+            <input type="password" class="form-control" required>
+            <div class="invalid-feedback">
+              كلمة المرور غير صحيحة
+            </div>
+          </div>
+
+          <div class="auth-form-body">
+           
             <a href="forget.html" class="forget-password-link"> نسيت كلمة المرور؟ </a>
           </div>
           <div class="auth-form-btns-container">
@@ -84,79 +89,39 @@
   <!-- End login form -->
   <!-- jquery  -->
   <script src="js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <!-- swiper slider -->
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+
   <script>
-    $(document).ready(function () {
-      function validateForm() {
-        let isValid = true;
-        // Get input elements and their closest input-group elements
-        const $emailInput = $('#emailInput');
-        const $passwordInput = $('#passwordInput');
-        const $emailGroup = $emailInput.closest('.input-group');
-        const $passwordGroup = $passwordInput.closest('.input-group');
-        // Get error message elements
-        const $emailErrorMessage = $emailGroup.find('.errorMessage');
-        const $passwordErrorMessage = $passwordGroup.find('.errorMessage');
-        // Reset error state
-        resetErrorState($emailGroup, $emailErrorMessage);
-        resetErrorState($passwordGroup, $passwordErrorMessage);
-        // Validate email
-        if (!validateEmail($emailInput.val())) {
-          setErrorState($emailGroup, $emailErrorMessage);
-          isValid = false;
-        }
-        // Validate password
-        if (!$passwordInput.val()) {
-          setErrorState($passwordGroup, $passwordErrorMessage);
-          isValid = false;
-        }
-        return isValid;
-      }
-      function validateEmail(email) {
-        // Simple email validation regex
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-      function resetErrorState($group, $errorMessage) {
-        $group.removeClass('error');
-        $errorMessage.hide();
-      }
-      function setErrorState($group, $errorMessage) {
-        $group.addClass('error');
-        $errorMessage.show();
-      }
-      // Attach validateForm to form submission
-      $('form').on('submit', function (e) {
-        if (!validateForm()) {
-          e.preventDefault(); // Prevent form submission if validation fails
-        }
-      });
-    });
+
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
   </script>
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const emailInput = document.getElementById('emailInput');
-      const errorDiv = emailInput.nextElementSibling;
-
-      emailInput.addEventListener('input', function() {
-          const emailValue = emailInput.value;
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-          if (emailPattern.test(emailValue)) {
-              emailInput.classList.remove('error');
-              errorDiv.style.display = 'none';
-          } else {
-              emailInput.classList.add('error');
-              errorDiv.style.display = 'block';
-          }
-      });
-  });
-</script>
-
 </body>
+
 </html>

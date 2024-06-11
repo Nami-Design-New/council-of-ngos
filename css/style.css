@@ -6626,4 +6626,65 @@ button {
 
 figure {
   margin: 0;
+}
+
+.spinerLoader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinerLoader .spinerLoaderImg {
+  width: 100px;
+  height: 100px;
+  -webkit-mask-image: url("../assets/fav.svg");
+  mask-image: url("../assets/fav.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  position: relative;
+}
+
+.spinerLoader .spinerLoaderImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background-color: #1d968f;
+  transform: translateY(100%);
+  animation: slide-up 1.5s forwards;
+}
+
+.spinerLoader .spinerLoaderImg::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/fav.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) opacity(0.5);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }/*# sourceMappingURL=style.css.map */

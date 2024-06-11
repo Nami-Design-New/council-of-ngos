@@ -227,6 +227,12 @@ $(document).ready(function () {
   const $dashboardUserMenu = $(
     ".adminDashboardPage .dashboardMain .dashboardHeader .dashboardUserMenu"
   );
+  $(window).on("resize", function () {
+    if ($(window)[0].innerWidth < 768) {
+      $aside.removeClass("expand");
+      $restPageFromAside.removeClass("shrink");
+    }
+  });
   const $aside = $(".adminDashboardPage aside");
   const $restPageFromAside = $(".adminDashboardPage .dashboardMain");
   // Toggle notification menu

@@ -12,6 +12,8 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -21,7 +23,6 @@
   <div class="spinerLoader">
     <div class="spinerLoaderImg"></div>
   </div>
-
   <!-- Start Reset form -->
   <main class="auth-page reset-page">
     <section class="auth-container">
@@ -39,30 +40,36 @@
           </div>
           <p class="heading-note">الرجاء إنشاء كلمة مرور يسهل تذكرها</p>
         </div>
-        <form class="auth-form" action="login.html">
+        <form class="auth-form needs-validation" id="resetPasswordForm" novalidate action="login.html">
           <div class="auth-form-body">
             <div class="form-inputs-container">
               <div class="input-group reset-password">
                 <label for="resetPasswordInput">كلمة المرور</label>
-                <input type="password" name="password" id="resetPasswordInput" placeholder="************" />
+                <input type="password" class="form-control" name="password" id="resetPasswordInput"
+                  placeholder="************" required />
                 <span class="passwordIcon">
-                  <img src="assets/show-passowd.svg" alt="show password icon" title="Toggle password visiblity" />
+                  <img src="assets/show-password.svg" alt="show password icon" title="Toggle password visibility"
+                    onclick="togglePasswordVisibility('resetPasswordInput', this)" />
                 </span>
+                <div class="invalid-feedback">يرجى إدخال كلمة مرور.</div>
               </div>
               <div class="input-group confirm-password">
                 <label for="confirmPasswordInput">تأكيد كلمة المرور</label>
-                <input type="password" name="confirmPassword" id="confirmPasswordInput" placeholder="************" />
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPasswordInput"
+                  placeholder="************" required />
                 <span class="passwordIcon">
-                  <img src="assets/show-passowd.svg" alt="show password icon" title="Toggle password visiblity" />
+                  <img src="assets/show-password.svg" alt="show password icon" title="Toggle password visibility"
+                    onclick="togglePasswordVisibility('confirmPasswordInput', this)" />
                 </span>
+                <div class="invalid-feedback" id="passwordMismatch">كلمتا المرور غير متطابقتين.</div>
               </div>
             </div>
           </div>
-          <div class="auth-form-btns-container">
-            <a href="#!" class="back-link" onclick="window.history.back();" >
+          <div class="auth-form-btns-container d-flex justify-content-between align-items-center">
+            <a href="#!" class="back-link" onclick="window.history.back();">
               <img src="assets/backArrow.svg" alt="back icon" title="back home" />
             </a>
-            <button type="submit">حفظ</button>
+            <button type="submit" class="btn btn-primary">حفظ</button>
           </div>
         </form>
       </div>
@@ -76,8 +83,42 @@
   <script src="js/jquery.min.js"></script>
   <!-- swiper slider -->
   <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS و Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
+
+  <script>
+    document.getElementById('resetPasswordForm').addEventListener('submit', function (event) {
+      let isValid = this.checkValidity();
+      let password = document.getElementById('resetPasswordInput').value;
+      let confirmPassword = document.getElementById('confirmPasswordInput').value;
+
+      if (password !== confirmPassword) {
+        event.preventDefault();
+        event.stopPropagation();
+        document.getElementById('confirmPasswordInput').classList.add('is-invalid');
+        document.getElementById('passwordMismatch').style.display = 'block';
+        isValid = false;
+      }
+
+      if (!isValid) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      this.classList.add('was-validated');
+    });
+
+    function togglePasswordVisibility(inputId, icon) {
+      const input = document.getElementById(inputId);
+      const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+      input.setAttribute('type', type);
+      icon.classList.toggle('showing');
+    }
+  </script>
+
 </body>
 
 </html>

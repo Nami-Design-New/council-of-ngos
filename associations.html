@@ -12,6 +12,8 @@
   <link rel="icon" type="image/icon" href="assets/fav.svg" />
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css" />
@@ -23,72 +25,42 @@
   <div class="spinerLoader">
     <div class="spinerLoaderImg"></div>
   </div>
-
   <div class="adminDashboardPage associationsPage">
     <!-- Start dashboard header -->
-    <aside class="">
+    <aside class="expand">
       <div class="asideIcon">
         <span class="iconBar"> </span><span class="iconBar"></span>
         <span class="iconBar"></span>
       </div>
       <a href="index.html" class="asideLogo">
-        <img
-          src="assets/empty-logo-council.svg"
-          alt="مجلس الجمعيات الأهلية"
-          title="مجلس الجمعيات الأهلية"
-        />
+        <img src="assets/empty-logo-council.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
         <div class="logo-heading">
-          <img
-            src="assets/logo-title-arabic-council.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-          <img
-            src="assets/logo-title-english-council.svg"
-            alt="Council of NGOs"
-            title="Council of NGOs"
-          />
+          <img src="assets/logo-title-arabic-council.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          <img src="assets/logo-title-english-council.svg" alt="Council of NGOs" title="Council of NGOs" />
         </div>
       </a>
-
       <ul class="asideNav">
         <li class="navItem">
           <a href="admin-dashboard.html" class="navLink">
-            <img
-              src="assets/dashboard-color-icon.svg"
-              alt="لوحة المعلومات"
-              title="لوحة المعلومات"
-            />
+            <img src="assets/dashboard-color-icon.svg" alt="لوحة المعلومات" title="لوحة المعلومات" />
             <p>لوحة المعلومات (الداشبورد)</p>
           </a>
         </li>
         <li class="navItem">
           <a href="" class="navLink">
-            <img
-              src="assets/users-color-icon.svg"
-              alt="المستخدمون"
-              title="المستخدمون"
-            />
+            <img src="assets/users-color-icon.svg" alt="المستخدمون" title="المستخدمون" />
             <p>المستخدمون</p>
           </a>
         </li>
         <li class="navItem active">
           <a href="associations.html" class="navLink">
-            <img
-              src="assets/associations-color-icon.svg"
-              alt="الجمعيات"
-              title="الجمعيات"
-            />
+            <img src="assets/associations-color-icon.svg" alt="الجمعيات" title="الجمعيات" />
             <p>الجمعيات</p>
           </a>
         </li>
         <li class="navItem">
           <div href="" class="navLink">
-            <img
-              src="assets/reports-color-icon.svg"
-              alt="التقارير"
-              title="التقارير"
-            />
+            <img src="assets/reports-color-icon.svg" alt="التقارير" title="التقارير" />
             <p>التقارير</p>
           </div>
           <span class="submenuIcon">
@@ -133,21 +105,13 @@
         </li>
         <li class="navItem">
           <a href="" class="navLink">
-            <img
-              src="assets/contact-request-color-icon.svg"
-              alt="طلبات التواصل"
-              title="طلبات التواصل"
-            />
+            <img src="assets/contact-request-color-icon.svg" alt="طلبات التواصل" title="طلبات التواصل" />
             <p>طلبات التواصل</p>
           </a>
         </li>
         <li class="navItem">
           <div href="" class="navLink">
-            <img
-              src="assets/settings-color-icon.svg"
-              alt="الاعدادات"
-              title="الاعدادات"
-            />
+            <img src="assets/settings-color-icon.svg" alt="الاعدادات" title="الاعدادات" />
             <p>الاعدادات</p>
           </div>
           <span class="submenuIcon">
@@ -163,36 +127,18 @@
           </ul>
         </li>
       </ul>
-
       <a href="index.html" class="asideLogo bottomAsideLogo">
-        <img
-          src="assets/empty-logo-associations.png"
-          alt="صندوق دعم الجمعيات"
-          title="صندوق دعم الجمعيات"
-          class="fullLogo"
-        />
-        <img
-          src="assets/Logo Lift.png"
-          alt="صندوق دعم الجمعيات"
-          title="صندوق دعم الجمعيات"
-          class="favLogo"
-        />
+        <img src="assets/empty-logo-associations.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات"
+          class="fullLogo" />
+        <img src="assets/Logo Lift.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات" class="favLogo" />
       </a>
     </aside>
     <!-- End dashboard header -->
-    <main class="dashboardMain">
+    <main class="dashboardMain shrink">
       <header class="dashboardHeader">
         <a href="index.html" class="header-logo">
-          <img
-            src="assets/logo.svg"
-            alt="مجلس الجمعيات الأهلية"
-            title="مجلس الجمعيات الأهلية"
-          />
-          <img
-            src="assets/Logo Lift.png"
-            alt="صندوق دعم الجمعيات"
-            title="صندوق دعم الجمعيات"
-          />
+          <img src="assets/logo.svg" alt="مجلس الجمعيات الأهلية" title="مجلس الجمعيات الأهلية" />
+          <img src="assets/Logo Lift.png" alt="صندوق دعم الجمعيات" title="صندوق دعم الجمعيات" />
         </a>
         <div class="headerAsideIcon">
           <span class="iconBar"> </span><span class="iconBar"></span>
@@ -249,18 +195,10 @@
             <div class="userInfoBox">
               <div class="userMaskGroup">
                 <figure>
-                  <img
-                    src="assets/avatar.webp"
-                    alt="user avatar"
-                    title="user avatar"
-                  />
+                  <img src="assets/avatar.webp" alt="user avatar" title="user avatar" />
                 </figure>
-                <a href="" class="editAvatar"
-                  ><img
-                    src="assets/pencil.svg"
-                    alt="edit avatar"
-                    title="تعديل صورة الملف"
-                /></a>
+                <a href="" class="editAvatar"><img src="assets/pencil.svg" alt="edit avatar"
+                    title="تعديل صورة الملف" /></a>
               </div>
               <div class="userInfo">
                 <p class="userName">محمود جمال</p>
@@ -269,19 +207,11 @@
             </div>
             <div class="menuLinksBox">
               <a href="" class="menuLink">
-                <img
-                  src="assets/settings-color-icon.svg"
-                  alt="إدارة حسابك"
-                  title="إدارة حسابك"
-                />
+                <img src="assets/settings-color-icon.svg" alt="إدارة حسابك" title="إدارة حسابك" />
                 <p>إدارة حسابك</p>
               </a>
               <a href="" class="menuLink">
-                <img
-                  src="assets/logout-icon.svg"
-                  alt="تسجيل الخروج"
-                  title="تسجيل الخروج"
-                />
+                <img src="assets/logout-icon.svg" alt="تسجيل الخروج" title="تسجيل الخروج" />
                 <p>تسجيل الخروج</p>
               </a>
             </div>
@@ -292,11 +222,7 @@
           </div>
           <div class="userBox">
             <div class="userBoxAvatar">
-              <img
-                src="assets/avatar.webp"
-                alt="user avatar"
-                class="userAvatar"
-              />
+              <img src="assets/avatar.webp" alt="user avatar" class="userAvatar" />
             </div>
             <p>محمود جمال</p>
             <span class="userSubmenuIcon">
@@ -305,7 +231,6 @@
           </div>
         </div>
       </header>
-      
       <div class="dashboardMainContent associationsMainContent">
         <div class="contentConatiner">
           <div class="associationsHeadingbox">
@@ -885,6 +810,9 @@
   <script src="js/jquery.min.js"></script>
   <!-- swiper slider -->
   <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS و Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
   <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
@@ -894,8 +822,6 @@
     $('.table').DataTable({
       responsive: true
     });
-
-
     // Modal Operations
     const modal = document.querySelector(`.modal`);
     const modalBody = document.querySelector(`.modal .modalBox`);
@@ -923,7 +849,6 @@
       },
       true
     );
-
   </script>
 </body>
 

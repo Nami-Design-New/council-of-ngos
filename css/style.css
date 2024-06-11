@@ -285,6 +285,7 @@ header .container .navList li {
   -o-transition: all 0.3s ease-in-out ease-out;
 }
 header .container .navList li a {
+  transition: 0.3s ease-in-out;
   color: var(--Dark, var(--White, #0d0d0d));
   text-align: right;
   font-size: 15px;
@@ -1553,6 +1554,7 @@ footer .container .footerLinks .footerNavList li {
   align-items: center;
 }
 footer .container .footerLinks .footerNavList li a {
+  transition: 0.3s ease-in-out;
   flex: 1 0 0;
   color: #0d0d0d;
   text-align: right;
@@ -1634,6 +1636,7 @@ footer .container .support .support-contact-social li {
   cursor: pointer;
 }
 footer .container .support .support-contact-social li a {
+  transition: 0.3s ease-in-out;
   display: flex;
   width: 40px;
   height: 40px;
@@ -2097,7 +2100,7 @@ footer .container .support .support-contact-social li a img {
   gap: 16px;
   align-self: stretch;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group {
   display: flex;
   min-width: 318px;
   flex-direction: column;
@@ -2106,37 +2109,37 @@ footer .container .support .support-contact-social li a img {
   align-self: stretch;
   position: relative;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group label {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group label {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
   align-self: stretch;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input,
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group input,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group select {
   display: flex;
   min-height: 54px;
   padding: 16px;
   align-items: center;
   gap: 8px;
+  width: 100%;
   align-self: stretch;
-  border-radius: 12px;
-  border: 1px solid #f2f2f2;
-  background: #f8f8f8;
+  border-radius: 12px !important;
+  border-width: 1px;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   text-align: right;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select::-moz-placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group input::-moz-placeholder, .auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group select::-moz-placeholder {
   color: #aaa;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group input::placeholder,
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group select::placeholder {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group input::placeholder,
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group select::placeholder {
   color: #aaa;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group .passwordIcon {
   display: flex;
   width: 24px;
   height: 24px;
@@ -2150,7 +2153,7 @@ footer .container .support .support-contact-social li a img {
   top: 44px;
   cursor: pointer;
 }
-.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .form-inputs-container .input-group .passwordIcon img {
+.auth-page .auth-container .auth-form-container .auth-form .auth-form-body .input-group .passwordIcon img {
   width: 20px;
   height: 20px;
   -o-object-fit: cover;
@@ -2258,6 +2261,7 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
 }
 .auth-page .auth-container .auth-form-container .auth-link-box a {
+  transition: 0.3s ease-in-out;
   color: #1d968f;
   text-align: right;
   font-family: MadaniArabic-Regular;
@@ -2605,8 +2609,7 @@ footer .container .support .support-contact-social li a img {
   gap: 16px;
   flex: 1 0 0;
   border-radius: 16px;
-  border: 1px solid #f2f2f2;
-  background: #f8f8f8;
+  border-width: 1px;
 }
 @media (max-width: 768px) {
   .org-register-page .org-register-container .org-register-form .form-section .section-form-body .activity-section-container .activity-section-box {
@@ -4854,7 +4857,7 @@ footer .container .support .support-contact-social li a img {
   z-index: 999999;
   background-color: #ffffff;
   box-shadow: 0 0 2px 1px #ececec;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .adminDashboardPage aside {
@@ -4940,10 +4943,10 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .adminDashboardPage aside .asideLogo.bottomAsideLogo {
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideLogo.bottomAsideLogo img {
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideLogo.bottomAsideLogo .favLogo {
   display: none;
@@ -4992,7 +4995,7 @@ footer .container .support .support-contact-social li a img {
   overflow-x: hidden;
   cursor: pointer;
   filter: grayscale(1);
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideNav .navItem.active, .adminDashboardPage aside .asideNav .navItem:hover {
   background: rgba(29, 150, 143, 0.08);
@@ -5069,8 +5072,9 @@ footer .container .support .support-contact-social li a img {
   top: 0;
   right: 0;
   background-color: #ffffff;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   list-style: none;
+  border-radius: 8px;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem {
   display: flex;
@@ -5079,7 +5083,7 @@ footer .container .support .support-contact-social li a img {
   gap: 8px;
   align-self: stretch;
   flex-direction: column;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem.active > li {
   color: #1d968f !important;
@@ -5099,26 +5103,29 @@ footer .container .support .support-contact-social li a img {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  padding: 8px 4px;
   align-self: stretch;
   color: #777;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem .submenuMenuItem.active > a {
+  transition: 0.3s ease-in-out;
   color: #1d968f !important;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem ul {
   padding-right: 20px;
   width: 100%;
   background-color: rgba(29, 150, 143, 0.2);
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem ul li {
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem ul li:hover {
   padding-right: 8px !important;
 }
 .adminDashboardPage aside .asideNav .navItem .submenu .submenuItem a {
+  transition: 0.3s ease-in-out;
   width: 100%;
   padding: 8px 4px;
   color: var(--Gray, #777);
@@ -5355,6 +5362,7 @@ footer .container .support .support-contact-social li a img {
   font-weight: 400;
 }
 .adminDashboardPage .dashboardMain .dashboardHeader .notificationAndUserBox .notificationMenu .notificationMenuHeading a {
+  transition: 0.3s ease-in-out;
   color: #1d968f;
   text-align: right;
   font-family: MadaniArabic-Regular;
@@ -5795,6 +5803,7 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .adminDashboardPage .dashboardMain .dashboardFooter .copyright a {
+  transition: 0.3s ease-in-out;
   color: #1d968f;
   text-align: right;
   font-family: MadaniArabic-Regular;
@@ -5815,6 +5824,7 @@ footer .container .support .support-contact-social li a img {
   }
 }
 .adminDashboardPage .dashboardMain .dashboardFooter .footerNav a {
+  transition: 0.3s ease-in-out;
   color: #0d0d0d;
   text-align: right;
   font-family: MadaniArabic-Regular;
@@ -6533,6 +6543,7 @@ button {
   font-weight: bold;
 }
 .page404 .container a {
+  transition: 0.3s ease-in-out;
   margin-top: 16px;
 }
 
@@ -6541,7 +6552,7 @@ button {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 999999;
+  z-index: 99999999999999;
   width: 100%;
   height: 100%;
   display: flex;
@@ -6607,4 +6618,73 @@ button {
 
 .select2 {
   width: 100% !important;
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.spinerLoader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinerLoader .spinerLoaderImg {
+  width: 100px;
+  height: 100px;
+  -webkit-mask-image: url("../assets/fav.svg");
+  mask-image: url("../assets/fav.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  position: relative;
+}
+
+.spinerLoader .spinerLoaderImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background-color: #1d968f;
+  transform: translateY(100%);
+  animation: slide-up 1.5s forwards;
+}
+
+.spinerLoader .spinerLoaderImg::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/fav.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) opacity(0.5);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }/*# sourceMappingURL=style.css.map */

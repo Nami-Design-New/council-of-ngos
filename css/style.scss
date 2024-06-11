@@ -279,6 +279,8 @@ header {
         -ms-transition: $transition ease-out;
         -o-transition: $transition ease-out;
         a {
+          transition: 0.3s ease-in-out;
+
           color: var(--Dark, var(--White, #0d0d0d));
           text-align: right;
           font-size: 15px;
@@ -1480,6 +1482,8 @@ footer {
           justify-content: flex-end;
           align-items: center;
           a {
+            transition: 0.3s ease-in-out;
+
             flex: 1 0 0;
             color: $darkColor;
             text-align: right;
@@ -1556,6 +1560,8 @@ footer {
           align-items: flex-start;
           cursor: pointer;
           a {
+            transition: 0.3s ease-in-out;
+
             display: flex;
             width: 40px;
             height: 40px;
@@ -1993,7 +1999,6 @@ footer {
             align-items: flex-start;
             gap: 16px;
             align-self: stretch;
-          
           }
           .input-group {
             display: flex;
@@ -2017,10 +2022,12 @@ footer {
               padding: 16px;
               align-items: center;
               gap: 8px;
+              width: 100%;
               align-self: stretch;
-              border-radius: 12px;
-              border: 1px solid $InputStroke;
-              background: $InputBG;
+              border-radius: 12px !important;
+              // border: 1px solid $InputStroke;
+              // background: $InputBG;
+              border-width: 1px;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -2146,6 +2153,8 @@ footer {
           font-weight: 400;
         }
         a {
+          transition: 0.3s ease-in-out;
+
           color: $mainColor;
           text-align: right;
           font-family: MadaniArabic-Regular;
@@ -2474,8 +2483,9 @@ footer {
               gap: 16px;
               flex: 1 0 0;
               border-radius: 16px;
-              border: 1px solid $InputStroke;
-              background: $InputBG;
+              // border: 1px solid $InputStroke;
+              // background: $InputBG;
+              border-width: 1px;
               @media (max-width: 768px) {
                 flex-direction: column;
                 justify-content: center;
@@ -3531,7 +3541,7 @@ $PercentSize: 100px;
     z-index: 999999;
     background-color: $whiteColor;
     box-shadow: 0 0 2px 1px #ececec;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 
     @media (max-width: 768px) {
       right: unset;
@@ -3620,9 +3630,9 @@ $PercentSize: 100px;
       }
 
       &.bottomAsideLogo {
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         img {
-          transition: 0.3s;
+          transition: 0.3s ease-in-out;
         }
 
         .favLogo {
@@ -3673,7 +3683,7 @@ $PercentSize: 100px;
         overflow-x: hidden;
         cursor: pointer;
         filter: grayscale(1);
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         &.active,
         &:hover {
           background: $main08;
@@ -3754,8 +3764,9 @@ $PercentSize: 100px;
           top: 0;
           right: 0;
           background-color: $whiteColor;
-          transition: 0.3s;
+          transition: 0.3s ease-in-out;
           list-style: none;
+          border-radius: 8px;
           .submenuItem {
             display: flex;
             justify-content: flex-start;
@@ -3763,7 +3774,7 @@ $PercentSize: 100px;
             gap: 8px;
             align-self: stretch;
             flex-direction: column;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
             &.active {
               > li {
                 color: $mainColor !important;
@@ -3791,12 +3802,15 @@ $PercentSize: 100px;
               justify-content: space-between;
               align-items: center;
               gap: 8px;
+              padding: 8px 4px;
               align-self: stretch;
               color: $grayColor;
-              transition: 0.3s;
+              transition: 0.3s ease-in-out;
 
               &.active {
                 > a {
+                  transition: 0.3s ease-in-out;
+
                   color: $mainColor !important;
                 }
               }
@@ -3805,16 +3819,18 @@ $PercentSize: 100px;
               padding-right: 20px;
               width: 100%;
               background-color: $main02;
-              transition: 0.3s;
+              transition: 0.3s ease-in-out;
 
               li {
-                transition: 0.3s;
+                transition: 0.3s ease-in-out;
                 &:hover {
                   padding-right: 8px !important;
                 }
               }
             }
             a {
+              transition: 0.3s ease-in-out;
+
               width: 100%;
               padding: 8px 4px;
               color: var(--Gray, #777);
@@ -4041,6 +4057,8 @@ $PercentSize: 100px;
               font-weight: 400;
             }
             a {
+              transition: 0.3s ease-in-out;
+
               color: $mainColor;
               text-align: right;
               font-family: MadaniArabic-Regular;
@@ -4471,6 +4489,8 @@ $PercentSize: 100px;
           font-size: 13px;
         }
         a {
+          transition: 0.3s ease-in-out;
+
           color: $mainColor;
           text-align: right;
           font-family: MadaniArabic-Regular;
@@ -4489,6 +4509,8 @@ $PercentSize: 100px;
           justify-content: space-around;
         }
         a {
+          transition: 0.3s ease-in-out;
+
           color: $darkColor;
           text-align: right;
           font-family: MadaniArabic-Regular;
@@ -5077,7 +5099,7 @@ $PercentSize: 100px;
   display: flex;
   width: 100%;
 }
-input.error{
+input.error {
   border-color: red !important;
 }
 .error {
@@ -5202,6 +5224,8 @@ button {
       }
     }
     a {
+      transition: 0.3s ease-in-out;
+
       margin-top: 16px;
     }
   }
@@ -5212,7 +5236,7 @@ button {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 999999;
+  z-index: 99999999999999;
   width: 100%;
   height: 100%;
   display: flex;
@@ -5274,4 +5298,73 @@ button {
 
 .select2 {
   width: 100% !important;
+}
+
+
+
+.invalid-feedback{
+  display: none;
+}
+figure{
+  margin: 0;
+}
+
+
+
+
+.spinerLoader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinerLoader .spinerLoaderImg {
+  width: 100px;
+  height: 100px;
+  -webkit-mask-image: url("../assets/fav.svg");
+          mask-image: url("../assets/fav.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  position: relative;
+}
+.spinerLoader .spinerLoaderImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background-color: #1d968f;
+  transform: translateY(100%);
+  animation: slide-up 1.5s forwards;
+}
+.spinerLoader .spinerLoaderImg::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/fav.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) opacity(0.5);
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }

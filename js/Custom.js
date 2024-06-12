@@ -266,4 +266,16 @@ $(document).ready(function () {
 
   //spinner
   $(".spinerLoader").delay(500).fadeOut(300);
+
+  // check if the screen is mobile (< 768) to collapse the aside
+  function checkScreenToToggleAside() {
+    if ($(window)[0].innerWidth < 768) {
+      $aside.removeClass("expand");
+      $restPageFromAside.removeClass("shrink");
+    }
+  }
+  // Trigger it when resize window
+  $(window).on("resize", checkScreenToToggleAside);
+  // Trigger it when document is ready
+  checkScreenToToggleAside();
 });
